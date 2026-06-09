@@ -1,17 +1,17 @@
 {
-  "conditionId": "0x87963e547116e7cc97d74471c11ea6265864022c2a489a4d574a876e685f9d99",
-  "slug": "nba-sas-nyk-2026-06-10-spread-home-18pt5",
-  "question": "Spread: Knicks (-18.5)",
+  "conditionId": "0xbbb2ca5a352d6aec84c4d78cca2671d4fee076b3f1096d45dd2aec8ebb049137",
+  "slug": "nba-sas-nyk-2026-06-10-assists-deaaron-fox-6pt5",
+  "question": "De'Aaron Fox: Assists O/U 6.5",
   "eventSlug": "nba-sas-nyk-2026-06-10",
   "eventTitle": "Spurs vs. Knicks",
   "eventId": "557378",
   "clobTokenIds": [
-    "76357622190661562411431158610545633901329850448710607217128827502168718235040",
-    "19131274858041545254536681389204522928408344252678779251895770640458529692233"
+    "112567065640232378474603041689840515665462674398636571352667909843044299978087",
+    "100898695223814678363997248427395922647687129447215520424942197664697548645577"
   ],
   "outcomes": [
-    "Knicks",
-    "Spurs"
+    "Yes",
+    "No"
   ],
   "endDate": "2026-06-11T00:30:00Z",
   "tags": [
@@ -61,8 +61,8 @@
   "resolvedAt": null,
   "history": [
     {
-      "timestamp": "2026-06-09T05:00:03Z",
-      "impliedProbability": 0.095,
+      "timestamp": "2026-06-09T07:00:03Z",
+      "impliedProbability": 0.5,
       "volume24hr": null,
       "volume": null,
       "liquidity": null,
@@ -71,22 +71,32 @@
       "oneWeekPriceChange": null
     },
     {
-      "timestamp": "2026-06-09T05:52:00Z",
-      "impliedProbability": 0.095,
-      "volume24hr": 0.0,
+      "timestamp": "2026-06-09T08:00:03Z",
+      "impliedProbability": 0.5,
+      "volume24hr": null,
       "volume": null,
-      "liquidity": 719.5596,
-      "spread": 0.09,
+      "liquidity": null,
+      "spread": null,
+      "oneDayPriceChange": null,
+      "oneWeekPriceChange": null
+    },
+    {
+      "timestamp": "2026-06-09T09:00:03Z",
+      "impliedProbability": 0.5,
+      "volume24hr": null,
+      "volume": null,
+      "liquidity": null,
+      "spread": null,
       "oneDayPriceChange": null,
       "oneWeekPriceChange": null
     },
     {
       "timestamp": "2026-06-09T09:56:47Z",
-      "impliedProbability": 0.1,
-      "volume24hr": 18.4301,
-      "volume": 18.4301,
-      "liquidity": 8616.7048,
-      "spread": 0.04,
+      "impliedProbability": 0.255,
+      "volume24hr": 0.0,
+      "volume": null,
+      "liquidity": 1919.1514,
+      "spread": 0.47,
       "oneDayPriceChange": null,
       "oneWeekPriceChange": null
     }
