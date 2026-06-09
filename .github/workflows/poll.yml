@@ -1,8 +1,9 @@
 name: poll
 
-# Polls Polymarket every 10 minutes, rebuilds the index, and commits any
-# changed data back to the repository. Also runnable on demand from the
-# Actions tab (workflow_dispatch).
+# Polls Polymarket every 10 minutes, sweeps any markets that dropped off the
+# active feed without resolving, rebuilds the index, and commits any changed
+# data back to the repository. Also runnable on demand from the Actions tab
+# (workflow_dispatch).
 
 on:
   schedule:

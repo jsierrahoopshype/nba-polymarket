@@ -31,6 +31,11 @@ Output shape (data/index.json):
     "markets": [ <entry>, ... ]
   }
 
+The file is written with the top-level fields pretty-printed and each market
+entry on its own compact line (see render_index). Tags are trimmed to just
+id/label/slug. Both choices keep this every-cycle full rewrite small; the
+frontend JSON.parses the file, so the formatting is invisible to it.
+
 Usage:
     python scripts/build_index.py
 """
@@ -58,6 +63,50 @@ def iso(dt: datetime) -> str:
 
 def parse_iso(ts: str) -> datetime:
     return datetime.fromisoformat(ts.replace("Z", "+00:00"))
+
+
+def trim_tags(tags):
+    """
+    Keep only the fields the UI needs (id, label, slug). The raw tag objects
+    from Polymarket carry ~11 fields each; index.json is rebuilt and committed
+    in full every cycle, so dropping the unused fields is a large, repeated
+    saving in commit size.
+    """
+    trimmed = []
+    for tag in tags or []:
+        if isinstance(tag, dict):
+            trimmed.append({
+                "id": tag.get("id"),
+                "label": tag.get("label"),
+                "slug": tag.get("slug"),
+            })
+    return trimmed
+
+
+def render_index(index):
+    """
+    Serialize index.json with the top-level fields pretty-printed but each
+    market entry on its own compact line. index.json is regenerated wholesale
+    every cycle (sparklines shift, so git cannot delta it), which makes its raw
+    byte size the dominant churn cost; compacting each entry (plus trimming
+    tags) cuts that size by roughly 60%. Whitespace is irrelevant to the
+    frontend, which
+    JSON.parses the file. Output round-trips through json.loads().
+    """
+    markets = index.get("markets") or []
+    head = {k: v for k, v in index.items() if k != "markets"}
+    head_json = json.dumps(head, indent=2, ensure_ascii=False, default=str)
+    body = head_json[:-2] if head_json.endswith("\n}") else "{"
+    if markets:
+        rows = ",\n".join(
+            json.dumps(entry, ensure_ascii=False, separators=(",", ":"),
+                       default=str)
+            for entry in markets
+        )
+        block = f'  "markets": [\n{rows}\n  ]'
+    else:
+        block = '  "markets": []'
+    return f"{body},\n{block}\n}}\n"
 
 
 def recent_archive_months(now):
@@ -182,7 +231,7 @@ def build_entry(record, now):
         "eventTitle": record.get("eventTitle"),
         "eventId": record.get("eventId"),
         "endDate": record.get("endDate"),
-        "tags": record.get("tags") or [],
+        "tags": trim_tags(record.get("tags")),
         "impliedProbability": latest.get("impliedProbability"),
         "volume24hr": latest.get("volume24hr"),
         "volume": latest.get("volume"),
@@ -249,10 +298,7 @@ def main():
     }
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    INDEX_PATH.write_text(
-        json.dumps(index, indent=2, ensure_ascii=False, default=str),
-        encoding="utf-8",
-    )
+    INDEX_PATH.write_text(render_index(index), encoding="utf-8")
     print(f"Wrote {INDEX_PATH} with {len(markets)} markets ({len(live)} live, "
           f"{len(resolved)} recently resolved).")
 
