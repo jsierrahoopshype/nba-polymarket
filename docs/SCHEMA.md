@@ -36,6 +36,8 @@ Every 10 minutes a scheduled job runs:
    looking its event up directly by slug, so an off-feed resolution still gets
    archived. The sweep is bounded (at most 50 events per run, most-stale first)
    and never deletes a file just because it is temporarily missing from a feed.
+   It is also skipped entirely on any cycle where the active feed comes back
+   empty or badly partial, so a failed fetch never triggers a mass re-check.
 5. **Build index** (`build_index.py`): all the live files plus recently
    resolved ones are summarized into `data/index.json`.
 

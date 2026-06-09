@@ -61,6 +61,12 @@ PAGE_LIMIT = 100
 # backlog drains over several runs, oldest-stale first.
 SWEEP_MAX_EVENTS = 50
 
+# Sweep safety valve: if the active-events feed returns markets covering less
+# than this fraction of the live files we already have on disk, the feed almost
+# certainly failed or came back partial. Re-checking everything would be wasted
+# work against a broken feed, so we skip the sweep entirely that cycle.
+SWEEP_MIN_FEED_FRACTION = 0.10
+
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -421,16 +427,35 @@ def sweep_stale_markets(seen_ids, now):
       - At most SWEEP_MAX_EVENTS events are checked per run, oldest-stale first,
         so one run can never make an unbounded number of API calls and a backlog
         drains over successive runs.
+      - If the active feed came back empty or badly partial (covering less than
+        SWEEP_MIN_FEED_FRACTION of the live files on disk), the whole sweep is
+        skipped that cycle, since nearly everything would look stale at once.
 
     Returns the number of markets re-processed.
     """
     if not MARKETS_DIR.exists():
         return 0
 
+    market_files = list(MARKETS_DIR.glob("*.json"))
+
+    # Safety valve: a market counts as "stale" only because it is missing from
+    # this cycle's feed. If the feed itself came back empty or badly partial,
+    # almost every live file would look stale at once. The sweep is still safe
+    # (it re-verifies each market by slug before archiving, so the worst case is
+    # wasted lookups, never a wrong archive), but re-checking 50 markets against
+    # a feed that clearly failed is pointless. Skip the sweep this cycle instead.
+    total_live = len(market_files)
+    if not seen_ids or len(seen_ids) < SWEEP_MIN_FEED_FRACTION * total_live:
+        print(
+            f"Sweep skipped: active feed returned {len(seen_ids)} market(s) vs "
+            f"{total_live} live file(s) on disk (feed looks empty/partial)."
+        )
+        return 0
+
     # Bucket stale live files by eventSlug, tracking each group's most recent
     # snapshot so we can prioritise the most-stale groups first.
     groups = {}  # eventSlug -> {"ids": set(conditionId), "latest": iso-or-""}
-    for path in MARKETS_DIR.glob("*.json"):
+    for path in market_files:
         try:
             record = json.loads(path.read_text(encoding="utf-8"))
         except (ValueError, OSError):
