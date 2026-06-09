@@ -1,0 +1,274 @@
+{
+  "ran_at": "2026-06-09T10:44:41.477643Z",
+  "checks": {
+    "sports_metadata": {
+      "ok": true,
+      "result": {
+        "total_sports": 272,
+        "first_sport_sample": {
+          "id": 1,
+          "sport": "ncaab",
+          "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/marchmadness.jpeg",
+          "resolution": "https://www.ncaa.com/march-madness-live/bracket",
+          "ordering": "home",
+          "tags": "1,100149,100639",
+          "series": "39",
+          "createdAt": "2025-11-05T19:27:45.399303Z"
+        },
+        "nba_matches": [
+          {
+            "id": 6,
+            "sport": "wnba",
+            "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/wnba-logo-PAR4befDAubM.png",
+            "resolution": "https://www.wnba.com/",
+            "ordering": "away",
+            "tags": "1,100639,100254",
+            "series": "10105",
+            "createdAt": "2025-11-05T19:27:45.399303Z"
+          },
+          {
+            "id": 34,
+            "sport": "nba",
+            "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/super+cool+basketball+in+red+and+blue+wow.png",
+            "resolution": "https://www.nba.com/",
+            "ordering": "away",
+            "tags": "1,745,100639",
+            "series": "10345",
+            "createdAt": "2025-11-05T19:27:45.399303Z"
+          },
+          {
+            "id": 106,
+            "sport": "bkarg",
+            "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/super+cool+basketball+in+red+and+blue+wow.png",
+            "resolution": "https://www.lnba.com.ar/",
+            "ordering": "home",
+            "tags": "1,100639,28,103099",
+            "series": "10873",
+            "createdAt": "2026-01-09T01:26:27.593711Z"
+          }
+        ]
+      }
+    },
+    "event_by_slug_champion": {
+      "ok": true,
+      "result": {
+        "found": true,
+        "event_id": "27830",
+        "event_title": "2026 NBA Champion",
+        "event_slug": "2026-nba-champion",
+        "active": true,
+        "closed": false,
+        "volume": 417673877.38769174,
+        "volume24hr": 2402456.690663003,
+        "tags": [
+          {
+            "id": "1",
+            "label": "Sports",
+            "slug": "sports",
+            "forceShow": false,
+            "publishedAt": "2023-10-24 22:37:50.296+00",
+            "updatedBy": 15,
+            "createdAt": "2023-10-24T22:37:50.31Z",
+            "updatedAt": "2026-04-17T20:47:16.461062Z",
+            "forceHide": true,
+            "requiresTranslation": false
+          },
+          {
+            "id": "745",
+            "label": "NBA",
+            "slug": "nba",
+            "forceShow": false,
+            "publishedAt": "2023-12-18 18:24:38.08+00",
+            "createdAt": "2023-12-18T18:24:38.098Z",
+            "updatedAt": "2026-04-17T17:28:34.430568Z",
+            "requiresTranslation": false
+          },
+          {
+            "id": "100240",
+            "label": "NBA Finals",
+            "slug": "nba-finals",
+            "createdAt": "2024-05-31T15:49:35.90647Z",
+            "updatedAt": "2026-04-17T20:19:03.168093Z",
+            "requiresTranslation": false
+          },
+          {
+            "id": "28",
+            "label": "Basketball",
+            "slug": "basketball",
+            "forceShow": false,
+            "publishedAt": "2023-11-02 21:04:25.152+00",
+            "createdAt": "2023-11-02T21:04:25.158Z",
+            "updatedAt": "2026-04-17T20:16:02.304942Z",
+            "requiresTranslation": false
+          },
+          {
+            "id": "102288",
+            "label": "NBA Champion",
+            "slug": "nba-champion",
+            "createdAt": "2025-06-19T18:23:27.137001Z",
+            "updatedAt": "2026-04-17T17:24:31.88476Z",
+            "requiresTranslation": false
+          },
+          {
+            "id": "104587",
+            "label": "2026 NBA Playoffs",
+            "slug": "2026-nba-playoffs",
+            "createdAt": "2026-04-13T20:51:56.89448Z",
+            "updatedAt": "2026-04-17T20:51:10.072241Z",
+            "requiresTranslation": false
+          }
+        ],
+        "series": null,
+        "n_markets": 30,
+        "sample_market": {
+          "id": "553856",
+          "question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+          "slug": "will-the-oklahoma-city-thunder-win-the-2026-nba-finals",
+          "outcomes": "[\"Yes\", \"No\"]",
+          "outcomePrices": "[\"0\", \"1\"]",
+          "clobTokenIds": "[\"49500299856831034491021962156746701298730459370557900271970866855042624695770\", \"44914465637297319816681463234953032477919413063019359633128421605039733545953\"]",
+          "volume": "15151786.681256065",
+          "volume24hr": null,
+          "liquidity": null,
+          "oneDayPriceChange": -0.4245,
+          "oneWeekPriceChange": -0.6345,
+          "active": true,
+          "closed": true,
+          "endDate": "2026-07-01T00:00:00Z"
+        }
+      }
+    },
+    "event_by_slug_mvp": {
+      "ok": true,
+      "result": {
+        "found": true,
+        "event_id": "32754",
+        "event_title": "NBA MVP ",
+        "series": null,
+        "tags": [
+          {
+            "id": "1",
+            "label": "Sports",
+            "slug": "sports",
+            "forceShow": false,
+            "publishedAt": "2023-10-24 22:37:50.296+00",
+            "updatedBy": 15,
+            "createdAt": "2023-10-24T22:37:50.31Z",
+            "updatedAt": "2026-04-17T20:47:16.461062Z",
+            "forceHide": true,
+            "requiresTranslation": false
+          },
+          {
+            "id": "745",
+            "label": "NBA",
+            "slug": "nba",
+            "forceShow": false,
+            "publishedAt": "2023-12-18 18:24:38.08+00",
+            "createdAt": "2023-12-18T18:24:38.098Z",
+            "updatedAt": "2026-04-17T17:28:34.430568Z",
+            "requiresTranslation": false
+          },
+          {
+            "id": "707",
+            "label": "mvp",
+            "slug": "mvp",
+            "publishedAt": "2023-12-12 00:23:27.51+00",
+            "createdAt": "2023-12-12T00:23:27.733Z",
+            "updatedAt": "2026-04-17T17:20:19.690593Z",
+            "requiresTranslation": false
+          },
+          {
+            "id": "18",
+            "label": "Awards",
+            "slug": "awards",
+            "forceShow": false,
+            "publishedAt": "2023-11-02 21:03:41.709+00",
+            "createdAt": "2023-11-02T21:03:41.713Z",
+            "updatedAt": "2026-04-17T20:42:53.495391Z",
+            "requiresTranslation": false
+          },
+          {
+            "id": "102169",
+            "label": "Hide From New",
+            "slug": "hide-from-new",
+            "forceShow": false,
+            "createdAt": "2025-05-23T18:47:07.430147Z",
+            "updatedAt": "2026-04-17T20:28:28.912197Z",
+            "isCarousel": false,
+            "requiresTranslation": false
+          }
+        ],
+        "n_markets": 33,
+        "first_3_markets": [
+          {
+            "q": "Will Trae Young win the 2025\u20132026 NBA MVP?",
+            "prices": "[\"0\", \"1\"]"
+          },
+          {
+            "q": "Will Player G win the 2025\u20132026 NBA MVP?",
+            "prices": "[\"0\", \"1\"]"
+          },
+          {
+            "q": "Will Kawhi Leonard win the 2025\u20132026 NBA MVP?",
+            "prices": "[\"0\", \"1\"]"
+          }
+        ]
+      }
+    },
+    "series_id_filter": {
+      "ok": true,
+      "result": {
+        "series_id=10345": {
+          "n_returned": 2,
+          "n_currently_open": 2,
+          "first_title": "Spurs vs. Knicks",
+          "first_seriesSlug": "nba-2026",
+          "all_nba": true
+        },
+        "series_id=2": {
+          "n_returned": 0,
+          "n_currently_open": 0,
+          "first_title": null,
+          "first_seriesSlug": null,
+          "all_nba": null
+        }
+      }
+    },
+    "tag_or_category_filter": {
+      "ok": true,
+      "result": {
+        "{\"tag_slug\": \"nba\", \"active\": \"true\", \"closed\": \"false\", \"limit\": 5}": {
+          "n_returned": 5,
+          "first_title": "2026 NBA Champion",
+          "first_seriesSlug": null
+        },
+        "{\"category\": \"Sports\", \"active\": \"true\", \"closed\": \"false\", \"limit\": 5}": {
+          "n_returned": 5,
+          "first_title": "Kraken IPO by ___ ?",
+          "first_seriesSlug": null
+        }
+      }
+    },
+    "price_history_for_one_market": {
+      "ok": true,
+      "result": {
+        "market_question": "Will the Oklahoma City Thunder win the 2026 NBA Finals?",
+        "market_slug": "will-the-oklahoma-city-thunder-win-the-2026-nba-finals",
+        "yes_token_id": "49500299856831034491021962156746701298730459370557900271970866855042624695770",
+        "history_points_1d": 0,
+        "first_point": null,
+        "last_point": null
+      }
+    },
+    "nba_via_full_pagination": {
+      "ok": true,
+      "result": {
+        "page_size": 100,
+        "nba_in_first_page": 0,
+        "first_5_nba_titles": [],
+        "first_5_nba_volumes_24h": [],
+        "first_5_nba_end_dates": []
+      }
+    }
+  }
+}
