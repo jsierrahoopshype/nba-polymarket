@@ -14,6 +14,14 @@ Runs every 10 minutes (via .github/workflows/poll.yml). On each run it:
   5. Detects markets that have just resolved (closed == true), writes a final
      snapshot, stamps them resolved, and freezes the file into
      data/archive/<YYYY-MM>/.
+  6. Sweeps stale markets: any live file that dropped out of the active feed
+     (its parent event went inactive/closed) is re-checked by event slug so a
+     resolution that happened off-feed still gets archived. See
+     sweep_stale_markets for the safety bounds.
+
+Per-market files are written with metadata pretty-printed but each history
+snapshot on its own compact line, so a normal poll only appends one line and
+git stores almost nothing per commit.
 
 This script does NOT build data/index.json — that is the job of build_index.py,
 which the workflow runs immediately after this script.
@@ -47,6 +55,11 @@ GAMMA = "https://gamma-api.polymarket.com"
 CLOB = "https://clob.polymarket.com"
 NBA_TAG_ID = 745
 PAGE_LIMIT = 100
+
+# Sweep: how many stale events to re-check by slug per run (see
+# sweep_stale_markets). Bounds the extra API calls a single run can make; any
+# backlog drains over several runs, oldest-stale first.
+SWEEP_MAX_EVENTS = 50
 
 HEADERS = {
     "User-Agent": (
@@ -124,11 +137,40 @@ def http_get(url, params=None, retries=3):
     raise last_error
 
 
-def write_json(path: Path, obj):
-    """Write pretty JSON, creating parent directories as needed."""
+def dumps_compact_array(head: dict, array_key: str, items: list) -> str:
+    """
+    Serialize a record as JSON where the identity/metadata fields (`head`) are
+    pretty-printed for readability, but each object in the big list (`items`,
+    stored under `array_key`) is rendered as ONE compact line.
+
+    This keeps per-market files diff-friendly: a normal poll only appends a
+    single new snapshot line and rewrites nothing else, so git stores almost
+    nothing per commit. The output still round-trips cleanly through
+    json.loads().
+    """
+    head_json = json.dumps(head, indent=2, ensure_ascii=False, default=str)
+    # head_json always ends in "\n}" for a non-empty dict; splice the array in
+    # just before that closing brace.
+    body = head_json[:-2] if head_json.endswith("\n}") else "{"
+    if items:
+        rows = ",\n".join(
+            json.dumps(item, ensure_ascii=False, separators=(",", ":"),
+                       default=str)
+            for item in items
+        )
+        block = f'  "{array_key}": [\n{rows}\n  ]'
+    else:
+        block = f'  "{array_key}": []'
+    return f"{body},\n{block}\n}}\n"
+
+
+def write_market_file(path: Path, record: dict):
+    """Write a market record (metadata pretty, history one line per snapshot)."""
+    history = record.get("history") or []
+    head = {k: v for k, v in record.items() if k != "history"}
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(
-        json.dumps(obj, indent=2, ensure_ascii=False, default=str),
+        dumps_compact_array(head, "history", history),
         encoding="utf-8",
     )
 
@@ -159,6 +201,23 @@ def fetch_nba_events():
         if offset > 10000:  # hard safety stop, should never be hit
             break
     return events
+
+
+def fetch_event_by_slug(slug):
+    """
+    Look an event up directly by its slug. Unlike the active-events feed, this
+    lookup works regardless of the event's active/closed state, so it can see
+    an event (and its final market state) after the event has left the feed.
+
+    Returns a list of event dicts (usually one) or [] on any failure.
+    """
+    if not slug:
+        return []
+    try:
+        data = http_get(f"{GAMMA}/events", params={"slug": slug})
+    except Exception:  # noqa: BLE001 - sweep is best-effort, never fatal
+        return []
+    return data if isinstance(data, list) else []
 
 
 def backfill_history(clob_token_ids):
@@ -333,11 +392,76 @@ def process_market(event, market, now):
         record["resolvedAt"] = iso(now)
         month = now.strftime("%Y-%m")
         archive_path = ARCHIVE_DIR / month / f"{condition_id}.json"
-        write_json(archive_path, record)
+        write_market_file(archive_path, record)
         if live_path.exists():
             live_path.unlink()  # remove the live copy; it now lives in archive
     else:
-        write_json(live_path, record)
+        write_market_file(live_path, record)
+
+
+# --- Sweep for stale markets -------------------------------------------------
+
+def sweep_stale_markets(seen_ids, now):
+    """
+    Re-check live market files that fell out of the active-events feed.
+
+    A market leaves the feed when its parent event goes inactive/closed (a game
+    finishes, the championship resolves, etc.). We never see closed==true for
+    it in the normal pass, so without this it would linger as "live" forever and
+    keep polluting the index. Here we group such stale files by their stored
+    eventSlug, look each event up directly by slug (which works regardless of
+    active/closed state), and run any matching markets back through
+    process_market so the ones that have resolved get a final snapshot and are
+    archived.
+
+    Defensive by design:
+      - A market merely missing from one feed is NOT treated as resolved. We act
+        only on what the slug lookup actually returns; failed or empty lookups
+        leave files untouched.
+      - At most SWEEP_MAX_EVENTS events are checked per run, oldest-stale first,
+        so one run can never make an unbounded number of API calls and a backlog
+        drains over successive runs.
+
+    Returns the number of markets re-processed.
+    """
+    if not MARKETS_DIR.exists():
+        return 0
+
+    # Bucket stale live files by eventSlug, tracking each group's most recent
+    # snapshot so we can prioritise the most-stale groups first.
+    groups = {}  # eventSlug -> {"ids": set(conditionId), "latest": iso-or-""}
+    for path in MARKETS_DIR.glob("*.json"):
+        try:
+            record = json.loads(path.read_text(encoding="utf-8"))
+        except (ValueError, OSError):
+            continue
+        condition_id = record.get("conditionId")
+        if not condition_id or condition_id in seen_ids:
+            continue  # freshly polled this run, not stale
+        slug = record.get("eventSlug")
+        if not slug:
+            continue  # nothing to look up
+        history = record.get("history") or []
+        latest = max((s.get("timestamp") or "" for s in history), default="")
+        group = groups.setdefault(slug, {"ids": set(), "latest": ""})
+        group["ids"].add(condition_id)
+        if latest > group["latest"]:
+            group["latest"] = latest
+
+    if not groups:
+        return 0
+
+    # Oldest-stale groups first; cap how many events we hit per run.
+    ordered = sorted(groups.items(), key=lambda kv: kv[1]["latest"])
+    swept = 0
+    for slug, group in ordered[:SWEEP_MAX_EVENTS]:
+        wanted = group["ids"]
+        for event in fetch_event_by_slug(slug):
+            for market in event.get("markets") or []:
+                if market.get("conditionId") in wanted:
+                    process_market(event, market, now)
+                    swept += 1
+    return swept
 
 
 # --- Entry point -------------------------------------------------------------
@@ -346,15 +470,21 @@ def main():
     now = datetime.now(timezone.utc)
     events = fetch_nba_events()
 
+    seen_ids = set()
     market_count = 0
     for event in events:
         for market in event.get("markets") or []:
+            condition_id = market.get("conditionId")
+            if condition_id:
+                seen_ids.add(condition_id)
             process_market(event, market, now)
             market_count += 1
 
+    swept = sweep_stale_markets(seen_ids, now)
+
     print(
-        f"Polled {len(events)} NBA events / {market_count} markets "
-        f"at {iso(now)}"
+        f"Polled {len(events)} NBA events / {market_count} markets, "
+        f"swept {swept} stale market(s) at {iso(now)}"
     )
 
 

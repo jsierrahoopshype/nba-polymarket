@@ -30,7 +30,13 @@ Every 10 minutes a scheduled job runs:
 3. **Resolve**: if a market has just closed (a team or player is in/out), a
    final snapshot is written, the file is stamped `resolved`, and it is moved
    into the archive.
-4. **Build index** (`build_index.py`): all the live files plus recently
+4. **Sweep**: a market can leave the active feed *before* we ever see it close
+   (its parent event goes inactive when, say, a game ends or the season
+   finishes). Any live file that wasn't refreshed this cycle is re-checked by
+   looking its event up directly by slug, so an off-feed resolution still gets
+   archived. The sweep is bounded (at most 50 events per run, most-stale first)
+   and never deletes a file just because it is temporarily missing from a feed.
+5. **Build index** (`build_index.py`): all the live files plus recently
    resolved ones are summarized into `data/index.json`.
 
 ---
@@ -82,12 +88,23 @@ When a market resolves, the same file (with `resolved: true`, a final snapshot,
 and `resolvedAt` set) is **moved** from `data/markets/` into
 `data/archive/<YYYY-MM>/`, where `<YYYY-MM>` is the month it resolved.
 
+> File format: the identity fields are pretty-printed, but each snapshot in
+> `history` is written on its own compact single line. A normal poll therefore
+> only appends one line and changes nothing else, which keeps commits tiny. It
+> is still ordinary JSON — anything that reads JSON reads it unchanged.
+
 ---
 
 ## The index file: `data/index.json`
 
 This is the display-ready list the pages load. It is rebuilt from scratch every
 cycle.
+
+> File format: the top-level fields are pretty-printed and each market entry is
+> written on its own compact single line. Because the whole file is rewritten
+> every cycle, keeping each entry compact (and trimming `tags` to just
+> `id`/`label`/`slug`) keeps the committed size down. It is still ordinary
+> JSON; the pages parse it the same either way.
 
 Top level:
 
