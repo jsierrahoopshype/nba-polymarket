@@ -90,16 +90,6 @@
       "oneWeekPriceChange": null
     },
     {
-      "timestamp": "2026-05-10T05:00:09Z",
-      "impliedProbability": 0.49,
-      "volume24hr": null,
-      "volume": null,
-      "liquidity": null,
-      "spread": null,
-      "oneDayPriceChange": null,
-      "oneWeekPriceChange": null
-    },
-    {
       "timestamp": "2026-05-10T11:00:22Z",
       "impliedProbability": 0.49,
       "volume24hr": null,
@@ -1011,26 +1001,6 @@
     },
     {
       "timestamp": "2026-06-02T05:00:04Z",
-      "impliedProbability": 0.06,
-      "volume24hr": null,
-      "volume": null,
-      "liquidity": null,
-      "spread": null,
-      "oneDayPriceChange": null,
-      "oneWeekPriceChange": null
-    },
-    {
-      "timestamp": "2026-06-02T09:00:07Z",
-      "impliedProbability": 0.06,
-      "volume24hr": null,
-      "volume": null,
-      "liquidity": null,
-      "spread": null,
-      "oneDayPriceChange": null,
-      "oneWeekPriceChange": null
-    },
-    {
-      "timestamp": "2026-06-02T10:00:04Z",
       "impliedProbability": 0.06,
       "volume24hr": null,
       "volume": null,
@@ -2655,6 +2625,16 @@
       "volume24hr": 0.0,
       "volume": 274.495299,
       "liquidity": 2775.07754,
+      "spread": 0.011,
+      "oneDayPriceChange": 0.0005,
+      "oneWeekPriceChange": -0.0355
+    },
+    {
+      "timestamp": "2026-06-09T11:29:09Z",
+      "impliedProbability": 0.0245,
+      "volume24hr": 0.0,
+      "volume": 274.495299,
+      "liquidity": 2388.61154,
       "spread": 0.011,
       "oneDayPriceChange": 0.0005,
       "oneWeekPriceChange": -0.0355
