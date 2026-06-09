@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NBA Polymarket Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+
+  <div class="tabs">
+    <a href="index.html" class="active">Standings</a>
+    <a href="movers.html">Movers</a>
+  </div>
+
+  <div class="hdr">
+    <h1>NBA Polymarket</h1>
+    <span class="brand">HoopsHype</span>
+  </div>
+  <div class="subtitle">
+    Live implied odds for the championship, Finals MVP, the draft and individual
+    games — straight from Polymarket, refreshed every poll.
+    <span class="stamp" id="stamp"></span>
+  </div>
+
+  <div id="app"><div class="loading">Loading market data…</div></div>
+
+  <div class="foot" id="foot"></div>
+</div>
+
+<script src="app.js"></script>
+<script>
+const COLLAPSE = 12;            // rows shown per standings group before "View all"
+const MOVERS_TOP = 10;          // movers shown on the landing page
+
+/* ---------- row / card builders ---------- */
+function moverRow(m, i) {
+  const d = fmtDelta(m.delta24h);
+  return '<tr data-id="' + esc(m.conditionId) + '">' +
+    '<td class="rank">' + i + '</td>' +
+    '<td class="name"><span class="q">' + esc(m.question) + '</span>' +
+      '<span class="ev">' + esc(m.eventTitle || '') + '</span></td>' +
+    '<td><span class="cat">' + esc(categoryOf(m).label) + '</span></td>' +
+    '<td class="spark">' + sparkline(m.sparkline) + '</td>' +
+    '<td class="pct">' + fmtPct(m.impliedProbability) + '</td>' +
+    '<td><span class="delta ' + d.cls + '">' + d.text + '</span></td>' +
+  '</tr>';
+}
+
+function standRow(m, extra) {
+  const d24 = fmtDelta(m.delta24h), d7 = fmtDelta(m.delta7d);
+  return '<tr data-id="' + esc(m.conditionId) + '"' + (extra ? ' hidden data-extra' : '') + '>' +
+    '<td class="name"><span class="q">' + esc(m.question) + '</span></td>' +
+    '<td class="spark">' + sparkline(m.sparkline) + '</td>' +
+    '<td class="pct">' + fmtPct(m.impliedProbability) + '</td>' +
+    '<td><span class="delta ' + d24.cls + '">' + d24.text + '</span></td>' +
+    '<td><span class="delta ' + d7.cls + '">' + d7.text + '</span></td>' +
+  '</tr>';
+}
+
+function card(m, opts) {
+  opts = opts || {};
+  const d24 = fmtDelta(m.delta24h), d7 = fmtDelta(m.delta7d);
+  const sub = (opts.showCat ? esc(categoryOf(m).label) + ' · ' : '') + esc(m.eventTitle || '');
+  let foot = '<span class="lbl">24h</span><span class="delta ' + d24.cls + '">' + d24.text + '</span>';
+  if (opts.show7d) foot += '<span class="lbl">7d</span><span class="delta ' + d7.cls + '">' + d7.text + '</span>';
+  foot += m.sparkline && m.sparkline.length >= 2 ? sparkline(m.sparkline) : '';
+  return '<div class="card" data-id="' + esc(m.conditionId) + '"' + (opts.extra ? ' hidden data-extra' : '') + '>' +
+    '<div class="now"><span class="p">' + fmtPct(m.impliedProbability) + '</span></div>' +
+    '<div class="q">' + esc(m.question) + '</div>' +
+    '<div class="ev">' + sub + '</div>' +
+    '<div class="card-foot">' + foot + '</div>' +
+  '</div>';
+}
+
+/* ---------- sections ---------- */
+function moversSection(live) {
+  const movers = live
+    .filter(m => isNum(m.delta24h))
+    .sort((a, b) => Math.abs(b.delta24h) - Math.abs(a.delta24h))
+    .slice(0, MOVERS_TOP);
+  if (!movers.length) return '';
+
+  const rows = movers.map((m, i) => moverRow(m, i + 1)).join('');
+  const cards = movers.map(m => card(m, { showCat: true })).join('');
+  return '<div class="block" id="movers">' +
+    '<div class="block-head"><h2>Biggest movers · last 24h</h2>' +
+      '<a class="more" href="movers.html">See all movers →</a></div>' +
+    '<div class="table-wrap"><table class="lb"><thead><tr>' +
+      '<th class="rank"></th><th class="left">Market</th><th>Category</th>' +
+      '<th>Trend</th><th>Now</th><th>24h</th>' +
+      '</tr></thead><tbody>' + rows + '</tbody></table></div>' +
+    '<div class="cards">' + cards + '</div>' +
+  '</div>';
+}
+
+function standingsSection(live) {
+  // bucket by category, leaders (highest probability) first within each group
+  const byCat = new Map(CATEGORIES.map(c => [c.key, []]));
+  live.forEach(m => byCat.get(categoryOf(m).key).push(m));
+  byCat.forEach(list => list.sort((a, b) =>
+    (b.impliedProbability || 0) - (a.impliedProbability || 0)));
+
+  const present = CATEGORIES.filter(c => byCat.get(c.key).length);
+
+  const chips = '<button class="chip active" data-cat="all">All' +
+      '<span class="ct">' + live.length + '</span></button>' +
+    present.map(c => '<button class="chip" data-cat="' + c.key + '">' +
+      esc(c.label) + '<span class="ct">' + byCat.get(c.key).length + '</span></button>').join('');
+
+  const groups = present.map(c => {
+    const list = byCat.get(c.key);
+    const rows = list.map((m, i) => standRow(m, i >= COLLAPSE)).join('');
+    const cards = list.map((m, i) => card(m, { show7d: true, extra: i >= COLLAPSE })).join('');
+    const more = list.length > COLLAPSE
+      ? '<button class="showmore" data-group="' + c.key + '">View all ' + list.length + ' →</button>'
+      : '';
+    return '<div class="group" data-cat="' + c.key + '">' +
+      '<div class="group-head"><h3>' + esc(c.label) + '</h3>' +
+        '<span class="ct">' + list.length + '</span></div>' +
+      '<div class="table-wrap"><table class="lb"><thead><tr>' +
+        '<th class="left">Market</th><th>Trend</th><th>Now</th><th>24h</th><th>7d</th>' +
+        '</tr></thead><tbody>' + rows + '</tbody></table></div>' +
+      '<div class="cards">' + cards + '</div>' + more +
+    '</div>';
+  }).join('');
+
+  return '<div class="block" id="standings">' +
+    '<div class="block-head"><h2>Standings</h2>' +
+      '<span class="sub">' + live.length + ' live markets</span></div>' +
+    '<div class="filters"><div class="chips" id="chips">' + chips + '</div></div>' +
+    '<div id="groups">' + groups + '</div>' +
+  '</div>';
+}
+
+/* ---------- interactions ---------- */
+function wireChips() {
+  const chips = document.getElementById('chips');
+  if (!chips) return;
+  chips.addEventListener('click', e => {
+    const btn = e.target.closest('.chip');
+    if (!btn) return;
+    chips.querySelectorAll('.chip').forEach(b => b.classList.toggle('active', b === btn));
+    const cat = btn.dataset.cat;
+    document.querySelectorAll('#groups .group').forEach(g => {
+      g.hidden = !(cat === 'all' || g.dataset.cat === cat);
+    });
+  });
+}
+
+function wireExpanders() {
+  document.querySelectorAll('.showmore[data-group]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.closest('.group');
+      const shown = btn.dataset.open === '1';
+      group.querySelectorAll('[data-extra]').forEach(el => { el.hidden = shown; });
+      btn.dataset.open = shown ? '0' : '1';
+      const n = group.querySelector('.group-head .ct').textContent;
+      btn.textContent = shown ? ('View all ' + n + ' →') : 'Show fewer ↑';
+    });
+  });
+}
+
+/* ---------- boot ---------- */
+(async function () {
+  const app = document.getElementById('app');
+  try {
+    const data = await loadData('index.json');
+    document.getElementById('stamp').textContent =
+      data.lastUpdated ? 'Updated ' + fmtStamp(data.lastUpdated) : '';
+
+    // landing page focuses on live markets that have a usable price
+    const live = (data.markets || [])
+      .filter(m => !m.resolved && isNum(m.impliedProbability));
+
+    if (!live.length) { app.innerHTML = '<div class="empty">No live markets right now.</div>'; return; }
+
+    app.innerHTML = moversSection(live) + standingsSection(live);
+    wireRowNav(app);
+    wireChips();
+    wireExpanders();
+
+    document.getElementById('foot').innerHTML =
+      'Data from Polymarket · ' + (data.count || data.markets.length) +
+      ' markets tracked · odds are implied probabilities, not guarantees.';
+  } catch (err) {
+    app.innerHTML = '<div class="empty">Couldn’t load market data.<br>' +
+      '<span style="font-size:.8rem">' + esc(String(err && err.message || err)) + '</span></div>';
+  }
+})();
+</script>
+</body>
+</html>
