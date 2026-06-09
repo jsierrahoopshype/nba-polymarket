@@ -109,16 +109,6 @@
       "oneWeekPriceChange": null
     },
     {
-      "timestamp": "2026-05-10T01:00:06Z",
-      "impliedProbability": 0.0475,
-      "volume24hr": null,
-      "volume": null,
-      "liquidity": null,
-      "spread": null,
-      "oneDayPriceChange": null,
-      "oneWeekPriceChange": null
-    },
-    {
       "timestamp": "2026-05-10T05:00:10Z",
       "impliedProbability": 0.048,
       "volume24hr": null,
@@ -1031,46 +1021,6 @@
     {
       "timestamp": "2026-06-01T23:00:07Z",
       "impliedProbability": 0.067,
-      "volume24hr": null,
-      "volume": null,
-      "liquidity": null,
-      "spread": null,
-      "oneDayPriceChange": null,
-      "oneWeekPriceChange": null
-    },
-    {
-      "timestamp": "2026-06-02T01:00:05Z",
-      "impliedProbability": 0.0785,
-      "volume24hr": null,
-      "volume": null,
-      "liquidity": null,
-      "spread": null,
-      "oneDayPriceChange": null,
-      "oneWeekPriceChange": null
-    },
-    {
-      "timestamp": "2026-06-02T02:00:06Z",
-      "impliedProbability": 0.0785,
-      "volume24hr": null,
-      "volume": null,
-      "liquidity": null,
-      "spread": null,
-      "oneDayPriceChange": null,
-      "oneWeekPriceChange": null
-    },
-    {
-      "timestamp": "2026-06-02T03:00:07Z",
-      "impliedProbability": 0.078,
-      "volume24hr": null,
-      "volume": null,
-      "liquidity": null,
-      "spread": null,
-      "oneDayPriceChange": null,
-      "oneWeekPriceChange": null
-    },
-    {
-      "timestamp": "2026-06-02T04:00:05Z",
-      "impliedProbability": 0.0765,
       "volume24hr": null,
       "volume": null,
       "liquidity": null,
@@ -2737,6 +2687,16 @@
       "spread": 0.001,
       "oneDayPriceChange": -0.0015,
       "oneWeekPriceChange": -0.014
+    },
+    {
+      "timestamp": "2026-06-09T05:52:00Z",
+      "impliedProbability": 0.062,
+      "volume24hr": 2315.574014,
+      "volume": 42195.87090499998,
+      "liquidity": 18046.99434,
+      "spread": 0.004,
+      "oneDayPriceChange": -0.0025,
+      "oneWeekPriceChange": -0.016
     }
   ]
 }

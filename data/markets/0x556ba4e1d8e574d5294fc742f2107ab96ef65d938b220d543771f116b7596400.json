@@ -1,0 +1,84 @@
+{
+  "conditionId": "0x556ba4e1d8e574d5294fc742f2107ab96ef65d938b220d543771f116b7596400",
+  "slug": "nba-sas-nyk-2026-06-10-total-199pt5",
+  "question": "Spurs vs. Knicks: O/U 199.5",
+  "eventSlug": "nba-sas-nyk-2026-06-10",
+  "eventTitle": "Spurs vs. Knicks",
+  "eventId": "557378",
+  "clobTokenIds": [
+    "78237976773187430251674747875365212576706969804727549324655367015265952751674",
+    "2518300406059462304627175434594389128499433259626728143111730336152755005179"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-06-11T00:30:00Z",
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true,
+      "requiresTranslation": false
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z",
+      "requiresTranslation": false
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z",
+      "requiresTranslation": false
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z",
+      "requiresTranslation": false
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+    {
+      "timestamp": "2026-06-09T05:00:04Z",
+      "impliedProbability": 0.835,
+      "volume24hr": null,
+      "volume": null,
+      "liquidity": null,
+      "spread": null,
+      "oneDayPriceChange": null,
+      "oneWeekPriceChange": null
+    },
+    {
+      "timestamp": "2026-06-09T05:52:04Z",
+      "impliedProbability": 0.835,
+      "volume24hr": null,
+      "volume": null,
+      "liquidity": null,
+      "spread": null,
+      "oneDayPriceChange": null,
+      "oneWeekPriceChange": null
+    }
+  ]
+}

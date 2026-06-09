@@ -1,0 +1,84 @@
+{
+  "conditionId": "0x96ff1230b75123d4fe6ea6393486ec94398274cf3f8b34716ec239556183bebd",
+  "slug": "nba-sas-nyk-2026-06-10-assists-karl-anthony-towns-3pt5",
+  "question": "Karl-Anthony Towns: Assists O/U 3.5",
+  "eventSlug": "nba-sas-nyk-2026-06-10",
+  "eventTitle": "Spurs vs. Knicks",
+  "eventId": "557378",
+  "clobTokenIds": [
+    "14544082976602527682672951682849626424878644350768363031401188691388009839231",
+    "55859084529414896529505571970587194840433525051412940594292185910452724087887"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-06-11T00:30:00Z",
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true,
+      "requiresTranslation": false
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z",
+      "requiresTranslation": false
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z",
+      "requiresTranslation": false
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z",
+      "requiresTranslation": false
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+    {
+      "timestamp": "2026-06-09T05:00:05Z",
+      "impliedProbability": 0.32,
+      "volume24hr": null,
+      "volume": null,
+      "liquidity": null,
+      "spread": null,
+      "oneDayPriceChange": null,
+      "oneWeekPriceChange": null
+    },
+    {
+      "timestamp": "2026-06-09T05:52:04Z",
+      "impliedProbability": 0.58,
+      "volume24hr": null,
+      "volume": null,
+      "liquidity": null,
+      "spread": null,
+      "oneDayPriceChange": null,
+      "oneWeekPriceChange": null
+    }
+  ]
+}

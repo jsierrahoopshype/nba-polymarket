@@ -90,16 +90,6 @@
       "oneWeekPriceChange": null
     },
     {
-      "timestamp": "2026-05-10T01:00:05Z",
-      "impliedProbability": 0.47,
-      "volume24hr": null,
-      "volume": null,
-      "liquidity": null,
-      "spread": null,
-      "oneDayPriceChange": null,
-      "oneWeekPriceChange": null
-    },
-    {
       "timestamp": "2026-05-10T05:00:09Z",
       "impliedProbability": 0.475,
       "volume24hr": null,
@@ -1011,46 +1001,6 @@
     },
     {
       "timestamp": "2026-06-01T23:00:06Z",
-      "impliedProbability": 0.0035,
-      "volume24hr": null,
-      "volume": null,
-      "liquidity": null,
-      "spread": null,
-      "oneDayPriceChange": null,
-      "oneWeekPriceChange": null
-    },
-    {
-      "timestamp": "2026-06-02T01:00:04Z",
-      "impliedProbability": 0.0035,
-      "volume24hr": null,
-      "volume": null,
-      "liquidity": null,
-      "spread": null,
-      "oneDayPriceChange": null,
-      "oneWeekPriceChange": null
-    },
-    {
-      "timestamp": "2026-06-02T02:00:05Z",
-      "impliedProbability": 0.0035,
-      "volume24hr": null,
-      "volume": null,
-      "liquidity": null,
-      "spread": null,
-      "oneDayPriceChange": null,
-      "oneWeekPriceChange": null
-    },
-    {
-      "timestamp": "2026-06-02T03:00:05Z",
-      "impliedProbability": 0.0035,
-      "volume24hr": null,
-      "volume": null,
-      "liquidity": null,
-      "spread": null,
-      "oneDayPriceChange": null,
-      "oneWeekPriceChange": null
-    },
-    {
-      "timestamp": "2026-06-02T04:00:03Z",
       "impliedProbability": 0.0035,
       "volume24hr": null,
       "volume": null,
@@ -2718,6 +2668,16 @@
       "spread": null,
       "oneDayPriceChange": null,
       "oneWeekPriceChange": null
+    },
+    {
+      "timestamp": "2026-06-09T05:52:00Z",
+      "impliedProbability": 0.002,
+      "volume24hr": 62.0,
+      "volume": 237.315,
+      "liquidity": 2996.59733,
+      "spread": 0.002,
+      "oneDayPriceChange": -0.0015,
+      "oneWeekPriceChange": -0.0015
     }
   ]
 }

@@ -90,16 +90,6 @@
       "oneWeekPriceChange": null
     },
     {
-      "timestamp": "2026-05-10T01:00:04Z",
-      "impliedProbability": 0.47,
-      "volume24hr": null,
-      "volume": null,
-      "liquidity": null,
-      "spread": null,
-      "oneDayPriceChange": null,
-      "oneWeekPriceChange": null
-    },
-    {
       "timestamp": "2026-05-10T05:00:08Z",
       "impliedProbability": 0.475,
       "volume24hr": null,
@@ -1012,46 +1002,6 @@
     {
       "timestamp": "2026-06-01T23:00:06Z",
       "impliedProbability": 0.0045,
-      "volume24hr": null,
-      "volume": null,
-      "liquidity": null,
-      "spread": null,
-      "oneDayPriceChange": null,
-      "oneWeekPriceChange": null
-    },
-    {
-      "timestamp": "2026-06-02T01:00:04Z",
-      "impliedProbability": 0.0065,
-      "volume24hr": null,
-      "volume": null,
-      "liquidity": null,
-      "spread": null,
-      "oneDayPriceChange": null,
-      "oneWeekPriceChange": null
-    },
-    {
-      "timestamp": "2026-06-02T02:00:05Z",
-      "impliedProbability": 0.0045,
-      "volume24hr": null,
-      "volume": null,
-      "liquidity": null,
-      "spread": null,
-      "oneDayPriceChange": null,
-      "oneWeekPriceChange": null
-    },
-    {
-      "timestamp": "2026-06-02T03:00:05Z",
-      "impliedProbability": 0.0035,
-      "volume24hr": null,
-      "volume": null,
-      "liquidity": null,
-      "spread": null,
-      "oneDayPriceChange": null,
-      "oneWeekPriceChange": null
-    },
-    {
-      "timestamp": "2026-06-02T04:00:03Z",
-      "impliedProbability": 0.0065,
       "volume24hr": null,
       "volume": null,
       "liquidity": null,
@@ -2718,6 +2668,16 @@
       "spread": null,
       "oneDayPriceChange": null,
       "oneWeekPriceChange": null
+    },
+    {
+      "timestamp": "2026-06-09T05:52:00Z",
+      "impliedProbability": 0.0035,
+      "volume24hr": 70.0,
+      "volume": 262.82,
+      "liquidity": 3887.61702,
+      "spread": 0.003,
+      "oneDayPriceChange": -0.001,
+      "oneWeekPriceChange": 0.001
     }
   ]
 }
