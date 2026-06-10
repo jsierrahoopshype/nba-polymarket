@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Movers · NBA Polymarket</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+
+  <div class="tabs">
+    <a href="index.html">Standings</a>
+    <a href="movers.html" class="active">Movers</a>
+  </div>
+
+  <div class="hdr">
+    <h1>Biggest movers</h1>
+    <span class="brand">HoopsHype</span>
+  </div>
+  <div class="subtitle">
+    Every live market ranked by how far its implied probability has moved —
+    gainers and losers both. <span class="stamp" id="stamp"></span>
+  </div>
+
+  <div class="filters">
+    <div class="toggle" id="window">
+      <button class="active" data-win="24h">24h change</button>
+      <button data-win="7d">7d change</button>
+    </div>
+  </div>
+
+  <div id="app"><div class="loading">Loading markets…</div></div>
+  <div class="foot" id="foot"></div>
+</div>
+
+<script src="app.js"></script>
+<script>
+let LIVE = [];
+let WIN = '24h';                                  // ranking window
+let SORT = { key: 'absWin', dir: 'desc' };        // current sort
+
+function deltaFor(m, win) { return win === '7d' ? m.delta7d : m.delta24h; }
+
+const COMPARATORS = {
+  name:   (a, b) => String(a.question).localeCompare(String(b.question)),
+  now:    (a, b) => (a.impliedProbability || 0) - (b.impliedProbability || 0),
+  d24:    (a, b) => (a.delta24h ?? -Infinity) - (b.delta24h ?? -Infinity),
+  d7:     (a, b) => (a.delta7d ?? -Infinity) - (b.delta7d ?? -Infinity),
+  absWin: (a, b) => Math.abs(deltaFor(a, WIN) ?? 0) - Math.abs(deltaFor(b, WIN) ?? 0),
+};
+
+function sortedRows() {
+  const cmp = COMPARATORS[SORT.key] || COMPARATORS.absWin;
+  const arr = LIVE.slice().sort(cmp);
+  if (SORT.dir === 'desc') arr.reverse();
+  return arr;
+}
+
+function rowHtml(m, i) {
+  const d24 = fmtDelta(m.delta24h), d7 = fmtDelta(m.delta7d);
+  const sb = k => SORT.key === k ? ' sorted-by' : '';
+  return '<tr data-id="' + esc(m.conditionId) + '">' +
+    '<td class="rank">' + i + '</td>' +
+    '<td class="name' + sb('name') + '"><span class="q">' + esc(m.question) + '</span>' +
+      '<span class="ev">' + esc(m.eventTitle || '') + '</span></td>' +
+    '<td><span class="cat">' + esc(categoryOf(m).label) + '</span></td>' +
+    '<td class="spark">' + sparkline(m.sparkline) + '</td>' +
+    '<td class="pct' + sb('now') + '">' + fmtPct(m.impliedProbability) + '</td>' +
+    '<td' + sb('d24') + '><span class="delta ' + d24.cls + '">' + d24.text + '</span></td>' +
+    '<td' + sb('d7') + '><span class="delta ' + d7.cls + '">' + d7.text + '</span></td>' +
+  '</tr>';
+}
+
+function cardHtml(m) {
+  const d24 = fmtDelta(m.delta24h), d7 = fmtDelta(m.delta7d);
+  return '<div class="card" data-id="' + esc(m.conditionId) + '">' +
+    '<div class="now"><span class="p">' + fmtPct(m.impliedProbability) + '</span></div>' +
+    '<div class="q">' + esc(m.question) + '</div>' +
+    '<div class="ev">' + esc(categoryOf(m).label) + ' · ' + esc(m.eventTitle || '') + '</div>' +
+    '<div class="card-foot">' +
+      '<span class="lbl">24h</span><span class="delta ' + d24.cls + '">' + d24.text + '</span>' +
+      '<span class="lbl">7d</span><span class="delta ' + d7.cls + '">' + d7.text + '</span>' +
+      (m.sparkline && m.sparkline.length >= 2 ? sparkline(m.sparkline) : '') +
+    '</div></div>';
+}
+
+function arrow(key) {
+  if (SORT.key !== key) return '';
+  return '<span class="arr">' + (SORT.dir === 'desc' ? '▼' : '▲') + '</span>';
+}
+
+function render() {
+  const rows = sortedRows();
+  const sb = k => SORT.key === k ? ' sorted-by' : '';
+  const head =
+    '<th class="rank"></th>' +
+    '<th class="left sortable' + sb('name') + '" data-sort="name">Market' + arrow('name') + '</th>' +
+    '<th>Category</th><th>Trend</th>' +
+    '<th class="sortable' + sb('now') + '" data-sort="now">Now' + arrow('now') + '</th>' +
+    '<th class="sortable' + sb('d24') + '" data-sort="d24">24h' + arrow('d24') + '</th>' +
+    '<th class="sortable' + sb('d7') + '" data-sort="d7">7d' + arrow('d7') + '</th>';
+  document.getElementById('app').innerHTML =
+    '<div class="table-wrap"><table class="lb"><thead><tr>' + head + '</tr></thead><tbody>' +
+      rows.map((m, i) => rowHtml(m, i + 1)).join('') +
+    '</tbody></table></div>' +
+    '<div class="cards">' + rows.map(cardHtml).join('') + '</div>';
+}
+
+/* default sort directions per column (desc for numbers, asc for name) */
+const DEFAULT_DIR = { name: 'asc', now: 'desc', d24: 'desc', d7: 'desc', absWin: 'desc' };
+
+function wire() {
+  const app = document.getElementById('app');
+  wireRowNav(app);
+  app.addEventListener('click', e => {
+    const th = e.target.closest('th.sortable');
+    if (!th) return;
+    const key = th.dataset.sort;
+    if (SORT.key === key) SORT.dir = SORT.dir === 'desc' ? 'asc' : 'desc';
+    else SORT = { key, dir: DEFAULT_DIR[key] };
+    render();
+  });
+  document.getElementById('window').addEventListener('click', e => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    WIN = btn.dataset.win;
+    document.querySelectorAll('#window button').forEach(b => b.classList.toggle('active', b === btn));
+    SORT = { key: 'absWin', dir: 'desc' };       // ranking resets to the chosen window
+    render();
+  });
+}
+
+(async function () {
+  const app = document.getElementById('app');
+  try {
+    const data = await loadData('index.json');
+    document.getElementById('stamp').textContent =
+      data.lastUpdated ? 'Updated ' + fmtStamp(data.lastUpdated) : '';
+    LIVE = (data.markets || []).filter(m =>
+      !m.resolved && isNum(m.impliedProbability) &&
+      (isNum(m.delta24h) || isNum(m.delta7d)));
+    if (!LIVE.length) { app.innerHTML = '<div class="empty">No movers right now.</div>'; return; }
+    render();
+    wire();
+    document.getElementById('foot').innerHTML =
+      LIVE.length + ' live markets · changes are in implied-probability points.';
+  } catch (err) {
+    app.innerHTML = '<div class="empty">Couldn’t load market data.<br>' +
+      '<span style="font-size:.8rem">' + esc(String(err && err.message || err)) + '</span></div>';
+  }
+})();
+</script>
+</body>
+</html>
