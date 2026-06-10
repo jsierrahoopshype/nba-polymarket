@@ -41,10 +41,12 @@ async function loadData(path) {
 const CATEGORIES = [
   { key: 'champion', label: 'Champion',   tags: ['102288'] },
   { key: 'fmvp',     label: 'Finals MVP', tags: ['104582'] },
+  { key: 'mvp',      label: 'MVP',        tags: ['707'] },     // season MVP — empty in Finals season, auto-activates when those markets return
+  { key: 'awards',   label: 'Awards',     tags: ['18'] },      // ROY/DPOY/etc. — empty in Finals season, auto-activates when those markets return
   { key: 'games',    label: 'Games',      tags: ['100639'] },
   { key: 'draft',    label: 'Draft',      tags: ['104857', '100283'] },
   { key: 'playoffs', label: 'Playoffs',   tags: ['104587', '100240', '102037'] },
-  { key: 'futures',  label: 'Futures',    tags: null },   // catch-all
+  { key: 'futures',  label: 'Futures',    tags: null },   // catch-all: every live market always renders somewhere
 ];
 
 function categoryOf(m) {
