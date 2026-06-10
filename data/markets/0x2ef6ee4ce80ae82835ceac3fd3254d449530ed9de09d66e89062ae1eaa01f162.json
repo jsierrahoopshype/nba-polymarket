@@ -66,9 +66,11 @@
   ],
   "resolved": false,
   "resolvedAt": null,
+  "negRisk": false,
   "history": [
 {"timestamp":"2026-06-10T16:00:05Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
 {"timestamp":"2026-06-10T17:00:05Z","impliedProbability":0.505,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
-{"timestamp":"2026-06-10T17:33:53Z","impliedProbability":0.505,"volume24hr":0.0,"volume":null,"liquidity":35.28,"spread":0.95,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+{"timestamp":"2026-06-10T17:33:53Z","impliedProbability":0.505,"volume24hr":0.0,"volume":null,"liquidity":35.28,"spread":0.95,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-10T18:36:28Z","impliedProbability":0.505,"volume24hr":0.0,"volume":null,"liquidity":24.48,"spread":0.95,"oneDayPriceChange":null,"oneWeekPriceChange":null}
   ]
 }
