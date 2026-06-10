@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Market · NBA Polymarket</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+<div class="container narrow">
+  <a class="back" href="index.html">← All markets</a>
+  <div id="app"><div class="loading">Loading market…</div></div>
+  <div class="foot" id="foot"></div>
+</div>
+
+<script src="app.js"></script>
+<script>
+const RANGE_DAYS = { '6h': 0.25, '24h': 1, '7d': 7, '30d': 30, 'all': Infinity };
+let CHART = null;
+let HISTORY = [];     // [[ms, prob], ...] ascending, prob non-null
+
+function qid() {
+  return new URLSearchParams(location.search).get('id');
+}
+
+/* change in implied probability over `hours`, computed from history; used only
+   when the index entry doesn't carry a precomputed delta (e.g. old resolved). */
+function deltaFromHistory(hours) {
+  if (!HISTORY.length) return null;
+  const last = HISTORY[HISTORY.length - 1];
+  const cutoff = last[0] - hours * 3600 * 1000;
+  let base = null;
+  for (const p of HISTORY) { if (p[0] <= cutoff) base = p[1]; }
+  if (base === null) base = HISTORY[0][1];
+  return last[1] - base;
+}
+
+async function loadMarketRecord(id, entry) {
+  const cands = ['markets/' + id + '.json'];
+  const months = new Set();
+  if (entry && entry.resolvedAt) months.add(entry.resolvedAt.slice(0, 7));
+  const now = new Date();
+  for (let k = 0; k < 4; k++) {
+    const d = new Date(now.getFullYear(), now.getMonth() - k, 1);
+    months.add(d.toISOString().slice(0, 7));
+  }
+  months.forEach(mm => cands.push('archive/' + mm + '/' + id + '.json'));
+  for (const c of cands) { try { return await loadMarketFile(c); } catch (e) {} }
+  return null;
+}
+/* like loadData but does NOT swallow into the shared cache hunt — reuses the
+   base already discovered by the initial index.json load. */
+async function loadMarketFile(path) {
+  const r = await fetch((typeof _dataBase === 'string' ? _dataBase : '../data/') + path);
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  return r.json();
+}
+
+/* ---------- chart ---------- */
+function rangeLabel(ms, days) {
+  const d = new Date(ms);
+  if (days <= 1) return d.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
+  return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+}
+
+function drawChart(rangeKey) {
+  const days = RANGE_DAYS[rangeKey];
+  const wrap = document.getElementById('chartwrap');
+  let pts = HISTORY;
+  if (isFinite(days) && HISTORY.length) {
+    const cutoff = HISTORY[HISTORY.length - 1][0] - days * 86400 * 1000;
+    pts = HISTORY.filter(p => p[0] >= cutoff);
+  }
+  if (pts.length < 2) {
+    if (CHART) { CHART.destroy(); CHART = null; }
+    wrap.innerHTML = '<div class="chart-empty">Not enough data in this range yet.</div>';
+    return;
+  }
+  wrap.innerHTML = '<canvas id="chart"></canvas>';
+  const ctx = document.getElementById('chart').getContext('2d');
+  const labels = pts.map(p => rangeLabel(p[0], days));
+  const data = pts.map(p => Math.round(p[1] * 1000) / 10);   // percent, 1 dp
+  if (CHART) CHART.destroy();
+  CHART = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        data,
+        borderColor: '#3b82f6',
+        backgroundColor: 'rgba(59,130,246,.12)',
+        borderWidth: 2, fill: true, tension: .25,
+        pointRadius: 0, pointHoverRadius: 4, pointHoverBackgroundColor: '#3b82f6'
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: { label: c => c.parsed.y + '%' },
+          backgroundColor: '#1d1d1f', titleFont: { family: "'JetBrains Mono',monospace" },
+          bodyFont: { family: "'JetBrains Mono',monospace" }
+        }
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: {
+            maxTicksLimit: 7, autoSkip: true, maxRotation: 0,
+            color: '#6e6e73', font: { family: "'JetBrains Mono',monospace", size: 10 }
+          }
+        },
+        y: {
+          grid: { color: 'rgba(0,0,0,.06)' },
+          ticks: {
+            callback: v => Math.round(v) + '%',
+            color: '#6e6e73', font: { family: "'JetBrains Mono',monospace", size: 10 }
+          }
+        }
+      }
+    }
+  });
+}
+
+function wireRange() {
+  const tog = document.getElementById('range');
+  if (!tog) return;
+  tog.addEventListener('click', e => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    tog.querySelectorAll('button').forEach(b => b.classList.toggle('active', b === btn));
+    drawChart(btn.dataset.range);
+  });
+}
+
+/* ---------- render ---------- */
+function render(record, entry, index) {
+  const app = document.getElementById('app');
+  const cat = categoryOf(record || entry || {});
+  const resolved = !!(record && record.resolved) || !!(entry && entry.resolved);
+
+  // current probability + deltas (prefer precomputed index deltas)
+  const cur = HISTORY.length ? HISTORY[HISTORY.length - 1][1]
+            : (entry ? entry.impliedProbability : null);
+  const d24 = fmtDelta(entry && isNum(entry.delta24h) ? entry.delta24h : deltaFromHistory(24));
+  const d7  = fmtDelta(entry && isNum(entry.delta7d)  ? entry.delta7d  : deltaFromHistory(24 * 7));
+
+  // resolution + volume meta
+  const vol = entry ? entry.volume : null;
+  const meta = [];
+  if (resolved) {
+    const when = (record && record.resolvedAt) || (entry && entry.resolvedAt);
+    const settled = isNum(cur) ? (cur >= 0.5 ? 'YES' : 'NO') : null;
+    if (settled) meta.push('<span class="resolved">✓ Settled ' + settled + '</span>');
+    if (when) meta.push('Resolved ' + fmtDate(when));
+  } else {
+    const end = (record && record.endDate) || (entry && entry.endDate);
+    if (end) meta.push('Ends ' + fmtDate(end));
+  }
+  if (isNum(vol)) meta.push('Volume ' + fmtVol(vol));
+
+  // stat cards
+  const probCls = resolved ? (isNum(cur) && cur >= 0.5 ? 'pos' : 'neg') : 'flat';
+  const cards =
+    '<div class="stat-cards">' +
+      '<div class="stat-card"><div class="lbl">Implied probability</div>' +
+        '<div class="num ' + probCls + '">' + fmtPct(cur) + '</div></div>' +
+      '<div class="stat-card"><div class="lbl">24h change</div>' +
+        '<div class="num ' + d24.cls + '">' + d24.text + '</div></div>' +
+      '<div class="stat-card"><div class="lbl">7d change</div>' +
+        '<div class="num ' + d7.cls + '">' + d7.text + '</div></div>' +
+    '</div>';
+
+  // chart section
+  const chart =
+    '<div class="section">' +
+      '<div class="section-head"><h2>Implied probability over time</h2>' +
+        '<div class="toggle" id="range">' +
+          ['6h', '24h', '7d', '30d', 'all'].map((r, i) =>
+            '<button class="' + (r === '7d' ? 'active' : '') + '" data-range="' + r + '">' +
+            (r === 'all' ? 'All' : r) + '</button>').join('') +
+        '</div></div>' +
+      '<div class="chart-wrap" id="chartwrap"></div>' +
+    '</div>';
+
+  // siblings — other markets in the same event
+  let siblings = '';
+  if (index && entry && entry.eventId) {
+    const sibs = index.markets
+      .filter(m => m.eventId === entry.eventId && m.conditionId !== entry.conditionId
+                   && isNum(m.impliedProbability))
+      .sort((a, b) => (b.impliedProbability || 0) - (a.impliedProbability || 0));
+    if (sibs.length) {
+      const rows = sibs.map(m => {
+        const d = fmtDelta(m.delta24h);
+        return '<div class="sib" data-id="' + esc(m.conditionId) + '">' +
+          '<span class="nm"><a href="' + marketUrl(m.conditionId) + '">' + esc(m.question) + '</a></span>' +
+          '<span class="p">' + fmtPct(m.impliedProbability) + '</span>' +
+          '<span class="d delta ' + d.cls + '">' + d.text + '</span>' +
+        '</div>';
+      }).join('');
+      siblings =
+        '<div class="section"><h2>Other outcomes in this race</h2>' +
+          '<div class="hint">' + esc(entry.eventTitle || '') + ' · ' + sibs.length + ' more</div>' +
+          '<div class="siblings">' + rows + '</div></div>';
+    }
+  }
+
+  const question = (record && record.question) || (entry && entry.question) || 'Market';
+  app.innerHTML =
+    '<div class="phead">' +
+      '<span class="cat">' + esc(cat.label) + '</span>' +
+      '<h1>' + esc(question) + '</h1>' +
+      (meta.length ? '<div class="meta">' + meta.join('') + '</div>' : '') +
+    '</div>' +
+    cards + chart + siblings;
+
+  drawChart('7d');
+  wireRange();
+  wireRowNav(app);
+}
+
+/* ---------- boot ---------- */
+(async function () {
+  const app = document.getElementById('app');
+  const id = qid();
+  if (!id) { app.innerHTML = '<div class="empty">No market id in the URL.</div>'; return; }
+  try {
+    const index = await loadData('index.json');            // also sets _dataBase
+    const entry = (index.markets || []).find(m => m.conditionId === id) || null;
+    const record = await loadMarketRecord(id, entry);
+    if (!record && !entry) {
+      app.innerHTML = '<div class="empty">Market not found.</div>'; return;
+    }
+    const hist = (record && record.history) || [];
+    HISTORY = hist
+      .map(s => [Date.parse(s.timestamp), s.impliedProbability])
+      .filter(p => isFinite(p[0]) && isNum(p[1]))
+      .sort((a, b) => a[0] - b[0]);
+
+    document.title = ((record && record.question) || (entry && entry.question) || 'Market')
+      + ' · NBA Polymarket';
+    render(record, entry, index);
+    document.getElementById('foot').innerHTML =
+      'Data from Polymarket · updated ' + fmtStamp(index.lastUpdated);
+  } catch (err) {
+    app.innerHTML = '<div class="empty">Couldn’t load this market.<br>' +
+      '<span style="font-size:.8rem">' + esc(String(err && err.message || err)) + '</span></div>';
+  }
+})();
+</script>
+</body>
+</html>
