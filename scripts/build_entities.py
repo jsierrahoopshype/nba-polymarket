@@ -4,9 +4,9 @@ NBA Polymarket entity-page builder.
 Runs in the polling workflow right after build_index.py. It:
 
   1. Reads data/index.json (live + recently-resolved markets).
-  2. Matches each market's question against the 30 NBA teams and the active
-     player roster (vendored from jsierrahoopshype/nba-headshots), precision
-     first: full names, then only *unambiguous* last names.
+  2. Matches each market's question against the 30 NBA teams (name aliases) and
+     the active player roster (vendored from jsierrahoopshype/nba-headshots) by
+     FULL NAME ONLY — see match_question for why last names were dropped.
   3. Statically generates an SEO page per entity under docs/player/<slug>/ and
      docs/team/<slug>/, plus the docs/players/ and docs/teams/ directories and
      docs/sitemap.xml.
@@ -39,9 +39,13 @@ ROSTER_PATH = Path(__file__).resolve().parent / "vendor" / "roster_players.json"
 # Change this if a custom domain is configured.
 SITE_BASE = "https://jsierrahoopshype.github.io/nba-polymarket"
 
-# Image sources (confirmed with the project owner).
-HEADSHOT_FACE = "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face/{id}.png"
-HEADSHOT_THUMB = "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/thumb/{id}.png"
+# Image sources. Headshots are keyed by the roster's headshot filename
+# (<nba_id>-<slug>.png, stored per player) on the nba-headshots Pages site;
+# confirmed 200 for face + thumb. HEADSHOT_RAW is the verified-reachable
+# raw.githubusercontent mirror used as the <img> onerror fallback.
+HEADSHOT_FACE = "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face/{file}"
+HEADSHOT_THUMB = "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/thumb/{file}"
+HEADSHOT_RAW = "https://raw.githubusercontent.com/jsierrahoopshype/nba-headshots/main/players/headshots/face/{file}"
 TEAM_LOGO = "https://cdn.nba.com/logos/nba/{id}/global/L/logo.svg"
 # Optional Cloudflare Worker proxy fallback for team logos — fill in to enable.
 TEAM_LOGO_PROXY = ""
@@ -107,6 +111,11 @@ def load_roster():
     for p in players:
         p["_full_tokens"] = tokens(p.get("full_name"))
     return players
+
+
+def headshot_file(p):
+    """Headshot image filename for a player (<nba_id>-<slug>.png)."""
+    return p.get("headshot_filename") or f'{p["nba_id"]}-{p["slug"]}.png'
 
 
 def match_question(q_tokens, players):
@@ -258,7 +267,7 @@ def main():
             p = next(x for x in players if x["slug"] == pl[0])
             market_primary[m["conditionId"]] = {
                 "t": "player", "slug": p["slug"], "name": p["full_name"],
-                "img": HEADSHOT_THUMB.format(id=p["nba_id"])}
+                "img": HEADSHOT_THUMB.format(file=headshot_file(p))}
         elif not pl and len(tm) == 1:
             tid, name, nick, slug, _a = TEAMS[_SLUG_TO_ABBREV[tm[0]]]
             market_primary[m["conditionId"]] = {
@@ -275,11 +284,12 @@ def main():
     for p in players:
         ms = vol_sorted(by_player.get(p["slug"], []))
         sub = p.get("team_abbrev") or "NBA"
-        img = HEADSHOT_FACE.format(id=p["nba_id"])
+        img = HEADSHOT_FACE.format(file=headshot_file(p))
+        raw = HEADSHOT_RAW.format(file=headshot_file(p))
         write_if_changed(DOCS_DIR / "player" / p["slug"] / "index.html",
-                         entity_page("player", p["slug"], p["full_name"], sub, img, "", ms), stats)
+                         entity_page("player", p["slug"], p["full_name"], sub, img, raw, ms), stats)
         player_dir_entries.append({"slug": p["slug"], "name": p["full_name"],
-                                   "thumb": HEADSHOT_THUMB.format(id=p["nba_id"]), "count": len(ms)})
+                                   "thumb": HEADSHOT_THUMB.format(file=headshot_file(p)), "count": len(ms)})
 
     # team pages (all 30)
     team_dir_entries = []

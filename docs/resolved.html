@@ -49,7 +49,7 @@ function outcomeBadge(m) {
 
 function rowHtml(m) {
   return '<tr data-id="' + esc(m.conditionId) + '">' +
-    '<td class="name"><span class="q">' + esc(m.question) + '</span>' +
+    '<td class="name"><span class="q">' + esc(displayTitle(m)) + '</span>' +
       '<span class="ev">' + esc(m.eventTitle || '') + '</span></td>' +
     '<td><span class="cat">' + esc(categoryOf(m).label) + '</span></td>' +
     '<td>' + outcomeBadge(m) + '</td>' +
@@ -62,7 +62,7 @@ function rowHtml(m) {
 function cardHtml(m) {
   return '<div class="card" data-id="' + esc(m.conditionId) + '">' +
     '<div class="now">' + outcomeBadge(m) + '</div>' +
-    '<div class="q">' + esc(m.question) + '</div>' +
+    '<div class="q">' + esc(displayTitle(m)) + '</div>' +
     '<div class="ev">' + esc(categoryOf(m).label) + ' · ' + esc(m.eventTitle || '') + '</div>' +
     '<div class="card-foot">' +
       '<span class="lbl">Closed</span><span>' + fmtPct(m.finalProbability) + '</span>' +
