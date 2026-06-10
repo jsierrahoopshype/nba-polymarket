@@ -321,6 +321,20 @@ def find_archived_file(condition_id):
     return None
 
 
+def neg_risk_flag(event):
+    """
+    Polymarket marks mutually-exclusive multi-outcome events (where exactly one
+    child market resolves YES) with a negRisk flag. The frontend uses it to
+    normalize outcome probabilities so a race sums to 100%.
+
+    Returns True/False when the event carries the flag, or None when it is
+    absent — storing None rather than False means a wrong field name shows up as
+    null in the data instead of silently looking like "no negRisk events exist".
+    """
+    value = event.get("negRisk")
+    return bool(value) if value is not None else None
+
+
 def build_metadata(event, market, condition_id):
     """The per-market fields we store once, on first creation of the file."""
     return {
@@ -333,6 +347,7 @@ def build_metadata(event, market, condition_id):
         "clobTokenIds": json_list(market.get("clobTokenIds")),
         "outcomes": json_list(market.get("outcomes")),
         "endDate": market.get("endDate"),
+        "negRisk": neg_risk_flag(event),
         "tags": event.get("tags") or [],
     }
 
@@ -388,6 +403,13 @@ def process_market(event, market, now):
         record.setdefault("history", [])
         record.setdefault("resolved", False)
         record.setdefault("resolvedAt", None)
+        record.setdefault("negRisk", None)
+
+    # Keep negRisk fresh from the parent event. This also backfills files that
+    # were created before we started capturing the flag.
+    flag = neg_risk_flag(event)
+    if flag is not None:
+        record["negRisk"] = flag
 
     record["history"].append(build_snapshot(market, now))
     record["history"] = compact_history(record["history"], now)

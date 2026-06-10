@@ -49,6 +49,7 @@ DATA_DIR = REPO_ROOT / "data"
 MARKETS_DIR = DATA_DIR / "markets"
 ARCHIVE_DIR = DATA_DIR / "archive"
 INDEX_PATH = DATA_DIR / "index.json"
+RESOLVED_PATH = DATA_DIR / "resolved.json"
 
 RECENTLY_RESOLVED_DAYS = 7
 SPARKLINE_MAX_POINTS = 30
@@ -231,6 +232,7 @@ def build_entry(record, now):
         "eventTitle": record.get("eventTitle"),
         "eventId": record.get("eventId"),
         "endDate": record.get("endDate"),
+        "negRisk": record.get("negRisk"),
         "tags": trim_tags(record.get("tags")),
         "impliedProbability": latest.get("impliedProbability"),
         "volume24hr": latest.get("volume24hr"),
@@ -266,6 +268,32 @@ def sort_key(entry):
     return (1, 0, entry.get("resolvedAt") or "")
 
 
+def build_resolved_entry(record):
+    """
+    A slim entry for the resolved/archive directory page. The full history (and
+    so the chart) still lives in the per-market archive file; this is just the
+    listing row, so it deliberately omits the sparkline to stay small.
+    """
+    latest = latest_snapshot(record.get("history") or []) or {}
+    final = latest.get("impliedProbability")
+    outcome = None
+    if final is not None:
+        outcome = "Yes" if final >= 0.5 else "No"
+    return {
+        "conditionId": record.get("conditionId"),
+        "slug": record.get("slug"),
+        "question": record.get("question"),
+        "eventSlug": record.get("eventSlug"),
+        "eventTitle": record.get("eventTitle"),
+        "eventId": record.get("eventId"),
+        "tags": trim_tags(record.get("tags")),
+        "resolvedAt": record.get("resolvedAt"),
+        "finalProbability": final,
+        "outcome": outcome,
+        "volume": latest.get("volume"),
+    }
+
+
 # --- Entry point -------------------------------------------------------------
 
 def main():
@@ -297,10 +325,27 @@ def main():
         "markets": markets,
     }
 
+    # resolved.json: the directory for docs/resolved.html. Unlike the index
+    # (which only keeps the last 7 days of resolved markets), this lists every
+    # resolved market load_market_files saw across the last two archive months.
+    resolved_records = [r for r in records if r.get("resolved")]
+    resolved_entries = sorted(
+        (build_resolved_entry(r) for r in resolved_records),
+        key=lambda e: e.get("resolvedAt") or "",
+        reverse=True,
+    )
+    resolved_manifest = {
+        "lastUpdated": iso(now),
+        "count": len(resolved_entries),
+        "markets": resolved_entries,
+    }
+
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     INDEX_PATH.write_text(render_index(index), encoding="utf-8")
+    RESOLVED_PATH.write_text(render_index(resolved_manifest), encoding="utf-8")
     print(f"Wrote {INDEX_PATH} with {len(markets)} markets ({len(live)} live, "
-          f"{len(resolved)} recently resolved).")
+          f"{len(resolved)} recently resolved). "
+          f"Wrote {RESOLVED_PATH} with {len(resolved_entries)} archived.")
 
 
 if __name__ == "__main__":

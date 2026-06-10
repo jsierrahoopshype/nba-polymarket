@@ -22,6 +22,7 @@
 const RANGE_DAYS = { '6h': 0.25, '24h': 1, '7d': 7, '30d': 30, 'all': Infinity };
 let CHART = null;
 let HISTORY = [];     // [[ms, prob], ...] ascending, prob non-null
+let NORM = null;      // conditionId -> normalized probability (from the index)
 
 function qid() {
   return new URLSearchParams(location.search).get('id');
@@ -52,8 +53,7 @@ async function loadMarketRecord(id, entry) {
   for (const c of cands) { try { return await loadMarketFile(c); } catch (e) {} }
   return null;
 }
-/* like loadData but does NOT swallow into the shared cache hunt — reuses the
-   base already discovered by the initial index.json load. */
+/* like loadData but reuses the base already discovered by the index.json load. */
 async function loadMarketFile(path) {
   const r = await fetch((typeof _dataBase === 'string' ? _dataBase : '../data/') + path);
   if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -112,8 +112,15 @@ function drawChart(rangeKey) {
         x: {
           grid: { display: false },
           ticks: {
-            maxTicksLimit: 7, autoSkip: true, maxRotation: 0,
-            color: '#6e6e73', font: { family: "'JetBrains Mono',monospace", size: 10 }
+            maxTicksLimit: 8, autoSkip: true, maxRotation: 0,
+            color: '#6e6e73', font: { family: "'JetBrains Mono',monospace", size: 10 },
+            // suppress a tick label when it repeats the previous shown one
+            // (e.g. several points on "Jun 5" collapse to a single Jun 5 tick)
+            callback: function (value, index, ticksArr) {
+              const cur = labels[value];
+              if (index > 0 && labels[ticksArr[index - 1].value] === cur) return '';
+              return cur;
+            }
           }
         },
         y: {
@@ -142,21 +149,26 @@ function wireRange() {
 /* ---------- render ---------- */
 function render(record, entry, index) {
   const app = document.getElementById('app');
-  const cat = categoryOf(record || entry || {});
+  const m = record || entry || {};
+  const cat = categoryOf(m);
   const resolved = !!(record && record.resolved) || !!(entry && entry.resolved);
 
-  // current probability + deltas (prefer precomputed index deltas)
-  const cur = HISTORY.length ? HISTORY[HISTORY.length - 1][1]
-            : (entry ? entry.impliedProbability : null);
+  // raw current price (from history if we have it, else the index entry)
+  const rawCur = HISTORY.length ? HISTORY[HISTORY.length - 1][1]
+               : (entry ? entry.impliedProbability : null);
+  // normalized current (only for live negRisk events)
+  const curInfo = (!resolved && entry) ? probInfo(entry, NORM)
+                : { value: rawCur, normalized: false, raw: rawCur };
+
   const d24 = fmtDelta(entry && isNum(entry.delta24h) ? entry.delta24h : deltaFromHistory(24));
   const d7  = fmtDelta(entry && isNum(entry.delta7d)  ? entry.delta7d  : deltaFromHistory(24 * 7));
 
-  // resolution + volume meta
+  // resolution + volume meta (each item its own span so they space cleanly)
   const vol = entry ? entry.volume : null;
   const meta = [];
   if (resolved) {
     const when = (record && record.resolvedAt) || (entry && entry.resolvedAt);
-    const settled = isNum(cur) ? (cur >= 0.5 ? 'YES' : 'NO') : null;
+    const settled = isNum(rawCur) ? (rawCur >= 0.5 ? 'YES' : 'NO') : null;
     if (settled) meta.push('<span class="resolved">✓ Settled ' + settled + '</span>');
     if (when) meta.push('Resolved ' + fmtDate(when));
   } else {
@@ -164,13 +176,24 @@ function render(record, entry, index) {
     if (end) meta.push('Ends ' + fmtDate(end));
   }
   if (isNum(vol)) meta.push('Volume ' + fmtVol(vol));
+  const metaHtml = meta.map(x => '<span>' + x + '</span>').join('<span class="sep">·</span>');
 
-  // stat cards
-  const probCls = resolved ? (isNum(cur) && cur >= 0.5 ? 'pos' : 'neg') : 'flat';
+  // outbound link to the original on Polymarket
+  const poly = polyMarketUrl(m);
+  const polyLink = poly
+    ? '<a class="poly-link" href="' + esc(poly) + '" target="_blank" rel="noopener">View on Polymarket ↗</a>'
+    : '';
+
+  // stat cards (probability primary; raw YES kept as a secondary line if normalized)
+  const probCls = resolved ? (isNum(rawCur) && rawCur >= 0.5 ? 'pos' : 'neg') : 'flat';
+  const probSub = curInfo.normalized
+    ? '<div class="sub">raw YES ' + fmtPct(curInfo.raw) + '</div>'
+    : (resolved ? '<div class="sub">settled</div>' : '');
   const cards =
     '<div class="stat-cards">' +
-      '<div class="stat-card"><div class="lbl">Implied probability</div>' +
-        '<div class="num ' + probCls + '">' + fmtPct(cur) + '</div></div>' +
+      '<div class="stat-card"><div class="lbl">Implied probability' +
+        (curInfo.normalized ? ' <span class="tag">normalized</span>' : '') + '</div>' +
+        '<div class="num ' + probCls + '">' + fmtPct(curInfo.value) + '</div>' + probSub + '</div>' +
       '<div class="stat-card"><div class="lbl">24h change</div>' +
         '<div class="num ' + d24.cls + '">' + d24.text + '</div></div>' +
       '<div class="stat-card"><div class="lbl">7d change</div>' +
@@ -182,33 +205,43 @@ function render(record, entry, index) {
     '<div class="section">' +
       '<div class="section-head"><h2>Implied probability over time</h2>' +
         '<div class="toggle" id="range">' +
-          ['6h', '24h', '7d', '30d', 'all'].map((r, i) =>
+          ['6h', '24h', '7d', '30d', 'all'].map(r =>
             '<button class="' + (r === '7d' ? 'active' : '') + '" data-range="' + r + '">' +
             (r === 'all' ? 'All' : r) + '</button>').join('') +
         '</div></div>' +
       '<div class="chart-wrap" id="chartwrap"></div>' +
     '</div>';
 
-  // siblings — other markets in the same event
+  // siblings — other outcomes in the same event, volume-sorted, floor-filtered
   let siblings = '';
   if (index && entry && entry.eventId) {
-    const sibs = index.markets
-      .filter(m => m.eventId === entry.eventId && m.conditionId !== entry.conditionId
-                   && isNum(m.impliedProbability))
-      .sort((a, b) => (b.impliedProbability || 0) - (a.impliedProbability || 0));
-    if (sibs.length) {
-      const rows = sibs.map(m => {
-        const d = fmtDelta(m.delta24h);
-        return '<div class="sib" data-id="' + esc(m.conditionId) + '">' +
-          '<span class="nm"><a href="' + marketUrl(m.conditionId) + '">' + esc(m.question) + '</a></span>' +
-          '<span class="p">' + fmtPct(m.impliedProbability) + '</span>' +
-          '<span class="d delta ' + d.cls + '">' + d.text + '</span>' +
+    const all = index.markets
+      .filter(s => s.eventId === entry.eventId && s.conditionId !== entry.conditionId
+                   && isNum(s.impliedProbability))
+      .sort((a, b) => (b.volume || 0) - (a.volume || 0));
+    const race = all.filter(passesFloor);
+    const low = all.filter(s => !passesFloor(s));
+    if (all.length) {
+      const sibRow = (s, extra) => {
+        const dd = fmtDelta(s.delta24h);
+        return '<div class="sib" data-id="' + esc(s.conditionId) + '"' + (extra ? ' hidden data-extra' : '') + '>' +
+          '<span class="nm"><a href="' + marketUrl(s.conditionId) + '">' + esc(s.question) + '</a></span>' +
+          '<span class="v">' + fmtVol(s.volume) + '</span>' +
+          '<span class="p">' + probHtml(s, NORM) + '</span>' +
+          '<span class="d delta ' + dd.cls + '">' + dd.text + '</span>' +
         '</div>';
-      }).join('');
+      };
+      const rows = race.map(s => sibRow(s, false)).join('') + low.map(s => sibRow(s, true)).join('');
+      const eventUrl = polyEventUrl(entry.eventSlug);
+      const moreBtn = low.length
+        ? '<button class="showmore" id="sib-more">Show ' + low.length + ' low-volume →</button>' : '';
       siblings =
-        '<div class="section"><h2>Other outcomes in this race</h2>' +
-          '<div class="hint">' + esc(entry.eventTitle || '') + ' · ' + sibs.length + ' more</div>' +
-          '<div class="siblings">' + rows + '</div></div>';
+        '<div class="section"><div class="section-head"><h2>Other outcomes in this race</h2>' +
+          (eventUrl ? '<a class="poly-link" href="' + esc(eventUrl) + '" target="_blank" rel="noopener">Event on Polymarket ↗</a>' : '') +
+          '</div>' +
+          '<div class="hint">' + esc(entry.eventTitle || '') + ' · ' + (race.length || all.length) + ' outcomes' +
+            (NORM && NORM.has(entry.conditionId) ? ' · normalized to 100%' : '') + '</div>' +
+          '<div class="siblings">' + rows + '</div>' + moreBtn + '</div>';
     }
   }
 
@@ -217,13 +250,23 @@ function render(record, entry, index) {
     '<div class="phead">' +
       '<span class="cat">' + esc(cat.label) + '</span>' +
       '<h1>' + esc(question) + '</h1>' +
-      (meta.length ? '<div class="meta">' + meta.join('') + '</div>' : '') +
+      (meta.length ? '<div class="meta">' + metaHtml + '</div>' : '') +
+      polyLink +
     '</div>' +
     cards + chart + siblings;
 
   drawChart('7d');
   wireRange();
   wireRowNav(app);
+  const sibMore = document.getElementById('sib-more');
+  if (sibMore) sibMore.addEventListener('click', () => {
+    const open = sibMore.dataset.open === '1';
+    document.querySelectorAll('.siblings [data-extra]').forEach(el => { el.hidden = open; });
+    sibMore.dataset.open = open ? '0' : '1';
+    sibMore.textContent = open
+      ? 'Show ' + document.querySelectorAll('.siblings [data-extra]').length + ' low-volume →'
+      : 'Hide low-volume ↑';
+  });
 }
 
 /* ---------- boot ---------- */
@@ -233,6 +276,7 @@ function render(record, entry, index) {
   if (!id) { app.innerHTML = '<div class="empty">No market id in the URL.</div>'; return; }
   try {
     const index = await loadData('index.json');            // also sets _dataBase
+    NORM = computeNormalized(index.markets);
     const entry = (index.markets || []).find(m => m.conditionId === id) || null;
     const record = await loadMarketRecord(id, entry);
     if (!record && !entry) {

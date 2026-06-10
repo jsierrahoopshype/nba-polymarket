@@ -131,8 +131,12 @@ td.spark{width:6.5rem}
 .phead .cat{margin-bottom:.5rem}
 .phead h1{font-size:1.6rem;font-weight:700;letter-spacing:-.02em;line-height:1.25}
 .phead .meta{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--text-secondary);
-  margin-top:.5rem;display:flex;gap:1.2rem;flex-wrap:wrap}
+  margin-top:.5rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.phead .meta .sep{opacity:.5}
 .phead .meta .resolved{color:var(--green);font-weight:600}
+.poly-link{display:inline-block;margin-top:.7rem;font-family:'JetBrains Mono',monospace;
+  font-size:.72rem;font-weight:600;color:var(--accent)}
+.section-head .poly-link{margin-top:0;font-size:.68rem}
 
 .stat-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-bottom:1.2rem}
 .stat-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:.9rem 1rem}
@@ -154,13 +158,38 @@ td.spark{width:6.5rem}
 
 /* siblings (other outcomes in this race) */
 .siblings{display:flex;flex-direction:column;gap:.1rem}
-.sib{display:grid;grid-template-columns:1fr 4rem 4.5rem;align-items:center;gap:.6rem;
+.sib{display:grid;grid-template-columns:1fr 4rem 4rem 4.5rem;align-items:center;gap:.6rem;
   padding:.4rem .2rem;border-bottom:1px solid var(--border);font-size:.84rem}
 .sib:last-child{border-bottom:none}
 .sib .nm{font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .sib .nm a{color:var(--text)}
+.sib .v{font-family:'JetBrains Mono',monospace;font-size:.74rem;color:var(--text-secondary);text-align:right}
 .sib .p{font-family:'JetBrains Mono',monospace;font-weight:600;text-align:right}
 .sib .d{font-family:'JetBrains Mono',monospace;font-size:.76rem;text-align:right}
+
+/* volume cell */
+td.vol{font-size:.8rem;color:var(--text-secondary);width:5rem}
+
+/* low-volume toggle bar */
+.lowvol-bar{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin-bottom:1rem}
+.lowvol-toggle{font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:600;padding:.34rem .7rem;
+  border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text-secondary);
+  cursor:pointer;transition:.12s}
+.lowvol-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.lowvol-toggle.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.lowvol-note{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--text-secondary)}
+
+/* stat-card secondary line + normalized tag */
+.stat-card .sub{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--text-secondary);margin-top:.25rem}
+.stat-card .lbl .tag{display:inline-block;font-size:.5rem;font-weight:700;letter-spacing:.04em;
+  padding:.04rem .3rem;border-radius:3px;background:var(--accent-dim);color:var(--accent);vertical-align:middle}
+
+/* resolved outcome badge */
+.oc{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.66rem;font-weight:700;
+  letter-spacing:.04em;padding:.1rem .45rem;border-radius:4px}
+.oc.yes{background:var(--green-dim);color:var(--green)}
+.oc.no{background:var(--red-dim);color:var(--red)}
+.card .now .oc{font-size:.74rem}
 
 .empty{text-align:center;padding:3rem 1rem;color:var(--text-secondary)}
 .loading{text-align:center;padding:3rem 1rem;color:var(--text-secondary);font-family:'JetBrains Mono',monospace;font-size:.8rem}
@@ -181,5 +210,5 @@ td.spark{width:6.5rem}
   .chart-wrap{height:280px}
 }
 @media(max-width:560px){
-  .sib{grid-template-columns:1fr 3.4rem 4rem}
+  .sib{grid-template-columns:1fr 3.4rem 3.4rem 4rem;gap:.4rem}
 }

@@ -10,6 +10,7 @@ There are three kinds of files, all under the `data/` folder:
 | File | What it is | Written by |
 | --- | --- | --- |
 | `data/index.json` | One summary list of every market worth showing right now. The pages load this first. | `scripts/build_index.py` |
+| `data/resolved.json` | A slim directory of markets resolved in the last two months, for the Resolved page. | `scripts/build_index.py` |
 | `data/markets/<conditionId>.json` | The full history of one live market. One file per market. | `scripts/poll_polymarket.py` |
 | `data/archive/<YYYY-MM>/<conditionId>.json` | A frozen, resolved market, filed under the month it resolved. | `scripts/poll_polymarket.py` |
 
@@ -81,6 +82,7 @@ This holds the identity of one market (stored once) plus its full history.
 | `clobTokenIds` | list of strings | The token IDs for the YES and NO sides. The first is YES. |
 | `outcomes` | list of strings | The outcome labels, normally `["Yes", "No"]`. |
 | `endDate` | string or null | When the market is scheduled to end. |
+| `negRisk` | boolean or null | Whether the parent event is mutually exclusive (exactly one outcome wins). The pages use this to normalize a race's odds to 100%. `null` means the flag wasn't present when the file was written. |
 | `tags` | list of objects | The parent event's tags (used for grouping in the UI — see the table below). |
 | `resolved` | boolean | `false` while live; `true` once the market has closed. |
 | `resolvedAt` | string or null | When we detected it resolved. `null` while live. |
@@ -127,6 +129,7 @@ Each entry in `markets`:
 | `eventTitle` | string | Parent event title. |
 | `eventId` | string | Parent event ID. |
 | `endDate` | string or null | Scheduled end. |
+| `negRisk` | boolean or null | Whether the parent event is mutually exclusive; drives the normalized-to-100% display. |
 | `tags` | list of objects | Parent event tags, for grouping. |
 | `impliedProbability` | number or null | Latest implied probability (the headline number). |
 | `volume24hr` | number | Latest 24h volume. |
@@ -146,6 +149,19 @@ Each entry in `markets`:
   "Recently resolved" strip on the homepage.
 - **Older resolved markets:** *not* in the index. They stay only in the
   archive, so the index never grows without bound.
+
+---
+
+## The resolved directory: `data/resolved.json`
+
+A slim companion to the index, rebuilt every cycle alongside it, listing every
+market that resolved in the last two archive months (the Resolved page reads
+it). It is *not* the full history — that still lives in the archive file the
+page links to. Same top level as the index (`lastUpdated`, `count`, `markets`).
+
+Each entry: `conditionId`, `slug`, `question`, `eventSlug`, `eventTitle`,
+`eventId`, `tags`, `resolvedAt`, `finalProbability` (the price it closed at),
+`outcome` (`"Yes"`/`"No"`/null), and `volume`.
 
 ---
 
