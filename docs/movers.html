@@ -15,6 +15,7 @@
   <div class="tabs">
     <a href="index.html">Standings</a>
     <a href="movers.html" class="active">Movers</a>
+    <a href="resolved.html">Resolved</a>
   </div>
 
   <div class="hdr">
@@ -33,13 +34,20 @@
     </div>
   </div>
 
+  <div class="lowvol-bar">
+    <button class="lowvol-toggle" id="lowvol">Show low-volume markets</button>
+    <span class="lowvol-note" id="lowvol-note"></span>
+  </div>
+
   <div id="app"><div class="loading">Loading markets…</div></div>
   <div class="foot" id="foot"></div>
 </div>
 
 <script src="app.js"></script>
 <script>
-let LIVE = [];
+let ALL = [];                                    // all live markets with a move
+let NORM = null;
+let SHOW_LOWVOL = false;
 let WIN = '24h';                                  // ranking window
 let SORT = { key: 'absWin', dir: 'desc' };        // current sort
 
@@ -47,15 +55,17 @@ function deltaFor(m, win) { return win === '7d' ? m.delta7d : m.delta24h; }
 
 const COMPARATORS = {
   name:   (a, b) => String(a.question).localeCompare(String(b.question)),
-  now:    (a, b) => (a.impliedProbability || 0) - (b.impliedProbability || 0),
+  vol:    (a, b) => (a.volume || 0) - (b.volume || 0),
+  now:    (a, b) => (probInfo(a, NORM).value || 0) - (probInfo(b, NORM).value || 0),
   d24:    (a, b) => (a.delta24h ?? -Infinity) - (b.delta24h ?? -Infinity),
   d7:     (a, b) => (a.delta7d ?? -Infinity) - (b.delta7d ?? -Infinity),
   absWin: (a, b) => Math.abs(deltaFor(a, WIN) ?? 0) - Math.abs(deltaFor(b, WIN) ?? 0),
 };
 
-function sortedRows() {
+function visibleRows() {
+  const base = SHOW_LOWVOL ? ALL : ALL.filter(passesFloor);
   const cmp = COMPARATORS[SORT.key] || COMPARATORS.absWin;
-  const arr = LIVE.slice().sort(cmp);
+  const arr = base.slice().sort(cmp);
   if (SORT.dir === 'desc') arr.reverse();
   return arr;
 }
@@ -68,8 +78,9 @@ function rowHtml(m, i) {
     '<td class="name' + sb('name') + '"><span class="q">' + esc(m.question) + '</span>' +
       '<span class="ev">' + esc(m.eventTitle || '') + '</span></td>' +
     '<td><span class="cat">' + esc(categoryOf(m).label) + '</span></td>' +
+    '<td class="vol' + sb('vol') + '">' + fmtVol(m.volume) + '</td>' +
     '<td class="spark">' + sparkline(m.sparkline) + '</td>' +
-    '<td class="pct' + sb('now') + '">' + fmtPct(m.impliedProbability) + '</td>' +
+    '<td class="pct' + sb('now') + '">' + probHtml(m, NORM) + '</td>' +
     '<td' + sb('d24') + '><span class="delta ' + d24.cls + '">' + d24.text + '</span></td>' +
     '<td' + sb('d7') + '><span class="delta ' + d7.cls + '">' + d7.text + '</span></td>' +
   '</tr>';
@@ -78,10 +89,11 @@ function rowHtml(m, i) {
 function cardHtml(m) {
   const d24 = fmtDelta(m.delta24h), d7 = fmtDelta(m.delta7d);
   return '<div class="card" data-id="' + esc(m.conditionId) + '">' +
-    '<div class="now"><span class="p">' + fmtPct(m.impliedProbability) + '</span></div>' +
+    '<div class="now"><span class="p">' + probHtml(m, NORM) + '</span></div>' +
     '<div class="q">' + esc(m.question) + '</div>' +
     '<div class="ev">' + esc(categoryOf(m).label) + ' · ' + esc(m.eventTitle || '') + '</div>' +
     '<div class="card-foot">' +
+      '<span class="lbl">Vol</span><span>' + fmtVol(m.volume) + '</span>' +
       '<span class="lbl">24h</span><span class="delta ' + d24.cls + '">' + d24.text + '</span>' +
       '<span class="lbl">7d</span><span class="delta ' + d7.cls + '">' + d7.text + '</span>' +
       (m.sparkline && m.sparkline.length >= 2 ? sparkline(m.sparkline) : '') +
@@ -94,12 +106,14 @@ function arrow(key) {
 }
 
 function render() {
-  const rows = sortedRows();
+  const rows = visibleRows();
   const sb = k => SORT.key === k ? ' sorted-by' : '';
   const head =
     '<th class="rank"></th>' +
     '<th class="left sortable' + sb('name') + '" data-sort="name">Market' + arrow('name') + '</th>' +
-    '<th>Category</th><th>Trend</th>' +
+    '<th>Category</th>' +
+    '<th class="sortable' + sb('vol') + '" data-sort="vol">Vol' + arrow('vol') + '</th>' +
+    '<th>Trend</th>' +
     '<th class="sortable' + sb('now') + '" data-sort="now">Now' + arrow('now') + '</th>' +
     '<th class="sortable' + sb('d24') + '" data-sort="d24">24h' + arrow('d24') + '</th>' +
     '<th class="sortable' + sb('d7') + '" data-sort="d7">7d' + arrow('d7') + '</th>';
@@ -108,10 +122,18 @@ function render() {
       rows.map((m, i) => rowHtml(m, i + 1)).join('') +
     '</tbody></table></div>' +
     '<div class="cards">' + rows.map(cardHtml).join('') + '</div>';
+  updateLowVolNote();
+}
+
+function updateLowVolNote() {
+  const hidden = ALL.length - ALL.filter(passesFloor).length;
+  document.getElementById('lowvol-note').textContent = SHOW_LOWVOL
+    ? 'Showing all markets, including under $' + (MIN_VOLUME / 1000) + 'K and placeholders.'
+    : hidden + ' market' + (hidden === 1 ? '' : 's') + ' under $' + (MIN_VOLUME / 1000) + 'K hidden.';
 }
 
 /* default sort directions per column (desc for numbers, asc for name) */
-const DEFAULT_DIR = { name: 'asc', now: 'desc', d24: 'desc', d7: 'desc', absWin: 'desc' };
+const DEFAULT_DIR = { name: 'asc', vol: 'desc', now: 'desc', d24: 'desc', d7: 'desc', absWin: 'desc' };
 
 function wire() {
   const app = document.getElementById('app');
@@ -132,6 +154,13 @@ function wire() {
     SORT = { key: 'absWin', dir: 'desc' };       // ranking resets to the chosen window
     render();
   });
+  document.getElementById('lowvol').addEventListener('click', () => {
+    SHOW_LOWVOL = !SHOW_LOWVOL;
+    document.getElementById('lowvol').classList.toggle('active', SHOW_LOWVOL);
+    document.getElementById('lowvol').textContent =
+      SHOW_LOWVOL ? 'Hide low-volume markets' : 'Show low-volume markets';
+    render();
+  });
 }
 
 (async function () {
@@ -140,14 +169,15 @@ function wire() {
     const data = await loadData('index.json');
     document.getElementById('stamp').textContent =
       data.lastUpdated ? 'Updated ' + fmtStamp(data.lastUpdated) : '';
-    LIVE = (data.markets || []).filter(m =>
+    NORM = computeNormalized(data.markets);
+    ALL = (data.markets || []).filter(m =>
       !m.resolved && isNum(m.impliedProbability) &&
       (isNum(m.delta24h) || isNum(m.delta7d)));
-    if (!LIVE.length) { app.innerHTML = '<div class="empty">No movers right now.</div>'; return; }
+    if (!ALL.length) { app.innerHTML = '<div class="empty">No movers right now.</div>'; return; }
     render();
     wire();
     document.getElementById('foot').innerHTML =
-      LIVE.length + ' live markets · changes are in implied-probability points.';
+      'Changes are in implied-probability points · multi-outcome odds normalized to 100%.';
   } catch (err) {
     app.innerHTML = '<div class="empty">Couldn’t load market data.<br>' +
       '<span style="font-size:.8rem">' + esc(String(err && err.message || err)) + '</span></div>';

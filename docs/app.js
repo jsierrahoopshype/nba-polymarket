@@ -57,6 +57,80 @@ function categoryOf(m) {
   return CATEGORIES[CATEGORIES.length - 1];   // Futures
 }
 
+/* --- display filtering (presentation only — we still poll/store everything) - */
+/* Markets below this much TOTAL traded volume (USD) are hidden by default and
+   revealed by the "show low-volume markets" toggle. */
+const MIN_VOLUME = 10000;
+
+/* A placeholder market: a freshly-listed outcome nobody has traded — zero/near
+   zero volume, price still pinned at the 0.50 default, and no 24h movement. */
+function isPlaceholder(m) {
+  const lowVol = !isNum(m.volume) || m.volume < 1;
+  const atDefault = isNum(m.impliedProbability) && Math.abs(m.impliedProbability - 0.5) < 0.005;
+  const noMove = !isNum(m.delta24h) || Math.abs(m.delta24h) < 0.005;
+  return lowVol && atDefault && noMove;
+}
+
+/* True when a market should show by default (real volume, not a placeholder). */
+function passesFloor(m) {
+  return isNum(m.volume) && m.volume >= MIN_VOLUME && !isPlaceholder(m);
+}
+
+/* --- normalized probability ----------------------------------------------- */
+/* For mutually-exclusive (negRisk) events, the YES prices of the outcomes form
+   a race that should sum to 100%. We normalize each outcome's YES price over
+   the sum of the race set — live, non-placeholder outcomes above the volume
+   floor — and expose a conditionId -> normalizedProbability map. Markets in
+   non-negRisk events, or outside the race set, are absent (callers fall back to
+   the raw YES price). Run AFTER the placeholder/volume filter. */
+function computeNormalized(markets) {
+  const byEvent = new Map();
+  for (const m of markets || []) {
+    if (m.resolved || !m.negRisk || !m.eventId) continue;
+    if (!isNum(m.impliedProbability) || !passesFloor(m)) continue;
+    if (!byEvent.has(m.eventId)) byEvent.set(m.eventId, []);
+    byEvent.get(m.eventId).push(m);
+  }
+  const norm = new Map();
+  for (const list of byEvent.values()) {
+    const sum = list.reduce((s, m) => s + m.impliedProbability, 0);
+    if (sum > 0) for (const m of list) norm.set(m.conditionId, m.impliedProbability / sum);
+  }
+  return norm;
+}
+
+/* Probability to display: normalized when available, else the raw YES price.
+   Returns { value, normalized:boolean, raw }. */
+function probInfo(m, norm) {
+  const n = norm && norm.get(m.conditionId);
+  if (isNum(n)) return { value: n, normalized: true, raw: m.impliedProbability };
+  return { value: m.impliedProbability, normalized: false, raw: m.impliedProbability };
+}
+
+/* A "Now %" cell/value: normalized number with the raw YES price kept in a
+   tooltip when the two differ. */
+function probHtml(m, norm) {
+  const info = probInfo(m, norm);
+  if (info.normalized) {
+    return '<span title="Raw YES price ' + fmtPct(info.raw) + '">' + fmtPct(info.value) + '</span>';
+  }
+  return fmtPct(info.value);
+}
+
+/* --- Polymarket deep links ------------------------------------------------ */
+function polyEventUrl(eventSlug) {
+  return eventSlug ? 'https://polymarket.com/event/' + encodeURIComponent(eventSlug) : null;
+}
+function polyMarketUrl(m) {
+  if (m.eventSlug && m.slug) {
+    return 'https://polymarket.com/event/' + encodeURIComponent(m.eventSlug) +
+           '/' + encodeURIComponent(m.slug);
+  }
+  if (m.eventSlug) return polyEventUrl(m.eventSlug);
+  if (m.slug) return 'https://polymarket.com/market/' + encodeURIComponent(m.slug);
+  return null;
+}
+
 /* --- formatting ----------------------------------------------------------- */
 function isNum(v) { return typeof v === 'number' && isFinite(v); }
 

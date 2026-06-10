@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resolved · NBA Polymarket</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+
+  <div class="tabs">
+    <a href="index.html">Standings</a>
+    <a href="movers.html">Movers</a>
+    <a href="resolved.html" class="active">Resolved</a>
+  </div>
+
+  <div class="hdr">
+    <h1>Recently resolved</h1>
+    <span class="brand">HoopsHype</span>
+  </div>
+  <div class="subtitle">
+    Markets that have settled over the last two months — how each finished and
+    what it closed at. <span class="stamp" id="stamp"></span>
+  </div>
+
+  <div class="lowvol-bar">
+    <button class="lowvol-toggle" id="lowvol">Show low-volume markets</button>
+    <span class="lowvol-note" id="lowvol-note"></span>
+  </div>
+
+  <div id="app"><div class="loading">Loading resolved markets…</div></div>
+  <div class="foot" id="foot"></div>
+</div>
+
+<script src="app.js"></script>
+<script>
+let ALL = [];
+let SHOW_LOWVOL = false;
+
+function outcomeBadge(m) {
+  if (m.outcome === 'Yes') return '<span class="oc yes">YES</span>';
+  if (m.outcome === 'No')  return '<span class="oc no">NO</span>';
+  return '<span class="dash">—</span>';
+}
+
+function rowHtml(m) {
+  return '<tr data-id="' + esc(m.conditionId) + '">' +
+    '<td class="name"><span class="q">' + esc(m.question) + '</span>' +
+      '<span class="ev">' + esc(m.eventTitle || '') + '</span></td>' +
+    '<td><span class="cat">' + esc(categoryOf(m).label) + '</span></td>' +
+    '<td>' + outcomeBadge(m) + '</td>' +
+    '<td class="pct">' + fmtPct(m.finalProbability) + '</td>' +
+    '<td class="vol">' + fmtVol(m.volume) + '</td>' +
+    '<td>' + fmtDate(m.resolvedAt) + '</td>' +
+  '</tr>';
+}
+
+function cardHtml(m) {
+  return '<div class="card" data-id="' + esc(m.conditionId) + '">' +
+    '<div class="now">' + outcomeBadge(m) + '</div>' +
+    '<div class="q">' + esc(m.question) + '</div>' +
+    '<div class="ev">' + esc(categoryOf(m).label) + ' · ' + esc(m.eventTitle || '') + '</div>' +
+    '<div class="card-foot">' +
+      '<span class="lbl">Closed</span><span>' + fmtPct(m.finalProbability) + '</span>' +
+      '<span class="lbl">Vol</span><span>' + fmtVol(m.volume) + '</span>' +
+      '<span class="lbl">On</span><span>' + fmtDate(m.resolvedAt) + '</span>' +
+    '</div></div>';
+}
+
+function render() {
+  const visible = SHOW_LOWVOL ? ALL : ALL.filter(m => isNum(m.volume) && m.volume >= MIN_VOLUME);
+  const app = document.getElementById('app');
+  const hidden = ALL.length - ALL.filter(m => isNum(m.volume) && m.volume >= MIN_VOLUME).length;
+  document.getElementById('lowvol-note').textContent = SHOW_LOWVOL
+    ? 'Showing all resolved markets.'
+    : hidden + ' under $' + (MIN_VOLUME / 1000) + 'K hidden.';
+
+  if (!visible.length) { app.innerHTML = '<div class="empty">No resolved markets to show.</div>'; return; }
+  app.innerHTML =
+    '<div class="table-wrap"><table class="lb"><thead><tr>' +
+      '<th class="left">Market</th><th>Category</th><th>Outcome</th>' +
+      '<th>Closed at</th><th>Vol</th><th>Resolved</th>' +
+    '</tr></thead><tbody>' + visible.map(rowHtml).join('') + '</tbody></table></div>' +
+    '<div class="cards">' + visible.map(cardHtml).join('') + '</div>';
+  wireRowNav(app);
+}
+
+(async function () {
+  const app = document.getElementById('app');
+  try {
+    let data;
+    try {
+      data = await loadData('resolved.json');
+    } catch (e) {
+      // resolved.json is written by build_index; until the first build after
+      // deploy it may not exist yet.
+      app.innerHTML = '<div class="empty">No resolved markets archived yet.</div>';
+      return;
+    }
+    document.getElementById('stamp').textContent =
+      data.lastUpdated ? 'Updated ' + fmtStamp(data.lastUpdated) : '';
+    ALL = (data.markets || []).slice()
+      .sort((a, b) => String(b.resolvedAt || '').localeCompare(String(a.resolvedAt || '')));
+    if (!ALL.length) { app.innerHTML = '<div class="empty">No resolved markets archived yet.</div>'; return; }
+    render();
+    document.getElementById('lowvol').addEventListener('click', () => {
+      SHOW_LOWVOL = !SHOW_LOWVOL;
+      document.getElementById('lowvol').classList.toggle('active', SHOW_LOWVOL);
+      document.getElementById('lowvol').textContent =
+        SHOW_LOWVOL ? 'Hide low-volume markets' : 'Show low-volume markets';
+      render();
+    });
+    document.getElementById('foot').innerHTML =
+      data.count + ' markets resolved in the last two months · tap any row for its frozen chart.';
+  } catch (err) {
+    app.innerHTML = '<div class="empty">Couldn’t load resolved markets.<br>' +
+      '<span style="font-size:.8rem">' + esc(String(err && err.message || err)) + '</span></div>';
+  }
+})();
+</script>
+</body>
+</html>
