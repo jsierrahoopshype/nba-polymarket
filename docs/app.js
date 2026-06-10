@@ -11,7 +11,9 @@
    natural path is "../data/". We try a few bases and cache the first that works
    so the site keeps functioning whether GitHub Pages serves from the repo root
    or from /docs with a data copy alongside. */
-const DATA_BASES = ['../data/', './data/', 'data/'];
+/* Candidates cover the app at /docs/ ("../data/") and the generated entity
+   pages at /docs/player|team/<slug>/ ("../../../data/"). First 200 is cached. */
+const DATA_BASES = ['../data/', '../../../data/', '../../data/', './data/', 'data/'];
 let _dataBase = null;
 
 async function loadData(path) {
@@ -129,6 +131,29 @@ function polyMarketUrl(m) {
   if (m.eventSlug) return polyEventUrl(m.eventSlug);
   if (m.slug) return 'https://polymarket.com/market/' + encodeURIComponent(m.slug);
   return null;
+}
+
+/* --- entity thumbnails ---------------------------------------------------- */
+/* data/entities.json maps a conditionId to its single primary entity (player
+   or team) so standings rows can show a headshot/logo next to a name. Optional:
+   if it isn't there yet, rows just render without a thumbnail. */
+let ENTITY_MAP = {};
+async function loadEntities() {
+  try {
+    const d = await loadData('entities.json');
+    ENTITY_MAP = (d && d.markets) || {};
+  } catch (e) { ENTITY_MAP = {}; }
+  return ENTITY_MAP;
+}
+
+/* Small linked thumbnail for a market's primary entity, relative to /docs/
+   (so it works from index.html / movers.html / resolved.html). */
+function entityThumb(conditionId) {
+  const e = ENTITY_MAP[conditionId];
+  if (!e) return '';
+  return '<a class="ethumb" href="' + e.t + '/' + esc(e.slug) + '/" title="' + esc(e.name) +
+    '" onclick="event.stopPropagation()"><img src="' + esc(e.img) + '" alt="" loading="lazy" ' +
+    'width="22" height="22" onerror="this.style.display=\'none\'"></a>';
 }
 
 /* --- formatting ----------------------------------------------------------- */

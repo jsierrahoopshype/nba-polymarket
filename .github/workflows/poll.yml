@@ -1,9 +1,9 @@
 name: poll
 
 # Polls Polymarket every 10 minutes, sweeps any markets that dropped off the
-# active feed without resolving, rebuilds the index, and commits any changed
-# data back to the repository. Also runnable on demand from the Actions tab
-# (workflow_dispatch).
+# active feed without resolving, rebuilds the index, regenerates the entity
+# pages, and commits any changed data/docs back to the repository. Also runnable
+# on demand from the Actions tab (workflow_dispatch).
 
 on:
   schedule:
@@ -47,11 +47,14 @@ jobs:
       - name: Build index
         run: python scripts/build_index.py
 
+      - name: Build entity pages
+        run: python scripts/build_entities.py
+
       - name: Commit and push data if it changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data
+          git add data docs
           if git diff --staged --quiet; then
             echo "No data changes to commit."
           else
