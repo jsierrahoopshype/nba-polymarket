@@ -11,6 +11,7 @@ There are three kinds of files, all under the `data/` folder:
 | --- | --- | --- |
 | `data/index.json` | One summary list of every market worth showing right now. The pages load this first. | `scripts/build_index.py` |
 | `data/resolved.json` | A slim directory of markets resolved in the last two months, for the Resolved page. | `scripts/build_index.py` |
+| `data/entities.json` | Maps a market to its single primary entity (player/team) so rows can show a headshot/logo. | `scripts/build_entities.py` |
 | `data/markets/<conditionId>.json` | The full history of one live market. One file per market. | `scripts/poll_polymarket.py` |
 | `data/archive/<YYYY-MM>/<conditionId>.json` | A frozen, resolved market, filed under the month it resolved. | `scripts/poll_polymarket.py` |
 
@@ -162,6 +163,31 @@ page links to. Same top level as the index (`lastUpdated`, `count`, `markets`).
 Each entry: `conditionId`, `slug`, `question`, `eventSlug`, `eventTitle`,
 `eventId`, `tags`, `resolvedAt`, `finalProbability` (the price it closed at),
 `outcome` (`"Yes"`/`"No"`/null), and `volume`.
+
+---
+
+## Entity pages: `docs/player/<slug>/` and `docs/team/<slug>/`
+
+`scripts/build_entities.py` runs after the index builder and statically
+generates one SEO page per NBA player (the active roster vendored from
+`jsierrahoopshype/nba-headshots`) and per team, plus the `docs/players/` and
+`docs/teams/` directories and `docs/sitemap.xml`.
+
+Markets are matched to entities from their question text: teams by name aliases,
+players by **full name only** (last-name matching was tested and produced only
+false positives — surnames collide with non-roster people, team cities and
+celebrities — so it was dropped for precision). Player headshots are hotlinked
+from the nba-headshots Pages site by NBA id; team logos from the NBA CDN.
+
+Each page is a static shell (title, meta description, heading, image, and a
+crawlable list of the entity's market questions); the live numbers are filled in
+the browser from `index.json`. So a page's bytes change only when its market
+membership changes, and the builder writes a file only when its content
+actually differs — a normal poll regenerates nothing.
+
+`data/entities.json` is the reverse map (`{ "markets": { conditionId: { t, slug,
+name, img } } }`) for the standings-row thumbnails. Only markets with a single
+unambiguous primary entity appear.
 
 ---
 

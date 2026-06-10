@@ -191,6 +191,34 @@ td.vol{font-size:.8rem;color:var(--text-secondary);width:5rem}
 .oc.no{background:var(--red-dim);color:var(--red)}
 .card .now .oc{font-size:.74rem}
 
+/* entity thumbnail in a market name cell / card */
+.ethumb{float:left;margin:0 .5rem 0 0;line-height:0}
+.ethumb img{width:22px;height:22px;border-radius:50%;display:block;background:var(--surface-hover);object-fit:cover}
+td.name::after,.card .q::after{content:"";display:table;clear:both}
+.card .q .ethumb{margin-top:.1rem}
+
+/* entity page header */
+.ehead{display:flex;align-items:center;gap:1rem;border-bottom:1px solid var(--border);
+  padding-bottom:1rem;margin-bottom:1.2rem}
+.eimg{width:72px;height:72px;border-radius:14px;object-fit:contain;background:var(--surface-hover);flex-shrink:0}
+.ehead h1{font-size:1.6rem;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+.esub{font-family:'JetBrains Mono',monospace;font-size:.74rem;color:var(--text-secondary);
+  text-transform:uppercase;letter-spacing:.05em;margin-top:.25rem}
+.seo-list{list-style:none;display:flex;flex-direction:column;gap:.35rem}
+.seo-list li a{color:var(--text)}
+
+/* directory pages (/players/, /teams/) */
+.esearch{width:100%;max-width:30rem;padding:.5rem .8rem;font-size:16px;font-family:inherit;
+  border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);margin-bottom:1rem}
+.esearch:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-dim)}
+.egrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:.4rem}
+.ecard{display:flex;align-items:center;gap:.6rem;padding:.5rem .6rem;border:1px solid var(--border);
+  border-radius:10px;background:var(--surface);color:var(--text);text-decoration:none;transition:.12s}
+.ecard:hover{border-color:var(--accent);text-decoration:none}
+.ecard img{width:40px;height:40px;border-radius:50%;object-fit:contain;background:var(--surface-hover);flex-shrink:0}
+.ecard .en{flex:1;font-weight:600;font-size:.86rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ecard .ec{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--text-secondary)}
+
 .empty{text-align:center;padding:3rem 1rem;color:var(--text-secondary)}
 .loading{text-align:center;padding:3rem 1rem;color:var(--text-secondary);font-family:'JetBrains Mono',monospace;font-size:.8rem}
 .foot{text-align:center;font-size:.72rem;color:var(--text-secondary);margin-top:1.6rem;

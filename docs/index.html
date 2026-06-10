@@ -16,6 +16,8 @@
     <a href="index.html" class="active">Standings</a>
     <a href="movers.html">Movers</a>
     <a href="resolved.html">Resolved</a>
+    <a href="players/">Players</a>
+    <a href="teams/">Teams</a>
   </div>
 
   <div class="hdr">
@@ -59,7 +61,8 @@ function moverRow(m, i) {
 function standRow(m, extra) {
   const d24 = fmtDelta(m.delta24h), d7 = fmtDelta(m.delta7d);
   return '<tr data-id="' + esc(m.conditionId) + '"' + (extra ? ' hidden data-extra' : '') + '>' +
-    '<td class="name"><span class="q">' + esc(m.question) + '</span></td>' +
+    '<td class="name">' + entityThumb(m.conditionId) +
+      '<span class="q">' + esc(m.question) + '</span></td>' +
     '<td class="vol">' + fmtVol(m.volume) + '</td>' +
     '<td class="spark">' + sparkline(m.sparkline) + '</td>' +
     '<td class="pct">' + probHtml(m, NORM) + '</td>' +
@@ -78,7 +81,7 @@ function card(m, opts) {
   foot += m.sparkline && m.sparkline.length >= 2 ? sparkline(m.sparkline) : '';
   return '<div class="card" data-id="' + esc(m.conditionId) + '"' + (opts.extra ? ' hidden data-extra' : '') + '>' +
     '<div class="now"><span class="p">' + probHtml(m, NORM) + '</span></div>' +
-    '<div class="q">' + esc(m.question) + '</div>' +
+    '<div class="q">' + entityThumb(m.conditionId) + esc(m.question) + '</div>' +
     '<div class="ev">' + sub + '</div>' +
     '<div class="card-foot">' + foot + '</div>' +
   '</div>';
@@ -214,6 +217,7 @@ function wireExpanders() {
     document.getElementById('stamp').textContent =
       data.lastUpdated ? 'Updated ' + fmtStamp(data.lastUpdated) : '';
 
+    await loadEntities();              // headshots/logos for standings rows (optional)
     NORM = computeNormalized(data.markets);
     ALL_LIVE = (data.markets || []).filter(m => !m.resolved && isNum(m.impliedProbability));
 
