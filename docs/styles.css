@@ -87,6 +87,9 @@ table.lb td.name{text-align:left;font-family:'DM Sans',sans-serif;max-width:24re
 .name .ev{font-size:.7rem;color:var(--text-secondary);font-family:'JetBrains Mono',monospace}
 .cat{display:inline-block;font-size:.58rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;
   padding:.08rem .4rem;border-radius:4px;background:var(--accent-dim);color:var(--accent);white-space:nowrap}
+.badge-settled{display:inline-block;font-size:.54rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+  padding:.05rem .35rem;border-radius:4px;background:var(--surface-hover);color:var(--text-secondary);
+  margin-right:.35rem;vertical-align:middle}
 td.pct{font-size:.92rem;font-weight:600;color:var(--text)}
 .delta{font-weight:600}
 .delta.pos{color:var(--green)}.delta.neg{color:var(--red)}.delta.flat{color:var(--text-secondary)}

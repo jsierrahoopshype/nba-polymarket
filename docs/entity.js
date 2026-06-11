@@ -24,13 +24,15 @@
   if (!mk.length) return;                          // all dropped from index; keep static
   mk.sort((a, b) => (b.volume || 0) - (a.volume || 0));
 
-  let showLow = false;
+  const passing = mk.filter(passesFloor);
+  const allLow = passing.length === 0;   // nothing clears the floor
+  let showLow = allLow;                   // ...so show everything rather than a blank list
 
   function rowsFor(list) {
     return list.map(m => {
       const d24 = fmtDelta(m.delta24h), d7 = fmtDelta(m.delta7d);
       return '<tr data-id="' + esc(m.conditionId) + '">' +
-        '<td class="name"><span class="q">' + esc(m.question) + '</span>' +
+        '<td class="name"><span class="q">' + settledBadge(m) + esc(displayTitle(m)) + '</span>' +
           '<span class="ev">' + esc(m.eventTitle || '') + '</span></td>' +
         '<td class="vol">' + fmtVol(m.volume) + '</td>' +
         '<td class="spark">' + sparkline(m.sparkline) + '</td>' +
@@ -46,7 +48,7 @@
       const d24 = fmtDelta(m.delta24h), d7 = fmtDelta(m.delta7d);
       return '<div class="card" data-id="' + esc(m.conditionId) + '">' +
         '<div class="now"><span class="p">' + probHtml(m, norm) + '</span></div>' +
-        '<div class="q">' + esc(m.question) + '</div>' +
+        '<div class="q">' + settledBadge(m) + esc(displayTitle(m)) + '</div>' +
         '<div class="ev">' + esc(m.eventTitle || '') + '</div>' +
         '<div class="card-foot">' +
           '<span class="lbl">Vol</span><span>' + fmtVol(m.volume) + '</span>' +
@@ -58,22 +60,25 @@
   }
 
   function draw() {
-    const vis = showLow ? mk : mk.filter(passesFloor);
-    const hidden = mk.length - mk.filter(passesFloor).length;
-    const bar = hidden > 0
-      ? '<div class="lowvol-bar"><button class="lowvol-toggle' + (showLow ? ' active' : '') +
-          '" id="elv">' + (showLow ? 'Hide low-volume markets' : 'Show low-volume markets') + '</button>' +
-          '<span class="lowvol-note">' + (showLow
-            ? 'Showing all ' + mk.length + ' markets.'
-            : hidden + ' under $' + (MIN_VOLUME / 1000) + 'K hidden.') + '</span></div>'
-      : '';
-    const table = vis.length
-      ? '<div class="table-wrap"><table class="lb"><thead><tr>' +
-          '<th class="left">Market</th><th>Vol</th><th>Trend</th><th>Now</th><th>24h</th><th>7d</th>' +
-          '</tr></thead><tbody>' + rowsFor(vis) + '</tbody></table></div>' +
-        '<div class="cards">' + cardsFor(vis) + '</div>'
-      : '<div class="empty">Every market here is under $' + (MIN_VOLUME / 1000) + 'K — use the toggle to show them.</div>';
-    wrap.innerHTML = bar + table;
+    const vis = (showLow || allLow) ? mk : passing;
+    const hidden = mk.length - passing.length;
+    let bar = '';
+    if (allLow) {
+      // every market is below the floor — show them all with a plain note, no toggle
+      bar = '<div class="lowvol-note">All ' + mk.length + ' market' + (mk.length === 1 ? '' : 's') +
+            ' here are under $' + (MIN_VOLUME / 1000) + 'K.</div>';
+    } else if (hidden > 0) {
+      bar = '<div class="lowvol-bar"><button class="lowvol-toggle' + (showLow ? ' active' : '') +
+            '" id="elv">' + (showLow ? 'Hide low-volume markets' : 'Show low-volume markets') + '</button>' +
+            '<span class="lowvol-note">' + (showLow
+              ? 'Showing all ' + mk.length + ' markets.'
+              : hidden + ' under $' + (MIN_VOLUME / 1000) + 'K hidden.') + '</span></div>';
+    }
+    wrap.innerHTML = bar +
+      '<div class="table-wrap"><table class="lb"><thead><tr>' +
+        '<th class="left">Market</th><th>Vol</th><th>Trend</th><th>Now</th><th>24h</th><th>7d</th>' +
+        '</tr></thead><tbody>' + rowsFor(vis) + '</tbody></table></div>' +
+      '<div class="cards">' + cardsFor(vis) + '</div>';
     wireRowNav(wrap);
     const b = document.getElementById('elv');
     if (b) b.addEventListener('click', () => { showLow = !showLow; draw(); });

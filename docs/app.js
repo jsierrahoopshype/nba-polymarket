@@ -133,6 +133,21 @@ function polyMarketUrl(m) {
   return null;
 }
 
+/* Path back to /docs/ from whatever depth the current page sits at, derived
+   from the data base loadData discovered (data/ and docs/ are siblings at the
+   site root). Lets nav links resolve correctly from deep pages like
+   /docs/player/<slug>/. Falls back to the app's own dir before the first load. */
+function docsBase() {
+  return (typeof _dataBase === 'string' ? _dataBase : '../data/').replace(/data\/$/, 'docs/');
+}
+
+/* onerror for hotlinked images: try the raw.githubusercontent mirror once
+   (the Pages host can lag/serve differently), then hide if that also fails. */
+const IMG_FALLBACK =
+  "if(this.dataset.f){this.style.display='none'}else{this.dataset.f=1;" +
+  "this.src=this.src.replace('https://jsierrahoopshype.github.io/nba-headshots/'," +
+  "'https://raw.githubusercontent.com/jsierrahoopshype/nba-headshots/main/')}";
+
 /* --- entity thumbnails ---------------------------------------------------- */
 /* data/entities.json maps a conditionId to its single primary entity (player
    or team) so standings rows can show a headshot/logo next to a name. Optional:
@@ -151,9 +166,9 @@ async function loadEntities() {
 function entityThumb(conditionId) {
   const e = ENTITY_MAP[conditionId];
   if (!e) return '';
-  return '<a class="ethumb" href="' + e.t + '/' + esc(e.slug) + '/" title="' + esc(e.name) +
+  return '<a class="ethumb" href="' + docsBase() + esc(e.t) + '/' + esc(e.slug) + '/" title="' + esc(e.name) +
     '" onclick="event.stopPropagation()"><img src="' + esc(e.img) + '" alt="" loading="lazy" ' +
-    'width="22" height="22" onerror="this.style.display=\'none\'"></a>';
+    'width="22" height="22" onerror="' + IMG_FALLBACK + '"></a>';
 }
 
 /* --- formatting ----------------------------------------------------------- */
@@ -179,6 +194,35 @@ function fmtVol(v) {
   return '$' + Math.round(v);
 }
 
+/* short local date like "Jun 9" */
+function fmtDayShort(iso) {
+  if (!iso) return '';
+  const d = new Date(iso);
+  return isNaN(d) ? '' : d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+}
+
+const GAME_TAG = '100639';   // Polymarket "Games" tag
+function isGameMarket(m) {
+  return (m.tags || []).some(t => String(t && t.id) === GAME_TAG);
+}
+
+/* Display title: game markets get the game date appended so otherwise-identical
+   matchup rows ("Spurs vs. Knicks") are distinguishable. */
+function displayTitle(m) {
+  const q = m.question || '';
+  if (isGameMarket(m)) {
+    const d = fmtDayShort(m.endDate);
+    if (d) return q + ' · ' + d;
+  }
+  return q;
+}
+
+/* "Settled" badge for resolved markets — shown wherever a market renders so a
+   recently-resolved market never reads as live odds. */
+function settledBadge(m) {
+  return m && m.resolved ? '<span class="badge-settled">Settled</span>' : '';
+}
+
 function fmtDate(iso) {
   if (!iso) return '—';
   const d = new Date(iso);
@@ -200,7 +244,7 @@ function esc(s) {
     c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
-function marketUrl(id) { return 'market.html?id=' + encodeURIComponent(id); }
+function marketUrl(id) { return docsBase() + 'market.html?id=' + encodeURIComponent(id); }
 
 /* --- sparkline ------------------------------------------------------------ */
 /* Tiny inline SVG line from a market's sparkline points. Color encodes net

@@ -178,8 +178,10 @@ function render(record, entry, index) {
   if (isNum(vol)) meta.push('Volume ' + fmtVol(vol));
   const metaHtml = meta.map(x => '<span>' + x + '</span>').join('<span class="sep">·</span>');
 
-  // outbound link to the original on Polymarket
-  const poly = polyMarketUrl(m);
+  // outbound link to the original on Polymarket. Settled markets' deep links do
+  // not reliably resolve on Polymarket, so we hide the link rather than ship a
+  // dead one (see bug 4 — pending confirmation of a working settled-market URL).
+  const poly = resolved ? null : polyMarketUrl(m);
   const polyLink = poly
     ? '<a class="poly-link" href="' + esc(poly) + '" target="_blank" rel="noopener">View on Polymarket ↗</a>'
     : '';
@@ -225,7 +227,7 @@ function render(record, entry, index) {
       const sibRow = (s, extra) => {
         const dd = fmtDelta(s.delta24h);
         return '<div class="sib" data-id="' + esc(s.conditionId) + '"' + (extra ? ' hidden data-extra' : '') + '>' +
-          '<span class="nm"><a href="' + marketUrl(s.conditionId) + '">' + esc(s.question) + '</a></span>' +
+          '<span class="nm"><a href="' + marketUrl(s.conditionId) + '">' + settledBadge(s) + esc(displayTitle(s)) + '</a></span>' +
           '<span class="v">' + fmtVol(s.volume) + '</span>' +
           '<span class="p">' + probHtml(s, NORM) + '</span>' +
           '<span class="d delta ' + dd.cls + '">' + dd.text + '</span>' +
@@ -246,10 +248,11 @@ function render(record, entry, index) {
   }
 
   const question = (record && record.question) || (entry && entry.question) || 'Market';
+  const titleM = { question: question, tags: m.tags, endDate: (record && record.endDate) || (entry && entry.endDate) };
   app.innerHTML =
     '<div class="phead">' +
       '<span class="cat">' + esc(cat.label) + '</span>' +
-      '<h1>' + esc(question) + '</h1>' +
+      '<h1>' + settledBadge(m) + esc(displayTitle(titleM)) + '</h1>' +
       (meta.length ? '<div class="meta">' + metaHtml + '</div>' : '') +
       polyLink +
     '</div>' +
@@ -288,8 +291,11 @@ function render(record, entry, index) {
       .filter(p => isFinite(p[0]) && isNum(p[1]))
       .sort((a, b) => a[0] - b[0]);
 
-    document.title = ((record && record.question) || (entry && entry.question) || 'Market')
-      + ' · NBA Polymarket';
+    const tm = entry || record || {};
+    document.title = displayTitle({
+      question: (record && record.question) || (entry && entry.question) || 'Market',
+      tags: tm.tags, endDate: tm.endDate
+    }) + ' · NBA Polymarket';
     render(record, entry, index);
     document.getElementById('foot').innerHTML =
       'Data from Polymarket · updated ' + fmtStamp(index.lastUpdated);
