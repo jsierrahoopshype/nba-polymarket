@@ -345,10 +345,18 @@ def main():
     write_if_changed(DOCS_DIR / "teams" / "index.html",
                      directory_page("team", "NBA Teams", team_dir_entries), stats)
 
-    # entities.json: per-market primary entity (row thumbnail) + all matches (chips)
+    # entities.json: per-market matches (markets) + the full roster (directory)
+    # so global search resolves EVERY player/team, even ones with no current
+    # markets (their pages exist and say "no active markets").
+    directory = (
+        [{"t": "player", "slug": e["slug"], "name": e["name"], "img": e["thumb"]}
+         for e in player_dir_entries] +
+        [{"t": "team", "slug": e["slug"], "name": e["name"], "img": e["thumb"]}
+         for e in team_dir_entries]
+    )
     write_if_changed(ENTITIES_PATH,
-                     json.dumps({"markets": market_entities}, ensure_ascii=False,
-                                separators=(",", ":")) + "\n", stats)
+                     json.dumps({"markets": market_entities, "directory": directory},
+                                ensure_ascii=False, separators=(",", ":")) + "\n", stats)
 
     # sitemap.xml (urls only — no lastmod, so it stays churn-free)
     urls = [f"{SITE_BASE}/docs/index.html", f"{SITE_BASE}/docs/movers.html",

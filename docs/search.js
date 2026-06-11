@@ -21,28 +21,23 @@
       loadData('index.json').catch(function () { return { markets: [] }; }),
       loadData('entities.json').catch(function () { return { markets: {} }; })
     ]).then(function (res) {
-      var index = res[0], entmap = (res[1] && res[1].markets) || {};
+      var index = res[0], ents = res[1] || {};
       var items = [];
+      // every player + team (the full roster directory), so search never misses
+      // a known name even when the entity has no current markets
+      (ents.directory || []).forEach(function (e) {
+        items.push({
+          label: e.name, sub: e.t === 'player' ? 'Player' : 'Team',
+          url: docsBase() + e.t + '/' + e.slug + '/', kind: e.t, img: e.img,
+          key: e.name.toLowerCase()
+        });
+      });
       // markets (question -> market page)
       (index.markets || []).forEach(function (m) {
         items.push({
           label: displayTitle(m), sub: m.eventTitle || '',
           url: marketUrl(m.conditionId), kind: 'market', img: null,
           key: (m.question || '').toLowerCase()
-        });
-      });
-      // entities (player/team -> entity page), de-duplicated across markets
-      var seen = {};
-      Object.keys(entmap).forEach(function (cid) {
-        ((entmap[cid] && entmap[cid].all) || []).forEach(function (e) {
-          var id = e.t + '/' + e.slug;
-          if (seen[id]) return;
-          seen[id] = 1;
-          items.push({
-            label: e.name, sub: e.t === 'player' ? 'Player' : 'Team',
-            url: docsBase() + e.t + '/' + e.slug + '/', kind: e.t, img: e.img,
-            key: e.name.toLowerCase()
-          });
         });
       });
       CORPUS = items;
