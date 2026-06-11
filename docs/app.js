@@ -120,10 +120,18 @@ function probHtml(m, norm) {
 }
 
 /* --- Polymarket deep links ------------------------------------------------ */
+/* Site-wide legal-caution switch: set to false to hide EVERY outbound
+   polymarket.com link at once (Polymarket is ISP-blocked in some regions and
+   the regulatory picture can change quickly). Both link helpers honor it, so
+   every caller hides its link when this is off. */
+const SHOW_POLYMARKET_LINKS = true;
+
 function polyEventUrl(eventSlug) {
-  return eventSlug ? 'https://polymarket.com/event/' + encodeURIComponent(eventSlug) : null;
+  if (!SHOW_POLYMARKET_LINKS || !eventSlug) return null;
+  return 'https://polymarket.com/event/' + encodeURIComponent(eventSlug);
 }
 function polyMarketUrl(m) {
+  if (!SHOW_POLYMARKET_LINKS) return null;
   if (m.eventSlug && m.slug) {
     return 'https://polymarket.com/event/' + encodeURIComponent(m.eventSlug) +
            '/' + encodeURIComponent(m.slug);
@@ -148,10 +156,12 @@ const IMG_FALLBACK =
   "this.src=this.src.replace('https://jsierrahoopshype.github.io/nba-headshots/'," +
   "'https://raw.githubusercontent.com/jsierrahoopshype/nba-headshots/main/')}";
 
-/* --- entity thumbnails ---------------------------------------------------- */
-/* data/entities.json maps a conditionId to its single primary entity (player
-   or team) so standings rows can show a headshot/logo next to a name. Optional:
-   if it isn't there yet, rows just render without a thumbnail. */
+/* --- entities (players/teams matched to a market) ------------------------- */
+/* data/entities.json maps a conditionId to { primary, all }: `primary` is the
+   single unambiguous player/team for the row thumbnail (or null), `all` is every
+   matched entity for the clickable chips. Both come straight from the build's
+   exact full-name/alias matching — no fuzzy matching in the browser. Optional:
+   if the file isn't there yet, rows just render without entities. */
 let ENTITY_MAP = {};
 async function loadEntities() {
   try {
@@ -161,14 +171,26 @@ async function loadEntities() {
   return ENTITY_MAP;
 }
 
-/* Small linked thumbnail for a market's primary entity, relative to /docs/
-   (so it works from index.html / movers.html / resolved.html). */
+function entityLink(x, cls, imgSize, withName) {
+  return '<a class="' + cls + '" href="' + docsBase() + esc(x.t) + '/' + esc(x.slug) + '/" ' +
+    'title="' + esc(x.name) + '" onclick="event.stopPropagation()">' +
+    '<img src="' + esc(x.img) + '" alt="" loading="lazy" width="' + imgSize + '" height="' + imgSize +
+    '" onerror="' + IMG_FALLBACK + '">' + (withName ? esc(x.name) : '') + '</a>';
+}
+
+/* Small linked thumbnail for a market's primary entity (row name cells). */
 function entityThumb(conditionId) {
   const e = ENTITY_MAP[conditionId];
-  if (!e) return '';
-  return '<a class="ethumb" href="' + docsBase() + esc(e.t) + '/' + esc(e.slug) + '/" title="' + esc(e.name) +
-    '" onclick="event.stopPropagation()"><img src="' + esc(e.img) + '" alt="" loading="lazy" ' +
-    'width="22" height="22" onerror="' + IMG_FALLBACK + '"></a>';
+  const p = e && e.primary;
+  return p ? entityLink(p, 'ethumb', 22, false) : '';
+}
+
+/* Clickable chips for every entity matched to a market (one per player/team). */
+function entityChips(conditionId) {
+  const e = ENTITY_MAP[conditionId];
+  const all = (e && e.all) || [];
+  if (!all.length) return '';
+  return '<span class="echips">' + all.map(x => entityLink(x, 'echip', 16, true)).join('') + '</span>';
 }
 
 /* --- formatting ----------------------------------------------------------- */

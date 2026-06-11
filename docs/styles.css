@@ -243,3 +243,31 @@ td.name::after,.card .q::after{content:"";display:table;clear:both}
 @media(max-width:560px){
   .sib{grid-template-columns:1fr 3.4rem 3.4rem 4rem;gap:.4rem}
 }
+
+/* --- entity chips (item 11): clickable player/team links on rows + titles --- */
+.echips{display:inline-flex;flex-wrap:wrap;gap:.25rem;margin-top:.2rem}
+.phead .echips{margin:.5rem 0 0}
+.echip{display:inline-flex;align-items:center;gap:.25rem;font-family:'JetBrains Mono',monospace;
+  font-size:.62rem;font-weight:600;padding:.1rem .4rem .1rem .12rem;border:1px solid var(--border);
+  border-radius:999px;background:var(--surface);color:var(--text-secondary);text-decoration:none;white-space:nowrap}
+.echip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.echip img{width:16px;height:16px;border-radius:50%;object-fit:cover;background:var(--surface-hover)}
+
+/* --- global search (item 10) --- */
+.gsearch-wrap{position:relative;margin:0 0 1rem}
+.gsearch{width:100%;padding:.6rem .9rem;font-size:16px;font-family:inherit;border:1px solid var(--border);
+  border-radius:10px;background:var(--surface);color:var(--text)}
+.gsearch:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-dim)}
+.gsearch-results{position:absolute;top:100%;left:0;right:0;margin-top:.25rem;background:var(--surface);
+  border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.12);
+  max-height:22rem;overflow-y:auto;z-index:200;display:none}
+.gsearch-results.open{display:block}
+.gs-item{display:flex;align-items:center;gap:.55rem;padding:.5rem .8rem;border-bottom:1px solid var(--border);
+  text-decoration:none;color:var(--text)}
+.gs-item:last-child{border-bottom:none}
+.gs-item:hover{background:var(--surface-hover);text-decoration:none}
+.gs-item img{width:20px;height:20px;border-radius:50%;object-fit:cover;background:var(--surface-hover);flex-shrink:0}
+.gs-dot{width:8px;height:8px;border-radius:50%;background:var(--text-secondary);flex-shrink:0;margin:0 6px}
+.gs-dot.player{background:var(--accent)}.gs-dot.team{background:var(--green)}
+.gs-main{flex:1;font-size:.86rem;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gs-sub{font-family:'JetBrains Mono',monospace;font-size:.66rem;color:var(--text-secondary);flex-shrink:0}

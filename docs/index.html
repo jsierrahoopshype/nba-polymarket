@@ -30,8 +30,11 @@
     <span class="stamp" id="stamp"></span>
   </div>
 
+  <div class="gsearch-wrap"><input class="gsearch" type="text" placeholder="Search markets, players, teams…" autocomplete="off" aria-label="Search"><div class="gsearch-results"></div></div>
+
   <div id="app"><div class="loading">Loading market data…</div></div>
 
+  <div class="gsearch-wrap"><input class="gsearch" type="text" placeholder="Search markets, players, teams…" autocomplete="off" aria-label="Search"><div class="gsearch-results"></div></div>
   <div class="foot" id="foot"></div>
 </div>
 
@@ -50,7 +53,7 @@ function moverRow(m, i) {
   return '<tr data-id="' + esc(m.conditionId) + '">' +
     '<td class="rank">' + i + '</td>' +
     '<td class="name"><span class="q">' + settledBadge(m) + esc(displayTitle(m)) + '</span>' +
-      '<span class="ev">' + esc(m.eventTitle || '') + '</span></td>' +
+      '<span class="ev">' + esc(m.eventTitle || '') + '</span>' + entityChips(m.conditionId) + '</td>' +
     '<td><span class="cat">' + esc(categoryOf(m).label) + '</span></td>' +
     '<td class="spark">' + sparkline(m.sparkline) + '</td>' +
     '<td class="pct">' + probHtml(m, NORM) + '</td>' +
@@ -62,7 +65,8 @@ function standRow(m, extra) {
   const d24 = fmtDelta(m.delta24h), d7 = fmtDelta(m.delta7d);
   return '<tr data-id="' + esc(m.conditionId) + '"' + (extra ? ' hidden data-extra' : '') + '>' +
     '<td class="name">' + entityThumb(m.conditionId) +
-      '<span class="q">' + settledBadge(m) + esc(displayTitle(m)) + '</span></td>' +
+      '<span class="q">' + settledBadge(m) + esc(displayTitle(m)) + '</span>' +
+      entityChips(m.conditionId) + '</td>' +
     '<td class="vol">' + fmtVol(m.volume) + '</td>' +
     '<td class="spark">' + sparkline(m.sparkline) + '</td>' +
     '<td class="pct">' + probHtml(m, NORM) + '</td>' +
@@ -82,7 +86,7 @@ function card(m, opts) {
   return '<div class="card" data-id="' + esc(m.conditionId) + '"' + (opts.extra ? ' hidden data-extra' : '') + '>' +
     '<div class="now"><span class="p">' + probHtml(m, NORM) + '</span></div>' +
     '<div class="q">' + entityThumb(m.conditionId) + settledBadge(m) + esc(displayTitle(m)) + '</div>' +
-    '<div class="ev">' + sub + '</div>' +
+    '<div class="ev">' + sub + '</div>' + entityChips(m.conditionId) +
     '<div class="card-foot">' + foot + '</div>' +
   '</div>';
 }
@@ -234,5 +238,6 @@ function wireExpanders() {
   }
 })();
 </script>
+<script src="search.js"></script>
 </body>
 </html>
