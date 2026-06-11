@@ -1,0 +1,107 @@
+{
+  "conditionId": "0x9993f913bd65561aa1a0fb88330f8116c843c5e598faa1512236be1d723e5085",
+  "slug": "nba-finals-will-there-be-a-breen-bang-in-game-4-20260608220212041",
+  "question": "NBA Finals: Will there be a Breen Bang in Game 4?",
+  "eventSlug": "nba-finals-will-there-be-a-breen-bang-in-game-4-20260608220212041",
+  "eventTitle": "NBA Finals: Will there be a Breen Bang in Game 4?",
+  "eventId": "576558",
+  "clobTokenIds": [
+    "113796656915125619523523449832943252012988601365171525331826624555401374767245",
+    "17951080242966950148641334835013566131015645839126470119694241342344863483521"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-06-11T03:59:00Z",
+  "tags": [
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z",
+      "requiresTranslation": false
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z",
+      "requiresTranslation": false
+    },
+    {
+      "id": "101504",
+      "label": "Mike Breen",
+      "slug": "mike-breen",
+      "createdAt": "2024-12-16T17:56:16.941415Z",
+      "updatedAt": "2026-04-17T20:20:13.830542Z",
+      "requiresTranslation": false
+    },
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true,
+      "requiresTranslation": false
+    },
+    {
+      "id": "100240",
+      "label": "NBA Finals",
+      "slug": "nba-finals",
+      "createdAt": "2024-05-31T15:49:35.90647Z",
+      "updatedAt": "2026-04-17T20:19:03.168093Z",
+      "requiresTranslation": false
+    },
+    {
+      "id": "104587",
+      "label": "2026 NBA Playoffs",
+      "slug": "2026-nba-playoffs",
+      "createdAt": "2026-04-13T20:51:56.89448Z",
+      "updatedAt": "2026-04-17T20:51:10.072241Z",
+      "requiresTranslation": false
+    },
+    {
+      "id": "100343",
+      "label": "Mentions",
+      "slug": "mention-markets",
+      "forceShow": false,
+      "createdAt": "2024-08-16T02:29:11.548984Z",
+      "updatedAt": "2026-04-17T21:08:23.080776Z",
+      "requiresTranslation": false
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-06-11T09:05:39Z",
+  "negRisk": false,
+  "history": [
+{"timestamp":"2026-06-09T15:47:08Z","impliedProbability":0.765,"volume24hr":16.2,"volume":16.2,"liquidity":225.4575,"spread":0.43,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-09T17:48:49Z","impliedProbability":0.52,"volume24hr":18.2404,"volume":18.240399999999998,"liquidity":27.3221,"spread":0.86,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-09T19:54:45Z","impliedProbability":0.515,"volume24hr":18.2404,"volume":18.240399999999998,"liquidity":43.6202,"spread":0.85,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-09T21:52:50Z","impliedProbability":0.57,"volume24hr":18.2404,"volume":18.240399999999998,"liquidity":62.6439,"spread":0.68,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-09T23:21:36Z","impliedProbability":0.475,"volume24hr":18.2404,"volume":18.240399999999998,"liquidity":39.99,"spread":0.83,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-10T01:37:10Z","impliedProbability":0.65,"volume24hr":18.2404,"volume":18.240399999999998,"liquidity":112.9352,"spread":0.56,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-10T06:06:57Z","impliedProbability":0.43,"volume24hr":19.767866,"volume":19.767865999999998,"liquidity":105.0786,"spread":0.14,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-10T10:32:31Z","impliedProbability":0.28,"volume24hr":19.767866,"volume":19.767865999999998,"liquidity":36.803,"spread":0.44,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-10T14:00:53Z","impliedProbability":0.355,"volume24hr":23.607866,"volume":23.607865999999998,"liquidity":51.7083,"spread":0.29,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-10T17:33:53Z","impliedProbability":0.475,"volume24hr":7.407866,"volume":23.607865999999998,"liquidity":94.108,"spread":0.05,"oneDayPriceChange":-0.05,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-10T18:36:28Z","impliedProbability":0.485,"volume24hr":5.367466,"volume":23.607865999999998,"liquidity":104.1255,"spread":0.03,"oneDayPriceChange":-0.04,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-10T19:03:16Z","impliedProbability":0.485,"volume24hr":5.367466,"volume":23.607865999999998,"liquidity":103.7097,"spread":0.03,"oneDayPriceChange":-0.035,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-10T19:57:09Z","impliedProbability":0.47,"volume24hr":5.367466,"volume":23.607865999999998,"liquidity":77.8315,"spread":0.06,"oneDayPriceChange":-0.045,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-10T22:14:26Z","impliedProbability":0.735,"volume24hr":21.527466,"volume":39.767866,"liquidity":113.1905,"spread":0.41,"oneDayPriceChange":0.18,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-10T23:52:26Z","impliedProbability":0.715,"volume24hr":21.527466,"volume":39.767866,"liquidity":111.1953,"spread":0.47,"oneDayPriceChange":0.215,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-11T02:16:35Z","impliedProbability":0.52,"volume24hr":111.501802,"volume":129.742202,"liquidity":12.9996,"spread":0.86,"oneDayPriceChange":-0.16,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-11T04:41:59Z","impliedProbability":0.991,"volume24hr":697.974333,"volume":717.742199,"liquidity":2021.90647,"spread":0.018,"oneDayPriceChange":0.356,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-11T09:05:39Z","impliedProbability":1.0,"volume24hr":697.974333,"volume":717.742199,"liquidity":0.0,"spread":0.018,"oneDayPriceChange":0.561,"oneWeekPriceChange":null}
+  ]
+}
