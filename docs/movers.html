@@ -27,6 +27,8 @@
     gainers and losers both. <span class="stamp" id="stamp"></span>
   </div>
 
+  <div class="gsearch-wrap"><input class="gsearch" type="text" placeholder="Search markets, players, teams…" autocomplete="off" aria-label="Search"><div class="gsearch-results"></div></div>
+
   <div class="filters">
     <div class="toggle" id="window">
       <button class="active" data-win="24h">24h change</button>
@@ -40,6 +42,7 @@
   </div>
 
   <div id="app"><div class="loading">Loading markets…</div></div>
+  <div class="gsearch-wrap"><input class="gsearch" type="text" placeholder="Search markets, players, teams…" autocomplete="off" aria-label="Search"><div class="gsearch-results"></div></div>
   <div class="foot" id="foot"></div>
 </div>
 
@@ -75,8 +78,9 @@ function rowHtml(m, i) {
   const sb = k => SORT.key === k ? ' sorted-by' : '';
   return '<tr data-id="' + esc(m.conditionId) + '">' +
     '<td class="rank">' + i + '</td>' +
-    '<td class="name' + sb('name') + '"><span class="q">' + settledBadge(m) + esc(displayTitle(m)) + '</span>' +
-      '<span class="ev">' + esc(m.eventTitle || '') + '</span></td>' +
+    '<td class="name' + sb('name') + '">' + entityThumb(m.conditionId) +
+      '<span class="q">' + settledBadge(m) + esc(displayTitle(m)) + '</span>' +
+      '<span class="ev">' + esc(m.eventTitle || '') + '</span>' + entityChips(m.conditionId) + '</td>' +
     '<td><span class="cat">' + esc(categoryOf(m).label) + '</span></td>' +
     '<td class="vol' + sb('vol') + '">' + fmtVol(m.volume) + '</td>' +
     '<td class="spark">' + sparkline(m.sparkline) + '</td>' +
@@ -90,8 +94,8 @@ function cardHtml(m) {
   const d24 = fmtDelta(m.delta24h), d7 = fmtDelta(m.delta7d);
   return '<div class="card" data-id="' + esc(m.conditionId) + '">' +
     '<div class="now"><span class="p">' + probHtml(m, NORM) + '</span></div>' +
-    '<div class="q">' + settledBadge(m) + esc(displayTitle(m)) + '</div>' +
-    '<div class="ev">' + esc(categoryOf(m).label) + ' · ' + esc(m.eventTitle || '') + '</div>' +
+    '<div class="q">' + entityThumb(m.conditionId) + settledBadge(m) + esc(displayTitle(m)) + '</div>' +
+    '<div class="ev">' + esc(categoryOf(m).label) + ' · ' + esc(m.eventTitle || '') + '</div>' + entityChips(m.conditionId) +
     '<div class="card-foot">' +
       '<span class="lbl">Vol</span><span>' + fmtVol(m.volume) + '</span>' +
       '<span class="lbl">24h</span><span class="delta ' + d24.cls + '">' + d24.text + '</span>' +
@@ -169,6 +173,7 @@ function wire() {
     const data = await loadData('index.json');
     document.getElementById('stamp').textContent =
       data.lastUpdated ? 'Updated ' + fmtStamp(data.lastUpdated) : '';
+    await loadEntities();
     NORM = computeNormalized(data.markets);
     ALL = (data.markets || []).filter(m =>
       !m.resolved && isNum(m.impliedProbability) &&
@@ -184,5 +189,6 @@ function wire() {
   }
 })();
 </script>
+<script src="search.js"></script>
 </body>
 </html>

@@ -194,28 +194,43 @@ def entity_page(kind, slug, name, sub, img, fallback_img, markets):
         '<link rel="stylesheet" href="../../styles.css">\n'
         '</head>\n<body>\n<div class="container narrow">\n'
         '<a class="back" href="../../index.html">← All markets</a>\n'
+        + search_box("../../") +
         '<div class="ehead">\n'
         f'<img class="eimg" src="{img}" alt="{esc(name)}" loading="lazy" '
         f'width="72" height="72" onerror="{onerr}">\n'
         f'<div><h1>{esc(name)}</h1><div class="esub">{esc(sub)}</div></div>\n'
         '</div>\n'
         f'<div id="markets">{body}</div>\n'
+        + search_box("../../") +
         '<div class="foot" id="foot"></div>\n</div>\n'
         f'<script>window.ENTITY={json.dumps(payload)};</script>\n'
         '<script src="../../app.js"></script>\n'
         '<script src="../../entity.js"></script>\n'
+        '<script src="../../search.js"></script>\n'
         '</body>\n</html>\n'
     )
 
 
+def search_box(base):
+    """Global search input markup (wired by search.js). Used top and bottom."""
+    return ('<div class="gsearch-wrap"><input class="gsearch" type="text" '
+            'placeholder="Search markets, players, teams…" autocomplete="off" '
+            'aria-label="Search"><div class="gsearch-results"></div></div>')
+
+
 def directory_page(kind, title, entries):
-    """A /players/ or /teams/ index: searchable grid of every entity."""
+    """
+    A /players/ or /teams/ index. Entities arrive sorted by market count (item 9
+    default); a toggle re-sorts alphabetically client-side. Global search is at
+    top and bottom (item 10).
+    """
     cards = "".join(
-        f'<a class="ecard" href="../{kind}/{esc(e["slug"])}/" data-name="{esc(e["name"].lower())}">'
+        f'<a class="ecard" href="../{kind}/{esc(e["slug"])}/" '
+        f'data-name="{esc(e["name"].lower())}" data-count="{e["count"]}">'
         f'<img src="{e["thumb"]}" alt="" loading="lazy" width="40" height="40" '
         f'onerror="this.style.visibility=\'hidden\'">'
         f'<span class="en">{esc(e["name"])}</span>'
-        f'<span class="ec">{esc(e["count"])}</span></a>' for e in entries)
+        f'<span class="ec">{e["count"]}</span></a>' for e in entries)
     return (
         '<!doctype html>\n<html lang="en">\n<head>\n'
         '<meta charset="utf-8">\n'
@@ -230,15 +245,23 @@ def directory_page(kind, title, entries):
         '</head>\n<body>\n<div class="container">\n'
         '<div class="tabs"><a href="../index.html">Standings</a>'
         '<a href="../movers.html">Movers</a><a href="../resolved.html">Resolved</a>'
-        '<a href="../players/">Players</a><a href="../teams/">Teams</a></div>\n'
+        f'<a href="../players/"{" class=active" if kind=="player" else ""}>Players</a>'
+        f'<a href="../teams/"{" class=active" if kind=="team" else ""}>Teams</a></div>\n'
+        + search_box("../") +
         f'<div class="hdr"><h1>{esc(title)}</h1><span class="brand">HoopsHype</span></div>\n'
-        '<input class="esearch" id="esearch" type="text" placeholder="Filter by name…" autocomplete="off">\n'
+        '<div class="toggle" id="esort"><button class="active" data-sort="count">Most markets</button>'
+        '<button data-sort="name">A–Z</button></div>\n'
         f'<div class="egrid" id="egrid">{cards}</div>\n'
+        + search_box("../") +
         '</div>\n'
-        '<script>(function(){var b=document.getElementById("esearch"),g=document.getElementById("egrid");'
-        'b.addEventListener("input",function(){var q=b.value.toLowerCase();'
-        'g.querySelectorAll(".ecard").forEach(function(c){'
-        'c.style.display=c.dataset.name.indexOf(q)>=0?"":"none";});});})();</script>\n'
+        '<script>(function(){var t=document.getElementById("esort"),g=document.getElementById("egrid");'
+        't.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;'
+        't.querySelectorAll("button").forEach(function(x){x.classList.toggle("active",x===b);});'
+        'var k=b.dataset.sort,cs=[].slice.call(g.children);'
+        'cs.sort(function(a,c){return k==="name"?a.dataset.name.localeCompare(c.dataset.name):'
+        '(+c.dataset.count- +a.dataset.count)||a.dataset.name.localeCompare(c.dataset.name);});'
+        'cs.forEach(function(c){g.appendChild(c);});});})();</script>\n'
+        '<script src="../app.js"></script>\n<script src="../search.js"></script>\n'
         '</body>\n</html>\n'
     )
 
@@ -250,10 +273,22 @@ def main():
     markets = index.get("markets", [])
     players = load_roster()
 
+    players_by_slug = {p["slug"]: p for p in players}
+
+    def player_entity(slug):
+        p = players_by_slug[slug]
+        return {"t": "player", "slug": p["slug"], "name": p["full_name"],
+                "img": HEADSHOT_THUMB.format(file=headshot_file(p))}
+
+    def team_entity(slug):
+        tid, name, _nick, tslug, _a = TEAMS[_SLUG_TO_ABBREV[slug]]
+        return {"t": "team", "slug": tslug, "name": name,
+                "img": TEAM_LOGO.format(id=tid)}
+
     # match every market once
-    by_player = {}   # slug -> [market, ...]
-    by_team = {}     # slug -> [market, ...]
-    market_primary = {}   # conditionId -> {t, slug, name, img}
+    by_player = {}        # slug -> [market, ...]
+    by_team = {}          # slug -> [market, ...]
+    market_entities = {}  # conditionId -> {primary: {..}|null, all: [{..}, ...]}
     for m in markets:
         q = tokens(m.get("question"))
         pl, tm = match_question(q, players)
@@ -261,18 +296,18 @@ def main():
             by_player.setdefault(slug, []).append(m)
         for slug in tm:
             by_team.setdefault(slug, []).append(m)
-        # primary entity (for the standings-row thumbnail): exactly one player,
-        # else exactly one team, else none (avoid a wrong/ambiguous icon)
+        if not pl and not tm:
+            continue
+        all_ents = [player_entity(s) for s in pl] + [team_entity(s) for s in tm]
+        # primary (for the row thumbnail): exactly one player, else exactly one
+        # team, else none — never show a single wrong/ambiguous icon.
         if len(pl) == 1:
-            p = next(x for x in players if x["slug"] == pl[0])
-            market_primary[m["conditionId"]] = {
-                "t": "player", "slug": p["slug"], "name": p["full_name"],
-                "img": HEADSHOT_THUMB.format(file=headshot_file(p))}
+            primary = all_ents[0]
         elif not pl and len(tm) == 1:
-            tid, name, nick, slug, _a = TEAMS[_SLUG_TO_ABBREV[tm[0]]]
-            market_primary[m["conditionId"]] = {
-                "t": "team", "slug": slug, "name": name,
-                "img": TEAM_LOGO.format(id=tid)}
+            primary = all_ents[0]
+        else:
+            primary = None
+        market_entities[m["conditionId"]] = {"primary": primary, "all": all_ents}
 
     stats = {"written": 0, "skipped": 0}
 
@@ -301,18 +336,27 @@ def main():
         team_dir_entries.append({"slug": slug, "name": name,
                                  "thumb": img, "count": len(ms)})
 
-    # directory pages
-    player_dir_entries.sort(key=lambda e: e["name"])
-    team_dir_entries.sort(key=lambda e: e["name"])
+    # directory pages — default order is most markets first (item 9); the page
+    # has a client-side toggle to alphabetical.
+    player_dir_entries.sort(key=lambda e: (-e["count"], e["name"]))
+    team_dir_entries.sort(key=lambda e: (-e["count"], e["name"]))
     write_if_changed(DOCS_DIR / "players" / "index.html",
                      directory_page("player", "NBA Players", player_dir_entries), stats)
     write_if_changed(DOCS_DIR / "teams" / "index.html",
                      directory_page("team", "NBA Teams", team_dir_entries), stats)
 
-    # entities.json for the standings-row thumbnails
+    # entities.json: per-market matches (markets) + the full roster (directory)
+    # so global search resolves EVERY player/team, even ones with no current
+    # markets (their pages exist and say "no active markets").
+    directory = (
+        [{"t": "player", "slug": e["slug"], "name": e["name"], "img": e["thumb"]}
+         for e in player_dir_entries] +
+        [{"t": "team", "slug": e["slug"], "name": e["name"], "img": e["thumb"]}
+         for e in team_dir_entries]
+    )
     write_if_changed(ENTITIES_PATH,
-                     json.dumps({"markets": market_primary}, ensure_ascii=False,
-                                separators=(",", ":")) + "\n", stats)
+                     json.dumps({"markets": market_entities, "directory": directory},
+                                ensure_ascii=False, separators=(",", ":")) + "\n", stats)
 
     # sitemap.xml (urls only — no lastmod, so it stays churn-free)
     urls = [f"{SITE_BASE}/docs/index.html", f"{SITE_BASE}/docs/movers.html",
@@ -330,7 +374,7 @@ def main():
     matched_teams = sum(1 for s in (t[3] for t in TEAMS.values()) if by_team.get(s))
     print(f"Entities: {len(players)} players ({matched_players} with markets), "
           f"30 teams ({matched_teams} with markets), "
-          f"{len(market_primary)} markets tagged. "
+          f"{len(market_entities)} markets tagged. "
           f"Files written: {stats['written']}, unchanged: {stats['skipped']}.")
 
 

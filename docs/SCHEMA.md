@@ -11,7 +11,7 @@ There are three kinds of files, all under the `data/` folder:
 | --- | --- | --- |
 | `data/index.json` | One summary list of every market worth showing right now. The pages load this first. | `scripts/build_index.py` |
 | `data/resolved.json` | A slim directory of markets resolved in the last two months, for the Resolved page. | `scripts/build_index.py` |
-| `data/entities.json` | Maps a market to its single primary entity (player/team) so rows can show a headshot/logo. | `scripts/build_entities.py` |
+| `data/entities.json` | Maps a market to its matched player(s)/team(s): a `primary` for the row thumbnail and `all` for the clickable chips. | `scripts/build_entities.py` |
 | `data/markets/<conditionId>.json` | The full history of one live market. One file per market. | `scripts/poll_polymarket.py` |
 | `data/archive/<YYYY-MM>/<conditionId>.json` | A frozen, resolved market, filed under the month it resolved. | `scripts/poll_polymarket.py` |
 
@@ -185,9 +185,12 @@ the browser from `index.json`. So a page's bytes change only when its market
 membership changes, and the builder writes a file only when its content
 actually differs — a normal poll regenerates nothing.
 
-`data/entities.json` is the reverse map (`{ "markets": { conditionId: { t, slug,
-name, img } } }`) for the standings-row thumbnails. Only markets with a single
-unambiguous primary entity appear.
+`data/entities.json` is the reverse map. For each market it carries
+`{ "primary": {t,slug,name,img}|null, "all": [{t,slug,name,img}, ...] }`:
+`primary` is the single unambiguous player/team for the row thumbnail (null when
+ambiguous, e.g. a "Team A vs Team B" game), and `all` is every matched entity,
+used for the clickable entity chips. Both come from the build's exact
+full-name/alias matching — there is no fuzzy matching in the browser.
 
 ---
 

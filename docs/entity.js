@@ -17,6 +17,7 @@
   let data;
   try { data = await loadData('index.json'); }
   catch (e) { return; }                            // keep the static SEO list
+  await loadEntities();                            // for cross-links to other entities
 
   const norm = computeNormalized(data.markets);
   const byId = new Map((data.markets || []).map(m => [m.conditionId, m]));
@@ -32,8 +33,9 @@
     return list.map(m => {
       const d24 = fmtDelta(m.delta24h), d7 = fmtDelta(m.delta7d);
       return '<tr data-id="' + esc(m.conditionId) + '">' +
-        '<td class="name"><span class="q">' + settledBadge(m) + esc(displayTitle(m)) + '</span>' +
-          '<span class="ev">' + esc(m.eventTitle || '') + '</span></td>' +
+        '<td class="name">' + entityThumb(m.conditionId) +
+          '<span class="q">' + settledBadge(m) + esc(displayTitle(m)) + '</span>' +
+          '<span class="ev">' + esc(m.eventTitle || '') + '</span>' + entityChips(m.conditionId) + '</td>' +
         '<td class="vol">' + fmtVol(m.volume) + '</td>' +
         '<td class="spark">' + sparkline(m.sparkline) + '</td>' +
         '<td class="pct">' + probHtml(m, norm) + '</td>' +
@@ -48,8 +50,8 @@
       const d24 = fmtDelta(m.delta24h), d7 = fmtDelta(m.delta7d);
       return '<div class="card" data-id="' + esc(m.conditionId) + '">' +
         '<div class="now"><span class="p">' + probHtml(m, norm) + '</span></div>' +
-        '<div class="q">' + settledBadge(m) + esc(displayTitle(m)) + '</div>' +
-        '<div class="ev">' + esc(m.eventTitle || '') + '</div>' +
+        '<div class="q">' + entityThumb(m.conditionId) + settledBadge(m) + esc(displayTitle(m)) + '</div>' +
+        '<div class="ev">' + esc(m.eventTitle || '') + '</div>' + entityChips(m.conditionId) +
         '<div class="card-foot">' +
           '<span class="lbl">Vol</span><span>' + fmtVol(m.volume) + '</span>' +
           '<span class="lbl">24h</span><span class="delta ' + d24.cls + '">' + d24.text + '</span>' +

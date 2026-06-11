@@ -27,12 +27,15 @@
     what it closed at. <span class="stamp" id="stamp"></span>
   </div>
 
+  <div class="gsearch-wrap"><input class="gsearch" type="text" placeholder="Search markets, players, teams…" autocomplete="off" aria-label="Search"><div class="gsearch-results"></div></div>
+
   <div class="lowvol-bar">
     <button class="lowvol-toggle" id="lowvol">Show low-volume markets</button>
     <span class="lowvol-note" id="lowvol-note"></span>
   </div>
 
   <div id="app"><div class="loading">Loading resolved markets…</div></div>
+  <div class="gsearch-wrap"><input class="gsearch" type="text" placeholder="Search markets, players, teams…" autocomplete="off" aria-label="Search"><div class="gsearch-results"></div></div>
   <div class="foot" id="foot"></div>
 </div>
 
@@ -49,8 +52,9 @@ function outcomeBadge(m) {
 
 function rowHtml(m) {
   return '<tr data-id="' + esc(m.conditionId) + '">' +
-    '<td class="name"><span class="q">' + esc(displayTitle(m)) + '</span>' +
-      '<span class="ev">' + esc(m.eventTitle || '') + '</span></td>' +
+    '<td class="name">' + entityThumb(m.conditionId) +
+      '<span class="q">' + esc(displayTitle(m)) + '</span>' +
+      '<span class="ev">' + esc(m.eventTitle || '') + '</span>' + entityChips(m.conditionId) + '</td>' +
     '<td><span class="cat">' + esc(categoryOf(m).label) + '</span></td>' +
     '<td>' + outcomeBadge(m) + '</td>' +
     '<td class="pct">' + fmtPct(m.finalProbability) + '</td>' +
@@ -62,8 +66,8 @@ function rowHtml(m) {
 function cardHtml(m) {
   return '<div class="card" data-id="' + esc(m.conditionId) + '">' +
     '<div class="now">' + outcomeBadge(m) + '</div>' +
-    '<div class="q">' + esc(displayTitle(m)) + '</div>' +
-    '<div class="ev">' + esc(categoryOf(m).label) + ' · ' + esc(m.eventTitle || '') + '</div>' +
+    '<div class="q">' + entityThumb(m.conditionId) + esc(displayTitle(m)) + '</div>' +
+    '<div class="ev">' + esc(categoryOf(m).label) + ' · ' + esc(m.eventTitle || '') + '</div>' + entityChips(m.conditionId) +
     '<div class="card-foot">' +
       '<span class="lbl">Closed</span><span>' + fmtPct(m.finalProbability) + '</span>' +
       '<span class="lbl">Vol</span><span>' + fmtVol(m.volume) + '</span>' +
@@ -103,6 +107,7 @@ function render() {
     }
     document.getElementById('stamp').textContent =
       data.lastUpdated ? 'Updated ' + fmtStamp(data.lastUpdated) : '';
+    await loadEntities();
     ALL = (data.markets || []).slice()
       .sort((a, b) => String(b.resolvedAt || '').localeCompare(String(a.resolvedAt || '')));
     if (!ALL.length) { app.innerHTML = '<div class="empty">No resolved markets archived yet.</div>'; return; }
@@ -122,5 +127,6 @@ function render() {
   }
 })();
 </script>
+<script src="search.js"></script>
 </body>
 </html>

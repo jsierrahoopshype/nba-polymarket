@@ -13,7 +13,9 @@
 <body>
 <div class="container narrow">
   <a class="back" href="index.html">← All markets</a>
+  <div class="gsearch-wrap"><input class="gsearch" type="text" placeholder="Search markets, players, teams…" autocomplete="off" aria-label="Search"><div class="gsearch-results"></div></div>
   <div id="app"><div class="loading">Loading market…</div></div>
+  <div class="gsearch-wrap"><input class="gsearch" type="text" placeholder="Search markets, players, teams…" autocomplete="off" aria-label="Search"><div class="gsearch-results"></div></div>
   <div class="foot" id="foot"></div>
 </div>
 
@@ -253,6 +255,7 @@ function render(record, entry, index) {
     '<div class="phead">' +
       '<span class="cat">' + esc(cat.label) + '</span>' +
       '<h1>' + settledBadge(m) + esc(displayTitle(titleM)) + '</h1>' +
+      (entry ? entityChips(entry.conditionId) : '') +
       (meta.length ? '<div class="meta">' + metaHtml + '</div>' : '') +
       polyLink +
     '</div>' +
@@ -279,6 +282,7 @@ function render(record, entry, index) {
   if (!id) { app.innerHTML = '<div class="empty">No market id in the URL.</div>'; return; }
   try {
     const index = await loadData('index.json');            // also sets _dataBase
+    await loadEntities();
     NORM = computeNormalized(index.markets);
     const entry = (index.markets || []).find(m => m.conditionId === id) || null;
     const record = await loadMarketRecord(id, entry);
@@ -305,5 +309,6 @@ function render(record, entry, index) {
   }
 })();
 </script>
+<script src="search.js"></script>
 </body>
 </html>
