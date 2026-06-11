@@ -271,3 +271,7 @@ td.name::after,.card .q::after{content:"";display:table;clear:both}
 .gs-dot.player{background:var(--accent)}.gs-dot.team{background:var(--green)}
 .gs-main{flex:1;font-size:.86rem;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .gs-sub{font-family:'JetBrains Mono',monospace;font-size:.66rem;color:var(--text-secondary);flex-shrink:0}
+
+/* race chart (item 8): taller for the bottom legend */
+#racewrap{height:400px}
+@media(max-width:860px){#racewrap{height:340px}}

@@ -222,6 +222,7 @@ function wireExpanders() {
       data.lastUpdated ? 'Updated ' + fmtStamp(data.lastUpdated) : '';
 
     await loadEntities();              // headshots/logos for standings rows (optional)
+    registerSlugs(data.markets);       // route market links to /market/<slug>/
     NORM = computeNormalized(data.markets);
     ALL_LIVE = (data.markets || []).filter(m => !m.resolved && isNum(m.impliedProbability));
 

@@ -166,12 +166,18 @@ Each entry: `conditionId`, `slug`, `question`, `eventSlug`, `eventTitle`,
 
 ---
 
-## Entity pages: `docs/player/<slug>/` and `docs/team/<slug>/`
+## Generated pages: entities and markets
 
 `scripts/build_entities.py` runs after the index builder and statically
-generates one SEO page per NBA player (the active roster vendored from
-`jsierrahoopshype/nba-headshots`) and per team, plus the `docs/players/` and
-`docs/teams/` directories and `docs/sitemap.xml`.
+generates:
+
+- one SEO page per NBA player (the active roster vendored from
+  `jsierrahoopshype/nba-headshots`) and per team — `docs/player/<slug>/`,
+  `docs/team/<slug>/`;
+- one SEO page per live + recently-resolved **market** — `docs/market/<slug>/`
+  (a static shell + `window.MARKET`; `docs/market.js` renders the live detail,
+  and `docs/market.html?id=` redirects to the slug page when one exists);
+- the `docs/players/` and `docs/teams/` directories and `docs/sitemap.xml`.
 
 Markets are matched to entities from their question text: teams by name aliases,
 players by **full name only** (last-name matching was tested and produced only

@@ -18,6 +18,7 @@
   try { data = await loadData('index.json'); }
   catch (e) { return; }                            // keep the static SEO list
   await loadEntities();                            // for cross-links to other entities
+  registerSlugs(data.markets);                     // route market links to /market/<slug>/
 
   const norm = computeNormalized(data.markets);
   const byId = new Map((data.markets || []).map(m => [m.conditionId, m]));
