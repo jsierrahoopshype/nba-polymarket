@@ -134,12 +134,36 @@ const RACE_COLORS = ['#3b82f6', '#ef4444', '#1d8a40', '#b26b00', '#8b5cf6',
 
 /* short, entity-based label for an outcome (e.g. "New York Knicks" not the full
    question); falls back to a trimmed question when no entity matched. */
-function outcomeLabel(m) {
+/* entity keys (t/slug) matched to a market */
+function entityKeys(m) {
   const e = ENTITY_MAP[m.conditionId];
-  if (e && e.primary) return e.primary.name;
-  if (e && e.all && e.all.length === 1) return e.all[0].name;
-  let q = (m.question || '').replace(/^Will (the )?/i, '').replace(/\?$/, '');
-  return q.length > 28 ? q.slice(0, 27) + '…' : q;
+  return ((e && e.all) || []).map(x => x.t + '/' + x.slug);
+}
+
+/* a cleaned question fragment, used when no distinguishing entity exists */
+function cleanQuestion(m) {
+  const q = (m.question || '').replace(/^Will (the )?/i, '').replace(/\?\s*$/, '').trim();
+  return q.length > 30 ? q.slice(0, 29) + '…' : q;
+}
+
+/* Build a per-outcome labeler for a race. Entities matched to EVERY outcome are
+   "common" and don't distinguish (e.g. "LeBron James" on a next-team event);
+   each outcome is labeled by its first NON-common entity (the team that differs)
+   and falls back to a cleaned question fragment when nothing distinguishes it.
+   Events whose outcomes are distinct entities (Champion, Finals MVP) have no
+   common entity, so each is labeled by its own team/player. */
+function buildLabeler(markets) {
+  let common = null;
+  markets.forEach(m => {
+    const ks = new Set(entityKeys(m));
+    common = common === null ? ks : new Set([...common].filter(k => ks.has(k)));
+  });
+  common = common || new Set();
+  return function (m) {
+    const e = ENTITY_MAP[m.conditionId];
+    const distinct = ((e && e.all) || []).find(x => !common.has(x.t + '/' + x.slug));
+    return distinct ? distinct.name : cleanQuestion(m);
+  };
 }
 
 /* step value of a [ [ms,p], ... ] series at time T (last point with ms<=T) */
@@ -172,9 +196,10 @@ async function buildRaceChart(outcomes) {
   // top 8 by current volume; the rest collapse into one gray "Others" line
   series.sort((a, b) => (b.o.volume || 0) - (a.o.volume || 0));
   const top = series.slice(0, 8), rest = series.slice(8);
+  const label = buildLabeler(series.map(s => s.o));   // distinguishing labels
 
   const datasets = top.map((s, i) => ({
-    label: outcomeLabel(s.o),
+    label: label(s.o),
     data: merged.map(t => { const v = stepAt(s.hist, t); return v == null ? null : Math.round(v * 1000) / 10; }),
     borderColor: RACE_COLORS[i % RACE_COLORS.length], backgroundColor: 'transparent',
     borderWidth: 1.8, tension: .25, pointRadius: 0, pointHoverRadius: 3, spanGaps: true
@@ -207,13 +232,11 @@ function drawRaceChart(built) {
       interaction: { mode: 'nearest', axis: 'x', intersect: false },
       plugins: {
         legend: {
+          // Chart.js's built-in onClick toggles a dataset's visibility — exactly
+          // "click a name to hide/show its line" — so we deliberately don't
+          // override it (the previous custom handler silently threw and killed it).
           display: true, position: 'bottom',
-          labels: { boxWidth: 12, boxHeight: 2, font: { family: "'JetBrains Mono',monospace", size: 10 }, color: '#1d1d1f' },
-          onClick: function (e, item, legend) {     // click a name to toggle its line
-            const ci = legend.chart, idx = item.datasetIndex;
-            ci.setDatasetVisibility(idx, !ci.isDatasetVisible(idx));
-            ci.update();
-          }
+          labels: { boxWidth: 18, font: { family: "'JetBrains Mono',monospace", size: 10 }, color: '#1d1d1f' }
         },
         tooltip: {
           callbacks: { label: c => c.dataset.label + ': ' + c.parsed.y + '%' },
