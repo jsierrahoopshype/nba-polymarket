@@ -16,6 +16,9 @@
   --orange:#b26b00;--orange-dim:rgba(245,158,11,.16);
 }
 *{margin:0;padding:0;box-sizing:border-box}
+/* Global +15% type scale: everything is sized in rem off this root, so the whole
+   tool scales proportionally. Viewport-px media-query breakpoints are unaffected. */
+html{font-size:115%}
 body{font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);
   color:var(--text);min-height:100vh;line-height:1.5;-webkit-font-smoothing:antialiased}
 .container{max-width:1400px;margin:0 auto;padding:1.5rem 1.5rem 4rem}
@@ -254,7 +257,9 @@ td.name::after,.card .q::after{content:"";display:table;clear:both}
 .echip img{width:16px;height:16px;border-radius:50%;object-fit:cover;background:var(--surface-hover)}
 
 /* --- global search (item 10) --- */
-.gsearch-wrap{position:relative;margin:0 0 1rem}
+.gsearch-wrap{position:relative;margin:1.5rem 0 1rem}
+/* directory sort tabs (Most markets / A–Z) need air above the grid */
+#esort{margin-bottom:1.1rem}
 .gsearch{width:100%;padding:.6rem .9rem;font-size:16px;font-family:inherit;border:1px solid var(--border);
   border-radius:10px;background:var(--surface);color:var(--text)}
 .gsearch:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-dim)}
