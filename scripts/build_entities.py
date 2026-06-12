@@ -266,6 +266,47 @@ def directory_page(kind, title, entries):
     )
 
 
+def market_page(m):
+    """
+    A pre-generated SEO page for one market at docs/market/<slug>/. Static shell
+    (title, meta description, crawlable question heading) + window.MARKET so
+    market.js renders the live detail. Only the question/identity is baked in, so
+    the bytes change only when the market's question changes — not when prices
+    move (keeps the churn guard meaningful).
+    """
+    slug = m.get("slug")
+    cid = m.get("conditionId")
+    q = m.get("question") or "NBA market"
+    ev = m.get("eventTitle") or ""
+    desc = (f"Live implied probability, price history and the full field for "
+            f"“{q}” on the HoopsMatic NBA Polymarket tracker.")
+    return (
+        '<!doctype html>\n<html lang="en">\n<head>\n'
+        '<meta charset="utf-8">\n'
+        '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+        f'<title>{esc(q)} — NBA Polymarket odds | HoopsMatic</title>\n'
+        f'<meta name="description" content="{esc(desc)}">\n'
+        f'<link rel="canonical" href="{SITE_BASE}/docs/market/{esc(slug)}/">\n'
+        '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
+        '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
+        '<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">\n'
+        '<link rel="stylesheet" href="../../styles.css">\n'
+        '<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>\n'
+        '</head>\n<body>\n<div class="container narrow">\n'
+        '<a class="back" href="../../index.html">← All markets</a>\n'
+        + search_box("../../") +
+        f'<div id="app"><h1>{esc(q)}</h1>'
+        f'<p class="esub">{esc(ev)}</p><div class="loading">Loading market…</div></div>\n'
+        + search_box("../../") +
+        '<div class="foot" id="foot"></div>\n</div>\n'
+        f'<script>window.MARKET={json.dumps({"conditionId": cid})};</script>\n'
+        '<script src="../../app.js"></script>\n'
+        '<script src="../../market.js"></script>\n'
+        '<script src="../../search.js"></script>\n'
+        '</body>\n</html>\n'
+    )
+
+
 # --- main --------------------------------------------------------------------
 
 def main():
@@ -358,12 +399,24 @@ def main():
                      json.dumps({"markets": market_entities, "directory": directory},
                                 ensure_ascii=False, separators=(",", ":")) + "\n", stats)
 
+    # SEO market pages (item 7) — one per live + recently-resolved market.
+    market_slugs = []
+    seen_slug = set()
+    for m in markets:
+        slug = m.get("slug")
+        if not slug or not m.get("conditionId") or slug in seen_slug:
+            continue
+        seen_slug.add(slug)
+        market_slugs.append(slug)
+        write_if_changed(DOCS_DIR / "market" / slug / "index.html", market_page(m), stats)
+
     # sitemap.xml (urls only — no lastmod, so it stays churn-free)
     urls = [f"{SITE_BASE}/docs/index.html", f"{SITE_BASE}/docs/movers.html",
             f"{SITE_BASE}/docs/resolved.html", f"{SITE_BASE}/docs/players/",
             f"{SITE_BASE}/docs/teams/"]
     urls += [f"{SITE_BASE}/docs/player/{p['slug']}/" for p in players]
     urls += [f"{SITE_BASE}/docs/team/{t[3]}/" for t in TEAMS.values()]
+    urls += [f"{SITE_BASE}/docs/market/{s}/" for s in sorted(market_slugs)]
     sitemap = ('<?xml version="1.0" encoding="UTF-8"?>\n'
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                + "".join(f"<url><loc>{u}</loc></url>\n" for u in urls)
@@ -374,7 +427,7 @@ def main():
     matched_teams = sum(1 for s in (t[3] for t in TEAMS.values()) if by_team.get(s))
     print(f"Entities: {len(players)} players ({matched_players} with markets), "
           f"30 teams ({matched_teams} with markets), "
-          f"{len(market_entities)} markets tagged. "
+          f"{len(market_entities)} markets tagged, {len(market_slugs)} market pages. "
           f"Files written: {stats['written']}, unchanged: {stats['skipped']}.")
 
 

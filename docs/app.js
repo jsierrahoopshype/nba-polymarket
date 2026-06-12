@@ -266,7 +266,21 @@ function esc(s) {
     c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
-function marketUrl(id) { return docsBase() + 'market.html?id=' + encodeURIComponent(id); }
+/* conditionId -> slug, populated from index.json by registerSlugs. Lets
+   marketUrl point at the pre-generated SEO page docs/market/<slug>/ when one
+   exists, and fall back to docs/market.html?id= otherwise. */
+let MARKET_SLUG = {};
+function registerSlugs(markets) {
+  (markets || []).forEach(function (m) {
+    if (m && m.conditionId && m.slug) MARKET_SLUG[m.conditionId] = m.slug;
+  });
+}
+function marketUrl(id) {
+  var slug = MARKET_SLUG[id];
+  return slug
+    ? docsBase() + 'market/' + encodeURIComponent(slug) + '/'
+    : docsBase() + 'market.html?id=' + encodeURIComponent(id);
+}
 
 /* --- sparkline ------------------------------------------------------------ */
 /* Tiny inline SVG line from a market's sparkline points. Color encodes net

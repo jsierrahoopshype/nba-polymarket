@@ -22,6 +22,7 @@
       loadData('entities.json').catch(function () { return { markets: {} }; })
     ]).then(function (res) {
       var index = res[0], ents = res[1] || {};
+      registerSlugs(index.markets);
       var items = [];
       // every player + team (the full roster directory), so search never misses
       // a known name even when the entity has no current markets
