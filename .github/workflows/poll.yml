@@ -50,6 +50,13 @@ jobs:
       - name: Build entity pages
         run: python scripts/build_entities.py
 
+      - name: Movers instant alerts (Slack)
+        env:
+          SLACK_MOVERS_WEBHOOK: ${{ secrets.SLACK_MOVERS_WEBHOOK }}
+        # best-effort: never fail the poll over an alert; dry-run (no post) when
+        # the secret is unset, so this is harmless until the webhook is added.
+        run: python scripts/movers_alerts.py --instant || echo "instant alerts step failed (non-fatal)"
+
       - name: Commit and push data if it changed
         run: |
           git config user.name "github-actions[bot]"
