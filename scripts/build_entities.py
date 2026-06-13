@@ -218,49 +218,73 @@ def search_box(base):
             'aria-label="Search"><div class="gsearch-results"></div></div>')
 
 
+def fmt_vol(v):
+    """Compact USD volume, e.g. $1.2M / $48K / $930."""
+    v = v or 0
+    if v >= 1_000_000:
+        return f"${v / 1_000_000:.1f}M"
+    if v >= 1_000:
+        return f"${round(v / 1000)}K"
+    return f"${round(v)}"
+
+
 def directory_page(kind, title, entries):
     """
-    A /players/ or /teams/ index. Entities arrive sorted by market count (item 9
-    default); a toggle re-sorts alphabetically client-side. Global search is at
-    top and bottom (item 10).
+    A /players/ or /teams/ ranked leaderboard — one entity per row: rank,
+    headshot/logo, name, total betting volume across the entity's markets, and
+    market count. Default sort is volume desc; client-side toggles re-sort by
+    market count or alphabetically (and renumber the rank). Same table.lb styling
+    as the standings tables for consistency. Global search top + bottom.
     """
-    cards = "".join(
-        f'<a class="ecard" href="../{kind}/{esc(e["slug"])}/" '
-        f'data-name="{esc(e["name"].lower())}" data-count="{e["count"]}">'
-        f'<img src="{e["thumb"]}" alt="" loading="lazy" width="40" height="40" '
-        f'onerror="this.style.visibility=\'hidden\'">'
-        f'<span class="en">{esc(e["name"])}</span>'
-        f'<span class="ec">{e["count"]}</span></a>' for e in entries)
+    rows = "".join(
+        f'<tr data-href="../{kind}/{esc(e["slug"])}/" data-name="{esc(e["name"].lower())}" '
+        f'data-vol="{int(e["vol"])}" data-count="{e["count"]}">'
+        f'<td class="rank">{i + 1}</td>'
+        f'<td class="name lb-ent"><img src="{e["thumb"]}" alt="" loading="lazy" '
+        f'width="28" height="28" onerror="this.style.visibility=\'hidden\'">'
+        f'<span>{esc(e["name"])}</span></td>'
+        f'<td class="vol">{fmt_vol(e["vol"])}</td>'
+        f'<td class="pct">{e["count"]}</td></tr>'
+        for i, e in enumerate(entries))
+    label = "players" if kind == "player" else "teams"
     return (
         '<!doctype html>\n<html lang="en">\n<head>\n'
         '<meta charset="utf-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
-        f'<title>{esc(title)} — HoopsMatic NBA Polymarket tracker</title>\n'
-        f'<meta name="description" content="Every NBA {kind} with Polymarket betting markets — implied odds updated continuously.">\n'
+        f'<title>{esc(title)} by betting volume — HoopsMatic NBA Polymarket tracker</title>\n'
+        f'<meta name="description" content="Every NBA {kind} ranked by total Polymarket betting volume across their markets, updated continuously.">\n'
         f'<link rel="canonical" href="{SITE_BASE}/docs/{kind}s/">\n'
         '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
         '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
         '<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">\n'
         '<link rel="stylesheet" href="../styles.css">\n'
-        '</head>\n<body>\n<div class="container">\n'
+        '</head>\n<body>\n<div class="container narrow">\n'
         '<div class="tabs"><a href="../index.html">Standings</a>'
         '<a href="../movers.html">Movers</a><a href="../resolved.html">Resolved</a>'
         f'<a href="../players/"{" class=active" if kind=="player" else ""}>Players</a>'
         f'<a href="../teams/"{" class=active" if kind=="team" else ""}>Teams</a></div>\n'
         + search_box("../") +
         f'<div class="hdr"><h1>{esc(title)}</h1><span class="brand">HoopsHype</span></div>\n'
-        '<div class="toggle" id="esort"><button class="active" data-sort="count">Most markets</button>'
-        '<button data-sort="name">A–Z</button></div>\n'
-        f'<div class="egrid" id="egrid">{cards}</div>\n'
+        f'<div class="subtitle">Ranked by total betting volume across each {kind}’s markets.</div>\n'
+        '<div class="toggle" id="esort"><button class="active" data-sort="vol">Volume</button>'
+        '<button data-sort="count">Markets</button><button data-sort="name">A–Z</button></div>\n'
+        '<div class="dirtable"><table class="lb"><thead><tr>'
+        '<th class="rank"></th><th class="left">' + esc(title.split()[-1]) + '</th>'
+        '<th>Volume</th><th>Markets</th></tr></thead>'
+        f'<tbody id="lbbody">{rows}</tbody></table></div>\n'
         + search_box("../") +
         '</div>\n'
-        '<script>(function(){var t=document.getElementById("esort"),g=document.getElementById("egrid");'
+        '<script>(function(){var t=document.getElementById("esort"),g=document.getElementById("lbbody");'
         't.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;'
         't.querySelectorAll("button").forEach(function(x){x.classList.toggle("active",x===b);});'
         'var k=b.dataset.sort,cs=[].slice.call(g.children);'
-        'cs.sort(function(a,c){return k==="name"?a.dataset.name.localeCompare(c.dataset.name):'
-        '(+c.dataset.count- +a.dataset.count)||a.dataset.name.localeCompare(c.dataset.name);});'
-        'cs.forEach(function(c){g.appendChild(c);});});})();</script>\n'
+        'cs.sort(function(a,c){'
+        'if(k==="name")return a.dataset.name.localeCompare(c.dataset.name);'
+        'var ka=+a.dataset[k],kc=+c.dataset[k];'
+        'return (kc-ka)||a.dataset.name.localeCompare(c.dataset.name);});'
+        'cs.forEach(function(c,i){c.firstChild.textContent=i+1;g.appendChild(c);});});'
+        'g.addEventListener("click",function(e){var r=e.target.closest("tr");'
+        'if(r&&r.dataset.href)location.href=r.dataset.href;});})();</script>\n'
         '<script src="../app.js"></script>\n<script src="../search.js"></script>\n'
         '</body>\n</html>\n'
     )
@@ -355,6 +379,9 @@ def main():
     def vol_sorted(ms):
         return sorted(ms, key=lambda m: (m.get("volume") or 0), reverse=True)
 
+    def total_vol(ms):
+        return sum((m.get("volume") or 0) for m in ms)
+
     # player pages (whole roster)
     player_dir_entries = []
     for p in players:
@@ -365,7 +392,8 @@ def main():
         write_if_changed(DOCS_DIR / "player" / p["slug"] / "index.html",
                          entity_page("player", p["slug"], p["full_name"], sub, img, raw, ms), stats)
         player_dir_entries.append({"slug": p["slug"], "name": p["full_name"],
-                                   "thumb": HEADSHOT_THUMB.format(file=headshot_file(p)), "count": len(ms)})
+                                   "thumb": HEADSHOT_THUMB.format(file=headshot_file(p)),
+                                   "count": len(ms), "vol": total_vol(ms)})
 
     # team pages (all 30)
     team_dir_entries = []
@@ -375,12 +403,12 @@ def main():
         write_if_changed(DOCS_DIR / "team" / slug / "index.html",
                          entity_page("team", slug, name, "NBA team", img, "", ms), stats)
         team_dir_entries.append({"slug": slug, "name": name,
-                                 "thumb": img, "count": len(ms)})
+                                 "thumb": img, "count": len(ms), "vol": total_vol(ms)})
 
-    # directory pages — default order is most markets first (item 9); the page
-    # has a client-side toggle to alphabetical.
-    player_dir_entries.sort(key=lambda e: (-e["count"], e["name"]))
-    team_dir_entries.sort(key=lambda e: (-e["count"], e["name"]))
+    # directory leaderboards — default order is most betting volume first; the
+    # page has client-side toggles to market count and alphabetical.
+    player_dir_entries.sort(key=lambda e: (-e["vol"], -e["count"], e["name"]))
+    team_dir_entries.sort(key=lambda e: (-e["vol"], -e["count"], e["name"]))
     write_if_changed(DOCS_DIR / "players" / "index.html",
                      directory_page("player", "NBA Players", player_dir_entries), stats)
     write_if_changed(DOCS_DIR / "teams" / "index.html",
@@ -389,12 +417,15 @@ def main():
     # entities.json: per-market matches (markets) + the full roster (directory)
     # so global search resolves EVERY player/team, even ones with no current
     # markets (their pages exist and say "no active markets").
+    # Sorted by NAME (stable) so this file doesn't churn when volumes shift the
+    # leaderboard order each poll — search doesn't care about order.
     directory = (
         [{"t": "player", "slug": e["slug"], "name": e["name"], "img": e["thumb"]}
          for e in player_dir_entries] +
         [{"t": "team", "slug": e["slug"], "name": e["name"], "img": e["thumb"]}
          for e in team_dir_entries]
     )
+    directory.sort(key=lambda x: x["name"])
     write_if_changed(ENTITIES_PATH,
                      json.dumps({"markets": market_entities, "directory": directory},
                                 ensure_ascii=False, separators=(",", ":")) + "\n", stats)

@@ -284,3 +284,10 @@ td.name::after,.card .q::after{content:"";display:table;clear:both}
 /* race chart controls (isolate hint + Show all reset) */
 .race-controls{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}
 .race-controls .showmore{margin:0}
+
+/* directory leaderboard (PR F): same look as standings tables, but the wrapper
+   stays visible on mobile (unlike .table-wrap which flips to cards) */
+.dirtable{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.lb-ent{display:flex;align-items:center;gap:.6rem;font-family:'DM Sans',sans-serif}
+.lb-ent img{width:28px;height:28px;border-radius:50%;object-fit:contain;background:var(--surface-hover);flex-shrink:0}
+.lb-ent span{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
