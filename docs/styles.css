@@ -280,3 +280,7 @@ td.name::after,.card .q::after{content:"";display:table;clear:both}
 /* race chart (item 8): taller for the bottom legend */
 #racewrap{height:400px}
 @media(max-width:860px){#racewrap{height:340px}}
+
+/* race chart controls (isolate hint + Show all reset) */
+.race-controls{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}
+.race-controls .showmore{margin:0}

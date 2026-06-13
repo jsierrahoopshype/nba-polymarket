@@ -219,6 +219,27 @@ async function buildRaceChart(outcomes) {
   return { merged: merged, datasets: datasets };
 }
 
+/* Click a legend name to ISOLATE that outcome (show only it); click the same one
+   again to restore all. Defensive on purpose — tolerate missing args so it can
+   never silently die the way the previous handler did. */
+function raceLegendClick(e, legendItem, legend) {
+  const ci = (legend && legend.chart) || (this && this.chart) || RACE_CHART;
+  if (!ci || !legendItem || legendItem.datasetIndex == null) return;
+  const idx = legendItem.datasetIndex;
+  raceSetIsolation(ci, ci._raceIsolated === idx ? null : idx);
+}
+
+/* show only dataset `idx`, or all lines when idx is null (the reset) */
+function raceSetIsolation(ci, idx) {
+  if (!ci || !ci.data) return;
+  const n = ci.data.datasets.length;
+  for (let i = 0; i < n; i++) ci.setDatasetVisibility(i, idx == null || i === idx);
+  ci._raceIsolated = idx;
+  ci.update();
+  const btn = document.getElementById('race-showall');
+  if (btn) btn.hidden = (idx == null);   // the reset is only relevant while isolated
+}
+
 function drawRaceChart(built) {
   const wrap = document.getElementById('racewrap');
   if (!built) { wrap.innerHTML = '<div class="chart-empty">Not enough outcome history yet.</div>'; return; }
@@ -232,11 +253,9 @@ function drawRaceChart(built) {
       interaction: { mode: 'nearest', axis: 'x', intersect: false },
       plugins: {
         legend: {
-          // Chart.js's built-in onClick toggles a dataset's visibility — exactly
-          // "click a name to hide/show its line" — so we deliberately don't
-          // override it (the previous custom handler silently threw and killed it).
           display: true, position: 'bottom',
-          labels: { boxWidth: 18, font: { family: "'JetBrains Mono',monospace", size: 10 }, color: '#1d1d1f' }
+          labels: { boxWidth: 18, font: { family: "'JetBrains Mono',monospace", size: 10 }, color: '#1d1d1f' },
+          onClick: raceLegendClick
         },
         tooltip: {
           callbacks: { label: c => c.dataset.label + ': ' + c.parsed.y + '%' },
@@ -264,6 +283,8 @@ function drawRaceChart(built) {
       }
     }
   });
+  const sa = document.getElementById('race-showall');
+  if (sa) sa.addEventListener('click', () => raceSetIsolation(RACE_CHART, null));
 }
 
 /* lazy-load the race chart only when its section scrolls into view */
@@ -353,7 +374,8 @@ function render(record, entry, index) {
   const isRace = !!(entry && entry.negRisk) && outcomes.length > 1;
   const raceSection = isRace
     ? '<div class="section" id="racesec"><div class="section-head"><h2>The race over time</h2>' +
-        '<span class="hint" style="margin:0">every outcome · click a name to toggle</span></div>' +
+        '<div class="race-controls"><span class="hint" style="margin:0">every outcome · click a name to isolate it</span>' +
+        '<button class="showmore" id="race-showall" hidden>Show all</button></div></div>' +
         '<div class="chart-wrap" id="racewrap"><div class="loading">Loading the field…</div></div></div>'
     : '';
 
