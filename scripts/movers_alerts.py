@@ -56,6 +56,10 @@ DIGEST_SWING = 0.03           # 3 points over 24h
 INSTANT_HOURS = 6
 SETTLE_LO, SETTLE_HI = 0.02, 0.98   # outside this band a move is settlement, skip
 MIN_HISTORY_HOURS = 5         # need ~6h of history to judge a 6h swing
+# Alert-only volume floor: a swing must have real money behind it to fire a Slack
+# alert. This does NOT touch the display floors — the movers/standings pages still
+# show everything; this only gates what's loud enough to ping Slack.
+ALERT_VOLUME_FLOOR = 10000
 
 
 # --- time / state ------------------------------------------------------------
@@ -236,6 +240,11 @@ def artificial_swing(start, m):
     return abs((start or 0) - 0.5) < 0.025 and (m.get("volume") or 0) < 1
 
 
+def loud_enough(m):
+    """Alert-only volume floor — enough money behind the move to be worth a ping."""
+    return (m.get("volume") or 0) >= ALERT_VOLUME_FLOOR
+
+
 # --- modes -------------------------------------------------------------------
 
 def run_instant():
@@ -247,7 +256,7 @@ def run_instant():
     fired = 0
     for m in index.get("markets", []):
         cid = m.get("conditionId")
-        if not cid or cid in sent or not is_live_swingable(m):
+        if not cid or cid in sent or not is_live_swingable(m) or not loud_enough(m):
             continue
         sw = swing_6h(cid)
         if not sw:
@@ -283,7 +292,7 @@ def run_digest():
     movers = []
     for m in index.get("markets", []):
         cid = m.get("conditionId")
-        if not cid or cid in sent or not is_live_swingable(m):
+        if not cid or cid in sent or not is_live_swingable(m) or not loud_enough(m):
             continue                               # suppress already-instant-alerted
         d = m.get("delta24h")
         if not isinstance(d, (int, float)) or abs(d) < DIGEST_SWING:
