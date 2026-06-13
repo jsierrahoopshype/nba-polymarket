@@ -1,0 +1,51 @@
+name: movers-digest
+
+# Posts the daily Slack digest of NBA Polymarket movers at ~09:00 Europe/Madrid.
+# GitHub cron is in UTC and Madrid shifts with DST, so we trigger at 07:00, 08:00
+# and 09:00 UTC and let movers_alerts.py gate on the Madrid local hour (>= 9) plus
+# a once-per-day guard (digest_sent_for) — so exactly one digest goes out in the
+# morning regardless of DST, even if a cron fires late.
+
+on:
+  schedule:
+    - cron: "0 7,8,9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Share the poller's concurrency group so the digest and a poll never push at the
+# same time (both commit data/alerts_state.json).
+concurrency:
+  group: poll-polymarket
+  cancel-in-progress: false
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Post daily movers digest
+        env:
+          SLACK_MOVERS_WEBHOOK: ${{ secrets.SLACK_MOVERS_WEBHOOK }}
+        run: python scripts/movers_alerts.py --digest || echo "digest step failed (non-fatal)"
+
+      - name: Commit alerts state if it changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/alerts_state.json
+          if git diff --staged --quiet; then
+            echo "No alerts-state change to commit."
+          else
+            git commit -m "alerts: digest state $(date -u '+%Y-%m-%d')"
+            git pull --rebase origin main && git push
+          fi
