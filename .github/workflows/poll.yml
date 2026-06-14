@@ -50,6 +50,9 @@ jobs:
       - name: Build entity pages
         run: python scripts/build_entities.py
 
+      - name: Build bar-chart-race data
+        run: python scripts/build_races.py
+
       - name: Movers instant alerts (Slack)
         env:
           SLACK_MOVERS_WEBHOOK: ${{ secrets.SLACK_MOVERS_WEBHOOK }}
