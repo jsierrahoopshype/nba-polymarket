@@ -1,0 +1,95 @@
+{
+  "conditionId": "0x670ba350a017a89d050d7eca53cf88d76a23a7ad68afa878fcb47a8c677dc54d",
+  "slug": "nba-nyk-sas-2026-06-13-total-206pt5",
+  "question": "Knicks vs. Spurs: O/U 206.5",
+  "eventSlug": "nba-nyk-sas-2026-06-13",
+  "eventTitle": "Knicks vs. Spurs",
+  "eventId": "567958",
+  "clobTokenIds": [
+    "98147239350740138602768783565124759954499712869417861497990928868234067374607",
+    "49743750517716630366216408267642627089310502776629793032787546938030067010315"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-06-14T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true,
+      "requiresTranslation": false
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z",
+      "requiresTranslation": false
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z",
+      "requiresTranslation": false
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z",
+      "requiresTranslation": false
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-06-14T06:58:04Z",
+  "history": [
+{"timestamp":"2026-06-11T04:42:03Z","impliedProbability":0.715,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-11T09:05:39Z","impliedProbability":0.725,"volume24hr":2.66,"volume":2.66,"liquidity":1071.2326,"spread":0.05,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-11T12:54:26Z","impliedProbability":0.725,"volume24hr":5.3627,"volume":5.3627,"liquidity":6974.2997,"spread":0.03,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-11T16:58:28Z","impliedProbability":0.72,"volume24hr":5.3627,"volume":5.3627,"liquidity":6432.1507,"spread":0.06,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-11T19:40:40Z","impliedProbability":0.72,"volume24hr":5.3627,"volume":5.3627,"liquidity":6555.1035,"spread":0.02,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-11T21:52:05Z","impliedProbability":0.72,"volume24hr":5.3627,"volume":5.3627,"liquidity":6392.4495,"spread":0.02,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-11T23:42:27Z","impliedProbability":0.72,"volume24hr":5.3627,"volume":5.3627,"liquidity":6490.2997,"spread":0.06,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-12T02:02:15Z","impliedProbability":0.72,"volume24hr":5.3627,"volume":5.3627,"liquidity":5846.4764,"spread":0.04,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-12T06:54:54Z","impliedProbability":0.725,"volume24hr":5.3627,"volume":5.3627,"liquidity":6456.0242,"spread":0.05,"oneDayPriceChange":0.005,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-12T11:05:26Z","impliedProbability":0.725,"volume24hr":61.392337,"volume":64.052337,"liquidity":6664.2567,"spread":0.03,"oneDayPriceChange":0.01,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-12T14:30:11Z","impliedProbability":0.725,"volume24hr":58.689637,"volume":64.052337,"liquidity":7437.6512,"spread":0.03,"oneDayPriceChange":0.005,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-12T17:18:50Z","impliedProbability":0.73,"volume24hr":68.895637,"volume":74.258337,"liquidity":8805.7067,"spread":0.04,"oneDayPriceChange":0.01,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-12T19:26:53Z","impliedProbability":0.73,"volume24hr":68.895637,"volume":74.258337,"liquidity":7886.0562,"spread":0.04,"oneDayPriceChange":0.01,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-12T21:17:00Z","impliedProbability":0.725,"volume24hr":68.895637,"volume":74.258337,"liquidity":8064.0561,"spread":0.05,"oneDayPriceChange":0.005,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-12T22:51:49Z","impliedProbability":0.725,"volume24hr":68.895637,"volume":74.258337,"liquidity":9057.2078,"spread":0.03,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-13T00:23:00Z","impliedProbability":0.725,"volume24hr":68.895637,"volume":74.258337,"liquidity":8297.367,"spread":0.03,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-13T05:06:39Z","impliedProbability":0.73,"volume24hr":108.895637,"volume":114.258337,"liquidity":8517.6511,"spread":0.04,"oneDayPriceChange":0.01,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-13T08:31:17Z","impliedProbability":0.73,"volume24hr":108.895637,"volume":114.258337,"liquidity":6591.4207,"spread":0.04,"oneDayPriceChange":0.01,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-13T11:01:10Z","impliedProbability":0.73,"volume24hr":50.206,"volume":114.258337,"liquidity":11084.5619,"spread":0.04,"oneDayPriceChange":0.005,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-13T12:57:15Z","impliedProbability":0.73,"volume24hr":64.260053,"volume":128.31239,"liquidity":9546.3894,"spread":0.04,"oneDayPriceChange":0.005,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-13T15:04:55Z","impliedProbability":0.715,"volume24hr":64.260053,"volume":128.31239,"liquidity":9687.5017,"spread":0.05,"oneDayPriceChange":-0.01,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-13T16:44:24Z","impliedProbability":0.715,"volume24hr":64.260053,"volume":128.31239,"liquidity":9148.9123,"spread":0.03,"oneDayPriceChange":-0.01,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-13T18:00:27Z","impliedProbability":0.72,"volume24hr":229.713915,"volume":303.972252,"liquidity":9489.3549,"spread":0.02,"oneDayPriceChange":-0.01,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-13T19:36:35Z","impliedProbability":0.72,"volume24hr":229.713915,"volume":303.972252,"liquidity":10250.024,"spread":0.02,"oneDayPriceChange":-0.01,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-13T19:52:53Z","impliedProbability":0.715,"volume24hr":412.040579,"volume":486.29891599999996,"liquidity":9840.1698,"spread":0.03,"oneDayPriceChange":-0.015,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-13T21:21:57Z","impliedProbability":0.715,"volume24hr":412.040579,"volume":486.29891599999996,"liquidity":13724.4632,"spread":0.03,"oneDayPriceChange":-0.015,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-13T22:38:46Z","impliedProbability":0.715,"volume24hr":1448.123911,"volume":1522.382248,"liquidity":13970.4371,"spread":0.03,"oneDayPriceChange":-0.005,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-13T23:48:03Z","impliedProbability":0.715,"volume24hr":1481.313911,"volume":1555.572248,"liquidity":17910.9329,"spread":0.03,"oneDayPriceChange":-0.01,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-14T02:08:58Z","impliedProbability":0.08,"volume24hr":7616.606041999999,"volume":7690.864379000001,"liquidity":16851.3051,"spread":0.08,"oneDayPriceChange":-0.645,"oneWeekPriceChange":null},
+{"timestamp":"2026-06-14T06:58:04Z","impliedProbability":0.0,"volume24hr":8937.688241999998,"volume":9051.946579000001,"liquidity":null,"spread":0.01,"oneDayPriceChange":-0.73,"oneWeekPriceChange":null}
+  ]
+}
