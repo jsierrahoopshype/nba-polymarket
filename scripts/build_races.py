@@ -36,6 +36,7 @@ Usage:
 """
 
 import json
+import re
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -84,13 +85,33 @@ def is_placeholder(m):
             and (not isinstance(m.get("delta24h"), (int, float)) or abs(m["delta24h"]) < 0.005))
 
 
-def qualifies_outcome(m, ent):
-    """Live, real volume, not a placeholder, and has a single primary entity."""
+def qualifies_outcome(m):
+    """Live, real volume, not a placeholder. An entity match is NOT required —
+    outcomes without one still animate as a named bar (label from the question),
+    the way the renderer handles a player with no headshot."""
     if m.get("resolved") or not isinstance(m.get("impliedProbability"), (int, float)):
         return False
     if (m.get("volume") or 0) < OUTCOME_VOL_FLOOR or is_placeholder(m):
         return False
-    return bool(ent and ent.get("primary"))
+    return True
+
+
+# subject-name extraction for outcomes with no entity match (e.g. draft
+# prospects). The question is "Will <name> <predicate> ...?"; we take the noun
+# phrase between "Will [the]" and the first predicate verb.
+_PREDICATES = (r"\b(be|been|being|win|wins|won|play|plays|played|lead|leads|led|"
+               r"score|scores|scored|record|records|sign|signs|signed|attend|attends|"
+               r"make|makes|made|get|gets|got|average|averages|have|has|had|hit|hits|"
+               r"reach|reaches|finish|finishes|name|named|go|goes|return|returns|"
+               r"retire|retires|start|starts|miss|misses|appear|appears)\b")
+
+
+def label_from_question(q):
+    s = re.sub(r"^\s*will\s+(the\s+)?", "", (q or "").strip(), flags=re.I)
+    m = re.search(_PREDICATES, s, flags=re.I)
+    name = (s[:m.start()] if m else s).strip(" ?.,:")
+    return name or (q or "").strip()
+
 
 
 def daily_closes(condition_id, last_day):
@@ -152,7 +173,7 @@ def main():
         ent = entmap.get(m.get("conditionId"))
         if any(str(t.get("id")) in NAMED_TAGS for t in (m.get("tags") or [])):
             event_named[m["eventSlug"]] = True
-        if qualifies_outcome(m, ent):
+        if qualifies_outcome(m):
             events[m["eventSlug"]].append((m, ent))
 
     stats = {"written": 0, "skipped": 0}
@@ -211,9 +232,13 @@ def main():
         rows = []
         title = outcomes[0][0].get("eventTitle") or slug
         for m, ent, ff in shown:
-            primary = ent["primary"]
-            player = primary["name"]
-            team = team_abbrev(primary, roster_team)
+            primary = ent.get("primary") if ent else None
+            if primary:                                   # entity match -> labeled + team-colored
+                player = primary["name"]
+                team = team_abbrev(primary, roster_team)
+            else:                                         # no entity -> named bar, no headshot/team
+                player = label_from_question(m.get("question"))
+                team = None
             for d in span:
                 p = ff.get(d)
                 tot = day_total.get(d)
