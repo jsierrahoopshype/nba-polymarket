@@ -1,13 +1,13 @@
 {
-  "conditionId": "0x39bca2e9c7373c926239058fcef15692142b961482e46ee716b0b9d74cf972f4",
-  "slug": "will-coach-l-be-the-next-head-coach-of-the-chicago-bulls",
-  "question": "Will Coach L be the next head coach of the Chicago Bulls?",
+  "conditionId": "0x96bdba0b9f39842f9e2615f9060f9c289e9d1e7d1ad460f7022a241f9afec3bb",
+  "slug": "will-coach-e-be-the-next-head-coach-of-the-chicago-bulls",
+  "question": "Will Coach E be the next head coach of the Chicago Bulls?",
   "eventSlug": "nba-next-bulls-head-coach",
   "eventTitle": "NBA: Next Bulls Head Coach",
   "eventId": "506667",
   "clobTokenIds": [
-    "103603468767413954697913107738026879369610132896775431579058130677314291348738",
-    "64689406284297233609202652669142766956391751597345716095221790882084730664646"
+    "110792103440395512287139746918530310113587434608542291175758824837952520613207",
+    "3563359472782687845552391272599632673868448594508916984172633964310384187746"
   ],
   "outcomes": [
     "Yes",
@@ -64,14 +64,13 @@
       "requiresTranslation": false
     }
   ],
-  "resolved": false,
-  "resolvedAt": null,
+  "resolved": true,
+  "resolvedAt": "2026-06-17T01:45:16Z",
   "negRisk": true,
   "history": [
 {"timestamp":"2026-06-09T05:52:00Z","impliedProbability":null,"volume24hr":0.0,"volume":0.0,"liquidity":0.0,"spread":1.0,"oneDayPriceChange":0.0,"oneWeekPriceChange":0.0},
 {"timestamp":"2026-06-09T11:29:09Z","impliedProbability":null,"volume24hr":0.0,"volume":0.0,"liquidity":0.0,"spread":1.0,"oneDayPriceChange":0.0,"oneWeekPriceChange":0.0},
 {"timestamp":"2026-06-09T17:48:49Z","impliedProbability":null,"volume24hr":0.0,"volume":0.0,"liquidity":0.0,"spread":1.0,"oneDayPriceChange":0.0,"oneWeekPriceChange":0.0},
-{"timestamp":"2026-06-09T21:52:50Z","impliedProbability":null,"volume24hr":0.0,"volume":0.0,"liquidity":0.0,"spread":1.0,"oneDayPriceChange":0.0,"oneWeekPriceChange":0.0},
 {"timestamp":"2026-06-09T23:21:36Z","impliedProbability":null,"volume24hr":0.0,"volume":0.0,"liquidity":0.0,"spread":1.0,"oneDayPriceChange":0.0,"oneWeekPriceChange":0.0},
 {"timestamp":"2026-06-10T01:37:10Z","impliedProbability":null,"volume24hr":0.0,"volume":0.0,"liquidity":0.0,"spread":1.0,"oneDayPriceChange":0.0,"oneWeekPriceChange":0.0},
 {"timestamp":"2026-06-10T06:06:57Z","impliedProbability":null,"volume24hr":0.0,"volume":0.0,"liquidity":0.0,"spread":1.0,"oneDayPriceChange":0.0,"oneWeekPriceChange":0.0},
@@ -132,6 +131,7 @@
 {"timestamp":"2026-06-16T15:33:21Z","impliedProbability":null,"volume24hr":0.0,"volume":0.0,"liquidity":0.0,"spread":1.0,"oneDayPriceChange":0.0,"oneWeekPriceChange":0.0},
 {"timestamp":"2026-06-16T19:06:55Z","impliedProbability":null,"volume24hr":0.0,"volume":0.0,"liquidity":0.0,"spread":1.0,"oneDayPriceChange":0.0,"oneWeekPriceChange":0.0},
 {"timestamp":"2026-06-16T21:48:29Z","impliedProbability":null,"volume24hr":0.0,"volume":0.0,"liquidity":0.0,"spread":1.0,"oneDayPriceChange":0.0,"oneWeekPriceChange":0.0},
-{"timestamp":"2026-06-16T23:16:27Z","impliedProbability":null,"volume24hr":0.0,"volume":0.0,"liquidity":0.0,"spread":1.0,"oneDayPriceChange":0.0,"oneWeekPriceChange":0.0}
+{"timestamp":"2026-06-16T23:16:27Z","impliedProbability":null,"volume24hr":0.0,"volume":0.0,"liquidity":0.0,"spread":1.0,"oneDayPriceChange":0.0,"oneWeekPriceChange":0.0},
+{"timestamp":"2026-06-17T01:45:16Z","impliedProbability":0.0,"volume24hr":0.0,"volume":0.0,"liquidity":0.0,"spread":1.0,"oneDayPriceChange":0.0,"oneWeekPriceChange":0.0}
   ]
 }
