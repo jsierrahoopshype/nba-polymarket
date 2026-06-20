@@ -26,10 +26,17 @@ Definitions:
   - team   : the outcome's team (abbrev) for bar coloring, when derivable.
 
 Selection: a live negRisk event qualifies if it has >= MIN_OUTCOMES outcomes
-clearing the $10K volume floor (placeholder/init outcomes excluded), and either
-carries a "named" tag (Champion / Finals MVP / MVP / Awards) or its qualifying
-volume clears EVENT_VOL_FLOOR. Up to CAP outcomes (top by current probability)
-are emitted; the rest are dropped but still count toward the daily denominator.
+clearing the per-outcome volume floor (placeholder/init outcomes excluded), and
+either carries a "named" tag (Champion / Finals MVP / MVP / Awards) or its
+qualifying volume clears EVENT_VOL_FLOOR. Up to CAP outcomes (top by current
+probability) are emitted; the rest are dropped but still count toward the daily
+denominator.
+
+The per-outcome floor is OUTCOME_VOL_FLOOR ($10K) for everything except draft-pick
+markets, which are inherently lower-liquidity than championship futures and clear a
+lower DRAFT_OUTCOME_VOL_FLOOR ($6K). The override is keyed on the same trusted
+Polymarket draft tags the rest of the repo uses, so it only ever loosens the bar
+for draft events and never touches any other market's floor.
 
 Usage:
     python scripts/build_races.py
@@ -53,10 +60,12 @@ RACE_DIR = DATA_DIR / "race"
 ROSTER_PATH = Path(__file__).resolve().parent / "vendor" / "roster_players.json"
 
 OUTCOME_VOL_FLOOR = 10000      # an outcome must clear this to be in a race
-EVENT_VOL_FLOOR = 50000        # un-named events need this much qualifying volume
+DRAFT_OUTCOME_VOL_FLOOR = 6000  # draft-pick outcomes clear a lower bar (see below)
+EVENT_VOL_FLOOR = 25000        # un-named events need this much qualifying volume
 MIN_OUTCOMES = 3              # fewer than this is not a race
 CAP = 12                     # emit at most this many bars (top by current prob)
 NAMED_TAGS = {"102288", "104582", "707", "18"}   # champion, finals mvp, mvp, awards
+DRAFT_TAGS = {"100283", "104857"}                # "NBA Draft", "2026 NBA Draft"
 
 SLUG_TO_ABBREV = {v[3]: k for k, v in TEAMS.items()}
 
@@ -85,13 +94,23 @@ def is_placeholder(m):
             and (not isinstance(m.get("delta24h"), (int, float)) or abs(m["delta24h"]) < 0.005))
 
 
+def outcome_vol_floor(m):
+    """Per-outcome volume floor. Draft-pick markets are inherently lower-liquidity
+    than championship futures, so they clear the lower DRAFT_OUTCOME_VOL_FLOOR;
+    everything else holds at the standard OUTCOME_VOL_FLOOR. Keyed on the same draft
+    tags the rest of the repo trusts, so it only loosens the bar for draft events."""
+    if any(str(t.get("id")) in DRAFT_TAGS for t in (m.get("tags") or [])):
+        return DRAFT_OUTCOME_VOL_FLOOR
+    return OUTCOME_VOL_FLOOR
+
+
 def qualifies_outcome(m):
     """Live, real volume, not a placeholder. An entity match is NOT required —
     outcomes without one still animate as a named bar (label from the question),
     the way the renderer handles a player with no headshot."""
     if m.get("resolved") or not isinstance(m.get("impliedProbability"), (int, float)):
         return False
-    if (m.get("volume") or 0) < OUTCOME_VOL_FLOOR or is_placeholder(m):
+    if (m.get("volume") or 0) < outcome_vol_floor(m) or is_placeholder(m):
         return False
     return True
 
