@@ -163,6 +163,16 @@ def team_abbrev(primary, roster_team):
     return roster_team.get(primary["slug"])
 
 
+def team_entity(ent):
+    """The team entry in an entity's `all` list. "Next team" markets carry the
+    subject player as `primary` and the candidate team as a secondary entity, so
+    the team — the thing that actually varies across the event — lives here."""
+    for e in (ent.get("all") or []) if ent else []:
+        if e.get("t") == "team":
+            return e
+    return None
+
+
 def date_range(a, b):
     """Inclusive list of YYYY-MM-DD strings from a..b."""
     out, d = [], datetime.fromisoformat(a).date()
@@ -248,14 +258,26 @@ def main():
             for d, p in ff.items():
                 day_total[d] += p
 
+        # "Next team" detection: when every shown outcome shares the SAME primary
+        # player, the player is constant and the bar's real subject is the team it
+        # names. Label/color those by team (the varying axis) instead, so the race
+        # animates as candidate teams rather than collapsing onto one player bar.
+        primaries = [(ent.get("primary") if ent else None) for _, ent, _ in shown]
+        by_team = (all(p and p.get("t") == "player" for p in primaries)
+                   and len({p["slug"] for p in primaries}) == 1)
+
         rows = []
         title = outcomes[0][0].get("eventTitle") or slug
         for m, ent, ff in shown:
             primary = ent.get("primary") if ent else None
-            if primary:                                   # entity match -> labeled + team-colored
+            te = team_entity(ent) if by_team else None
+            if te:                                        # next-team race -> team bar
+                player = te["name"]
+                team = SLUG_TO_ABBREV.get(te["slug"])
+            elif primary and not by_team:                 # entity match -> labeled + team-colored
                 player = primary["name"]
                 team = team_abbrev(primary, roster_team)
-            else:                                         # no entity -> named bar, no headshot/team
+            else:                                         # no usable subject -> named bar
                 player = label_from_question(m.get("question"))
                 team = None
             for d in span:
@@ -269,12 +291,22 @@ def main():
                 rows.append(row)
         if not rows:
             continue
+
+        # Backstop: a bar-chart-race needs distinct bars. Outcomes can collapse
+        # onto one label (e.g. a single-subject event the team relabel couldn't
+        # split), and the renderer keys bars by `player`, so such an event would
+        # animate as a degenerate 1- or 2-bar "race". Require MIN_OUTCOMES distinct
+        # labels here, after labeling, so a collapsed race never reaches the index.
+        distinct_labels = {r["player"] for r in rows}
+        if len(distinct_labels) < MIN_OUTCOMES:
+            continue
+
         rows.sort(key=lambda r: (r["date"], r["player"]))
 
         write_if_changed(RACE_DIR / f"{slug}.json",
                          json.dumps(rows, ensure_ascii=False, separators=(",", ":")) + "\n", stats)
         dates = [r["date"] for r in rows]
-        races.append({"slug": slug, "title": title, "outcomeCount": len(shown),
+        races.append({"slug": slug, "title": title, "outcomeCount": len(distinct_labels),
                       "dateRange": [min(dates), max(dates)], "lastUpdated": max(dates)})
 
     races.sort(key=lambda r: r["slug"])
