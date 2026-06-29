@@ -1,14 +1,20 @@
 name: movers-digest
 
-# Posts the daily Slack digest of NBA Polymarket movers at ~09:00 Europe/Madrid.
-# GitHub cron is in UTC and Madrid shifts with DST, so we trigger at 07:00, 08:00
-# and 09:00 UTC and let movers_alerts.py gate on the Madrid local hour (>= 9) plus
-# a once-per-day guard (digest_sent_for) — so exactly one digest goes out in the
-# morning regardless of DST, even if a cron fires late.
+# Posts the Slack movers digest three times a day at 07:00 / 15:00 / 23:00
+# Europe/Madrid. GitHub cron is in UTC and Madrid shifts with DST, so each target
+# fires at the two UTC hours that bracket it (CET = UTC+1, CEST = UTC+2);
+# movers_alerts.py gates on the Madrid local hour and a once-per-slot guard
+# (digest3.slots), so exactly one digest goes out per window regardless of DST,
+# even if a cron fires late.
+#   07:00 Madrid -> 05:00/06:00 UTC
+#   15:00 Madrid -> 13:00/14:00 UTC
+#   23:00 Madrid -> 21:00/22:00 UTC
 
 on:
   schedule:
-    - cron: "0 7,8,9 * * *"
+    - cron: "0 5,6 * * *"     # 07:00 Europe/Madrid
+    - cron: "0 13,14 * * *"   # 15:00 Europe/Madrid
+    - cron: "0 21,22 * * *"   # 23:00 Europe/Madrid
   workflow_dispatch:
 
 permissions:
