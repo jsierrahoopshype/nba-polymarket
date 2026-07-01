@@ -39,10 +39,15 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Post daily movers digest
+      - name: Post movers digest
         env:
           SLACK_MOVERS_WEBHOOK: ${{ secrets.SLACK_MOVERS_WEBHOOK }}
-        run: python scripts/movers_alerts.py --digest || echo "digest step failed (non-fatal)"
+        # Two independent force triggers on manual dispatch (belt-and-suspenders):
+        #   1. This ternary appends --force on workflow_dispatch (nothing on cron).
+        #   2. The script also forces when GITHUB_EVENT_NAME == workflow_dispatch,
+        #      which GitHub sets automatically — so a manual run forces even if the
+        #      ternary above ever resolved to empty.
+        run: python scripts/movers_alerts.py --digest ${{ github.event_name == 'workflow_dispatch' && '--force' || '' }} || echo "digest step failed (non-fatal)"
 
       - name: Commit alerts state if it changed
         run: |

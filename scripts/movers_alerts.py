@@ -29,7 +29,9 @@ the digest links point at HoopsMatic's per-outcome market pages.
 
 Usage:
     SLACK_MOVERS_WEBHOOK=... python scripts/movers_alerts.py --instant
-    SLACK_MOVERS_WEBHOOK=... python scripts/movers_alerts.py --digest
+    SLACK_MOVERS_WEBHOOK=... python scripts/movers_alerts.py --digest [--force]
+        (--force, or any workflow_dispatch run, bypasses the digest slot-hour
+        gate so it can be tested on demand at any hour.)
 """
 
 import hashlib
@@ -431,10 +433,15 @@ def current_slot(now_madrid):
     return None, None
 
 
-def run_digest():
+def run_digest(force=False):
     now_madrid = datetime.now(MADRID)
     today = now_madrid.strftime("%Y-%m-%d")
     slot_id, slot_label = current_slot(now_madrid)
+
+    # Debug line so a run's log states definitively whether force was active and
+    # why (see main() for the --force / GITHUB_EVENT_NAME detection).
+    print(f"Digest: force={force}, GITHUB_EVENT_NAME={os.environ.get('GITHUB_EVENT_NAME')!r}, "
+          f"argv={sys.argv[1:]}, Madrid={now_madrid:%H:%M} (slot={slot_id}).")
 
     # per-day slot record; leave the instant channel's state untouched
     state = load_state()
@@ -444,11 +451,17 @@ def run_digest():
     state["digest3"] = digest
     state.setdefault("instant_sent", {})
 
-    if not slot_id:
+    # A manual workflow_dispatch (force) bypasses the slot-hour gate and the
+    # once-per-slot dedup so the digest can be tested on demand at any hour. A
+    # forced run posts but records no slot, so it never consumes a scheduled slot
+    # and can be repeated. Scheduled crons still respect both gates.
+    if force:
+        slot_id, slot_label = "manual", f"manual {now_madrid:%H:%M}"
+    elif not slot_id:
         print(f"Digest: {now_madrid:%H:%M} Madrid is outside the 07/15/23 windows, skipping.")
         save_state(state)
         return
-    if slot_id in digest["slots"]:
+    elif slot_id in digest["slots"]:
         print(f"Digest: {slot_label} slot already sent for {today}, skipping.")
         return
 
@@ -480,19 +493,25 @@ def run_digest():
         ]
         post_slack("\n\n".join(blocks))
 
-    digest["slots"].append(slot_id)
-    save_state(state)
+    if not force:                                  # forced runs record no slot
+        digest["slots"].append(slot_id)
+        save_state(state)
     print(f"Digest: {len(movers)} movers posted for {today} {slot_label} slot.")
 
 
 def main():
-    mode = sys.argv[1] if len(sys.argv) > 1 else ""
+    args = sys.argv[1:]
+    mode = args[0] if args else ""
+    # Force the digest past its slot-hour gate on a manual run. Two independent
+    # triggers: an explicit --force arg, or GitHub setting GITHUB_EVENT_NAME to
+    # "workflow_dispatch" (set automatically on every manual-dispatch step).
+    force = "--force" in args or os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
     if mode == "--instant":
         run_instant()
     elif mode == "--digest":
-        run_digest()
+        run_digest(force=force)
     else:
-        print("usage: movers_alerts.py --instant | --digest", file=sys.stderr)
+        print("usage: movers_alerts.py --instant | --digest [--force]", file=sys.stderr)
         sys.exit(2)
 
 
