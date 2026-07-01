@@ -297,10 +297,17 @@ def move_verb(delta_pts, key):
     return pool[int(hashlib.md5(key.encode("utf-8")).hexdigest(), 16) % len(pool)]
 
 
+def _article(n):
+    """'a' vs 'an' for a spoken number: 'an' before 8, 11, 18 and 80-89 (eight /
+    eleven / eighteen / eighty- start with a vowel sound); 'a' otherwise."""
+    return "an" if str(n).startswith(("8", "11", "18")) else "a"
+
+
 def prose_sentence(m, start_p, end_p, key, window):
     """Shared HoopsHype-Rumors prose + HoopsMatic link, used by BOTH the digest and
     the instant channel. Identical style; only `window` differs (the digest passes
-    a 24h phrase, instant a 6h one)."""
+    a 24h phrase, instant a 6h one). Direction lives in the verb (surged/slipped),
+    so the tail is a directionless magnitude: ', a N-point move.' — always shown."""
     subject, outcome = subject_outcome(m.get("question"))
     a, b = round(start_p * 100, 1), round(end_p * 100, 1)
     delta = b - a
@@ -310,8 +317,8 @@ def prose_sentence(m, start_p, end_p, key, window):
         core = f"{head} odds of {outcome} have {verb} from {a:.1f}% to {b:.1f}% {window}"
     else:
         core = f"{head} odds have {verb} from {a:.1f}% to {b:.1f}% {window}"
-    direction = "gain" if delta >= 0 else "drop"
-    tail = f", a {round(abs(delta))}-point {direction}."
+    n = round(abs(delta))
+    tail = f", {_article(n)} {n}-point move."
     return core + tail + "\n" + hoopsmatic_url(m)
 
 
