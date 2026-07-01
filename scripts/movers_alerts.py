@@ -6,6 +6,7 @@ Two channels, both off the existing poll data (no new market fetching):
   --instant  (run after each poll/build_index): every LIVE market whose implied
              probability swung >= 6 points over the last 6h fires a one-off Slack
              message, at most once per market per calendar day (Europe/Madrid).
+             Same prose + HoopsMatic link as the digest, worded for a 6h window.
   --digest   (run three times a day, 07:00/15:00/23:00 Madrid): the top 10 movers
              over a rolling 24-hour window, ranked by absolute swing, as
              natural-prose sentences for HoopsHype Rumors. The 24h windows overlap
@@ -24,8 +25,7 @@ of the day's three digest windows have already gone out.
 
 The Slack webhook is read from $SLACK_MOVERS_WEBHOOK (a GitHub secret). With no
 webhook set the script runs in dry-run mode and prints the messages, so it is
-safe to run locally. Instant links point at our own /docs/market/<slug>/ pages;
-the digest links point at HoopsMatic's per-outcome market pages.
+safe to run locally. Both channels link to HoopsMatic's per-outcome market pages.
 
 Usage:
     SLACK_MOVERS_WEBHOOK=... python scripts/movers_alerts.py --instant
@@ -54,9 +54,6 @@ DATA_DIR = REPO_ROOT / "data"
 INDEX_PATH = DATA_DIR / "index.json"
 MARKETS_DIR = DATA_DIR / "markets"
 STATE_PATH = DATA_DIR / "alerts_state.json"
-
-SITE_BASE = "https://jsierrahoopshype.github.io/nba-polymarket"
-GAME_TAG = "100639"
 
 INSTANT_SWING = 0.06          # 6 points over 6h
 INSTANT_HOURS = 6
@@ -127,77 +124,6 @@ def post_slack(text):
     except Exception as exc:  # noqa: BLE001 - network can fail many ways
         print("Slack post failed:", exc, file=sys.stderr)
         return False
-
-
-# --- formatting --------------------------------------------------------------
-
-def pct(p):
-    return round((p or 0) * 100)
-
-
-def fmt_vol(v):
-    v = v or 0
-    if v >= 1_000_000:
-        return f"${v / 1_000_000:.1f}M"
-    if v >= 1_000:
-        return f"${round(v / 1000)}K"
-    return f"${round(v)}"
-
-
-def display_title(m):
-    """Readable question; game markets get the game date appended to disambiguate."""
-    q = (m.get("question") or "this market").strip()
-    tags = m.get("tags") or []
-    if any(str(t.get("id")) == GAME_TAG for t in tags) and m.get("endDate"):
-        try:
-            d = datetime.fromisoformat(m["endDate"].replace("Z", "+00:00")).astimezone(MADRID)
-            q = f"{q} ({d.strftime('%b %-d')})"
-        except (ValueError, TypeError):
-            pass
-    return q
-
-
-def market_url(m):
-    return f"{SITE_BASE}/docs/market/{m.get('slug')}/"
-
-
-# Sentence templates. Direction-specific verbs (never mismatch up/down). No
-# em-dashes, no filler verbs, one idea each. {window} is "6 hours" / "24 hours".
-UP_TEMPLATES = [
-    "Per Polymarket, {market}'s odds have climbed from {a}% to {b}% over the last {window}.",
-    "Polymarket money is moving toward {market}: up to {b}% from {a}% in the last {window}.",
-    "{market} has jumped {delta} points on Polymarket in the last {window}, now at {b}%.",
-    "Bettors are piling into {market} on Polymarket, up {delta} points to {b}% in the last {window}.",
-    "{market} surged from {a}% to {b}% on Polymarket over the last {window}.",
-    "Polymarket now puts {market} at {b}%, up from {a}% in the last {window}.",
-    "{market} has risen to {b}% from {a}% on Polymarket in the last {window}.",
-]
-DOWN_TEMPLATES = [
-    "Per Polymarket, {market}'s odds have slipped from {a}% to {b}% over the last {window}.",
-    "Polymarket money is leaving {market}: down to {b}% from {a}% in the last {window}.",
-    "{market} has dropped {delta} points on Polymarket in the last {window}, now at {b}%.",
-    "Bettors are cooling on {market}, down {delta} points to {b}% in the last {window}.",
-    "{market} faded from {a}% to {b}% on Polymarket over the last {window}.",
-    "Polymarket now puts {market} at {b}%, down from {a}% in the last {window}.",
-    "{market} has fallen to {b}% from {a}% on Polymarket in the last {window}.",
-]
-
-
-def sentence(m, start, end, today, window_label):
-    """Pick a template deterministically (varied) by hashing conditionId+date."""
-    up = end >= start
-    pool = UP_TEMPLATES if up else DOWN_TEMPLATES
-    key = (m.get("conditionId", "") + today).encode("utf-8")
-    idx = int(hashlib.md5(key).hexdigest(), 16) % len(pool)
-    return pool[idx].format(
-        market=display_title(m), a=pct(start), b=pct(end),
-        delta=abs(pct(end) - pct(start)), window=window_label)
-
-
-def alert_text(m, start, end, today, window_label):
-    line = sentence(m, start, end, today, window_label)
-    line += f" Volume {fmt_vol(m.get('volume'))}."
-    return line + "\n" + market_url(m)
 
 
 # --- swings ------------------------------------------------------------------
@@ -285,7 +211,9 @@ def run_instant():
         start, end = sw
         if abs(end - start) < INSTANT_SWING or artificial_swing(start, m):
             continue
-        if post_slack(alert_text(m, start, end, today, "6 hours")):
+        msg = prose_sentence(m, start, end, cid + today,
+                             "in the past 6 hours on Polymarket")
+        if post_slack(msg):
             sent[cid] = {"ts": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                          "swing": round(end - start, 4)}
             fired += 1
@@ -369,13 +297,15 @@ def move_verb(delta_pts, key):
     return pool[int(hashlib.md5(key.encode("utf-8")).hexdigest(), 16) % len(pool)]
 
 
-def digest_sentence(m, start_p, end_p, key):
+def prose_sentence(m, start_p, end_p, key, window):
+    """Shared HoopsHype-Rumors prose + HoopsMatic link, used by BOTH the digest and
+    the instant channel. Identical style; only `window` differs (the digest passes
+    a 24h phrase, instant a 6h one)."""
     subject, outcome = subject_outcome(m.get("question"))
     a, b = round(start_p * 100, 1), round(end_p * 100, 1)
     delta = b - a
     verb = move_verb(delta, key)
     head = possessive(subject)
-    window = "over the past 24 hours on Polymarket"
     if outcome:
         core = f"{head} odds of {outcome} have {verb} from {a:.1f}% to {b:.1f}% {window}"
     else:
@@ -481,7 +411,8 @@ def run_digest(force=False):
     if movers:
         header = f"*NBA Polymarket — biggest moves · last 24h ({today}, {slot_label} Madrid)*"
         blocks = [header] + [
-            digest_sentence(m, start_p, end_p, m.get("conditionId", "") + today + slot_id)
+            prose_sentence(m, start_p, end_p, m.get("conditionId", "") + today + slot_id,
+                           "over the past 24 hours on Polymarket")
             for m, start_p, end_p, _ in movers
         ]
         post_slack("\n\n".join(blocks))
