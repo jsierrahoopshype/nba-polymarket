@@ -6,11 +6,11 @@ Two channels, both off the existing poll data (no new market fetching):
   --instant  (run after each poll/build_index): every LIVE market whose implied
              probability swung >= 6 points over the last 6h fires a one-off Slack
              message, at most once per market per calendar day (Europe/Madrid).
-  --digest   (run three times a day, 07:00/15:00/23:00 Madrid): the day's top 10
-             movers, cumulative since Madrid-midnight, ranked by absolute swing,
-             as natural-prose sentences for HoopsHype Rumors. A market may recur
-             across the three digests (and alongside instant) — each digest is a
-             fresh cumulative snapshot, so that repetition is intended.
+  --digest   (run three times a day, 07:00/15:00/23:00 Madrid): the top 10 movers
+             over a rolling 24-hour window, ranked by absolute swing, as
+             natural-prose sentences for HoopsHype Rumors. The 24h windows overlap
+             across the three daily digests (and with instant), so a move can recur
+             in consecutive digests — that is expected.
 
 The digest is gated on negRisk + unresolved + ALERT_VOLUME_FLOOR and a 2.0-point
 floor (a quiet day showing one or two lines is correct). Resolved markets are
@@ -67,10 +67,10 @@ MIN_HISTORY_HOURS = 5         # need ~6h of history to judge a 6h swing
 # show everything; this only gates what's loud enough to ping Slack.
 ALERT_VOLUME_FLOOR = 10000
 
-# --- digest (three daily, cumulative since Madrid-midnight) -------------------
-DIGEST_FLOOR = 0.02           # 2.0 percentage points cumulative since midnight
+# --- digest (three daily, rolling 24-hour window) ----------------------------
+DIGEST_FLOOR = 0.02           # 2.0 percentage points over the rolling 24h window
 DIGEST_TOP_N = 10             # at most this many movers per digest
-DIGEST_BIG_MOVE = 8           # >= this many points gets a verb upgrade + "N-point move"
+DIGEST_BIG_MOVE = 8           # >= this many points gets a stronger verb (surged vs risen)
 HOOPSMATIC_BASE = "https://hoopsmatic.com/polymarket/market"
 
 # Madrid local-hour -> digest slot. The workflow fires UTC cron pairs (05/06,
@@ -351,14 +351,17 @@ def possessive(name):
     return name + ("'" if name.endswith("s") else "'s")
 
 
+# Past participles, rendered as "have <participle>" for the rolling-24h framing
+# ("have fallen from ..."). Direction- and size-specific.
 _UP_BIG = ["surged", "jumped"]
-_UP_SMALL = ["rose", "climbed"]
-_DOWN_BIG = ["tumbled", "fell"]
+_UP_SMALL = ["risen", "climbed"]
+_DOWN_BIG = ["tumbled", "fallen"]
 _DOWN_SMALL = ["slipped", "eased"]
 
 
 def move_verb(delta_pts, key):
-    """Direction- and size-appropriate verb, varied deterministically per market+slot."""
+    """Direction- and size-appropriate past participle, varied deterministically
+    per market+slot (rendered as 'have <participle>')."""
     if delta_pts >= 0:
         pool = _UP_BIG if delta_pts >= DIGEST_BIG_MOVE else _UP_SMALL
     else:
@@ -372,30 +375,27 @@ def digest_sentence(m, start_p, end_p, key):
     delta = b - a
     verb = move_verb(delta, key)
     head = possessive(subject)
+    window = "over the past 24 hours on Polymarket"
     if outcome:
-        core = (f"{head} odds of {outcome} {verb} from "
-                f"{a:.1f}% to {b:.1f}% on Polymarket today")
+        core = f"{head} odds of {outcome} have {verb} from {a:.1f}% to {b:.1f}% {window}"
     else:
-        core = f"{head} odds {verb} from {a:.1f}% to {b:.1f}% on Polymarket today"
-    tail = f", a {round(abs(delta))}-point move." if abs(delta) >= DIGEST_BIG_MOVE else "."
+        core = f"{head} odds have {verb} from {a:.1f}% to {b:.1f}% {window}"
+    direction = "gain" if delta >= 0 else "drop"
+    tail = f", a {round(abs(delta))}-point {direction}."
     return core + tail + "\n" + hoopsmatic_url(m)
 
 
 # --- digest swing window -----------------------------------------------------
 
-def madrid_midnight_utc(now_madrid):
-    """The UTC instant of the most recent Madrid 00:00 (start of today, Madrid)."""
-    midnight = now_madrid.replace(hour=0, minute=0, second=0, microsecond=0)
-    return midnight.astimezone(timezone.utc)
+def swing_last_24h(condition_id, cutoff_utc):
+    """(baseline_prob, latest_prob) over a rolling 24h window, or None.
 
-
-def swing_since_midnight(condition_id, midnight_utc):
-    """(baseline_prob, latest_prob) cumulative since Madrid-midnight, or None.
-
-    Baseline = the standing odds at midnight (last snapshot at/before it), or the
-    first snapshot after midnight for a market that only started trading today.
-    Returns None when there is no usable history, or none of it lands today (a
-    market that hasn't updated since midnight is stale and skipped)."""
+    Baseline = the snapshot closest in time to cutoff_utc (now - 24h); end = the
+    latest snapshot. For a market with >= 24h of history the baseline is the point
+    nearest the 24h mark (history older than 24h is thinned to ~hourly, so it lands
+    within ~an hour). For a market younger than 24h the closest point to the cutoff
+    is simply its earliest, so the window gracefully shrinks to the market's life
+    rather than dropping it. None when there are < 2 usable snapshots."""
     path = MARKETS_DIR / f"{condition_id}.json"
     try:
         hist = json.loads(path.read_text(encoding="utf-8")).get("history") or []
@@ -414,14 +414,7 @@ def swing_since_midnight(condition_id, midnight_utc):
     if len(pts) < 2:
         return None
     pts.sort(key=lambda x: x[0])
-    if pts[-1][0] < midnight_utc:                  # nothing since midnight -> stale
-        return None
-    baseline = None
-    for t, p in pts:
-        if t <= midnight_utc:
-            baseline = p                           # last reading at/before midnight wins
-    if baseline is None:
-        baseline = next(p for t, p in pts if t > midnight_utc)
+    baseline = min(pts, key=lambda tp: abs((tp[0] - cutoff_utc).total_seconds()))[1]
     return baseline, pts[-1][1]
 
 
@@ -465,14 +458,14 @@ def run_digest(force=False):
         print(f"Digest: {slot_label} slot already sent for {today}, skipping.")
         return
 
-    midnight_utc = madrid_midnight_utc(now_madrid)
+    cutoff_utc = now_madrid.astimezone(timezone.utc) - timedelta(hours=24)
     index = json.loads(INDEX_PATH.read_text(encoding="utf-8"))
     movers = []
     for m in index.get("markets", []):
         cid = m.get("conditionId")
         if not cid or not m.get("negRisk") or m.get("resolved") or not loud_enough(m):
             continue
-        sw = swing_since_midnight(cid, midnight_utc)
+        sw = swing_last_24h(cid, cutoff_utc)
         if not sw:
             continue
         start_p, end_p = sw
@@ -486,7 +479,7 @@ def run_digest(force=False):
     movers = movers[:DIGEST_TOP_N]
 
     if movers:
-        header = f"*NBA Polymarket — biggest moves so far today ({today}, {slot_label} Madrid)*"
+        header = f"*NBA Polymarket — biggest moves · last 24h ({today}, {slot_label} Madrid)*"
         blocks = [header] + [
             digest_sentence(m, start_p, end_p, m.get("conditionId", "") + today + slot_id)
             for m, start_p, end_p, _ in movers
