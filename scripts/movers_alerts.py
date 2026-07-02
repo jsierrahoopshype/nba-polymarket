@@ -225,9 +225,13 @@ def run_instant():
 # --- digest prose + links ----------------------------------------------------
 
 def slugify(text):
-    """Lowercase, runs of non-alphanumerics -> single hyphen, trimmed. Matches the
-    slug HoopsMatic derives from a market's question (verified against live pages)."""
-    s = re.sub(r"[^a-z0-9]+", " ", (text or "").lower()).strip()
+    """Lowercase, delete apostrophes, then runs of non-alphanumerics -> single
+    hyphen, trimmed. Matches the slug HoopsMatic derives from a market's question
+    (verified against live pages). Apostrophes are DELETED, not hyphenated, so
+    "LeBron's" -> "lebrons" and "D'Angelo" -> "dangelo" (HoopsMatic drops the
+    apostrophe and keeps the surrounding letters together)."""
+    s = (text or "").lower().replace("'", "").replace("’", "")
+    s = re.sub(r"[^a-z0-9]+", " ", s).strip()
     return re.sub(r"\s+", "-", s)
 
 
