@@ -225,9 +225,13 @@ def run_instant():
 # --- digest prose + links ----------------------------------------------------
 
 def slugify(text):
-    """Lowercase, runs of non-alphanumerics -> single hyphen, trimmed. Matches the
-    slug HoopsMatic derives from a market's question (verified against live pages)."""
-    s = re.sub(r"[^a-z0-9]+", " ", (text or "").lower()).strip()
+    """Lowercase, delete apostrophes, then runs of non-alphanumerics -> single
+    hyphen, trimmed. Matches the slug HoopsMatic derives from a market's question
+    (verified against live pages). Apostrophes are DELETED, not hyphenated, so
+    "LeBron's" -> "lebrons" and "D'Angelo" -> "dangelo" (HoopsMatic drops the
+    apostrophe and keeps the surrounding letters together)."""
+    s = (text or "").lower().replace("'", "").replace("’", "")
+    s = re.sub(r"[^a-z0-9]+", " ", s).strip()
     return re.sub(r"\s+", "-", s)
 
 
@@ -317,8 +321,11 @@ def prose_sentence(m, start_p, end_p, key, window):
         core = f"{head} odds of {outcome} have {verb} from {a:.1f}% to {b:.1f}% {window}"
     else:
         core = f"{head} odds have {verb} from {a:.1f}% to {b:.1f}% {window}"
-    n = round(abs(delta))
-    tail = f", {_article(n)} {n}-point move."
+    # Accurate magnitude: the swing is over the shown 1-decimal odds (b - a), so a
+    # 57.0 -> 66.5 move is 9.5 points, not a rounded "10". Show one decimal when the
+    # swing isn't a whole number; drop the ".0" when it is.
+    mag = f"{abs(delta):.1f}".removesuffix(".0")
+    tail = f", {_article(mag)} {mag}-point move."
     return core + tail + "\n" + hoopsmatic_url(m)
 
 
