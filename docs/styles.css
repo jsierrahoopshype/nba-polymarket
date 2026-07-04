@@ -244,7 +244,13 @@ td.name::after,.card .q::after{content:"";display:table;clear:both}
   .chart-wrap{height:280px}
 }
 @media(max-width:560px){
-  .sib{grid-template-columns:1fr 3.4rem 3.4rem 4rem;gap:.4rem}
+  /* Narrow viewport: the 4-column grid squeezes the label to a useless
+     ellipsis ("Will Le…"). Switch to flex-wrap — the label takes the full first
+     line and wraps to ~2 lines, and the vol/prob/delta drop to a second line,
+     right-aligned. Desktop keeps the single-line grid above. */
+  .sib{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:baseline;
+    column-gap:.7rem;row-gap:.15rem}
+  .sib .nm{flex:1 1 100%;white-space:normal;overflow:visible;text-overflow:clip}
 }
 
 /* --- entity chips (item 11): clickable player/team links on rows + titles --- */
