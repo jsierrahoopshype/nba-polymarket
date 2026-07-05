@@ -75,21 +75,8 @@ function standRow(m, extra) {
   '</tr>';
 }
 
-function card(m, opts) {
-  opts = opts || {};
-  const d24 = fmtDelta(m.delta24h), d7 = fmtDelta(m.delta7d);
-  const sub = (opts.showCat ? esc(categoryOf(m).label) + ' · ' : '') + esc(m.eventTitle || '');
-  let foot = '<span class="lbl">Vol</span><span>' + fmtVol(m.volume) + '</span>' +
-    '<span class="lbl">24h</span><span class="delta ' + d24.cls + '">' + d24.text + '</span>';
-  if (opts.show7d) foot += '<span class="lbl">7d</span><span class="delta ' + d7.cls + '">' + d7.text + '</span>';
-  foot += m.sparkline && m.sparkline.length >= 2 ? sparkline(m.sparkline) : '';
-  return '<div class="card" data-id="' + esc(m.conditionId) + '"' + (opts.extra ? ' hidden data-extra' : '') + '>' +
-    '<div class="now"><span class="p">' + probHtml(m, NORM) + '</span></div>' +
-    '<div class="q">' + entityThumb(m.conditionId) + settledBadge(m) + esc(displayTitle(m)) + '</div>' +
-    '<div class="ev">' + sub + '</div>' + entityChips(m.conditionId) +
-    '<div class="card-foot">' + foot + '</div>' +
-  '</div>';
-}
+/* card() is the shared movers-card component; it now lives in app.js so the
+   per-market "Other outcomes" list can reuse it too. */
 
 /* ---------- sections ---------- */
 function moversSection(visible) {
