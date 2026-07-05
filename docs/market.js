@@ -379,14 +379,16 @@ function render(record, entry, index) {
         '<div class="chart-wrap" id="racewrap"><div class="loading">Loading the field…</div></div></div>'
     : '';
 
-  // siblings list
+  // siblings — top N by volume as movers-style cards, the rest as a compact list
   let siblings = '';
   if (index && entry && entry.eventId) {
     const all = outcomes.filter(s => s.conditionId !== entry.conditionId)
       .sort((a, b) => (b.volume || 0) - (a.volume || 0));
-    const race = all.filter(passesFloor);
-    const low = all.filter(s => !passesFloor(s));
     if (all.length) {
+      const CARD_N = 8;                         // top outcomes get the full movers card
+      const cardsHtml = all.slice(0, CARD_N).map(s => card(s, {})).join('');
+
+      // everything past the top N stays a compact row; sub-floor ones stay collapsed
       const sibRow = (s, extra) => {
         const dd = fmtDelta(s.delta24h);
         return '<div class="sib" data-id="' + esc(s.conditionId) + '"' + (extra ? ' hidden data-extra' : '') + '>' +
@@ -396,17 +398,25 @@ function render(record, entry, index) {
           '<span class="d delta ' + dd.cls + '">' + dd.text + '</span>' +
         '</div>';
       };
-      const rows = race.map(s => sibRow(s, false)).join('') + low.map(s => sibRow(s, true)).join('');
+      const rest = all.slice(CARD_N);
+      const race = rest.filter(passesFloor);
+      const low = rest.filter(s => !passesFloor(s));
+      const listHtml = rest.length
+        ? '<div class="siblings">' +
+            race.map(s => sibRow(s, false)).join('') + low.map(s => sibRow(s, true)).join('') +
+          '</div>' +
+          (low.length ? '<button class="showmore" id="sib-more">Show ' + low.length + ' low-volume →</button>' : '')
+        : '';
+
       const eventUrl = polyEventUrl(entry.eventSlug);
-      const moreBtn = low.length
-        ? '<button class="showmore" id="sib-more">Show ' + low.length + ' low-volume →</button>' : '';
+      const floorCount = all.filter(passesFloor).length;
       siblings =
         '<div class="section"><div class="section-head"><h2>Other outcomes in this race</h2>' +
           (eventUrl ? '<a class="poly-link" href="' + esc(eventUrl) + '" target="_blank" rel="noopener">Event on Polymarket ↗</a>' : '') +
           '</div>' +
-          '<div class="hint">' + esc(entry.eventTitle || '') + ' · ' + (race.length || all.length) + ' outcomes' +
+          '<div class="hint">' + esc(entry.eventTitle || '') + ' · ' + (floorCount || all.length) + ' outcomes' +
             (NORM && NORM.has(entry.conditionId) ? ' · normalized to 100%' : '') + '</div>' +
-          '<div class="siblings">' + rows + '</div>' + moreBtn + '</div>';
+          '<div class="outcome-cards">' + cardsHtml + '</div>' + listHtml + '</div>';
     }
   }
 

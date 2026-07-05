@@ -305,6 +305,27 @@ function sparkline(points) {
     '<circle cx="' + cx + '" cy="' + cy + '" r="1.7" fill="' + color + '"/></svg></span>';
 }
 
+/* --- movers card ---------------------------------------------------------- */
+/* The card component shared by the homepage "Biggest movers"/standings grids and
+   the per-market page's "Other outcomes" list. Team badge + question title +
+   entity chips + a Vol/24h(+7d)/sparkline foot. Reads the page-global NORM for
+   normalized odds. Kept here (not inline in index.html) so both pages reuse it. */
+function card(m, opts) {
+  opts = opts || {};
+  const d24 = fmtDelta(m.delta24h), d7 = fmtDelta(m.delta7d);
+  const sub = (opts.showCat ? esc(categoryOf(m).label) + ' · ' : '') + esc(m.eventTitle || '');
+  let foot = '<span class="lbl">Vol</span><span>' + fmtVol(m.volume) + '</span>' +
+    '<span class="lbl">24h</span><span class="delta ' + d24.cls + '">' + d24.text + '</span>';
+  if (opts.show7d) foot += '<span class="lbl">7d</span><span class="delta ' + d7.cls + '">' + d7.text + '</span>';
+  foot += m.sparkline && m.sparkline.length >= 2 ? sparkline(m.sparkline) : '';
+  return '<div class="card" data-id="' + esc(m.conditionId) + '"' + (opts.extra ? ' hidden data-extra' : '') + '>' +
+    '<div class="now"><span class="p">' + probHtml(m, NORM) + '</span></div>' +
+    '<div class="q">' + entityThumb(m.conditionId) + settledBadge(m) + esc(displayTitle(m)) + '</div>' +
+    '<div class="ev">' + sub + '</div>' + entityChips(m.conditionId) +
+    '<div class="card-foot">' + foot + '</div>' +
+  '</div>';
+}
+
 /* --- misc ----------------------------------------------------------------- */
 /* Delegate row/card taps: any element with data-id navigates to its detail. */
 function wireRowNav(container) {

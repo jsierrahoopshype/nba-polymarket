@@ -128,6 +128,13 @@ td.spark{width:6.5rem}
 .card-foot{display:flex;align-items:center;gap:.8rem;margin-top:.5rem;font-family:'JetBrains Mono',monospace;font-size:.74rem}
 .card-foot .lbl{color:var(--text-secondary);text-transform:uppercase;font-size:.58rem;letter-spacing:.04em;margin-right:.25rem}
 .card .spark svg{margin:0;width:4.5rem}
+/* outcomes list reusing the .card component: an always-visible responsive grid
+   (the homepage .cards container above is deliberately mobile-only). */
+.outcome-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:.6rem;margin-bottom:.6rem}
+.outcome-cards .card{margin-bottom:0}
+/* every outcome shares one event, so the event-title line is redundant here
+   (the homepage cards keep it) */
+.outcome-cards .card .ev{display:none}
 
 /* ---- detail page ---- */
 .back{font-size:.78rem;font-family:'JetBrains Mono',monospace;color:var(--text-secondary);
