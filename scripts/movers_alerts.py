@@ -59,10 +59,14 @@ INSTANT_SWING = 0.06          # 6 points over 6h
 INSTANT_HOURS = 6
 SETTLE_LO, SETTLE_HI = 0.02, 0.98   # outside this band a move is settlement, skip
 MIN_HISTORY_HOURS = 5         # need ~6h of history to judge a 6h swing
-# Alert-only volume floor: a swing must have real money behind it to fire a Slack
-# alert. This does NOT touch the display floors — the movers/standings pages still
-# show everything; this only gates what's loud enough to ping Slack.
+# Alert-only floors: a swing must have real money behind it to fire a Slack alert.
+# These do NOT touch the display floors — the movers/standings pages still show
+# everything; this only gates what's loud enough to ping Slack.
+#   volume    — cumulative money traded (a market people actually care about).
+#   liquidity — order-book depth. A thin book (a few hundred $) throws phantom
+#               price spikes on ~no trades; requiring real depth filters those out.
 ALERT_VOLUME_FLOOR = 10000
+ALERT_LIQUIDITY_FLOOR = 1000
 
 # --- digest (three daily, rolling 24-hour window) ----------------------------
 DIGEST_FLOOR = 0.02           # 2.0 percentage points over the rolling 24h window
@@ -188,8 +192,11 @@ def artificial_swing(start, m):
 
 
 def loud_enough(m):
-    """Alert-only volume floor — enough money behind the move to be worth a ping."""
-    return (m.get("volume") or 0) >= ALERT_VOLUME_FLOOR
+    """Alert-only floors — enough money AND a real order book behind the move to be
+    worth a ping. The liquidity floor filters thin-book markets whose quoted price
+    spikes on ~no trades (a $166-liquidity longshot 'jumping' to 40% and reverting)."""
+    return ((m.get("volume") or 0) >= ALERT_VOLUME_FLOOR
+            and (m.get("liquidity") or 0) >= ALERT_LIQUIDITY_FLOOR)
 
 
 # --- modes -------------------------------------------------------------------
