@@ -6,7 +6,7 @@ Two channels, both off the existing poll data (no new market fetching):
   --instant  (run after each poll/build_index): every LIVE market whose implied
              probability swung >= 6 points over the last 6h fires a one-off Slack
              message, at most once per market per calendar day (Europe/Madrid).
-             Same prose + HoopsMatic link as the digest, worded for a 6h window.
+             Same prose + market link as the digest, worded for a 6h window.
   --digest   (run three times a day, 07:00/15:00/23:00 Madrid): the top 10 movers
              over a rolling 24-hour window, ranked by absolute swing, as
              natural-prose sentences for HoopsHype Rumors. The 24h windows overlap
@@ -25,7 +25,7 @@ of the day's three digest windows have already gone out.
 
 The Slack webhook is read from $SLACK_MOVERS_WEBHOOK (a GitHub secret). With no
 webhook set the script runs in dry-run mode and prints the messages, so it is
-safe to run locally. Both channels link to HoopsMatic's per-outcome market pages.
+safe to run locally. Both channels link to our own /docs/market/<slug>/ pages.
 
 Usage:
     SLACK_MOVERS_WEBHOOK=... python scripts/movers_alerts.py --instant
@@ -72,7 +72,11 @@ ALERT_LIQUIDITY_FLOOR = 1000
 DIGEST_FLOOR = 0.02           # 2.0 percentage points over the rolling 24h window
 DIGEST_TOP_N = 10             # at most this many movers per digest
 DIGEST_BIG_MOVE = 8           # >= this many points gets a stronger verb (surged vs risen)
-HOOPSMATIC_BASE = "https://hoopsmatic.com/polymarket/market"
+
+# Alert links point at our own GitHub Pages market pages. The poller builds a page
+# for every market (keyed on its slug field), so these are guaranteed to exist —
+# unlike a derived HoopsMatic slug, which 404s on coverage gaps and slug mismatches.
+SITE_BASE = "https://jsierrahoopshype.github.io/nba-polymarket"
 
 # Madrid local-hour -> digest slot. The workflow fires UTC cron pairs (05/06,
 # 13/14, 21/22) that bracket DST so exactly one fire lands on each target Madrid
@@ -231,21 +235,10 @@ def run_instant():
 
 # --- digest prose + links ----------------------------------------------------
 
-def slugify(text):
-    """Lowercase, delete apostrophes, then runs of non-alphanumerics -> single
-    hyphen, trimmed. Matches the slug HoopsMatic derives from a market's question
-    (verified against live pages). Apostrophes are DELETED, not hyphenated, so
-    "LeBron's" -> "lebrons" and "D'Angelo" -> "dangelo" (HoopsMatic drops the
-    apostrophe and keeps the surrounding letters together)."""
-    s = (text or "").lower().replace("'", "").replace("’", "")
-    s = re.sub(r"[^a-z0-9]+", " ", s).strip()
-    return re.sub(r"\s+", "-", s)
-
-
-def hoopsmatic_url(m):
-    """Per-outcome HoopsMatic page, from the market's question (NOT its slug field,
-    which carries a dedup timestamp suffix that would 404)."""
-    return f"{HOOPSMATIC_BASE}/{slugify(m.get('question'))}/"
+def market_url(m):
+    """Per-market link to our own GitHub Pages page, keyed on the market's slug
+    field (the exact slug the poller builds each page under), so it always exists."""
+    return f"{SITE_BASE}/docs/market/{m.get('slug')}/"
 
 
 # "Will <subject> <predicate>?" -> "<subject>'s odds of <gerund predicate> ...".
@@ -315,7 +308,7 @@ def _article(n):
 
 
 def prose_sentence(m, start_p, end_p, key, window):
-    """Shared HoopsHype-Rumors prose + HoopsMatic link, used by BOTH the digest and
+    """Shared HoopsHype-Rumors prose + market link, used by BOTH the digest and
     the instant channel. Identical style; only `window` differs (the digest passes
     a 24h phrase, instant a 6h one). Direction lives in the verb (surged/slipped),
     so the tail is a directionless magnitude: ', a N-point move.' — always shown."""
@@ -333,7 +326,7 @@ def prose_sentence(m, start_p, end_p, key, window):
     # swing isn't a whole number; drop the ".0" when it is.
     mag = f"{abs(delta):.1f}".removesuffix(".0")
     tail = f", {_article(mag)} {mag}-point move."
-    return core + tail + "\n" + hoopsmatic_url(m)
+    return core + tail + "\n" + market_url(m)
 
 
 # --- digest swing window -----------------------------------------------------
