@@ -1,0 +1,52 @@
+name: hoopsmatic-audit
+
+# Background audit of HoopsMatic market-link coverage, fully separate from the
+# poll/alert pipeline so it can never slow down or break alerts. Once a day it
+# HTTP-checks every alert-eligible market's HoopsMatic URL, writes a versioned
+# 404-rate record to data/hoopsmatic_audit.json, and (Mondays) posts a weekly
+# Slack summary. Runs on a GitHub-hosted runner, which — unlike our poll data —
+# can actually reach hoopsmatic.com.
+
+on:
+  schedule:
+    - cron: "0 8 * * *"   # daily 08:00 UTC; the weekly Slack post fires on Mondays
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Share the poller's concurrency group so the audit commit and a poll/digest
+# commit never race (all three touch data/ and push).
+concurrency:
+  group: poll-polymarket
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Audit HoopsMatic links
+        env:
+          SLACK_MOVERS_WEBHOOK: ${{ secrets.SLACK_MOVERS_WEBHOOK }}
+        run: python scripts/hoopsmatic_audit.py || echo "audit step failed (non-fatal)"
+
+      - name: Commit audit results if they changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/hoopsmatic_audit.json
+          if git diff --staged --quiet; then
+            echo "No audit change to commit."
+          else
+            git commit -m "audit: hoopsmatic links $(date -u '+%Y-%m-%d')"
+            git pull --rebase origin main && git push
+          fi
