@@ -53,15 +53,21 @@
       "checked": 75,
       "broken": 15,
       "rate": 0.2
+    },
+    {
+      "date": "2026-07-17",
+      "checked": 77,
+      "broken": 17,
+      "rate": 0.2208
     }
   ],
   "lastWeeklyPost": "2026-W29",
-  "lastRun": "2026-07-16T10:17:11Z",
-  "checked": 75,
+  "lastRun": "2026-07-17T10:05:18Z",
+  "checked": 77,
   "ok": 60,
-  "broken": 15,
+  "broken": 17,
   "errors": 0,
-  "rate": 0.2,
+  "rate": 0.2208,
   "brokenMarkets": [
     {
       "question": "Will Ebuka Okorie win the 2026-27 NBA Rookie of the Year?",
@@ -168,6 +174,14 @@
       "ourPageUp": true
     },
     {
+      "question": "Will LeBron's next contract average under $4M per year?",
+      "slug": "will-lebrons-next-contract-average-under-4m-per-year-20260630183002759",
+      "eventSlug": "nba-how-much-will-lebrons-next-contract-be-20260630183002758",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-lebrons-next-contract-average-under-4m-per-year/",
+      "status": 404,
+      "ourPageUp": true
+    },
+    {
       "question": "Will Caleb Wilson win the 2026-27 NBA Rookie of the Year?",
       "slug": "will-caleb-wilson-win-the-2026-27-nba-rookie-of-the-year-20260624161716883",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
@@ -180,6 +194,14 @@
       "slug": "will-darryn-peterson-win-the-2026-27-nba-rookie-of-the-year-20260624161716881",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-darryn-peterson-win-the-2026-27-nba-rookie-of-the-year/",
+      "status": 404,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will LeBron's next contract average $10M-$15M per year?",
+      "slug": "will-lebrons-next-contract-average-10m-14pt999m-per-year-20260630183002761",
+      "eventSlug": "nba-how-much-will-lebrons-next-contract-be-20260630183002758",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-lebrons-next-contract-average-10m-15m-per-year/",
       "status": 404,
       "ourPageUp": true
     }
