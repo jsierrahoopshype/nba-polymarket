@@ -137,15 +137,21 @@
       "checked": 51,
       "broken": 21,
       "rate": 0.4118
+    },
+    {
+      "date": "2026-07-31",
+      "checked": 51,
+      "broken": 24,
+      "rate": 0.4706
     }
   ],
   "lastWeeklyPost": "2026-W31",
-  "lastRun": "2026-07-30T10:30:46Z",
+  "lastRun": "2026-07-31T10:45:57Z",
   "checked": 51,
-  "ok": 30,
-  "broken": 21,
+  "ok": 27,
+  "broken": 24,
   "errors": 0,
-  "rate": 0.4118,
+  "rate": 0.4706,
   "brokenMarkets": [
     {
       "question": "Will Ebuka Okorie win the 2026-27 NBA Rookie of the Year?",
@@ -169,6 +175,14 @@
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-zuby-ejiofor-win-the-2026-27-nba-rookie-of-the-year/",
       "status": 404,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Golden State Warriors win the 2027 NBA Finals?",
+      "slug": "will-golden-state-warriors-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-golden-state-warriors-win-the-2027-nba-finals/",
+      "status": 502,
       "ourPageUp": true
     },
     {
@@ -196,11 +210,27 @@
       "ourPageUp": true
     },
     {
+      "question": "Will James Harden play for the Memphis Grizzlies in 2026-27?",
+      "slug": "will-james-harden-play-for-the-memphis-grizzlies-in-2026-27-20260622161457165",
+      "eventSlug": "nba-free-agency-james-harden-next-team-20260622160230346",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-james-harden-play-for-the-memphis-grizzlies-in-2026-27/",
+      "status": 404,
+      "ourPageUp": true
+    },
+    {
       "question": "Will Labaron Philon Jr. win the 2026-27 NBA Rookie of the Year?",
       "slug": "will-labaron-philon-jrpt-win-the-2026-27-nba-rookie-of-the-year-20260624161716901",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-labaron-philon-jr-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
+      "status": 502,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Orlando Magic win the 2027 NBA Finals?",
+      "slug": "will-orlando-magic-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-orlando-magic-win-the-2027-nba-finals/",
+      "status": 502,
       "ourPageUp": true
     },
     {
@@ -209,6 +239,14 @@
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-kingston-flemings-win-the-2026-27-nba-rookie-of-the-year/",
       "status": 404,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Brooklyn Nets win the 2027 NBA Finals?",
+      "slug": "will-brooklyn-nets-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-brooklyn-nets-win-the-2027-nba-finals/",
+      "status": 502,
       "ourPageUp": true
     },
     {
@@ -240,14 +278,6 @@
       "slug": "will-kawhi-play-for-the-toronto-raptors-in-2026-27-20260629144043516",
       "eventSlug": "nba-kawhi-leonard-next-team-20260629144203996",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-kawhi-play-for-the-toronto-raptors-in-2026-27/",
-      "status": 404,
-      "ourPageUp": true
-    },
-    {
-      "question": "Will Kawhi play for the Los Angeles Clippers in 2026-27?",
-      "slug": "will-kawhi-play-for-the-los-angeles-clippers-in-2026-27-20260629144043501",
-      "eventSlug": "nba-kawhi-leonard-next-team-20260629144203996",
-      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-kawhi-play-for-the-los-angeles-clippers-in-2026-27/",
       "status": 404,
       "ourPageUp": true
     },
