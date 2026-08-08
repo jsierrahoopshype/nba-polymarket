@@ -1,12 +1,6 @@
 {
   "history": [
     {
-      "date": "2026-07-09",
-      "checked": 67,
-      "broken": 28,
-      "rate": 0.4179
-    },
-    {
       "date": "2026-07-10",
       "checked": 69,
       "broken": 9,
@@ -179,10 +173,16 @@
       "checked": 55,
       "broken": 25,
       "rate": 0.4545
+    },
+    {
+      "date": "2026-08-08",
+      "checked": 55,
+      "broken": 25,
+      "rate": 0.4545
     }
   ],
   "lastWeeklyPost": "2026-W32",
-  "lastRun": "2026-08-07T09:06:22Z",
+  "lastRun": "2026-08-08T08:50:07Z",
   "checked": 55,
   "ok": 30,
   "broken": 25,
@@ -270,14 +270,6 @@
       "ourPageUp": true
     },
     {
-      "question": "Will Jalen Duren play for the Cleveland Cavaliers in 2026-27?",
-      "slug": "will-jalen-duren-play-for-the-cleveland-cavaliers-in-2026-27-20260622170634996",
-      "eventSlug": "nba-free-agency-jalen-duren-next-team-20260622170505392",
-      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-jalen-duren-play-for-the-cleveland-cavaliers-in-2026-27/",
-      "status": 404,
-      "ourPageUp": true
-    },
-    {
       "question": "Will Joshua Jefferson win the 2026-27 NBA Rookie of the Year?",
       "slug": "will-joshua-jefferson-win-the-2026-27-nba-rookie-of-the-year-20260624161716907",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
@@ -350,6 +342,14 @@
       "ourPageUp": true
     },
     {
+      "question": "Will AJ Dybantsa win the 2026-27 NBA Rookie of the Year?",
+      "slug": "will-aj-dybantsa-win-the-2026-27-nba-rookie-of-the-year-20260624161716880",
+      "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-aj-dybantsa-win-the-2026-27-nba-rookie-of-the-year/",
+      "status": 404,
+      "ourPageUp": true
+    },
+    {
       "question": "Will the New York Knicks be the 2027 NBA Eastern Conference Champion?",
       "slug": "will-the-new-york-knicks-be-the-2027-nba-eastern-conference-champion-20260624155839406",
       "eventSlug": "nba-2027-eastern-conference-champion-20260624155838911",
@@ -366,14 +366,6 @@
       "ourPageUp": true
     },
     {
-      "question": "Will AJ Dybantsa win the 2026-27 NBA Rookie of the Year?",
-      "slug": "will-aj-dybantsa-win-the-2026-27-nba-rookie-of-the-year-20260624161716880",
-      "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
-      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-aj-dybantsa-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
-      "ourPageUp": true
-    },
-    {
       "question": "Will Cameron Boozer win the 2026-27 NBA Rookie of the Year?",
       "slug": "will-cameron-boozer-win-the-2026-27-nba-rookie-of-the-year-20260624161716882",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
@@ -386,6 +378,14 @@
       "slug": "will-darryn-peterson-win-the-2026-27-nba-rookie-of-the-year-20260624161716881",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-darryn-peterson-win-the-2026-27-nba-rookie-of-the-year/",
+      "status": 404,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Steph Curry's next team be Golden State Warriors?",
+      "slug": "will-steph-currys-next-team-be-golden-state-warriors-20260731023145463",
+      "eventSlug": "nba-steph-curry-next-team-20260731023145453",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-steph-currys-next-team-be-golden-state-warriors/",
       "status": 404,
       "ourPageUp": true
     }
