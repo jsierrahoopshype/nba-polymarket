@@ -1,12 +1,6 @@
 {
   "history": [
     {
-      "date": "2026-07-12",
-      "checked": 69,
-      "broken": 9,
-      "rate": 0.1304
-    },
-    {
       "date": "2026-07-13",
       "checked": 66,
       "broken": 6,
@@ -179,10 +173,16 @@
       "checked": 56,
       "broken": 26,
       "rate": 0.4643
+    },
+    {
+      "date": "2026-08-11",
+      "checked": 56,
+      "broken": 26,
+      "rate": 0.4643
     }
   ],
   "lastWeeklyPost": "2026-W33",
-  "lastRun": "2026-08-10T09:39:28Z",
+  "lastRun": "2026-08-11T09:05:24Z",
   "checked": 56,
   "ok": 30,
   "broken": 26,
@@ -278,6 +278,14 @@
       "ourPageUp": true
     },
     {
+      "question": "Will Kawhi play for the Toronto Raptors in 2026-27?",
+      "slug": "will-kawhi-play-for-the-toronto-raptors-in-2026-27-20260629144043516",
+      "eventSlug": "nba-kawhi-leonard-next-team-20260629144203996",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-kawhi-play-for-the-toronto-raptors-in-2026-27/",
+      "status": 404,
+      "ourPageUp": true
+    },
+    {
       "question": "Will Joshua Jefferson win the 2026-27 NBA Rookie of the Year?",
       "slug": "will-joshua-jefferson-win-the-2026-27-nba-rookie-of-the-year-20260624161716907",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
@@ -290,14 +298,6 @@
       "slug": "will-jayden-quaintance-win-the-2026-27-nba-rookie-of-the-year-20260624161716899",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-jayden-quaintance-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
-      "ourPageUp": true
-    },
-    {
-      "question": "Will Kawhi play for the Toronto Raptors in 2026-27?",
-      "slug": "will-kawhi-play-for-the-toronto-raptors-in-2026-27-20260629144043516",
-      "eventSlug": "nba-kawhi-leonard-next-team-20260629144203996",
-      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-kawhi-play-for-the-toronto-raptors-in-2026-27/",
       "status": 404,
       "ourPageUp": true
     },
@@ -358,18 +358,18 @@
       "ourPageUp": true
     },
     {
-      "question": "Will the New York Knicks be the 2027 NBA Eastern Conference Champion?",
-      "slug": "will-the-new-york-knicks-be-the-2027-nba-eastern-conference-champion-20260624155839406",
-      "eventSlug": "nba-2027-eastern-conference-champion-20260624155838911",
-      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-the-new-york-knicks-be-the-2027-nba-eastern-conference-champion/",
-      "status": 404,
-      "ourPageUp": true
-    },
-    {
       "question": "Will James Harden play for the Cleveland Cavaliers in 2026-27?",
       "slug": "will-james-harden-play-for-the-cleveland-cavaliers-in-2026-27-20260622161457156",
       "eventSlug": "nba-free-agency-james-harden-next-team-20260622160230346",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-james-harden-play-for-the-cleveland-cavaliers-in-2026-27/",
+      "status": 404,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will the New York Knicks be the 2027 NBA Eastern Conference Champion?",
+      "slug": "will-the-new-york-knicks-be-the-2027-nba-eastern-conference-champion-20260624155839406",
+      "eventSlug": "nba-2027-eastern-conference-champion-20260624155838911",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-the-new-york-knicks-be-the-2027-nba-eastern-conference-champion/",
       "status": 404,
       "ourPageUp": true
     },
