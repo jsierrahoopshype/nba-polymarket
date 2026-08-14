@@ -1,12 +1,6 @@
 {
   "history": [
     {
-      "date": "2026-07-15",
-      "checked": 76,
-      "broken": 16,
-      "rate": 0.2105
-    },
-    {
       "date": "2026-07-16",
       "checked": 75,
       "broken": 15,
@@ -179,15 +173,21 @@
       "checked": 54,
       "broken": 24,
       "rate": 0.4444
+    },
+    {
+      "date": "2026-08-14",
+      "checked": 55,
+      "broken": 25,
+      "rate": 0.4545
     }
   ],
   "lastWeeklyPost": "2026-W33",
-  "lastRun": "2026-08-13T09:18:37Z",
-  "checked": 54,
+  "lastRun": "2026-08-14T09:13:08Z",
+  "checked": 55,
   "ok": 30,
-  "broken": 24,
+  "broken": 25,
   "errors": 0,
-  "rate": 0.4444,
+  "rate": 0.4545,
   "brokenMarkets": [
     {
       "question": "Will Ebuka Okorie win the 2026-27 NBA Rookie of the Year?",
@@ -210,6 +210,14 @@
       "slug": "will-zuby-ejiofor-win-the-2026-27-nba-rookie-of-the-year-20260624161716902",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-zuby-ejiofor-win-the-2026-27-nba-rookie-of-the-year/",
+      "status": 404,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will James Harden play for the Atlanta Hawks in 2026-27?",
+      "slug": "will-james-harden-play-for-the-atlanta-hawks-in-2026-27-20260622161457151",
+      "eventSlug": "nba-free-agency-james-harden-next-team-20260622160230346",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-james-harden-play-for-the-atlanta-hawks-in-2026-27/",
       "status": 404,
       "ourPageUp": true
     },
@@ -262,6 +270,14 @@
       "ourPageUp": true
     },
     {
+      "question": "Will Jalen Duren play for the Cleveland Cavaliers in 2026-27?",
+      "slug": "will-jalen-duren-play-for-the-cleveland-cavaliers-in-2026-27-20260622170634996",
+      "eventSlug": "nba-free-agency-jalen-duren-next-team-20260622170505392",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-jalen-duren-play-for-the-cleveland-cavaliers-in-2026-27/",
+      "status": 404,
+      "ourPageUp": true
+    },
+    {
       "question": "Will Kawhi play for the Toronto Raptors in 2026-27?",
       "slug": "will-kawhi-play-for-the-toronto-raptors-in-2026-27-20260629144043516",
       "eventSlug": "nba-kawhi-leonard-next-team-20260629144203996",
@@ -290,14 +306,6 @@
       "slug": "will-kawhi-play-for-the-los-angeles-clippers-in-2026-27-20260629144043501",
       "eventSlug": "nba-kawhi-leonard-next-team-20260629144203996",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-kawhi-play-for-the-los-angeles-clippers-in-2026-27/",
-      "status": 404,
-      "ourPageUp": true
-    },
-    {
-      "question": "Will James Harden play for the Phoenix Suns in 2026-27?",
-      "slug": "will-james-harden-play-for-the-phoenix-suns-in-2026-27-20260622161457174",
-      "eventSlug": "nba-free-agency-james-harden-next-team-20260622160230346",
-      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-james-harden-play-for-the-phoenix-suns-in-2026-27/",
       "status": 404,
       "ourPageUp": true
     },
@@ -350,18 +358,18 @@
       "ourPageUp": true
     },
     {
-      "question": "Will James Harden play for the Cleveland Cavaliers in 2026-27?",
-      "slug": "will-james-harden-play-for-the-cleveland-cavaliers-in-2026-27-20260622161457156",
-      "eventSlug": "nba-free-agency-james-harden-next-team-20260622160230346",
-      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-james-harden-play-for-the-cleveland-cavaliers-in-2026-27/",
-      "status": 404,
-      "ourPageUp": true
-    },
-    {
       "question": "Will the New York Knicks be the 2027 NBA Eastern Conference Champion?",
       "slug": "will-the-new-york-knicks-be-the-2027-nba-eastern-conference-champion-20260624155839406",
       "eventSlug": "nba-2027-eastern-conference-champion-20260624155838911",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-the-new-york-knicks-be-the-2027-nba-eastern-conference-champion/",
+      "status": 404,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will James Harden play for the Cleveland Cavaliers in 2026-27?",
+      "slug": "will-james-harden-play-for-the-cleveland-cavaliers-in-2026-27-20260622161457156",
+      "eventSlug": "nba-free-agency-james-harden-next-team-20260622160230346",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-james-harden-play-for-the-cleveland-cavaliers-in-2026-27/",
       "status": 404,
       "ourPageUp": true
     },
