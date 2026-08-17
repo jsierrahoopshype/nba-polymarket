@@ -1,12 +1,6 @@
 {
   "history": [
     {
-      "date": "2026-07-18",
-      "checked": 78,
-      "broken": 18,
-      "rate": 0.2308
-    },
-    {
       "date": "2026-07-19",
       "checked": 79,
       "broken": 19,
@@ -179,15 +173,21 @@
       "checked": 54,
       "broken": 24,
       "rate": 0.4444
+    },
+    {
+      "date": "2026-08-17",
+      "checked": 53,
+      "broken": 23,
+      "rate": 0.434
     }
   ],
-  "lastWeeklyPost": "2026-W33",
-  "lastRun": "2026-08-16T08:36:31Z",
-  "checked": 54,
+  "lastWeeklyPost": "2026-W34",
+  "lastRun": "2026-08-17T08:51:13Z",
+  "checked": 53,
   "ok": 30,
-  "broken": 24,
+  "broken": 23,
   "errors": 0,
-  "rate": 0.4444,
+  "rate": 0.434,
   "brokenMarkets": [
     {
       "question": "Will Ebuka Okorie win the 2026-27 NBA Rookie of the Year?",
@@ -258,14 +258,6 @@
       "slug": "will-kawhi-play-for-the-golden-state-warriors-in-2026-27-20260629144043498",
       "eventSlug": "nba-kawhi-leonard-next-team-20260629144203996",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-kawhi-play-for-the-golden-state-warriors-in-2026-27/",
-      "status": 404,
-      "ourPageUp": true
-    },
-    {
-      "question": "Will Jalen Duren play for the Cleveland Cavaliers in 2026-27?",
-      "slug": "will-jalen-duren-play-for-the-cleveland-cavaliers-in-2026-27-20260622170634996",
-      "eventSlug": "nba-free-agency-jalen-duren-next-team-20260622170505392",
-      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-jalen-duren-play-for-the-cleveland-cavaliers-in-2026-27/",
       "status": 404,
       "ourPageUp": true
     },
