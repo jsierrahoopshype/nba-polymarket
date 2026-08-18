@@ -1,12 +1,6 @@
 {
   "history": [
     {
-      "date": "2026-07-19",
-      "checked": 79,
-      "broken": 19,
-      "rate": 0.2405
-    },
-    {
       "date": "2026-07-20",
       "checked": 83,
       "broken": 23,
@@ -179,10 +173,16 @@
       "checked": 53,
       "broken": 23,
       "rate": 0.434
+    },
+    {
+      "date": "2026-08-18",
+      "checked": 53,
+      "broken": 23,
+      "rate": 0.434
     }
   ],
   "lastWeeklyPost": "2026-W34",
-  "lastRun": "2026-08-17T08:51:13Z",
+  "lastRun": "2026-08-18T08:44:05Z",
   "checked": 53,
   "ok": 30,
   "broken": 23,
@@ -358,18 +358,18 @@
       "ourPageUp": true
     },
     {
-      "question": "Will Cameron Boozer win the 2026-27 NBA Rookie of the Year?",
-      "slug": "will-cameron-boozer-win-the-2026-27-nba-rookie-of-the-year-20260624161716882",
-      "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
-      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-cameron-boozer-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
-      "ourPageUp": true
-    },
-    {
       "question": "Will Darryn Peterson win the 2026-27 NBA Rookie of the Year?",
       "slug": "will-darryn-peterson-win-the-2026-27-nba-rookie-of-the-year-20260624161716881",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-darryn-peterson-win-the-2026-27-nba-rookie-of-the-year/",
+      "status": 404,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Cameron Boozer win the 2026-27 NBA Rookie of the Year?",
+      "slug": "will-cameron-boozer-win-the-2026-27-nba-rookie-of-the-year-20260624161716882",
+      "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-cameron-boozer-win-the-2026-27-nba-rookie-of-the-year/",
       "status": 404,
       "ourPageUp": true
     }
