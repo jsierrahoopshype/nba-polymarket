@@ -1,12 +1,6 @@
 {
   "history": [
     {
-      "date": "2026-07-25",
-      "checked": 88,
-      "broken": 28,
-      "rate": 0.3182
-    },
-    {
       "date": "2026-07-26",
       "checked": 89,
       "broken": 29,
@@ -179,15 +173,21 @@
       "checked": 56,
       "broken": 26,
       "rate": 0.4643
+    },
+    {
+      "date": "2026-08-24",
+      "checked": 58,
+      "broken": 28,
+      "rate": 0.4828
     }
   ],
-  "lastWeeklyPost": "2026-W34",
-  "lastRun": "2026-08-23T08:37:25Z",
-  "checked": 56,
+  "lastWeeklyPost": "2026-W35",
+  "lastRun": "2026-08-24T08:55:33Z",
+  "checked": 58,
   "ok": 30,
-  "broken": 26,
+  "broken": 28,
   "errors": 0,
-  "rate": 0.4643,
+  "rate": 0.4828,
   "brokenMarkets": [
     {
       "question": "Will Ebuka Okorie win the 2026-27 NBA Rookie of the Year?",
@@ -278,6 +278,14 @@
       "ourPageUp": true
     },
     {
+      "question": "Will Kawhi play for the Toronto Raptors in 2026-27?",
+      "slug": "will-kawhi-play-for-the-toronto-raptors-in-2026-27-20260629144043516",
+      "eventSlug": "nba-kawhi-leonard-next-team-20260629144203996",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-kawhi-play-for-the-toronto-raptors-in-2026-27/",
+      "status": 404,
+      "ourPageUp": true
+    },
+    {
       "question": "Will Joshua Jefferson win the 2026-27 NBA Rookie of the Year?",
       "slug": "will-joshua-jefferson-win-the-2026-27-nba-rookie-of-the-year-20260624161716907",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
@@ -290,6 +298,14 @@
       "slug": "will-jayden-quaintance-win-the-2026-27-nba-rookie-of-the-year-20260624161716899",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-jayden-quaintance-win-the-2026-27-nba-rookie-of-the-year/",
+      "status": 404,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Kawhi play for the Los Angeles Clippers in 2026-27?",
+      "slug": "will-kawhi-play-for-the-los-angeles-clippers-in-2026-27-20260629144043501",
+      "eventSlug": "nba-kawhi-leonard-next-team-20260629144203996",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-kawhi-play-for-the-los-angeles-clippers-in-2026-27/",
       "status": 404,
       "ourPageUp": true
     },
@@ -334,6 +350,14 @@
       "ourPageUp": true
     },
     {
+      "question": "Will James Harden play for the Cleveland Cavaliers in 2026-27?",
+      "slug": "will-james-harden-play-for-the-cleveland-cavaliers-in-2026-27-20260622161457156",
+      "eventSlug": "nba-free-agency-james-harden-next-team-20260622160230346",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-james-harden-play-for-the-cleveland-cavaliers-in-2026-27/",
+      "status": 404,
+      "ourPageUp": true
+    },
+    {
       "question": "Will the New York Knicks be the 2027 NBA Eastern Conference Champion?",
       "slug": "will-the-new-york-knicks-be-the-2027-nba-eastern-conference-champion-20260624155839406",
       "eventSlug": "nba-2027-eastern-conference-champion-20260624155838911",
@@ -346,14 +370,6 @@
       "slug": "will-aj-dybantsa-win-the-2026-27-nba-rookie-of-the-year-20260624161716880",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-aj-dybantsa-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
-      "ourPageUp": true
-    },
-    {
-      "question": "Will James Harden play for the Cleveland Cavaliers in 2026-27?",
-      "slug": "will-james-harden-play-for-the-cleveland-cavaliers-in-2026-27-20260622161457156",
-      "eventSlug": "nba-free-agency-james-harden-next-team-20260622160230346",
-      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-james-harden-play-for-the-cleveland-cavaliers-in-2026-27/",
       "status": 404,
       "ourPageUp": true
     },
