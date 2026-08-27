@@ -1,12 +1,6 @@
 {
   "history": [
     {
-      "date": "2026-07-28",
-      "checked": 51,
-      "broken": 21,
-      "rate": 0.4118
-    },
-    {
       "date": "2026-07-29",
       "checked": 57,
       "broken": 27,
@@ -179,10 +173,16 @@
       "checked": 57,
       "broken": 27,
       "rate": 0.4737
+    },
+    {
+      "date": "2026-08-27",
+      "checked": 57,
+      "broken": 27,
+      "rate": 0.4737
     }
   ],
   "lastWeeklyPost": "2026-W35",
-  "lastRun": "2026-08-26T08:51:47Z",
+  "lastRun": "2026-08-27T19:00:36Z",
   "checked": 57,
   "ok": 30,
   "broken": 27,
@@ -238,18 +238,18 @@
       "ourPageUp": true
     },
     {
-      "question": "Will Christian Anderson win the 2026-27 NBA Rookie of the Year?",
-      "slug": "will-christian-anderson-win-the-2026-27-nba-rookie-of-the-year-20260624161716897",
-      "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
-      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-christian-anderson-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
-      "ourPageUp": true
-    },
-    {
       "question": "Will James Harden play for the Memphis Grizzlies in 2026-27?",
       "slug": "will-james-harden-play-for-the-memphis-grizzlies-in-2026-27-20260622161457165",
       "eventSlug": "nba-free-agency-james-harden-next-team-20260622160230346",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-james-harden-play-for-the-memphis-grizzlies-in-2026-27/",
+      "status": 404,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Christian Anderson win the 2026-27 NBA Rookie of the Year?",
+      "slug": "will-christian-anderson-win-the-2026-27-nba-rookie-of-the-year-20260624161716897",
+      "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-christian-anderson-win-the-2026-27-nba-rookie-of-the-year/",
       "status": 404,
       "ourPageUp": true
     },
