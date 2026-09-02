@@ -1,12 +1,6 @@
 {
   "history": [
     {
-      "date": "2026-08-03",
-      "checked": 53,
-      "broken": 23,
-      "rate": 0.434
-    },
-    {
       "date": "2026-08-04",
       "checked": 54,
       "broken": 24,
@@ -179,15 +173,21 @@
       "checked": 58,
       "broken": 28,
       "rate": 0.4828
+    },
+    {
+      "date": "2026-09-02",
+      "checked": 59,
+      "broken": 29,
+      "rate": 0.4915
     }
   ],
   "lastWeeklyPost": "2026-W36",
-  "lastRun": "2026-09-01T13:23:05Z",
-  "checked": 58,
+  "lastRun": "2026-09-02T12:41:18Z",
+  "checked": 59,
   "ok": 30,
-  "broken": 28,
+  "broken": 29,
   "errors": 0,
-  "rate": 0.4828,
+  "rate": 0.4915,
   "brokenMarkets": [
     {
       "question": "Will Ebuka Okorie win the 2026-27 NBA Rookie of the Year?",
@@ -298,6 +298,14 @@
       "slug": "will-jayden-quaintance-win-the-2026-27-nba-rookie-of-the-year-20260624161716899",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-jayden-quaintance-win-the-2026-27-nba-rookie-of-the-year/",
+      "status": 404,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Kawhi play for the Los Angeles Clippers in 2026-27?",
+      "slug": "will-kawhi-play-for-the-los-angeles-clippers-in-2026-27-20260629144043501",
+      "eventSlug": "nba-kawhi-leonard-next-team-20260629144203996",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-kawhi-play-for-the-los-angeles-clippers-in-2026-27/",
       "status": 404,
       "ourPageUp": true
     },
