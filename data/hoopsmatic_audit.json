@@ -1,12 +1,6 @@
 {
   "history": [
     {
-      "date": "2026-08-05",
-      "checked": 53,
-      "broken": 23,
-      "rate": 0.434
-    },
-    {
       "date": "2026-08-06",
       "checked": 52,
       "broken": 22,
@@ -179,22 +173,28 @@
       "checked": 61,
       "broken": 31,
       "rate": 0.5082
+    },
+    {
+      "date": "2026-09-04",
+      "checked": 60,
+      "broken": 60,
+      "rate": 1.0
     }
   ],
   "lastWeeklyPost": "2026-W36",
-  "lastRun": "2026-09-03T12:44:37Z",
-  "checked": 61,
-  "ok": 30,
-  "broken": 31,
+  "lastRun": "2026-09-04T12:38:24Z",
+  "checked": 60,
+  "ok": 0,
+  "broken": 60,
   "errors": 0,
-  "rate": 0.5082,
+  "rate": 1.0,
   "brokenMarkets": [
     {
       "question": "Will Ebuka Okorie win the 2026-27 NBA Rookie of the Year?",
       "slug": "will-ebuka-okorie-win-the-2026-27-nba-rookie-of-the-year-20260624161716896",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-ebuka-okorie-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -202,7 +202,7 @@
       "slug": "will-tarris-reed-jrpt-win-the-2026-27-nba-rookie-of-the-year-20260624161716905",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-tarris-reed-jr-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -210,7 +210,23 @@
       "slug": "will-zuby-ejiofor-win-the-2026-27-nba-rookie-of-the-year-20260624161716902",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-zuby-ejiofor-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Philadelphia 76ers win the 2027 NBA Finals?",
+      "slug": "will-philadelphia-76ers-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-philadelphia-76ers-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Golden State Warriors win the 2027 NBA Finals?",
+      "slug": "will-golden-state-warriors-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-golden-state-warriors-win-the-2027-nba-finals/",
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -218,7 +234,127 @@
       "slug": "will-james-harden-play-for-the-atlanta-hawks-in-2026-27-20260622161457151",
       "eventSlug": "nba-free-agency-james-harden-next-team-20260622160230346",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-james-harden-play-for-the-atlanta-hawks-in-2026-27/",
-      "status": 404,
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will New Orleans Pelicans win the 2027 NBA Finals?",
+      "slug": "will-new-orleans-pelicans-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-new-orleans-pelicans-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Utah Jazz win the 2027 NBA Finals?",
+      "slug": "will-utah-jazz-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-utah-jazz-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Detroit Pistons win the 2027 NBA Finals?",
+      "slug": "will-detroit-pistons-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-detroit-pistons-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Cleveland Cavaliers win the 2027 NBA Finals?",
+      "slug": "will-cleveland-cavaliers-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-cleveland-cavaliers-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Houston Rockets win the 2027 NBA Finals?",
+      "slug": "will-houston-rockets-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-houston-rockets-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Atlanta Hawks win the 2027 NBA Finals?",
+      "slug": "will-atlanta-hawks-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-atlanta-hawks-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Phoenix Suns win the 2027 NBA Finals?",
+      "slug": "will-phoenix-suns-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-phoenix-suns-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Denver Nuggets win the 2027 NBA Finals?",
+      "slug": "will-denver-nuggets-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-denver-nuggets-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Miami Heat win the 2027 NBA Finals?",
+      "slug": "will-miami-heat-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-miami-heat-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will New York Knicks win the 2027 NBA Finals?",
+      "slug": "will-new-york-knicks-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-new-york-knicks-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Los Angeles Lakers win the 2027 NBA Finals?",
+      "slug": "will-los-angeles-lakers-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-los-angeles-lakers-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Dallas Mavericks win the 2027 NBA Finals?",
+      "slug": "will-dallas-mavericks-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-dallas-mavericks-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Portland Trail Blazers win the 2027 NBA Finals?",
+      "slug": "will-portland-trail-blazers-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-portland-trail-blazers-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Minnesota Timberwolves win the 2027 NBA Finals?",
+      "slug": "will-minnesota-timberwolves-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-minnesota-timberwolves-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will San Antonio Spurs win the 2027 NBA Finals?",
+      "slug": "will-san-antonio-spurs-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-san-antonio-spurs-win-the-2027-nba-finals/",
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -226,7 +362,87 @@
       "slug": "will-allen-graves-win-the-2026-27-nba-rookie-of-the-year-20260624161716898",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-allen-graves-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Brooklyn Nets win the 2027 NBA Finals?",
+      "slug": "will-brooklyn-nets-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-brooklyn-nets-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Indiana Pacers win the 2027 NBA Finals?",
+      "slug": "will-indiana-pacers-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-indiana-pacers-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Los Angeles Clippers win the 2027 NBA Finals?",
+      "slug": "will-los-angeles-clippers-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-los-angeles-clippers-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Boston Celtics win the 2027 NBA Finals?",
+      "slug": "will-boston-celtics-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-boston-celtics-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Orlando Magic win the 2027 NBA Finals?",
+      "slug": "will-orlando-magic-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-orlando-magic-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Charlotte Hornets win the 2027 NBA Finals?",
+      "slug": "will-charlotte-hornets-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-charlotte-hornets-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Memphis Grizzlies win the 2027 NBA Finals?",
+      "slug": "will-memphis-grizzlies-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-memphis-grizzlies-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Sacramento Kings win the 2027 NBA Finals?",
+      "slug": "will-sacramento-kings-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-sacramento-kings-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Milwaukee Bucks win the 2027 NBA Finals?",
+      "slug": "will-milwaukee-bucks-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-milwaukee-bucks-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Chicago Bulls win the 2027 NBA Finals?",
+      "slug": "will-chicago-bulls-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-chicago-bulls-win-the-2027-nba-finals/",
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -234,7 +450,31 @@
       "slug": "will-chris-cenac-jrpt-win-the-2026-27-nba-rookie-of-the-year-20260624161716906",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-chris-cenac-jr-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Toronto Raptors win the 2027 NBA Finals?",
+      "slug": "will-toronto-raptors-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-toronto-raptors-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Washington Wizards win the 2027 NBA Finals?",
+      "slug": "will-washington-wizards-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-washington-wizards-win-the-2027-nba-finals/",
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will Oklahoma City Thunder win the 2027 NBA Finals?",
+      "slug": "will-oklahoma-city-thunder-win-the-2027-nba-finals",
+      "eventSlug": "nba-2027-champion",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-oklahoma-city-thunder-win-the-2027-nba-finals/",
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -242,7 +482,7 @@
       "slug": "will-james-harden-play-for-the-memphis-grizzlies-in-2026-27-20260622161457165",
       "eventSlug": "nba-free-agency-james-harden-next-team-20260622160230346",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-james-harden-play-for-the-memphis-grizzlies-in-2026-27/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -250,7 +490,7 @@
       "slug": "will-christian-anderson-win-the-2026-27-nba-rookie-of-the-year-20260624161716897",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-christian-anderson-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -258,7 +498,7 @@
       "slug": "will-labaron-philon-jrpt-win-the-2026-27-nba-rookie-of-the-year-20260624161716901",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-labaron-philon-jr-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -266,7 +506,7 @@
       "slug": "will-kingston-flemings-win-the-2026-27-nba-rookie-of-the-year-20260624161716887",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-kingston-flemings-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -274,15 +514,7 @@
       "slug": "will-kawhi-play-for-the-golden-state-warriors-in-2026-27-20260629144043498",
       "eventSlug": "nba-kawhi-leonard-next-team-20260629144203996",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-kawhi-play-for-the-golden-state-warriors-in-2026-27/",
-      "status": 404,
-      "ourPageUp": true
-    },
-    {
-      "question": "Will Jalen Duren play for the Cleveland Cavaliers in 2026-27?",
-      "slug": "will-jalen-duren-play-for-the-cleveland-cavaliers-in-2026-27-20260622170634996",
-      "eventSlug": "nba-free-agency-jalen-duren-next-team-20260622170505392",
-      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-jalen-duren-play-for-the-cleveland-cavaliers-in-2026-27/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -290,7 +522,7 @@
       "slug": "will-kawhi-play-for-the-toronto-raptors-in-2026-27-20260629144043516",
       "eventSlug": "nba-kawhi-leonard-next-team-20260629144203996",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-kawhi-play-for-the-toronto-raptors-in-2026-27/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -298,7 +530,7 @@
       "slug": "will-joshua-jefferson-win-the-2026-27-nba-rookie-of-the-year-20260624161716907",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-joshua-jefferson-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -306,7 +538,7 @@
       "slug": "will-jayden-quaintance-win-the-2026-27-nba-rookie-of-the-year-20260624161716899",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-jayden-quaintance-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -314,15 +546,7 @@
       "slug": "will-kawhi-play-for-the-los-angeles-clippers-in-2026-27-20260629144043501",
       "eventSlug": "nba-kawhi-leonard-next-team-20260629144203996",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-kawhi-play-for-the-los-angeles-clippers-in-2026-27/",
-      "status": 404,
-      "ourPageUp": true
-    },
-    {
-      "question": "Will James Harden play for the Phoenix Suns in 2026-27?",
-      "slug": "will-james-harden-play-for-the-phoenix-suns-in-2026-27-20260622161457174",
-      "eventSlug": "nba-free-agency-james-harden-next-team-20260622160230346",
-      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-james-harden-play-for-the-phoenix-suns-in-2026-27/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -330,7 +554,7 @@
       "slug": "will-the-philadelphia-76ers-be-the-2027-nba-eastern-conference-champion-20260624155839407",
       "eventSlug": "nba-2027-eastern-conference-champion-20260624155838911",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-the-philadelphia-76ers-be-the-2027-nba-eastern-conference-champion/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -338,7 +562,7 @@
       "slug": "will-the-miami-heat-be-the-2027-nba-eastern-conference-champion-20260624155839416",
       "eventSlug": "nba-2027-eastern-conference-champion-20260624155838911",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-the-miami-heat-be-the-2027-nba-eastern-conference-champion/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -346,7 +570,7 @@
       "slug": "will-the-washington-wizards-be-the-2027-nba-eastern-conference-champion-20260624155839418",
       "eventSlug": "nba-2027-eastern-conference-champion-20260624155838911",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-the-washington-wizards-be-the-2027-nba-eastern-conference-champion/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -354,7 +578,7 @@
       "slug": "will-caleb-wilson-win-the-2026-27-nba-rookie-of-the-year-20260624161716883",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-caleb-wilson-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -362,7 +586,7 @@
       "slug": "will-steph-currys-next-team-be-golden-state-warriors-20260731023145463",
       "eventSlug": "nba-steph-curry-next-team-20260731023145453",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-steph-currys-next-team-be-golden-state-warriors/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -370,7 +594,7 @@
       "slug": "will-the-new-york-knicks-be-the-2027-nba-eastern-conference-champion-20260624155839406",
       "eventSlug": "nba-2027-eastern-conference-champion-20260624155838911",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-the-new-york-knicks-be-the-2027-nba-eastern-conference-champion/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -378,7 +602,7 @@
       "slug": "will-james-harden-play-for-the-cleveland-cavaliers-in-2026-27-20260622161457156",
       "eventSlug": "nba-free-agency-james-harden-next-team-20260622160230346",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-james-harden-play-for-the-cleveland-cavaliers-in-2026-27/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -386,7 +610,7 @@
       "slug": "will-aj-dybantsa-win-the-2026-27-nba-rookie-of-the-year-20260624161716880",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-aj-dybantsa-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -394,7 +618,7 @@
       "slug": "will-the-milwaukee-bucks-be-the-2027-nba-eastern-conference-champion-20260624155839413",
       "eventSlug": "nba-2027-eastern-conference-champion-20260624155838911",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-the-milwaukee-bucks-be-the-2027-nba-eastern-conference-champion/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -402,7 +626,7 @@
       "slug": "will-darryn-peterson-win-the-2026-27-nba-rookie-of-the-year-20260624161716881",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-darryn-peterson-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -410,7 +634,7 @@
       "slug": "will-cameron-boozer-win-the-2026-27-nba-rookie-of-the-year-20260624161716882",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-cameron-boozer-win-the-2026-27-nba-rookie-of-the-year/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -418,7 +642,7 @@
       "slug": "will-the-chicago-bulls-be-the-2027-nba-eastern-conference-champion-20260624155839409",
       "eventSlug": "nba-2027-eastern-conference-champion-20260624155838911",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-the-chicago-bulls-be-the-2027-nba-eastern-conference-champion/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -426,7 +650,7 @@
       "slug": "will-the-indiana-pacers-be-the-2027-nba-eastern-conference-champion-20260624155839412",
       "eventSlug": "nba-2027-eastern-conference-champion-20260624155838911",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-the-indiana-pacers-be-the-2027-nba-eastern-conference-champion/",
-      "status": 404,
+      "status": 500,
       "ourPageUp": true
     },
     {
@@ -434,7 +658,15 @@
       "slug": "will-the-boston-celtics-be-the-2027-nba-eastern-conference-champion-20260624155839404",
       "eventSlug": "nba-2027-eastern-conference-champion-20260624155838911",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-the-boston-celtics-be-the-2027-nba-eastern-conference-champion/",
-      "status": 404,
+      "status": 500,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will the Toronto Raptors be the 2027 NBA Eastern Conference Champion?",
+      "slug": "will-the-toronto-raptors-be-the-2027-nba-eastern-conference-champion-20260624155839408",
+      "eventSlug": "nba-2027-eastern-conference-champion-20260624155838911",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-the-toronto-raptors-be-the-2027-nba-eastern-conference-champion/",
+      "status": 500,
       "ourPageUp": true
     }
   ]
