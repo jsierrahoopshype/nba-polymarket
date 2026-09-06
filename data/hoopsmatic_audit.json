@@ -1,12 +1,6 @@
 {
   "history": [
     {
-      "date": "2026-08-07",
-      "checked": 55,
-      "broken": 25,
-      "rate": 0.4545
-    },
-    {
       "date": "2026-08-08",
       "checked": 55,
       "broken": 25,
@@ -179,10 +173,16 @@
       "checked": 60,
       "broken": 30,
       "rate": 0.5
+    },
+    {
+      "date": "2026-09-06",
+      "checked": 60,
+      "broken": 30,
+      "rate": 0.5
     }
   ],
   "lastWeeklyPost": "2026-W36",
-  "lastRun": "2026-09-05T11:46:09Z",
+  "lastRun": "2026-09-06T12:04:06Z",
   "checked": 60,
   "ok": 30,
   "broken": 30,
@@ -358,18 +358,18 @@
       "ourPageUp": true
     },
     {
-      "question": "Will the New York Knicks be the 2027 NBA Eastern Conference Champion?",
-      "slug": "will-the-new-york-knicks-be-the-2027-nba-eastern-conference-champion-20260624155839406",
-      "eventSlug": "nba-2027-eastern-conference-champion-20260624155838911",
-      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-the-new-york-knicks-be-the-2027-nba-eastern-conference-champion/",
-      "status": 404,
-      "ourPageUp": true
-    },
-    {
       "question": "Will AJ Dybantsa win the 2026-27 NBA Rookie of the Year?",
       "slug": "will-aj-dybantsa-win-the-2026-27-nba-rookie-of-the-year-20260624161716880",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-aj-dybantsa-win-the-2026-27-nba-rookie-of-the-year/",
+      "status": 404,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will the New York Knicks be the 2027 NBA Eastern Conference Champion?",
+      "slug": "will-the-new-york-knicks-be-the-2027-nba-eastern-conference-champion-20260624155839406",
+      "eventSlug": "nba-2027-eastern-conference-champion-20260624155838911",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-the-new-york-knicks-be-the-2027-nba-eastern-conference-champion/",
       "status": 404,
       "ourPageUp": true
     },
