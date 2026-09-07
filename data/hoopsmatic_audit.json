@@ -1,12 +1,6 @@
 {
   "history": [
     {
-      "date": "2026-08-08",
-      "checked": 55,
-      "broken": 25,
-      "rate": 0.4545
-    },
-    {
       "date": "2026-08-09",
       "checked": 52,
       "broken": 22,
@@ -179,10 +173,16 @@
       "checked": 60,
       "broken": 30,
       "rate": 0.5
+    },
+    {
+      "date": "2026-09-07",
+      "checked": 60,
+      "broken": 30,
+      "rate": 0.5
     }
   ],
-  "lastWeeklyPost": "2026-W36",
-  "lastRun": "2026-09-06T12:04:06Z",
+  "lastWeeklyPost": "2026-W37",
+  "lastRun": "2026-09-07T14:09:10Z",
   "checked": 60,
   "ok": 30,
   "broken": 30,
@@ -350,18 +350,18 @@
       "ourPageUp": true
     },
     {
-      "question": "Will James Harden play for the Cleveland Cavaliers in 2026-27?",
-      "slug": "will-james-harden-play-for-the-cleveland-cavaliers-in-2026-27-20260622161457156",
-      "eventSlug": "nba-free-agency-james-harden-next-team-20260622160230346",
-      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-james-harden-play-for-the-cleveland-cavaliers-in-2026-27/",
-      "status": 404,
-      "ourPageUp": true
-    },
-    {
       "question": "Will AJ Dybantsa win the 2026-27 NBA Rookie of the Year?",
       "slug": "will-aj-dybantsa-win-the-2026-27-nba-rookie-of-the-year-20260624161716880",
       "eventSlug": "nba-2026-27-rookie-of-the-year-20260624161716143",
       "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-aj-dybantsa-win-the-2026-27-nba-rookie-of-the-year/",
+      "status": 404,
+      "ourPageUp": true
+    },
+    {
+      "question": "Will James Harden play for the Cleveland Cavaliers in 2026-27?",
+      "slug": "will-james-harden-play-for-the-cleveland-cavaliers-in-2026-27-20260622161457156",
+      "eventSlug": "nba-free-agency-james-harden-next-team-20260622160230346",
+      "hoopsmatic_url": "https://hoopsmatic.com/polymarket/market/will-james-harden-play-for-the-cleveland-cavaliers-in-2026-27/",
       "status": 404,
       "ourPageUp": true
     },
