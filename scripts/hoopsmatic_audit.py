@@ -34,8 +34,8 @@ from pathlib import Path
 
 # Reuse the alert channel's gating + link builders so the audit tests the EXACT
 # markets that can alert and the EXACT URLs alerts produce (single source of truth).
-from movers_alerts import (MADRID, hoopsmatic_url, loud_enough, market_url,
-                           post_slack)
+from movers_alerts import (MADRID, hoopsmatic_url, loud_enough,
+                           market_url_clean, post_slack)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 INDEX_PATH = REPO_ROOT / "data" / "index.json"
@@ -100,8 +100,11 @@ def run_audit():
             errors += 1
         else:
             broken += 1
-            # cross-check our own page is up -> "HoopsMatic gap" vs "market gone"
-            our_status, our_verdict = check_url(market_url(m))
+            # cross-check our own page at the CLEAN slug — the URL HoopsMatic and
+            # real links actually request. (Using the stored-slug market_url here
+            # was a tautology: that page is built for every market, so it was
+            # always 200 and ourPageUp was always True.)
+            our_status, our_verdict = check_url(market_url_clean(m))
             broken_markets.append({
                 "question": m.get("question"),
                 "slug": m.get("slug"),

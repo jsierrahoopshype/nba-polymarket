@@ -28,6 +28,10 @@ import json
 import re
 from pathlib import Path
 
+# Single source of truth for the question-derived "clean" slug, so the alias
+# pages we emit match exactly what HoopsMatic (and the audit) request.
+from movers_alerts import slugify
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
 DOCS_DIR = REPO_ROOT / "docs"
@@ -430,7 +434,8 @@ def main():
                      json.dumps({"markets": market_entities, "directory": directory},
                                 ensure_ascii=False, separators=(",", ":")) + "\n", stats)
 
-    # SEO market pages (item 7) — one per live + recently-resolved market.
+    # SEO market pages (item 7) — one per live + recently-resolved market, keyed
+    # on the STORED slug (the exact slug used everywhere on the site).
     market_slugs = []
     seen_slug = set()
     for m in markets:
@@ -440,6 +445,24 @@ def main():
         seen_slug.add(slug)
         market_slugs.append(slug)
         write_if_changed(DOCS_DIR / "market" / slug / "index.html", market_page(m), stats)
+
+    # Clean-slug alias pages. Some stored slugs carry a -<timestamp> (or value)
+    # suffix that the question-derived "clean" slug lacks — and HoopsMatic and
+    # human-facing links request that clean slug, so without an alias they 404.
+    # Emit the same page at the clean path (its canonical still points at the
+    # stored-slug page, so crawlers dedupe). Second pass so a real stored-slug page
+    # always wins a collision; first market claims a clean slug shared by several.
+    stored = set(market_slugs)
+    alias_seen = set()
+    for m in markets:
+        slug = m.get("slug")
+        if not slug or not m.get("conditionId"):
+            continue
+        clean = slugify(m.get("question"))
+        if not clean or clean == slug or clean in stored or clean in alias_seen:
+            continue
+        alias_seen.add(clean)
+        write_if_changed(DOCS_DIR / "market" / clean / "index.html", market_page(m), stats)
 
     # sitemap.xml (urls only — no lastmod, so it stays churn-free)
     urls = [f"{SITE_BASE}/docs/index.html", f"{SITE_BASE}/docs/movers.html",
