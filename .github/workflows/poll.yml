@@ -60,6 +60,15 @@ jobs:
         # the secret is unset, so this is harmless until the webhook is added.
         run: python scripts/movers_alerts.py --instant || echo "instant alerts step failed (non-fatal)"
 
+      - name: Digest staleness tripwire (Slack)
+        env:
+          SLACK_MOVERS_WEBHOOK: ${{ secrets.SLACK_MOVERS_WEBHOOK }}
+        # The poll runs far more often than the digest and is the reliable
+        # heartbeat, so it owns the tripwire: if the digest has gone quiet (no
+        # slot in >36h) this warns once/day, catching even a digest workflow that
+        # has stopped firing entirely. Best-effort, same as instant.
+        run: python scripts/movers_alerts.py --digest-healthcheck || echo "digest healthcheck step failed (non-fatal)"
+
       - name: Commit and push data if it changed
         run: |
           git config user.name "github-actions[bot]"

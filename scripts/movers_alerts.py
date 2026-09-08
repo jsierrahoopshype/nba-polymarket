@@ -19,9 +19,12 @@ excluded; the instant channel additionally skips near-settled prices.
 
 Dedup/calendar state lives in data/alerts_state.json:
   { "date": "YYYY-MM-DD", "instant_sent": { conditionId: {ts, swing} },
-    "digest3": { "date": "YYYY-MM-DD", "slots": ["morning", ...] } }
-instant_sent resets when the Madrid date rolls over; digest3.slots records which
-of the day's three digest windows have already gone out.
+    "digest3": { "sent": ["YYYY-MM-DD-<slot>", ...],
+                 "last_slot": "<ISO-UTC>", "last_warn": "YYYY-MM-DD" } }
+instant_sent resets when the Madrid date rolls over; digest3.sent is a bounded
+rolling list of the slot-instances already posted (so a run is deduped even when
+GitHub fires its cron hours late or past midnight); last_slot/last_warn drive the
+staleness tripwire (see digest_healthcheck).
 
 The Slack webhook is read from $SLACK_MOVERS_WEBHOOK (a GitHub secret). With no
 webhook set the script runs in dry-run mode and prints the messages, so it is
@@ -32,6 +35,9 @@ Usage:
     SLACK_MOVERS_WEBHOOK=... python scripts/movers_alerts.py --digest [--force]
         (--force, or any workflow_dispatch run, bypasses the digest slot-hour
         gate so it can be tested on demand at any hour.)
+    SLACK_MOVERS_WEBHOOK=... python scripts/movers_alerts.py --digest-healthcheck
+        (staleness tripwire, run from the poll workflow; warns if the digest has
+        gone quiet, catching a digest workflow that stops firing entirely.)
 """
 
 import hashlib
@@ -72,6 +78,7 @@ ALERT_LIQUIDITY_FLOOR = 1000
 DIGEST_FLOOR = 0.02           # 2.0 percentage points over the rolling 24h window
 DIGEST_TOP_N = 10             # at most this many movers per digest
 DIGEST_BIG_MOVE = 8           # >= this many points gets a stronger verb (surged vs risen)
+DIGEST_STALE_HOURS = 36       # tripwire: warn if no slot has been processed in this long
 
 # Alert links point at HoopsMatic's per-outcome market pages (per instruction:
 # always HoopsMatic). HoopsMatic derives the slug from the market's question.
@@ -81,13 +88,15 @@ HOOPSMATIC_BASE = "https://hoopsmatic.com/polymarket/market"
 # fallback / for the coverage-audit job, even though alerts link to HoopsMatic.
 SITE_BASE = "https://jsierrahoopshype.github.io/nba-polymarket"
 
-# Madrid local-hour -> digest slot. The workflow fires UTC cron pairs (05/06,
-# 13/14, 21/22) that bracket DST so exactly one fire lands on each target Madrid
-# hour; the second hour in a set is the fallback when GitHub drops the first fire.
+# Digest slots as (id, target Madrid hour, label). A run is attributed to the
+# most recent slot whose target hour has already passed, and that slot stays
+# claimable until the NEXT slot's target -- so a cron delayed by GitHub's
+# scheduler (routinely 1-4h, sometimes past midnight) still posts the right slot
+# instead of falling outside a narrow hour window and skipping. See due_slot().
 DIGEST_SLOTS = [
-    ("morning",   {7, 8},   "07:00"),
-    ("afternoon", {15, 16}, "15:00"),
-    ("night",     {23},     "23:00"),
+    ("morning",   7,  "07:00"),
+    ("afternoon", 15, "15:00"),
+    ("night",     23, "23:00"),
 ]
 
 
@@ -389,44 +398,89 @@ def swing_last_24h(condition_id, cutoff_utc):
     return baseline, pts[-1][1]
 
 
-def current_slot(now_madrid):
-    """The digest slot whose window contains the current Madrid hour, or (None, None)."""
-    for slot_id, hours, label in DIGEST_SLOTS:
-        if now_madrid.hour in hours:
-            return slot_id, label
-    return None, None
+def due_slot(now_madrid):
+    """The most recent digest slot whose target time has elapsed, as
+    (slot_id, label, slot_date). Each slot stays claimable from its target hour
+    until the next slot's target, so a cron delayed hours past its slot still
+    posts it (the old narrow-hour windows silently missed these); a fire after
+    midnight maps to the PRIOR day's night slot. There is always an elapsed
+    target (yesterday's at worst), so this never returns None."""
+    candidates = []
+    for slot_id, hour, label in DIGEST_SLOTS:
+        target_today = now_madrid.replace(hour=hour, minute=0, second=0, microsecond=0)
+        for target in (target_today, target_today - timedelta(days=1)):
+            if target <= now_madrid:
+                candidates.append((target, slot_id, label))
+    target, slot_id, label = max(candidates)
+    return slot_id, label, target.strftime("%Y-%m-%d")
+
+
+def digest_healthcheck(state):
+    """Tripwire: the digest silently skipped every run for 12 days once. If no
+    slot has been processed in > DIGEST_STALE_HOURS, post ONE loud Slack notice
+    per UTC day (an Actions log line stays invisible — which is how it went
+    unseen). Safe to call from any job and it is called from two: the digest
+    itself, and the poll (whose workflow is the reliable heartbeat), so even the
+    digest workflow silently not running at all is still caught. Mutates state's
+    digest3.last_warn and returns True when it warned; the caller saves state."""
+    digest = state.get("digest3") or {}
+    last_slot = digest.get("last_slot")
+    if not last_slot:
+        return False                                   # no heartbeat yet (fresh install)
+    now_utc = datetime.now(timezone.utc)
+    try:
+        stale_h = (now_utc - datetime.fromisoformat(last_slot)).total_seconds() / 3600
+    except ValueError:
+        return False
+    today = now_utc.strftime("%Y-%m-%d")
+    if stale_h > DIGEST_STALE_HOURS and digest.get("last_warn") != today:
+        post_slack(f":rotating_light: NBA movers digest has not posted in "
+                   f"{stale_h:.0f}h (last slot {last_slot[:16]}Z). "
+                   f"Check the movers-digest workflow/cron.")
+        digest["last_warn"] = today
+        state["digest3"] = digest
+        return True
+    return False
 
 
 def run_digest(force=False):
     now_madrid = datetime.now(MADRID)
-    today = now_madrid.strftime("%Y-%m-%d")
-    slot_id, slot_label = current_slot(now_madrid)
+    slot_id, slot_label, slot_date = due_slot(now_madrid)
 
     # Debug line so a run's log states definitively whether force was active and
     # why (see main() for the --force / GITHUB_EVENT_NAME detection).
     print(f"Digest: force={force}, GITHUB_EVENT_NAME={os.environ.get('GITHUB_EVENT_NAME')!r}, "
-          f"argv={sys.argv[1:]}, Madrid={now_madrid:%H:%M} (slot={slot_id}).")
+          f"argv={sys.argv[1:]}, Madrid={now_madrid:%H:%M} (slot={slot_id}@{slot_date}).")
 
-    # per-day slot record; leave the instant channel's state untouched
+    # Dedup by slot-instance ("<date>-<slot>"), kept as a short rolling list so a
+    # night slot's post-midnight fire (prior day) still dedups. Leave the instant
+    # channel's state untouched.
     state = load_state()
     digest = state.get("digest3") or {}
-    if digest.get("date") != today:
-        digest = {"date": today, "slots": []}
+    sent = digest.get("sent")
+    if not isinstance(sent, list):
+        sent = []                          # fresh, or migrate the old {date, slots} shape
+    # carry the health fields across runs: last_slot = ISO-UTC of the last slot
+    # processed; last_warn = the UTC date the tripwire last warned for (dedup)
+    digest = {"sent": sent, "last_slot": digest.get("last_slot"),
+              "last_warn": digest.get("last_warn")}
     state["digest3"] = digest
     state.setdefault("instant_sent", {})
+    now_utc = now_madrid.astimezone(timezone.utc)
 
-    # A manual workflow_dispatch (force) bypasses the slot-hour gate and the
-    # once-per-slot dedup so the digest can be tested on demand at any hour. A
-    # forced run posts but records no slot, so it never consumes a scheduled slot
-    # and can be repeated. Scheduled crons still respect both gates.
-    if force:
-        slot_id, slot_label = "manual", f"manual {now_madrid:%H:%M}"
-    elif not slot_id:
-        print(f"Digest: {now_madrid:%H:%M} Madrid is outside the 07/15/23 windows, skipping.")
+    # Same tripwire the poll job runs; harmless to also check here before posting.
+    if not force and digest_healthcheck(state):
         save_state(state)
-        return
-    elif slot_id in digest["slots"]:
-        print(f"Digest: {slot_label} slot already sent for {today}, skipping.")
+
+    slot_key = f"{slot_date}-{slot_id}"
+
+    # A manual workflow_dispatch (force) bypasses the dedup so the digest can be
+    # tested on demand at any hour; a forced run posts but records no slot, so it
+    # never consumes a scheduled slot and can be repeated. Scheduled crons dedup.
+    if force:
+        slot_label = f"manual {now_madrid:%H:%M}"
+    elif slot_key in sent:
+        print(f"Digest: {slot_label} slot for {slot_date} already sent, skipping.")
         return
 
     cutoff_utc = now_madrid.astimezone(timezone.utc) - timedelta(hours=24)
@@ -450,18 +504,20 @@ def run_digest(force=False):
     movers = movers[:DIGEST_TOP_N]
 
     if movers:
-        header = f"*NBA Polymarket — biggest moves · last 24h ({today}, {slot_label} Madrid)*"
+        header = f"*NBA Polymarket — biggest moves · last 24h ({slot_date}, {slot_label} Madrid)*"
         blocks = [header] + [
-            prose_sentence(m, start_p, end_p, m.get("conditionId", "") + today + slot_id,
+            prose_sentence(m, start_p, end_p, m.get("conditionId", "") + slot_date + slot_id,
                            "over the past 24 hours on Polymarket")
             for m, start_p, end_p, _ in movers
         ]
         post_slack("\n\n".join(blocks))
 
     if not force:                                  # forced runs record no slot
-        digest["slots"].append(slot_id)
+        sent.append(slot_key)
+        digest["sent"] = sent[-9:]                 # bound the list (~3 days x 3 slots)
+        digest["last_slot"] = now_utc.isoformat()  # health heartbeat for the tripwire
         save_state(state)
-    print(f"Digest: {len(movers)} movers posted for {today} {slot_label} slot.")
+    print(f"Digest: {len(movers)} movers posted for {slot_date} {slot_label} slot.")
 
 
 def main():
@@ -475,8 +531,15 @@ def main():
         run_instant()
     elif mode == "--digest":
         run_digest(force=force)
+    elif mode == "--digest-healthcheck":
+        # Cheap staleness tripwire, run from the poll workflow (the reliable
+        # heartbeat) so a digest workflow that stops firing entirely is still caught.
+        state = load_state()
+        if digest_healthcheck(state):
+            save_state(state)
     else:
-        print("usage: movers_alerts.py --instant | --digest [--force]", file=sys.stderr)
+        print("usage: movers_alerts.py --instant | --digest [--force] | --digest-healthcheck",
+              file=sys.stderr)
         sys.exit(2)
 
 
