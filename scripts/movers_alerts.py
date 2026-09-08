@@ -253,10 +253,19 @@ def hoopsmatic_url(m):
 
 
 def market_url(m):
-    """Our own GitHub Pages page, keyed on the market's slug field (the exact slug
+    """Our own GitHub Pages page, keyed on the market's stored slug (the exact slug
     the poller builds each page under), so it always exists. Not used for alert
-    links (which go to HoopsMatic) — kept as a reliable fallback / for the audit."""
+    links (which go to HoopsMatic) — kept as a reliable fallback."""
     return f"{SITE_BASE}/docs/market/{m.get('slug')}/"
+
+
+def market_url_clean(m):
+    """Our GitHub Pages page at the CLEAN (question-derived) slug — the URL that
+    HoopsMatic and any human-facing clean link actually request. When the stored
+    slug carries a -<timestamp> (or value) suffix the clean slug lacks, build_entities
+    emits an alias page here. This is the meaningful "is our page reachable?" check:
+    market_url()'s stored slug is built for every market so it is always 200."""
+    return f"{SITE_BASE}/docs/market/{slugify(m.get('question'))}/"
 
 
 # "Will <subject> <predicate>?" -> "<subject>'s odds of <gerund predicate> ...".
