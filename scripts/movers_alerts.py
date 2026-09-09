@@ -46,7 +46,7 @@ import os
 import re
 import sys
 import urllib.request
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 try:
@@ -79,6 +79,10 @@ DIGEST_FLOOR = 0.02           # 2.0 percentage points over the rolling 24h windo
 DIGEST_TOP_N = 10             # at most this many movers per digest
 DIGEST_BIG_MOVE = 8           # >= this many points gets a stronger verb (surged vs risen)
 DIGEST_STALE_HOURS = 36       # tripwire: warn if no slot has been processed in this long
+# Through this date only, a 0-mover slot posts a one-line "markets quiet" note
+# (with the actual biggest 24h move) instead of staying silent — useful while the
+# pre-season market is flat. Self-expires: after it, 0-mover slots go silent again.
+QUIET_LINE_UNTIL = date(2026, 10, 15)
 
 # Alert links point at HoopsMatic's per-outcome market pages (per instruction:
 # always HoopsMatic). HoopsMatic derives the slug from the market's question.
@@ -486,6 +490,7 @@ def run_digest(force=False):
     cutoff_utc = now_madrid.astimezone(timezone.utc) - timedelta(hours=24)
     index = json.loads(INDEX_PATH.read_text(encoding="utf-8"))
     movers = []
+    max_swing = 0.0                                # biggest 24h move among real candidates
     for m in index.get("markets", []):
         cid = m.get("conditionId")
         if not cid or not m.get("negRisk") or m.get("resolved") or not loud_enough(m):
@@ -496,9 +501,11 @@ def run_digest(force=False):
         start_p, end_p = sw
         if artificial_swing(start_p, m):
             continue                               # skip 0.50-default initialization noise
-        if abs(end_p - start_p) < DIGEST_FLOOR:
+        delta = abs(end_p - start_p)
+        max_swing = max(max_swing, delta)          # track before the floor, for the quiet-day line
+        if delta < DIGEST_FLOOR:
             continue
-        movers.append((m, start_p, end_p, abs(end_p - start_p)))
+        movers.append((m, start_p, end_p, delta))
 
     movers.sort(key=lambda x: x[3], reverse=True)
     movers = movers[:DIGEST_TOP_N]
@@ -511,6 +518,10 @@ def run_digest(force=False):
             for m, start_p, end_p, _ in movers
         ]
         post_slack("\n\n".join(blocks))
+    elif not force and now_madrid.date() <= QUIET_LINE_UNTIL:
+        # Pre-season quiet-day signal (self-expires at QUIET_LINE_UNTIL): report the
+        # flat market and by how much, so silence isn't mistaken for a broken pipeline.
+        post_slack(f"*NBA Polymarket* — markets quiet, biggest 24h move {max_swing * 100:.1f}pt.")
 
     if not force:                                  # forced runs record no slot
         sent.append(slot_key)
