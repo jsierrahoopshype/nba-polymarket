@@ -1,12 +1,6 @@
 {
   "history": [
     {
-      "date": "2026-08-14",
-      "checked": 55,
-      "broken": 25,
-      "rate": 0.4545
-    },
-    {
       "date": "2026-08-15",
       "checked": 54,
       "broken": 24,
@@ -179,14 +173,20 @@
       "checked": 54,
       "broken": 0,
       "rate": 0.0
+    },
+    {
+      "date": "2026-09-13",
+      "checked": 56,
+      "broken": 0,
+      "rate": 0.0
     }
   ],
   "lastWeeklyPost": "2026-W37",
-  "lastRun": "2026-09-12T12:04:38Z",
-  "checked": 54,
-  "ok": 54,
+  "lastRun": "2026-09-13T13:14:13Z",
+  "checked": 56,
+  "ok": 56,
   "broken": 0,
-  "errors": 2,
+  "errors": 0,
   "rate": 0.0,
   "brokenMarkets": []
 }
