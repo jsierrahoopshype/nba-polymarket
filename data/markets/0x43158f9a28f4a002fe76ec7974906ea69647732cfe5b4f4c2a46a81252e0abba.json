@@ -1,0 +1,64 @@
+{
+  "conditionId": "0x43158f9a28f4a002fe76ec7974906ea69647732cfe5b4f4c2a46a81252e0abba",
+  "slug": "will-the-las-vegas-nba-franchise-and-arena-price-be-between-11b-and-12b",
+  "question": "Will the Las Vegas NBA franchise and arena price be between $11B and $12B?",
+  "eventSlug": "las-vegas-nba-franchise-and-arena-price",
+  "eventTitle": "Las Vegas NBA franchise and arena price?",
+  "eventId": "1110449",
+  "clobTokenIds": [
+    "115021436498209745505159568372217596993282311215224337676241402147443658888521",
+    "68963335285158097828371884808861026259678593683135235914393401384963278999006"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2027-01-01T04:59:00Z",
+  "negRisk": true,
+  "tags": [
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "101652",
+      "label": "Las Vegas",
+      "slug": "las-vegas",
+      "createdAt": "2025-01-07T20:44:31.256829Z",
+      "updatedAt": "2026-04-17T20:52:10.019598Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-09-30T21:00:21Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-09-30T22:00:14Z","impliedProbability":0.47,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-09-30T23:00:18Z","impliedProbability":0.475,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-09-30T23:10:33Z","impliedProbability":0.475,"volume24hr":0.0,"volume":null,"liquidity":24.3654,"spread":0.92,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
