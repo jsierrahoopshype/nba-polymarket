@@ -1,0 +1,62 @@
+{
+  "conditionId": "0x28e83b79de04e0d51e9016b795a4eefcda8fc0243bb32805dd389dfca9e9026b",
+  "slug": "nba-den-uta-2026-10-06-odd-even",
+  "question": "Nuggets vs. Jazz: Odd/Even Score",
+  "eventSlug": "nba-den-uta-2026-10-06",
+  "eventTitle": "Nuggets vs. Jazz",
+  "eventId": "1107315",
+  "clobTokenIds": [
+    "12258676329246898484525684310932086392451555112541264617656010054455586469230",
+    "110940424300448361766049980137420811970353339477688508191883279498938066055542"
+  ],
+  "outcomes": [
+    "Odd",
+    "Even"
+  ],
+  "endDate": "2026-10-07T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-09-30T07:29:53Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":72.8794,"spread":0.92,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
