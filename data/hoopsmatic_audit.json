@@ -1,12 +1,6 @@
 {
   "history": [
     {
-      "date": "2026-09-03",
-      "checked": 61,
-      "broken": 31,
-      "rate": 0.5082
-    },
-    {
       "date": "2026-09-04",
       "checked": 60,
       "broken": 60,
@@ -179,12 +173,18 @@
       "checked": 61,
       "broken": 0,
       "rate": 0.0
+    },
+    {
+      "date": "2026-10-03",
+      "checked": 56,
+      "broken": 0,
+      "rate": 0.0
     }
   ],
   "lastWeeklyPost": "2026-W40",
-  "lastRun": "2026-10-02T14:38:00Z",
-  "checked": 61,
-  "ok": 61,
+  "lastRun": "2026-10-03T13:13:15Z",
+  "checked": 56,
+  "ok": 56,
   "broken": 0,
   "errors": 0,
   "rate": 0.0,
