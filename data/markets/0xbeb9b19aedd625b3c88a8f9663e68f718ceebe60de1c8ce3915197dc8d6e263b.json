@@ -1,0 +1,64 @@
+{
+  "conditionId": "0xbeb9b19aedd625b3c88a8f9663e68f718ceebe60de1c8ce3915197dc8d6e263b",
+  "slug": "nba-mia-tor-2026-10-03-spread-home-8pt5",
+  "question": "Spread: Raptors (-8.5)",
+  "eventSlug": "nba-mia-tor-2026-10-03",
+  "eventTitle": "Heat vs. Raptors",
+  "eventId": "1088680",
+  "clobTokenIds": [
+    "10884950480167777110468212785668901221509739638578121593114111176136412856585",
+    "59910225071753491745327859075738550690992865568463426126907894134526308972266"
+  ],
+  "outcomes": [
+    "Raptors",
+    "Heat"
+  ],
+  "endDate": "2026-10-03T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-03T21:00:25Z","impliedProbability":0.365,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-03T22:00:17Z","impliedProbability":0.35,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-03T22:25:56Z","impliedProbability":0.335,"volume24hr":0.0,"volume":null,"liquidity":1703.1859,"spread":0.09,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
