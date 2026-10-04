@@ -1,19 +1,19 @@
 {
-  "conditionId": "0x941d17cd03f6da71facf4c722e7d9c59ebe6c3e64ace8b701585fd3aeadb672a",
-  "slug": "nba-mia-tor-2026-10-03-1h-spread-home-2pt5",
-  "question": "1H Spread: Raptors (-2.5)",
-  "eventSlug": "nba-mia-tor-2026-10-03",
-  "eventTitle": "Heat vs. Raptors",
-  "eventId": "1088680",
+  "conditionId": "0x12673420edebc17f5904640ad2a3dcbb497ced64e151dcac4d9b8456fb8ed96f",
+  "slug": "nba-lac-tor-2026-10-10",
+  "question": "Clippers vs. Raptors",
+  "eventSlug": "nba-lac-tor-2026-10-10",
+  "eventTitle": "Clippers vs. Raptors",
+  "eventId": "1127878",
   "clobTokenIds": [
-    "42554756664571056582655977087026890084869922416877869638487329335736996633475",
-    "27261009558038799323428525251913248882746922877252631078831688424183548474397"
+    "28076919048013458208515901862948487910366118005468999923656424370798911611980",
+    "61405825976301603371495803651178070174253155612396066575713414159326555233596"
   ],
   "outcomes": [
-    "Raptors",
-    "Heat"
+    "Clippers",
+    "Raptors"
   ],
-  "endDate": "2026-10-03T23:00:00Z",
+  "endDate": "2026-10-10T22:30:00Z",
   "negRisk": false,
   "tags": [
     {
@@ -57,8 +57,6 @@
   "resolved": false,
   "resolvedAt": null,
   "history": [
-{"timestamp":"2026-10-03T19:00:36Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
-{"timestamp":"2026-10-03T19:31:54Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":5.0798,"spread":0.94,"oneDayPriceChange":null,"oneWeekPriceChange":null},
-{"timestamp":"2026-10-03T22:25:56Z","impliedProbability":0.505,"volume24hr":0.0,"volume":null,"liquidity":2.0484,"spread":0.97,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+{"timestamp":"2026-10-04T01:56:06Z","impliedProbability":0.295,"volume24hr":0.0,"volume":null,"liquidity":68.4671,"spread":0.35,"oneDayPriceChange":null,"oneWeekPriceChange":null}
   ]
 }
