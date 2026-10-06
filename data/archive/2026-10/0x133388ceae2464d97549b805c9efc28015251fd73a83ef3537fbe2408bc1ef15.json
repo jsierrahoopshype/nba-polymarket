@@ -1,0 +1,65 @@
+{
+  "conditionId": "0x133388ceae2464d97549b805c9efc28015251fd73a83ef3537fbe2408bc1ef15",
+  "slug": "nba-mem-atl-2026-10-05-spread-home-3pt5",
+  "question": "Spread: Hawks (-3.5)",
+  "eventSlug": "nba-mem-atl-2026-10-05",
+  "eventTitle": "Grizzlies vs. Hawks",
+  "eventId": "1100850",
+  "clobTokenIds": [
+    "32578691783377935830592426667244034688763748457258318860831618063502642792848",
+    "107889219873928379114720930801683753942108292253582486210320782473711330941061"
+  ],
+  "outcomes": [
+    "Hawks",
+    "Grizzlies"
+  ],
+  "endDate": "2026-10-05T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-06T01:53:15Z",
+  "history": [
+{"timestamp":"2026-10-05T20:00:18Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-05T21:00:19Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-05T21:31:32Z","impliedProbability":0.49,"volume24hr":0.0,"volume":null,"liquidity":14285.9987,"spread":0.02,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-06T01:53:15Z","impliedProbability":0.0,"volume24hr":1414.068965,"volume":1414.068965,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
