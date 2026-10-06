@@ -1,0 +1,64 @@
+{
+  "conditionId": "0x943073b45997b4598ccea96ddcfc0f4d53b02d0f6d4babe972da24736a3ab443",
+  "slug": "nba-nop-okc-2026-10-06-1h-total-110pt5",
+  "question": "Pelicans vs. Thunder: 1H O/U 110.5",
+  "eventSlug": "nba-nop-okc-2026-10-06",
+  "eventTitle": "Pelicans vs. Thunder",
+  "eventId": "1106105",
+  "clobTokenIds": [
+    "20938325352509610157163651914520230589586796443609811876110076478070624137573",
+    "13199820555812291969087503465796732178634474386513505676723874452028861524686"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-10-07T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-06T14:00:30Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-06T15:00:28Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-06T15:31:23Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":11.0,"spread":0.96,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
