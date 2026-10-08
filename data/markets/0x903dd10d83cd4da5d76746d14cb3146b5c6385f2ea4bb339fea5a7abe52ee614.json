@@ -1,0 +1,64 @@
+{
+  "conditionId": "0x903dd10d83cd4da5d76746d14cb3146b5c6385f2ea4bb339fea5a7abe52ee614",
+  "slug": "nba-nop-mia-2026-10-08-spread-home-10pt5",
+  "question": "Spread: Heat (-10.5)",
+  "eventSlug": "nba-nop-mia-2026-10-08",
+  "eventTitle": "Pelicans vs. Heat",
+  "eventId": "1116716",
+  "clobTokenIds": [
+    "70973283279923152652244865608413412907829825691353532451250800774215297335753",
+    "85903857575612645245741035407754880769415238755460206032709663182475933650241"
+  ],
+  "outcomes": [
+    "Heat",
+    "Pelicans"
+  ],
+  "endDate": "2026-10-08T23:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-08T16:00:45Z","impliedProbability":0.39,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-08T17:00:24Z","impliedProbability":0.4,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-08T17:34:23Z","impliedProbability":0.405,"volume24hr":65.0,"volume":65.0,"liquidity":4167.3516,"spread":0.05,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
