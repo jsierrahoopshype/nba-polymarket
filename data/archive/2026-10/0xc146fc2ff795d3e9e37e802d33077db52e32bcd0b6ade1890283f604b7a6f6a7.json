@@ -1,0 +1,95 @@
+{
+  "conditionId": "0xc146fc2ff795d3e9e37e802d33077db52e32bcd0b6ade1890283f604b7a6f6a7",
+  "slug": "nba-bos-cle-2026-10-08",
+  "question": "Celtics vs. Cavaliers",
+  "eventSlug": "nba-bos-cle-2026-10-08",
+  "eventTitle": "Celtics vs. Cavaliers",
+  "eventId": "1116715",
+  "clobTokenIds": [
+    "23939629923679756842323263449360781582857219498154369864825251763000632910598",
+    "31043528997500050037272927760134347745017176945518729193059708815426893617533"
+  ],
+  "outcomes": [
+    "Celtics",
+    "Cavaliers"
+  ],
+  "endDate": "2026-10-08T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-09T02:29:17Z",
+  "history": [
+{"timestamp":"2026-10-02T00:54:34Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":60.0,"spread":0.96,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-02T06:52:05Z","impliedProbability":0.445,"volume24hr":0.0,"volume":null,"liquidity":161.1163,"spread":0.35,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-02T13:43:50Z","impliedProbability":0.445,"volume24hr":0.0,"volume":null,"liquidity":1110.5765,"spread":0.31,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-02T18:44:33Z","impliedProbability":0.445,"volume24hr":0.0,"volume":null,"liquidity":2381.9245,"spread":0.31,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-02T22:37:34Z","impliedProbability":0.445,"volume24hr":0.0,"volume":null,"liquidity":2605.0874,"spread":0.29,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-03T01:27:34Z","impliedProbability":0.445,"volume24hr":0.0,"volume":null,"liquidity":3790.8726,"spread":0.27,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-03T07:01:52Z","impliedProbability":0.445,"volume24hr":0.0,"volume":null,"liquidity":4202.2828,"spread":0.27,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-03T12:30:16Z","impliedProbability":0.445,"volume24hr":0.0,"volume":null,"liquidity":3555.3461,"spread":0.25,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-03T16:42:42Z","impliedProbability":0.445,"volume24hr":0.0,"volume":null,"liquidity":3304.254,"spread":0.23,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-03T19:31:54Z","impliedProbability":0.445,"volume24hr":0.0,"volume":null,"liquidity":4393.8549,"spread":0.21,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-03T22:25:56Z","impliedProbability":0.445,"volume24hr":0.0,"volume":null,"liquidity":3696.82,"spread":0.21,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-04T01:56:06Z","impliedProbability":0.445,"volume24hr":0.0,"volume":null,"liquidity":4960.2242,"spread":0.17,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-04T08:18:40Z","impliedProbability":0.445,"volume24hr":0.0,"volume":null,"liquidity":5005.8535,"spread":0.15,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-04T14:10:27Z","impliedProbability":0.45,"volume24hr":0.0,"volume":null,"liquidity":6742.3049,"spread":0.12,"oneDayPriceChange":0.005,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-04T18:12:40Z","impliedProbability":0.45,"volume24hr":0.0,"volume":null,"liquidity":6566.7056,"spread":0.12,"oneDayPriceChange":0.005,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-04T21:38:46Z","impliedProbability":0.46,"volume24hr":0.0,"volume":null,"liquidity":5082.3705,"spread":0.1,"oneDayPriceChange":0.015,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-05T00:11:18Z","impliedProbability":0.47,"volume24hr":0.0,"volume":null,"liquidity":5428.3332,"spread":0.08,"oneDayPriceChange":0.025,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-05T05:53:44Z","impliedProbability":0.47,"volume24hr":0.0,"volume":null,"liquidity":5714.2535,"spread":0.02,"oneDayPriceChange":0.025,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-05T14:14:29Z","impliedProbability":0.47,"volume24hr":0.0,"volume":null,"liquidity":5624.9433,"spread":0.02,"oneDayPriceChange":0.02,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-05T21:31:32Z","impliedProbability":0.47,"volume24hr":6.0,"volume":6.0,"liquidity":3654.2904,"spread":0.02,"oneDayPriceChange":0.01,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-06T01:53:15Z","impliedProbability":0.49,"volume24hr":7.785715,"volume":7.785715,"liquidity":5983.6283,"spread":0.1,"oneDayPriceChange":0.02,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-06T08:48:46Z","impliedProbability":0.49,"volume24hr":7.785715,"volume":7.785715,"liquidity":5713.3526,"spread":0.06,"oneDayPriceChange":0.02,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-06T15:31:23Z","impliedProbability":0.49,"volume24hr":7.785715,"volume":7.785715,"liquidity":6419.1759,"spread":0.02,"oneDayPriceChange":0.02,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-06T20:33:08Z","impliedProbability":0.49,"volume24hr":7.785715,"volume":7.785715,"liquidity":6316.6726,"spread":0.02,"oneDayPriceChange":0.02,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-07T00:08:00Z","impliedProbability":0.49,"volume24hr":1.785715,"volume":7.785715,"liquidity":7106.7639,"spread":0.02,"oneDayPriceChange":-0.02,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-07T05:59:44Z","impliedProbability":0.49,"volume24hr":0.0,"volume":7.785715,"liquidity":7039.2094,"spread":0.02,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-07T13:11:56Z","impliedProbability":0.495,"volume24hr":9.96,"volume":17.745715,"liquidity":7401.6845,"spread":0.01,"oneDayPriceChange":0.005,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-07T19:23:37Z","impliedProbability":0.505,"volume24hr":204.232693,"volume":212.01840800000002,"liquidity":7489.8784,"spread":0.01,"oneDayPriceChange":0.015,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-07T23:42:22Z","impliedProbability":0.505,"volume24hr":204.232693,"volume":212.018408,"liquidity":6156.7843,"spread":0.01,"oneDayPriceChange":0.015,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-08T03:01:45Z","impliedProbability":0.505,"volume24hr":319.828316,"volume":327.614031,"liquidity":6294.3123,"spread":0.01,"oneDayPriceChange":0.015,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-08T10:29:52Z","impliedProbability":0.555,"volume24hr":6727.564088,"volume":6735.349802999999,"liquidity":27521.892,"spread":0.01,"oneDayPriceChange":0.06,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-08T17:34:23Z","impliedProbability":0.575,"volume24hr":25488.419882000002,"volume":25700.438290000002,"liquidity":65407.9375,"spread":0.01,"oneDayPriceChange":0.07,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-08T22:27:07Z","impliedProbability":0.565,"volume24hr":48937.965709,"volume":49149.98411699999,"liquidity":110765.3768,"spread":0.01,"oneDayPriceChange":0.06,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-09T02:29:17Z","impliedProbability":1.0,"volume24hr":338935.56825800025,"volume":339263.182289,"liquidity":null,"spread":0.001,"oneDayPriceChange":0.4945,"oneWeekPriceChange":0.5545}
+  ]
+}
