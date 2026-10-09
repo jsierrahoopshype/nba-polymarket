@@ -1,0 +1,64 @@
+{
+  "conditionId": "0x9d5b5f1f5fe2f93d0c02f411101613d4ddee377a56edcccd28cba4b746a03450",
+  "slug": "nba-det-was-2026-10-10-spread-away-5pt5",
+  "question": "Spread: Pistons (-5.5)",
+  "eventSlug": "nba-det-was-2026-10-10",
+  "eventTitle": "Pistons vs. Wizards",
+  "eventId": "1127879",
+  "clobTokenIds": [
+    "5046422336041625178247479463141532419458693317086180661785696405291629002187",
+    "87684772000181076520508026423636798419024028233841357749604661434683579949692"
+  ],
+  "outcomes": [
+    "Pistons",
+    "Wizards"
+  ],
+  "endDate": "2026-10-10T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-09T20:00:22Z","impliedProbability":0.4,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-09T21:00:29Z","impliedProbability":0.405,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-09T21:16:03Z","impliedProbability":0.405,"volume24hr":0.0,"volume":null,"liquidity":1160.3542,"spread":0.27,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

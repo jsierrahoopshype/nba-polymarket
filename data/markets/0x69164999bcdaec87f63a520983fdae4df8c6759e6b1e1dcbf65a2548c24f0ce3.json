@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x69164999bcdaec87f63a520983fdae4df8c6759e6b1e1dcbf65a2548c24f0ce3",
+  "slug": "nba-phi-bos-2026-10-10-total-225pt5",
+  "question": "76ers vs. Celtics: O/U 225.5",
+  "eventSlug": "nba-phi-bos-2026-10-10",
+  "eventTitle": "76ers vs. Celtics",
+  "eventId": "1127876",
+  "clobTokenIds": [
+    "83830856086562471201086372408953625371540570012989853929161180793494823819067",
+    "58240231108889737755454261957655213012094908564525333411012248862435736586847"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-10-11T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-09T21:00:48Z","impliedProbability":0.48,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-09T21:16:03Z","impliedProbability":0.48,"volume24hr":0.0,"volume":null,"liquidity":593.9191,"spread":0.42,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
