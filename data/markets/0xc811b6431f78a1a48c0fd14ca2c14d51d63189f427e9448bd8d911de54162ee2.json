@@ -1,0 +1,62 @@
+{
+  "conditionId": "0xc811b6431f78a1a48c0fd14ca2c14d51d63189f427e9448bd8d911de54162ee2",
+  "slug": "nba-sas-phx-2026-10-10-spread-away-3pt5",
+  "question": "Spread: Spurs (-3.5)",
+  "eventSlug": "nba-sas-phx-2026-10-10",
+  "eventTitle": "Spurs vs. Suns",
+  "eventId": "1129232",
+  "clobTokenIds": [
+    "110620843068322835311655951333905453485351212126697559588493055182030708520316",
+    "114623063464990934920112815549221052582795483767162170050336995857247710061294"
+  ],
+  "outcomes": [
+    "Spurs",
+    "Suns"
+  ],
+  "endDate": "2026-10-11T02:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-10T01:00:47Z","impliedProbability":0.51,"volume24hr":0.0,"volume":null,"liquidity":4.0,"spread":0.98,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
