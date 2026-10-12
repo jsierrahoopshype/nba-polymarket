@@ -15,11 +15,14 @@ from unittest import mock
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 import movers_alerts as ma  # noqa: E402
 
-MUTED = ["Pistons vs. Wizards", "Clippers vs. Raptors", "Hawks vs. Pacers"]
+MUTED = ["Pistons vs. Wizards", "Clippers vs. Raptors", "Hawks vs. Pacers",
+         "Bulls vs. Nuggets: 1H Moneyline", "Hawks vs. Pacers: 1H Moneyline"]
 ALERTED = [
     "Spread: Raptors (-4.5)",
     "Spread: Pacers (-1.5)",
+    "1H Spread: Nuggets (-4.5)",
     "Clippers vs. Raptors: O/U 219.5",
+    "Bulls vs. Nuggets: 1H O/U 118.5",
     "Will Boston Celtics win the 2027 NBA Finals?",                 # futures
     "Will Cameron Boozer win the 2026-27 NBA Rookie of the Year?",  # award
     "Heat vs. Magic: Team to Score First",                          # other game prop
@@ -31,6 +34,9 @@ class SlackMarketTypeTest(unittest.TestCase):
     def test_types(self):
         self.assertEqual(ma.slack_market_type({"question": "Pistons vs. Wizards"}), "moneyline")
         self.assertEqual(ma.slack_market_type({"question": "Spread: Raptors (-4.5)"}), "spreads")
+        self.assertEqual(ma.slack_market_type({"question": "1H Spread: Nuggets (-4.5)"}), "spreads")
+        self.assertEqual(ma.slack_market_type({"question": "Bulls vs. Nuggets: 1H Moneyline"}), "moneyline")
+        self.assertEqual(ma.slack_market_type({"question": "Bulls vs. Nuggets: 1H O/U 118.5"}), "totals")
         self.assertEqual(ma.slack_market_type({"question": "Clippers vs. Raptors: O/U 219.5"}), "totals")
         self.assertIsNone(ma.slack_market_type({"question": "Will Boston Celtics win the 2027 NBA Finals?"}))
         self.assertIsNone(ma.slack_market_type({}))

@@ -237,11 +237,11 @@ def slack_market_type(m):
     awards, other per-game props). Our stored data has no Polymarket
     sportsMarketType field, so this reads the question title."""
     q = (m.get("question") or "").strip()
-    if q.startswith("Spread:"):
+    if q.startswith(("Spread:", "1H Spread:")):    # full-game and first-half spreads
         return "spreads"
     if "O/U" in q:
         return "totals"
-    if _MONEYLINE_TITLE.match(q):
+    if _MONEYLINE_TITLE.match(q) or q.endswith(": 1H Moneyline"):   # full-game and first-half winner
         return "moneyline"
     return None
 
