@@ -74,6 +74,13 @@ MIN_HISTORY_HOURS = 5         # need ~6h of history to judge a 6h swing
 ALERT_VOLUME_FLOOR = 10000
 ALERT_LIQUIDITY_FLOOR = 1000
 
+# Slack-only mute list: market types listed here never post a Slack alert
+# (instant or digest). The website and market pages are unaffected. Types come
+# from slack_market_type(): "moneyline" (game winner, "Pistons vs. Wizards"),
+# "spreads" ("Spread: Raptors (-4.5)"), "totals" ("Clippers vs. Raptors: O/U
+# 219.5"). Add "spreads" / "totals" here to mute those too.
+SLACK_MUTED_MARKET_TYPES = ["moneyline"]
+
 # --- digest (three daily, rolling 24-hour window) ----------------------------
 DIGEST_FLOOR = 0.02           # 2.0 percentage points over the rolling 24h window
 DIGEST_TOP_N = 10             # at most this many movers per digest
@@ -219,6 +226,30 @@ def loud_enough(m):
             and (m.get("liquidity") or 0) >= ALERT_LIQUIDITY_FLOOR)
 
 
+# Game-winner title: exactly "<Team> vs. <Team>" with no colon suffix, so the
+# other per-game markets ("...: O/U 219.5", "...: Team to Score First",
+# "...: Odd/Even Score") don't match.
+_MONEYLINE_TITLE = re.compile(r"^[^:]+ vs\. [^:]+$")
+
+
+def slack_market_type(m):
+    """Market type for the Slack mute list, or None for everything else (futures,
+    awards, other per-game props). Our stored data has no Polymarket
+    sportsMarketType field, so this reads the question title."""
+    q = (m.get("question") or "").strip()
+    if q.startswith("Spread:"):
+        return "spreads"
+    if "O/U" in q:
+        return "totals"
+    if _MONEYLINE_TITLE.match(q):
+        return "moneyline"
+    return None
+
+
+def slack_muted(m):
+    return slack_market_type(m) in SLACK_MUTED_MARKET_TYPES
+
+
 # --- modes -------------------------------------------------------------------
 
 def run_instant():
@@ -232,6 +263,8 @@ def run_instant():
         cid = m.get("conditionId")
         if not cid or cid in sent or not is_live_swingable(m) or not loud_enough(m):
             continue
+        if slack_muted(m):
+            continue                               # muted type: never posted, never recorded in sent
         sw = swing_6h(cid)
         if not sw:
             continue
@@ -495,6 +528,8 @@ def run_digest(force=False):
         cid = m.get("conditionId")
         if not cid or not m.get("negRisk") or m.get("resolved") or not loud_enough(m):
             continue
+        if slack_muted(m):
+            continue                               # muted type (see SLACK_MUTED_MARKET_TYPES)
         sw = swing_last_24h(cid, cutoff_utc)
         if not sw:
             continue
