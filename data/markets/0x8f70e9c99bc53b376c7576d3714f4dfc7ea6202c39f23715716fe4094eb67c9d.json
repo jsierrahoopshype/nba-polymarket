@@ -1,0 +1,64 @@
+{
+  "conditionId": "0x8f70e9c99bc53b376c7576d3714f4dfc7ea6202c39f23715716fe4094eb67c9d",
+  "slug": "nba-okc-atl-2026-10-12-spread-home-3pt5",
+  "question": "Spread: Hawks (-3.5)",
+  "eventSlug": "nba-okc-atl-2026-10-12",
+  "eventTitle": "Thunder vs. Hawks",
+  "eventId": "1140250",
+  "clobTokenIds": [
+    "89057246575951498875574701275692288005957941362675398118588147610454089973754",
+    "72209086367587361395851224475756002006270358286026434252181524373770236816823"
+  ],
+  "outcomes": [
+    "Hawks",
+    "Thunder"
+  ],
+  "endDate": "2026-10-12T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-12T23:00:28Z","impliedProbability":0.56,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T00:00:42Z","impliedProbability":0.53,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T00:27:21Z","impliedProbability":0.62,"volume24hr":2406.9606700000004,"volume":2406.96067,"liquidity":5840.9092,"spread":0.06,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
