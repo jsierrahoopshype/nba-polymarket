@@ -76,10 +76,13 @@ ALERT_LIQUIDITY_FLOOR = 1000
 
 # Slack-only mute list: market types listed here never post a Slack alert
 # (instant or digest). The website and market pages are unaffected. Types come
-# from slack_market_type(): "moneyline" (game winner, "Pistons vs. Wizards"),
-# "spreads" ("Spread: Raptors (-4.5)"), "totals" ("Clippers vs. Raptors: O/U
-# 219.5"). Add "spreads" / "totals" here to mute those too.
-SLACK_MUTED_MARKET_TYPES = ["moneyline"]
+# from slack_market_type(), all single-game (full game and first half):
+# "moneyline" ("Pistons vs. Wizards"), "spreads" ("Spread: Raptors (-4.5)"),
+# "totals" ("Clippers vs. Raptors: O/U 219.5"), "player_props" ("Jalen Brunson:
+# Points O/U 26.5" in a game event), "game_props" (any other market in a game
+# event: "Heat vs. Magic: Team to Score First", "...: Odd/Even Score").
+# Futures and awards have no type and always alert.
+SLACK_MUTED_MARKET_TYPES = ["moneyline", "spreads", "totals", "player_props", "game_props"]
 
 # --- digest (three daily, rolling 24-hour window) ----------------------------
 DIGEST_FLOOR = 0.02           # 2.0 percentage points over the rolling 24h window
@@ -230,20 +233,37 @@ def loud_enough(m):
 # other per-game markets ("...: O/U 219.5", "...: Team to Score First",
 # "...: Odd/Even Score") don't match.
 _MONEYLINE_TITLE = re.compile(r"^[^:]+ vs\. [^:]+$")
+# Any per-game market title: "<Team> vs. <Team>: <something>".
+_GAME_PREFIX = re.compile(r"^[^:]+ vs\. [^:]+: ")
+
+
+def _single_game(m, q):
+    """True when the market belongs to one specific game: its title is
+    "<Team> vs. <Team>[: ...]", or its Polymarket event is a game ("Thunder vs.
+    Hawks") or carries the "games" tag. Futures/awards events ("NBA: 2027
+    Champion", "NBA: 2026-27 Rookie of the Year") match none of these."""
+    if _MONEYLINE_TITLE.match(q) or _GAME_PREFIX.match(q):
+        return True
+    if _MONEYLINE_TITLE.match((m.get("eventTitle") or "").strip()):
+        return True
+    return any(isinstance(t, dict) and t.get("slug") == "games" for t in m.get("tags") or [])
 
 
 def slack_market_type(m):
     """Market type for the Slack mute list, or None for everything else (futures,
-    awards, other per-game props). Our stored data has no Polymarket
-    sportsMarketType field, so this reads the question title."""
+    awards, season-long markets). Our stored data has no Polymarket
+    sportsMarketType field, so this reads the question title (plus the event
+    title / tags to tell a single-game market from a season-long one)."""
     q = (m.get("question") or "").strip()
     if q.startswith(("Spread:", "1H Spread:")):    # full-game and first-half spreads
         return "spreads"
-    if "O/U" in q:
-        return "totals"
+    if not _single_game(m, q):
+        return None                                # futures, awards, draft O/U, season win totals...
+    if "O/U" in q:                                 # full-game and first-half game totals vs player lines
+        return "totals" if _GAME_PREFIX.match(q) else "player_props"
     if _MONEYLINE_TITLE.match(q) or q.endswith(": 1H Moneyline"):   # full-game and first-half winner
         return "moneyline"
-    return None
+    return "game_props"                            # Team to Score First, Odd/Even Score, ...
 
 
 def slack_muted(m):
