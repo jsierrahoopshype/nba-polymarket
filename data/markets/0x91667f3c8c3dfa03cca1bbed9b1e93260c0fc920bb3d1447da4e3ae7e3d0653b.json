@@ -1,0 +1,73 @@
+{
+  "conditionId": "0x91667f3c8c3dfa03cca1bbed9b1e93260c0fc920bb3d1447da4e3ae7e3d0653b",
+  "slug": "nba-2026-27-per-leader-giannis-antetokounmpo",
+  "question": "Will Giannis Antetokounmpo lead the NBA in Player Efficiency Rating (PER) in 2026-27?",
+  "eventSlug": "nba-2026-27-per-leader",
+  "eventTitle": "NBA: 2026-27 Player Efficiency Rating (PER) Leader",
+  "eventId": "1183276",
+  "clobTokenIds": [
+    "110592393719287963439069279686840494908044547347088408078697209289783874907945",
+    "71300451734971997004327437062639041330898795085853697401083032954577645675877"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2027-04-26T03:59:00Z",
+  "negRisk": true,
+  "tags": [
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    },
+    {
+      "id": "105127",
+      "label": "Season stats",
+      "slug": "season-stats",
+      "createdAt": "2026-05-26T15:48:08.186572Z"
+    },
+    {
+      "id": "102169",
+      "label": "Hide From New",
+      "slug": "hide-from-new",
+      "forceShow": false,
+      "createdAt": "2025-05-23T18:47:07.430147Z",
+      "updatedAt": "2026-04-17T20:28:28.912197Z",
+      "isCarousel": false
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-13T17:00:27Z","impliedProbability":0.2505,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T18:00:33Z","impliedProbability":0.0355,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T19:00:38Z","impliedProbability":0.0355,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T20:00:27Z","impliedProbability":0.498,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T20:36:33Z","impliedProbability":0.498,"volume24hr":0.0,"volume":null,"liquidity":2.15798,"spread":0.994,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

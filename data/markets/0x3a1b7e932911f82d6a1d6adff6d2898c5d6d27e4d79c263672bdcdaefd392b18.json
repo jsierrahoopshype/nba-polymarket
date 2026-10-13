@@ -1,0 +1,76 @@
+{
+  "conditionId": "0x3a1b7e932911f82d6a1d6adff6d2898c5d6d27e4d79c263672bdcdaefd392b18",
+  "slug": "nba-2026-27-most-improved-player-aaron-wiggins",
+  "question": "Will Aaron Wiggins win the 2026-27 NBA Most Improved Player?",
+  "eventSlug": "nba-2026-27-most-improved-player",
+  "eventTitle": "NBA: 2026-27 Most Improved Player",
+  "eventId": "1183257",
+  "clobTokenIds": [
+    "85424922984740507587445867763993873269313727800213123168542294258601998611122",
+    "103028952013954428953749549673051572258930851019652804235876438552389915695976"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2027-07-01T03:59:00Z",
+  "negRisk": true,
+  "tags": [
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "18",
+      "label": "Awards",
+      "slug": "awards",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:03:41.709+00",
+      "createdAt": "2023-11-02T21:03:41.713Z",
+      "updatedAt": "2026-04-17T20:42:53.495391Z"
+    },
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    },
+    {
+      "id": "102169",
+      "label": "Hide From New",
+      "slug": "hide-from-new",
+      "forceShow": false,
+      "createdAt": "2025-05-23T18:47:07.430147Z",
+      "updatedAt": "2026-04-17T20:28:28.912197Z",
+      "isCarousel": false
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-13T17:00:30Z","impliedProbability":0.35,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T18:00:36Z","impliedProbability":0.4985,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T19:00:40Z","impliedProbability":0.0355,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T20:00:29Z","impliedProbability":0.0355,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T20:36:33Z","impliedProbability":0.2495,"volume24hr":0.0,"volume":null,"liquidity":12.19396,"spread":0.497,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

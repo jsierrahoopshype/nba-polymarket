@@ -1,0 +1,67 @@
+{
+  "conditionId": "0x21021adc2e51a5cbcdbcd520d415366ba3766b8e7fdbd34d4524bab6fa2c5f94",
+  "slug": "nba-2026-27-worst-regular-season-record-atlanta-hawks",
+  "question": "Will the Atlanta Hawks finish with the worst record in the NBA in 2026-27?",
+  "eventSlug": "nba-2026-27-worst-regular-season-record",
+  "eventTitle": "NBA: 2026-27 Worst Regular Season Record",
+  "eventId": "1183278",
+  "clobTokenIds": [
+    "81730146563077962537117227962162824435238406724054270967419796983153092185174",
+    "39794163473296027478987335841312371945381483403532039717732267200419347292608"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2027-04-26T03:59:00Z",
+  "negRisk": true,
+  "tags": [
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    },
+    {
+      "id": "102169",
+      "label": "Hide From New",
+      "slug": "hide-from-new",
+      "forceShow": false,
+      "createdAt": "2025-05-23T18:47:07.430147Z",
+      "updatedAt": "2026-04-17T20:28:28.912197Z",
+      "isCarousel": false
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-13T17:00:23Z","impliedProbability":0.0355,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T18:00:29Z","impliedProbability":0.036,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T19:00:36Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T20:00:24Z","impliedProbability":0.4985,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T20:36:33Z","impliedProbability":0.0455,"volume24hr":0.0,"volume":null,"liquidity":20.86999,"spread":0.089,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
