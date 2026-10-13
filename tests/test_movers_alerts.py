@@ -16,42 +16,58 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 import movers_alerts as ma  # noqa: E402
 
 MUTED = ["Pistons vs. Wizards", "Clippers vs. Raptors", "Hawks vs. Pacers",
-         "Bulls vs. Nuggets: 1H Moneyline", "Hawks vs. Pacers: 1H Moneyline"]
+         "Bulls vs. Nuggets: 1H Moneyline", "Hawks vs. Pacers: 1H Moneyline",
+         "Spread: Raptors (-4.5)",
+         "Spread: Pacers (-1.5)",
+         "Spread: Wizards (-2.5)",
+         "1H Spread: Nuggets (-4.5)",
+         "Clippers vs. Raptors: O/U 219.5",
+         "Thunder vs. Hawks: O/U 224.5",
+         "Bulls vs. Nuggets: 1H O/U 118.5",
+         "Heat vs. Magic: Team to Score First",                     # other game prop
+         "Trail Blazers vs. Kings: Odd/Even Score"]
 ALERTED = [
-    "Spread: Raptors (-4.5)",
-    "Spread: Pacers (-1.5)",
-    "1H Spread: Nuggets (-4.5)",
-    "Clippers vs. Raptors: O/U 219.5",
-    "Bulls vs. Nuggets: 1H O/U 118.5",
     "Will Boston Celtics win the 2027 NBA Finals?",                 # futures
     "Will Cameron Boozer win the 2026-27 NBA Rookie of the Year?",  # award
-    "Heat vs. Magic: Team to Score First",                          # other game prop
-    "Trail Blazers vs. Kings: Odd/Even Score",
+    "2026 NBA Draft: Freshman Drafted O/U 21.5",                    # O/U, but not a game
 ]
+# A player line only reads as single-game through its event (title has no "vs.").
+PLAYER_PROP = {"question": "Jalen Brunson: Points O/U 26.5", "eventTitle": "Knicks vs. Spurs"}
 
 
 class SlackMarketTypeTest(unittest.TestCase):
     def test_types(self):
         self.assertEqual(ma.slack_market_type({"question": "Pistons vs. Wizards"}), "moneyline")
         self.assertEqual(ma.slack_market_type({"question": "Spread: Raptors (-4.5)"}), "spreads")
+        self.assertEqual(ma.slack_market_type({"question": "Spread: Wizards (-2.5)"}), "spreads")
         self.assertEqual(ma.slack_market_type({"question": "1H Spread: Nuggets (-4.5)"}), "spreads")
         self.assertEqual(ma.slack_market_type({"question": "Bulls vs. Nuggets: 1H Moneyline"}), "moneyline")
         self.assertEqual(ma.slack_market_type({"question": "Bulls vs. Nuggets: 1H O/U 118.5"}), "totals")
         self.assertEqual(ma.slack_market_type({"question": "Clippers vs. Raptors: O/U 219.5"}), "totals")
+        self.assertEqual(ma.slack_market_type({"question": "Thunder vs. Hawks: O/U 224.5"}), "totals")
+        self.assertEqual(ma.slack_market_type({"question": "Heat vs. Magic: Team to Score First"}), "game_props")
+        self.assertEqual(ma.slack_market_type(PLAYER_PROP), "player_props")
+        self.assertEqual(ma.slack_market_type({"question": "Celtics: Points O/U 110.5",
+                                               "tags": [{"slug": "games"}]}), "player_props")
         self.assertIsNone(ma.slack_market_type({"question": "Will Boston Celtics win the 2027 NBA Finals?"}))
+        self.assertIsNone(ma.slack_market_type({"question": "2026 NBA Draft: Freshman Drafted O/U 21.5",
+                                                "eventTitle": "2026 NBA Draft: Freshman Drafted O/U 21.5"}))
         self.assertIsNone(ma.slack_market_type({}))
 
     def test_default_mute_list(self):
-        self.assertEqual(ma.SLACK_MUTED_MARKET_TYPES, ["moneyline"])
+        self.assertEqual(ma.SLACK_MUTED_MARKET_TYPES,
+                         ["moneyline", "spreads", "totals", "player_props", "game_props"])
         for q in MUTED:
             self.assertTrue(ma.slack_muted({"question": q}), q)
+        self.assertTrue(ma.slack_muted(PLAYER_PROP))
         for q in ALERTED:
             self.assertFalse(ma.slack_muted({"question": q}), q)
 
-    def test_list_is_extendable(self):
-        with mock.patch.object(ma, "SLACK_MUTED_MARKET_TYPES", ["moneyline", "spreads", "totals"]):
-            self.assertTrue(ma.slack_muted({"question": "Spread: Pacers (-1.5)"}))
-            self.assertTrue(ma.slack_muted({"question": "Clippers vs. Raptors: O/U 219.5"}))
+    def test_list_is_editable(self):
+        with mock.patch.object(ma, "SLACK_MUTED_MARKET_TYPES", ["moneyline"]):
+            self.assertTrue(ma.slack_muted({"question": "Pistons vs. Wizards"}))
+            self.assertFalse(ma.slack_muted({"question": "Spread: Pacers (-1.5)"}))
+            self.assertFalse(ma.slack_muted({"question": "Clippers vs. Raptors: O/U 219.5"}))
             self.assertFalse(ma.slack_muted({"question": "Will Boston Celtics win the 2027 NBA Finals?"}))
 
 
