@@ -1,0 +1,68 @@
+{
+  "conditionId": "0xa850678e754bf7aa20bbc8ee4c635f42591d7832c6a3daa131916a71e80a99c1",
+  "slug": "nba-nyk-tor-2026-10-13-1h-spread-home-5pt5",
+  "question": "1H Spread: Raptors (-5.5)",
+  "eventSlug": "nba-nyk-tor-2026-10-13",
+  "eventTitle": "Knicks vs. Raptors",
+  "eventId": "1145740",
+  "clobTokenIds": [
+    "112576219430314060402526558906547039367364419097062606255106586983210176772838",
+    "78996204505921742655595553710162701644736203918389974986313611266022846786242"
+  ],
+  "outcomes": [
+    "Raptors",
+    "Knicks"
+  ],
+  "endDate": "2026-10-13T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-14T04:27:13Z",
+  "history": [
+{"timestamp":"2026-10-13T13:00:26Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T14:00:27Z","impliedProbability":0.51,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T14:58:22Z","impliedProbability":0.505,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T15:00:07Z","impliedProbability":0.505,"volume24hr":0.0,"volume":null,"liquidity":4.2198,"spread":0.91,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T20:36:33Z","impliedProbability":0.49,"volume24hr":0.0,"volume":null,"liquidity":2.5195,"spread":0.96,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-13T23:53:56Z","impliedProbability":0.99,"volume24hr":50.919729,"volume":100.61132900000001,"liquidity":1436.90749,"spread":0.02,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-14T04:27:13Z","impliedProbability":1.0,"volume24hr":165.311329,"volume":165.31132900000003,"liquidity":null,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

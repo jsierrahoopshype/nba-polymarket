@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x52de39fab17ccd12b9eeb7033123c1ea6f24d9673bbb3e420a219c9f24144b74",
+  "slug": "nba-bkn-mia-2026-10-14-total-241pt5",
+  "question": "Nets vs. Heat: O/U 241.5",
+  "eventSlug": "nba-bkn-mia-2026-10-14",
+  "eventTitle": "Nets vs. Heat",
+  "eventId": "1151219",
+  "clobTokenIds": [
+    "27836618226342403695052838378267663424205864187244887148276255204941064766851",
+    "56190879575675070955373012396708831298364528386986907832664537334013913688770"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-10-14T23:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-14T04:00:27Z","impliedProbability":0.415,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-14T04:27:13Z","impliedProbability":0.41,"volume24hr":0.0,"volume":null,"liquidity":1415.2317,"spread":0.24,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
