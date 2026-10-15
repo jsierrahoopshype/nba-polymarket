@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x2c4e3f2f981199f025acdde72d20c1aa67baecd130dbe0e8ef8d4e56a6225b39",
+  "slug": "nba-det-min-2026-10-14-spread-home-5pt5",
+  "question": "Spread: Timberwolves (-5.5)",
+  "eventSlug": "nba-det-min-2026-10-14",
+  "eventTitle": "Pistons vs. Timberwolves",
+  "eventId": "1151224",
+  "clobTokenIds": [
+    "102656301333868938755584932333375899167254442316918467643428895409154602465586",
+    "113854031105478134135648189754524908005325303695423728169519712284131631361208"
+  ],
+  "outcomes": [
+    "Timberwolves",
+    "Pistons"
+  ],
+  "endDate": "2026-10-15T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-15T00:00:52Z","impliedProbability":0.465,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-15T00:35:50Z","impliedProbability":0.575,"volume24hr":297.770834,"volume":297.770834,"liquidity":1055.5853,"spread":0.07,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
