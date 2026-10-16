@@ -1,0 +1,63 @@
+{
+  "conditionId": "0xf92d4806ae4bd0baa6ddbb93a0318ce29653e13ab2e37e1ea48128e4d00aa48b",
+  "slug": "nba-bos-phi-2026-10-16-spread-home-9pt5",
+  "question": "Spread: 76ers (-9.5)",
+  "eventSlug": "nba-bos-phi-2026-10-16",
+  "eventTitle": "Celtics vs. 76ers",
+  "eventId": "1162057",
+  "clobTokenIds": [
+    "75208169117437811395259939060389462951305018553532858360384682240814119503705",
+    "2502098139728448740295501122481123715954866930137156293042541987803324472666"
+  ],
+  "outcomes": [
+    "76ers",
+    "Celtics"
+  ],
+  "endDate": "2026-10-16T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-16T23:00:29Z","impliedProbability":0.52,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-16T23:41:38Z","impliedProbability":0.36,"volume24hr":13088.702727,"volume":1437.3969650000001,"liquidity":386.2952,"spread":0.1,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
