@@ -1,0 +1,63 @@
+{
+  "conditionId": "0xdf9840d59248be91319eadc7ba8573f2be1f6117812edec9f96bd223a2c8f329",
+  "slug": "nba-sac-sas-2026-10-16-1h-spread-home-7pt5",
+  "question": "1H Spread: Spurs (-7.5)",
+  "eventSlug": "nba-sac-sas-2026-10-16",
+  "eventTitle": "Kings vs. Spurs",
+  "eventId": "1162060",
+  "clobTokenIds": [
+    "41431312834291434243289272326501902134776907288682782226019788204734351050943",
+    "89580305084219497262246243639425295697149688021478425687759332964584127020753"
+  ],
+  "outcomes": [
+    "Spurs",
+    "Kings"
+  ],
+  "endDate": "2026-10-17T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-17T01:37:14Z",
+  "history": [
+{"timestamp":"2026-10-16T23:41:38Z","impliedProbability":0.51,"volume24hr":0.0,"volume":null,"liquidity":478.7198,"spread":0.2,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-17T01:37:14Z","impliedProbability":1.0,"volume24hr":908.1818,"volume":908.1818,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
