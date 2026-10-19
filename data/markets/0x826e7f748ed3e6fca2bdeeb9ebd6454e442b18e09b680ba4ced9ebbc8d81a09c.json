@@ -1,0 +1,62 @@
+{
+  "conditionId": "0x826e7f748ed3e6fca2bdeeb9ebd6454e442b18e09b680ba4ced9ebbc8d81a09c",
+  "slug": "nba-dal-hou-2026-10-21-1h-spread-home-5pt5",
+  "question": "1H Spread: Rockets (-5.5)",
+  "eventSlug": "nba-dal-hou-2026-10-21",
+  "eventTitle": "Mavericks vs. Rockets",
+  "eventId": "1191469",
+  "clobTokenIds": [
+    "1934458104272896203567981638663331901466680036008644342093723152973568689700",
+    "8490463834402602558278870490875583544140175576979468948705603834637346410765"
+  ],
+  "outcomes": [
+    "Rockets",
+    "Mavericks"
+  ],
+  "endDate": "2026-10-22T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-19T05:13:01Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":4.1198,"spread":0.94,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

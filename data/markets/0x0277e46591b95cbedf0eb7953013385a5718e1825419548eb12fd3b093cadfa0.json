@@ -1,0 +1,65 @@
+{
+  "conditionId": "0x0277e46591b95cbedf0eb7953013385a5718e1825419548eb12fd3b093cadfa0",
+  "slug": "nba-dal-hou-2026-10-21-assists-fred-vanvleet-5pt5",
+  "question": "Fred VanVleet: Assists O/U 5.5",
+  "eventSlug": "nba-dal-hou-2026-10-21",
+  "eventTitle": "Mavericks vs. Rockets",
+  "eventId": "1191469",
+  "clobTokenIds": [
+    "89451838980849757779583575064943674228519261657012097057783851203104102923697",
+    "53216806642684379380308331259309370675216081753921035878362891707636973631075"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-22T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-19T03:00:30Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-19T04:00:17Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-19T05:00:36Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-19T05:13:01Z","impliedProbability":0.495,"volume24hr":0.0,"volume":null,"liquidity":7.1446,"spread":0.93,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
