@@ -1,0 +1,63 @@
+{
+  "conditionId": "0xb65e8b6f52d4208ca3e0f94194587344c5a9911cfc7faaf85aaa2e15daada0f5",
+  "slug": "nba-bos-det-2026-10-20-spread-away-4pt5",
+  "question": "Spread: Celtics (-4.5)",
+  "eventSlug": "nba-bos-det-2026-10-20",
+  "eventTitle": "Celtics vs. Pistons",
+  "eventId": "1185700",
+  "clobTokenIds": [
+    "103766572050667471910491377881758447670154020822556318775222404597230680427096",
+    "49179958792329694654111314883955171238913201596849422720817345721417511062955"
+  ],
+  "outcomes": [
+    "Celtics",
+    "Pistons"
+  ],
+  "endDate": "2026-10-20T19:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-20T22:33:28Z",
+  "history": [
+{"timestamp":"2026-10-20T21:00:31Z","impliedProbability":0.63,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-20T22:33:28Z","impliedProbability":0.0,"volume24hr":4186.071149,"volume":4186.071148999999,"liquidity":null,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
