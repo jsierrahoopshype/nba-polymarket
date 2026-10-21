@@ -1,0 +1,72 @@
+{
+  "conditionId": "0x92967d9467572fb643708d52ddaa5a509caf3ee78957c6f0955979413f0a0007",
+  "slug": "nba-phi-nyk-2026-10-20-1h-spread-home-5pt5",
+  "question": "1H Spread: Knicks (-5.5)",
+  "eventSlug": "nba-phi-nyk-2026-10-20",
+  "eventTitle": "76ers vs. Knicks",
+  "eventId": "1185701",
+  "clobTokenIds": [
+    "43280322369253801028658869778185440909289145503975174066109543527722503813695",
+    "895285269539955522160972687189638856563492572395532990093400429517528656570"
+  ],
+  "outcomes": [
+    "Knicks",
+    "76ers"
+  ],
+  "endDate": "2026-10-20T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    },
+    {
+      "id": "106395",
+      "label": "NBA Tip-Off",
+      "slug": "nba-tip-off",
+      "forceShow": false,
+      "createdAt": "2026-10-20T23:28:32.609675Z",
+      "updatedAt": "2026-10-20T23:30:08.457604Z",
+      "isCarousel": false
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-21T00:56:17Z",
+  "history": [
+{"timestamp":"2026-10-21T00:00:54Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-21T00:56:17Z","impliedProbability":0.0,"volume24hr":14.994049999999998,"volume":14.994049999999998,"liquidity":null,"spread":0.009,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
