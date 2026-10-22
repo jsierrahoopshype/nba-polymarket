@@ -1,0 +1,72 @@
+{
+  "conditionId": "0x12be12c23ace2c9bb9f47bb44b51b64cbbbf652bb76cda26055730dfcaacb615",
+  "slug": "nba-chi-tor-2026-10-21-spread-home-15pt5",
+  "question": "Spread: Raptors (-15.5)",
+  "eventSlug": "nba-chi-tor-2026-10-21",
+  "eventTitle": "Bulls vs. Raptors",
+  "eventId": "1191465",
+  "clobTokenIds": [
+    "47944713288749862402090823753351472341030557580732305789560015829077403921461",
+    "55408010260973197179620227749881047375405532902014785594569798208842665668813"
+  ],
+  "outcomes": [
+    "Raptors",
+    "Bulls"
+  ],
+  "endDate": "2026-10-21T23:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    },
+    {
+      "id": "106395",
+      "label": "NBA Tip-Off",
+      "slug": "nba-tip-off",
+      "forceShow": false,
+      "createdAt": "2026-10-20T23:28:32.609675Z",
+      "updatedAt": "2026-10-20T23:30:08.457604Z",
+      "isCarousel": false
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-22T06:35:53Z",
+  "history": [
+{"timestamp":"2026-10-22T01:38:52Z","impliedProbability":0.505,"volume24hr":577.629031,"volume":577.629031,"liquidity":0.5599,"spread":0.99,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T06:35:53Z","impliedProbability":1.0,"volume24hr":577.629031,"volume":577.629031,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

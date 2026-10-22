@@ -1,0 +1,79 @@
+{
+  "conditionId": "0x4d78be34cad6e07ecbe838fcc8400d70b9e0cb928f3c0f4f24d9e8e2efc8eda4",
+  "slug": "nba-phx-por-2026-10-21-assists-miles-bridges-2pt5",
+  "question": "Miles Bridges: Assists O/U 2.5",
+  "eventSlug": "nba-phx-por-2026-10-21",
+  "eventTitle": "Suns vs. Trail Blazers",
+  "eventId": "1192658",
+  "clobTokenIds": [
+    "3490964481733992822459650014492169517834825579361681547453101011402038524192",
+    "53747760064002950282911849122854454890888935074277625437837193510957388319281"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-22T02:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-22T06:35:53Z",
+  "history": [
+{"timestamp":"2026-10-19T05:13:21Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-19T10:55:43Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":7.1446,"spread":0.94,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-19T17:24:13Z","impliedProbability":0.505,"volume24hr":0.0,"volume":null,"liquidity":3.3574,"spread":0.94,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-19T21:41:53Z","impliedProbability":0.32,"volume24hr":0.0,"volume":null,"liquidity":63.1996,"spread":0.58,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-20T00:44:28Z","impliedProbability":0.315,"volume24hr":0.0,"volume":null,"liquidity":10633.5556,"spread":0.57,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-20T05:25:43Z","impliedProbability":0.32,"volume24hr":0.0,"volume":null,"liquidity":10656.7258,"spread":0.58,"oneDayPriceChange":-0.175,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-20T10:21:00Z","impliedProbability":0.275,"volume24hr":0.0,"volume":null,"liquidity":13882.1429,"spread":0.49,"oneDayPriceChange":-0.225,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-20T15:18:59Z","impliedProbability":0.28,"volume24hr":0.0,"volume":null,"liquidity":24635.8754,"spread":0.5,"oneDayPriceChange":-0.22,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-20T19:24:29Z","impliedProbability":0.325,"volume24hr":0.0,"volume":null,"liquidity":13405.8207,"spread":0.59,"oneDayPriceChange":-0.175,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-20T22:33:28Z","impliedProbability":0.35,"volume24hr":0.0,"volume":null,"liquidity":13361.485,"spread":0.5,"oneDayPriceChange":0.03,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-21T00:56:17Z","impliedProbability":0.295,"volume24hr":0.0,"volume":null,"liquidity":13551.9957,"spread":0.51,"oneDayPriceChange":-0.02,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-21T05:53:31Z","impliedProbability":0.335,"volume24hr":0.0,"volume":null,"liquidity":13390.8262,"spread":0.47,"oneDayPriceChange":0.055,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-21T11:32:31Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":13962.8612,"spread":0.08,"oneDayPriceChange":0.22,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-21T16:05:51Z","impliedProbability":0.385,"volume24hr":0.0,"volume":null,"liquidity":15475.5641,"spread":0.29,"oneDayPriceChange":0.06,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-21T20:07:40Z","impliedProbability":0.38,"volume24hr":0.0,"volume":null,"liquidity":15536.1548,"spread":0.28,"oneDayPriceChange":0.02,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-21T23:18:27Z","impliedProbability":0.305,"volume24hr":37.735848,"volume":37.735848,"liquidity":15584.1668,"spread":0.41,"oneDayPriceChange":-0.05,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T01:38:52Z","impliedProbability":0.485,"volume24hr":114.995848,"volume":114.995848,"liquidity":15603.5765,"spread":0.09,"oneDayPriceChange":0.195,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T06:35:53Z","impliedProbability":0.0,"volume24hr":119.995848,"volume":119.995848,"liquidity":null,"spread":0.95,"oneDayPriceChange":0.16,"oneWeekPriceChange":null}
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "conditionId": "0xa1b80fdb696f33be4dd9c911e84cb87f269e6ee99119b6cda9ce6e51e97ca67f",
+  "slug": "nba-cha-bkn-2026-10-21-total-216pt5",
+  "question": "Hornets vs. Nets: O/U 216.5",
+  "eventSlug": "nba-cha-bkn-2026-10-21",
+  "eventTitle": "Hornets vs. Nets",
+  "eventId": "1191464",
+  "clobTokenIds": [
+    "22775719578586054873190573473304260679014327173687907495572390334881180718379",
+    "37780835982562385247392257027946416782586633164649797993347243911385326540534"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-10-21T23:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    },
+    {
+      "id": "106395",
+      "label": "NBA Tip-Off",
+      "slug": "nba-tip-off",
+      "forceShow": false,
+      "createdAt": "2026-10-20T23:28:32.609675Z",
+      "updatedAt": "2026-10-20T23:30:08.457604Z",
+      "isCarousel": false
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-22T06:35:53Z",
+  "history": [
+{"timestamp":"2026-10-20T23:00:24Z","impliedProbability":0.545,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-21T00:56:22Z","impliedProbability":0.545,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-21T05:53:31Z","impliedProbability":0.555,"volume24hr":0.0,"volume":null,"liquidity":51797.3923,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-21T11:32:31Z","impliedProbability":0.585,"volume24hr":26.473683,"volume":26.473683,"liquidity":26779.6007,"spread":0.03,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-21T16:05:51Z","impliedProbability":0.575,"volume24hr":2844.400549,"volume":2844.4005490000004,"liquidity":77549.5694,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-21T20:07:40Z","impliedProbability":0.585,"volume24hr":59835.21965599999,"volume":59835.219655999994,"liquidity":71955.5139,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-21T23:18:27Z","impliedProbability":0.58,"volume24hr":60006.14659599999,"volume":60006.14659599999,"liquidity":72154.1676,"spread":0.02,"oneDayPriceChange":0.04,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T01:38:52Z","impliedProbability":0.645,"volume24hr":65883.53631099997,"volume":65646.53631099999,"liquidity":6151.7414,"spread":0.05,"oneDayPriceChange":0.1,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T06:35:53Z","impliedProbability":0.0,"volume24hr":68176.80273499998,"volume":68176.80273499999,"liquidity":null,"spread":0.001,"oneDayPriceChange":-0.5445,"oneWeekPriceChange":null}
+  ]
+}
