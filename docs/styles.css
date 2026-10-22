@@ -35,8 +35,6 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 /* header */
 .hdr{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:.35rem;flex-wrap:wrap}
 .hdr h1{font-size:1.4rem;font-weight:700;letter-spacing:-.03em}
-.hdr .brand{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--text-secondary);
-  text-transform:uppercase;letter-spacing:.08em}
 .subtitle{color:var(--text-secondary);font-size:.9rem;margin-bottom:1.25rem;max-width:60rem}
 .subtitle .stamp{font-family:'JetBrains Mono',monospace;font-size:.78rem}
 
@@ -242,7 +240,6 @@ td.name::after,.card .q::after{content:"";display:table;clear:both}
   .table-wrap{display:none}
   .cards{display:block}
   .hdr h1{font-size:1.15rem}
-  .hdr .brand{display:none}
   .subtitle{font-size:.82rem;margin-bottom:.8rem}
   .stat-cards{grid-template-columns:1fr 1fr 1fr;gap:.5rem}
   .stat-card{padding:.7rem .6rem}

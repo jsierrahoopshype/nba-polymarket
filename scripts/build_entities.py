@@ -268,7 +268,7 @@ def directory_page(kind, title, entries):
         f'<a href="../players/"{" class=active" if kind=="player" else ""}>Players</a>'
         f'<a href="../teams/"{" class=active" if kind=="team" else ""}>Teams</a></div>\n'
         + search_box("../") +
-        f'<div class="hdr"><h1>{esc(title)}</h1><span class="brand">HoopsHype</span></div>\n'
+        f'<div class="hdr"><h1>{esc(title)}</h1></div>\n'
         f'<div class="subtitle">Ranked by total betting volume across each {kind}’s markets.</div>\n'
         '<div class="toggle" id="esort"><button class="active" data-sort="vol">Volume</button>'
         '<button data-sort="count">Markets</button><button data-sort="name">A–Z</button></div>\n'
