@@ -1,0 +1,54 @@
+{
+  "conditionId": "0x3f694b037f7e22e45d24df59eb5ec2d227baa20388ea5a257a0cf8bc4ed052ac",
+  "slug": "nba-nyk-bos-2026-10-23-exact-margin-away-1-5",
+  "question": "Exact Margin: Knicks by 1-5",
+  "eventSlug": "nba-nyk-bos-2026-10-23-exact-margin",
+  "eventTitle": "Knicks vs. Celtics - Exact Margin",
+  "eventId": "1237620",
+  "clobTokenIds": [
+    "50159207475917850331582632587648051440336555000149687010606100057917976051984",
+    "55755200210912794829204359327101984103011974252339043631254944827851881504302"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-23T23:00:00Z",
+  "negRisk": true,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-22T23:00:31Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T23:47:15Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

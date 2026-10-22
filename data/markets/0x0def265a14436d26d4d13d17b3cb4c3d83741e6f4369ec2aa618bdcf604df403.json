@@ -1,0 +1,54 @@
+{
+  "conditionId": "0x0def265a14436d26d4d13d17b3cb4c3d83741e6f4369ec2aa618bdcf604df403",
+  "slug": "nba-ind-bkn-2026-10-25-exact-margin-away-6-10",
+  "question": "Exact Margin: Pacers by 6-10",
+  "eventSlug": "nba-ind-bkn-2026-10-25-exact-margin",
+  "eventTitle": "Pacers vs. Nets - Exact Margin",
+  "eventId": "1237657",
+  "clobTokenIds": [
+    "76804223834582352595709026945130306225595259439800408006921984322529766412598",
+    "13596128144418829203438518889924790691607113465129049807958683420366067774515"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-25T22:00:00Z",
+  "negRisk": true,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-22T23:00:30Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T23:48:21Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

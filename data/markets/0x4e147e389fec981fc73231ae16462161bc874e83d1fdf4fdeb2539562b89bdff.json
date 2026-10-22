@@ -1,0 +1,54 @@
+{
+  "conditionId": "0x4e147e389fec981fc73231ae16462161bc874e83d1fdf4fdeb2539562b89bdff",
+  "slug": "nba-det-phi-2026-10-25-exact-margin-home-21-plus",
+  "question": "Exact Margin: 76ers by 21+",
+  "eventSlug": "nba-det-phi-2026-10-25-exact-margin",
+  "eventTitle": "Pistons vs. 76ers - Exact Margin",
+  "eventId": "1237661",
+  "clobTokenIds": [
+    "115431745484252546455763356354018850545787799387856611280778791545499327460940",
+    "101264499396542178681215398569616449634480249942935577386896570816177543562699"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-25T23:30:00Z",
+  "negRisk": true,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-22T23:00:38Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T23:48:26Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

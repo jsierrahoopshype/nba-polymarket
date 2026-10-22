@@ -1,0 +1,54 @@
+{
+  "conditionId": "0xfc944d81dc387cd51e4bda60f9bf93eb2e0fe76a30e81e78ca02d1ad35554f25",
+  "slug": "nba-por-lal-2026-10-27-exact-margin-home-11-15",
+  "question": "Exact Margin: Lakers by 11-15",
+  "eventSlug": "nba-por-lal-2026-10-27-exact-margin",
+  "eventTitle": "Trail Blazers vs. Lakers - Exact Margin",
+  "eventId": "1237677",
+  "clobTokenIds": [
+    "36531578594021581056725551144976357778279297418808166629371857086897681398483",
+    "36063206104544207053636522250257566145456659193419073778517645962785178072350"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-28T03:00:00Z",
+  "negRisk": true,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-22T23:00:33Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T23:48:22Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
