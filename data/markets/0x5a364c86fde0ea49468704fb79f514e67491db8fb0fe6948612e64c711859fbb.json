@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x5a364c86fde0ea49468704fb79f514e67491db8fb0fe6948612e64c711859fbb",
+  "slug": "nba-min-orl-2026-10-23-points-jaden-mcdaniels-15pt5",
+  "question": "Jaden McDaniels: Points O/U 15.5",
+  "eventSlug": "nba-min-orl-2026-10-23",
+  "eventTitle": "Timberwolves vs. Magic",
+  "eventId": "1202603",
+  "clobTokenIds": [
+    "12407110970845483883221970679069945977779844560558775904841681251154780770176",
+    "71375879667099147135105755729920619748364314710809545300805410303976900676066"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-23T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-22T16:00:25Z","impliedProbability":0.315,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T17:31:54Z","impliedProbability":0.315,"volume24hr":0.0,"volume":null,"liquidity":79.1895,"spread":0.43,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
