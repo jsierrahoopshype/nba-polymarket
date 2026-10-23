@@ -1,0 +1,62 @@
+{
+  "conditionId": "0xf31619316805f385081f25c47f8d9f7a4fd0d84055844c6ac7af287c9e96e794",
+  "slug": "nba-min-orl-2026-10-23-2q-spread-home-4pt5",
+  "question": "2Q Spread: Magic (-4.5)",
+  "eventSlug": "nba-min-orl-2026-10-23",
+  "eventTitle": "Timberwolves vs. Magic",
+  "eventId": "1202603",
+  "clobTokenIds": [
+    "74580917765818706921480194985615436295703476632059380866146453443124144829977",
+    "45367901627906235058323658149595683306670208810867355541564308260906094405663"
+  ],
+  "outcomes": [
+    "Magic",
+    "Timberwolves"
+  ],
+  "endDate": "2026-10-23T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-23T23:31:58Z","impliedProbability":0.305,"volume24hr":0.0,"volume":null,"liquidity":23.364,"spread":0.13,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

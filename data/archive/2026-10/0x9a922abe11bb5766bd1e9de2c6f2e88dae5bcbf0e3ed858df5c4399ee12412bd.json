@@ -1,0 +1,69 @@
+{
+  "conditionId": "0x9a922abe11bb5766bd1e9de2c6f2e88dae5bcbf0e3ed858df5c4399ee12412bd",
+  "slug": "nba-chi-mil-2026-10-23-points-tyler-herro-24pt5",
+  "question": "Tyler Herro: Points O/U 24.5",
+  "eventSlug": "nba-chi-mil-2026-10-23",
+  "eventTitle": "Bulls vs. Bucks",
+  "eventId": "1202606",
+  "clobTokenIds": [
+    "44012334836609154172618247156107178129380404353257270855003039409161086857497",
+    "35083903876975920934112916718804165037323810200451549634941338856471347195450"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-23T20:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-23T23:31:58Z",
+  "history": [
+{"timestamp":"2026-10-22T23:00:36Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T23:44:36Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T02:01:44Z","impliedProbability":0.255,"volume24hr":0.0,"volume":null,"liquidity":40.4794,"spread":0.45,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T07:26:36Z","impliedProbability":0.21,"volume24hr":0.0,"volume":null,"liquidity":1768.1897,"spread":0.36,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T12:48:44Z","impliedProbability":0.22,"volume24hr":0.0,"volume":null,"liquidity":973.7198,"spread":0.38,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T17:33:15Z","impliedProbability":0.415,"volume24hr":0.0,"volume":null,"liquidity":1740.4344,"spread":0.03,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T20:38:31Z","impliedProbability":0.505,"volume24hr":0.0,"volume":null,"liquidity":79.9198,"spread":0.15,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T23:31:58Z","impliedProbability":1.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":0.7445,"oneWeekPriceChange":null}
+  ]
+}

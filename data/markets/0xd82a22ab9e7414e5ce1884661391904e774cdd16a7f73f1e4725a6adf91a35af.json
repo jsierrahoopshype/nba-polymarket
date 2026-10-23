@@ -1,0 +1,62 @@
+{
+  "conditionId": "0xd82a22ab9e7414e5ce1884661391904e774cdd16a7f73f1e4725a6adf91a35af",
+  "slug": "nba-dal-ind-2026-10-23-3q-spread-home-3pt5",
+  "question": "3Q Spread: Pacers (-3.5)",
+  "eventSlug": "nba-dal-ind-2026-10-23",
+  "eventTitle": "Mavericks vs. Pacers",
+  "eventId": "1202602",
+  "clobTokenIds": [
+    "20722297144585863053754738214287755059969239436362673276320484436360019451265",
+    "22959874481227829855546579689878611390178879364497225894438346827329183725541"
+  ],
+  "outcomes": [
+    "Pacers",
+    "Mavericks"
+  ],
+  "endDate": "2026-10-23T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-23T23:31:58Z","impliedProbability":0.26,"volume24hr":29.853659,"volume":29.853659,"liquidity":9.8671,"spread":0.52,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

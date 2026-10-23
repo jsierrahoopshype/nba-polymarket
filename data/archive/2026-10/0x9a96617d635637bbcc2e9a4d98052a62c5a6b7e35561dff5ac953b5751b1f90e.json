@@ -1,0 +1,69 @@
+{
+  "conditionId": "0x9a96617d635637bbcc2e9a4d98052a62c5a6b7e35561dff5ac953b5751b1f90e",
+  "slug": "nba-chi-mil-2026-10-23-rebounds-norman-powell-2pt5",
+  "question": "Norman Powell: Rebounds O/U 2.5",
+  "eventSlug": "nba-chi-mil-2026-10-23",
+  "eventTitle": "Bulls vs. Bucks",
+  "eventId": "1202606",
+  "clobTokenIds": [
+    "102026729708184275911582022289430589787841141364907180697026898714226648509224",
+    "102411737332037595494882182960984683983672038457742476116200035776995106465175"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-23T20:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-23T23:31:58Z",
+  "history": [
+{"timestamp":"2026-10-22T23:00:37Z","impliedProbability":0.285,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T23:45:19Z","impliedProbability":0.275,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T02:01:44Z","impliedProbability":0.475,"volume24hr":0.0,"volume":null,"liquidity":299.7297,"spread":0.09,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T07:26:36Z","impliedProbability":0.51,"volume24hr":0.0,"volume":null,"liquidity":1054.7767,"spread":0.1,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T12:48:44Z","impliedProbability":0.51,"volume24hr":0.0,"volume":null,"liquidity":1065.1051,"spread":0.1,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T17:33:15Z","impliedProbability":0.565,"volume24hr":27.631579,"volume":27.631579,"liquidity":1510.1431,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T20:38:31Z","impliedProbability":0.5,"volume24hr":80.263159,"volume":80.263159,"liquidity":null,"spread":1.0,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T23:31:58Z","impliedProbability":1.0,"volume24hr":80.263159,"volume":80.263159,"liquidity":0.0,"spread":0.199,"oneDayPriceChange":0.6155,"oneWeekPriceChange":null}
+  ]
+}

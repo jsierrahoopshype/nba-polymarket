@@ -1,0 +1,68 @@
+{
+  "conditionId": "0x8218753649bae969f33b1aff8f14f85d4bb4008ff04e95e5768857f21906b6f3",
+  "slug": "nba-chi-mil-2026-10-23-assists-josh-giddey-9pt5",
+  "question": "Josh Giddey: Assists O/U 9.5",
+  "eventSlug": "nba-chi-mil-2026-10-23",
+  "eventTitle": "Bulls vs. Bucks",
+  "eventId": "1202606",
+  "clobTokenIds": [
+    "100217904969111198838392406635646512251900645054797174527734545552498320718405",
+    "11401608242523411446596331682583384187441750694645261284958024079382626962801"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-23T20:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-23T23:31:58Z",
+  "history": [
+{"timestamp":"2026-10-22T23:45:18Z","impliedProbability":0.385,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T02:01:44Z","impliedProbability":0.26,"volume24hr":0.0,"volume":null,"liquidity":535.3295,"spread":0.46,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T07:26:36Z","impliedProbability":0.255,"volume24hr":0.0,"volume":null,"liquidity":3669.1436,"spread":0.41,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T12:48:44Z","impliedProbability":0.265,"volume24hr":0.0,"volume":null,"liquidity":4019.7639,"spread":0.41,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T17:33:15Z","impliedProbability":0.24,"volume24hr":7.446809,"volume":7.446809,"liquidity":14655.0025,"spread":0.46,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T20:38:31Z","impliedProbability":0.33,"volume24hr":7.446809,"volume":7.446809,"liquidity":72.0496,"spread":0.14,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T23:31:58Z","impliedProbability":0.0,"volume24hr":33.787719,"volume":33.787719,"liquidity":0.0,"spread":0.048,"oneDayPriceChange":-0.381,"oneWeekPriceChange":null}
+  ]
+}

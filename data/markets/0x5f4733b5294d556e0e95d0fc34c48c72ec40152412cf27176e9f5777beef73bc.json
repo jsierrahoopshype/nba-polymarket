@@ -1,0 +1,62 @@
+{
+  "conditionId": "0x5f4733b5294d556e0e95d0fc34c48c72ec40152412cf27176e9f5777beef73bc",
+  "slug": "nba-nop-den-2026-10-24-spread-away-5pt5",
+  "question": "Spread: Pelicans (-5.5)",
+  "eventSlug": "nba-nop-den-2026-10-24",
+  "eventTitle": "Pelicans vs. Nuggets",
+  "eventId": "1210114",
+  "clobTokenIds": [
+    "25775061823303927296408285579654680351530364719912924115236522448098805828098",
+    "77920729329949282219996578701215516446602425195888399013922641466624443068982"
+  ],
+  "outcomes": [
+    "Pelicans",
+    "Nuggets"
+  ],
+  "endDate": "2026-10-25T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-23T23:31:58Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":3.9197,"spread":0.94,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
