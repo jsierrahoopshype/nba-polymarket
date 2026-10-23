@@ -1,0 +1,53 @@
+{
+  "conditionId": "0x164b5a97704ee68098b4efa89bc7a4ff8b74acaab18d39c35d78b89db5d0843f",
+  "slug": "nba-sac-nop-2026-10-29-exact-margin-other",
+  "question": "Exact Margin: Other",
+  "eventSlug": "nba-sac-nop-2026-10-29-exact-margin",
+  "eventTitle": "Kings vs. Pelicans - Exact Margin",
+  "eventId": "1238240",
+  "clobTokenIds": [
+    "52802597730529582478357811310626440676611902042019468205393192710408604977658",
+    "27601121138171421928919450086630947711478192272601890043463652993186092313670"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-30T00:00:00Z",
+  "negRisk": true,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-23T02:02:24Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
