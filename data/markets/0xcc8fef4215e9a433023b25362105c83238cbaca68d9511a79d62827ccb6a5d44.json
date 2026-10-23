@@ -1,0 +1,64 @@
+{
+  "conditionId": "0xcc8fef4215e9a433023b25362105c83238cbaca68d9511a79d62827ccb6a5d44",
+  "slug": "nba-nyk-bos-2026-10-23-points-neemias-queta-14pt5",
+  "question": "Neemias Queta: Points O/U 14.5",
+  "eventSlug": "nba-nyk-bos-2026-10-23",
+  "eventTitle": "Knicks vs. Celtics",
+  "eventId": "1202600",
+  "clobTokenIds": [
+    "37957632656167781382309655965908777293603570994690407824044824283253885170396",
+    "103702206948899763158946010218530801702670379746701188862998898375433322450715"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-23T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-23T06:00:36Z","impliedProbability":0.205,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T07:00:24Z","impliedProbability":0.425,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T07:26:36Z","impliedProbability":0.085,"volume24hr":0.0,"volume":null,"liquidity":310.5996,"spread":0.11,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
