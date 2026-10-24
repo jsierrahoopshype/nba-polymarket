@@ -1,0 +1,64 @@
+{
+  "conditionId": "0x751d806a999c1715bcf1ee12a3ad46f48da0b8f82c8885c9c239f94b98050916",
+  "slug": "nba-lac-lal-2026-10-23-threes-sandro-mamukelashvili-3pt5",
+  "question": "Sandro Mamukelashvili: 3-Pointers Made O/U 3.5",
+  "eventSlug": "nba-lac-lal-2026-10-23",
+  "eventTitle": "Clippers vs. Lakers",
+  "eventId": "1203775",
+  "clobTokenIds": [
+    "81547711992902557710187010342154834444231427902074825074343491626149302688682",
+    "33143262757587284596663483845172021021283449529875621650673018185109542038788"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-24T02:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-24T07:10:39Z",
+  "history": [
+{"timestamp":"2026-10-24T01:57:47Z","impliedProbability":0.48,"volume24hr":50.0,"volume":50.0,"liquidity":6.57,"spread":0.94,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T02:00:38Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T07:10:39Z","impliedProbability":0.0,"volume24hr":50.0,"volume":50.0,"liquidity":0.0,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "conditionId": "0x8ef409d2f0a930105a086140a25bba759ddb03f825bcc97e17e989d4ef9e5eb6",
+  "slug": "nba-tor-was-2026-10-23-points-trae-young-19pt5",
+  "question": "Trae Young: Points O/U 19.5",
+  "eventSlug": "nba-tor-was-2026-10-23",
+  "eventTitle": "Raptors vs. Wizards",
+  "eventId": "1202604",
+  "clobTokenIds": [
+    "102024866595911385189950122805113452532948652569098083521828191994203451070855",
+    "4264313054243981199531313381035680202873711837456794092162485923565200437709"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-23T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-24T07:10:39Z",
+  "history": [
+{"timestamp":"2026-10-23T06:00:33Z","impliedProbability":0.265,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T07:00:23Z","impliedProbability":0.275,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T07:27:26Z","impliedProbability":0.265,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T12:48:44Z","impliedProbability":0.325,"volume24hr":0.0,"volume":null,"liquidity":1623.0397,"spread":0.35,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T17:33:15Z","impliedProbability":0.505,"volume24hr":15.0,"volume":15.0,"liquidity":2218.0442,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T20:38:31Z","impliedProbability":0.505,"volume24hr":17.0,"volume":17.0,"liquidity":1965.2939,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T23:31:58Z","impliedProbability":0.505,"volume24hr":110.62088,"volume":110.62088,"liquidity":0.05,"spread":0.99,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T01:57:47Z","impliedProbability":0.9855,"volume24hr":126.62088,"volume":126.62088,"liquidity":2311.26156,"spread":0.029,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T07:10:39Z","impliedProbability":1.0,"volume24hr":126.62088,"volume":126.62088,"liquidity":0.0,"spread":0.029,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

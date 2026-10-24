@@ -1,0 +1,65 @@
+{
+  "conditionId": "0xb6e4abafa3570d62a4a0a9e432a6ec46053c28036755d13788d4b1f342a64047",
+  "slug": "nba-tor-was-2026-10-23-total-217pt5",
+  "question": "Raptors vs. Wizards: O/U 217.5",
+  "eventSlug": "nba-tor-was-2026-10-23",
+  "eventTitle": "Raptors vs. Wizards",
+  "eventId": "1202604",
+  "clobTokenIds": [
+    "83234734984148110448393264709188117422426351905280355818663367531425831644178",
+    "78586292206742356153684271458586478059269358846136810433275957488247775911909"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-10-23T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-24T07:10:39Z",
+  "history": [
+{"timestamp":"2026-10-23T23:29:33Z","impliedProbability":0.74,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T23:31:58Z","impliedProbability":0.785,"volume24hr":0.0,"volume":null,"liquidity":1737.5209,"spread":0.09,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T01:57:47Z","impliedProbability":0.004,"volume24hr":771.153501,"volume":709.153501,"liquidity":4245.73162,"spread":0.008,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T07:10:39Z","impliedProbability":0.0,"volume24hr":813.2535009999999,"volume":813.253501,"liquidity":null,"spread":0.008,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

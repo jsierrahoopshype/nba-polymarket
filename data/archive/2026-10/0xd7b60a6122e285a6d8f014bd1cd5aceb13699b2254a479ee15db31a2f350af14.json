@@ -1,0 +1,70 @@
+{
+  "conditionId": "0xd7b60a6122e285a6d8f014bd1cd5aceb13699b2254a479ee15db31a2f350af14",
+  "slug": "nba-hou-sas-2026-10-23-points-deaaron-fox-9pt5",
+  "question": "De'Aaron Fox: Points O/U 9.5",
+  "eventSlug": "nba-hou-sas-2026-10-23",
+  "eventTitle": "Rockets vs. Spurs",
+  "eventId": "1203772",
+  "clobTokenIds": [
+    "76476121027559112107872962132366048761274824634091278206865550164565664375220",
+    "493835359029439907596547040629677982803177901063005277513790876091777206377"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-24T01:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-24T07:10:39Z",
+  "history": [
+{"timestamp":"2026-10-22T23:45:18Z","impliedProbability":0.315,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T02:01:44Z","impliedProbability":0.285,"volume24hr":0.0,"volume":null,"liquidity":118.8892,"spread":0.51,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T07:26:36Z","impliedProbability":0.29,"volume24hr":27.777778,"volume":27.777778,"liquidity":253.5508,"spread":0.5,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T12:48:44Z","impliedProbability":0.28,"volume24hr":255.69643800000003,"volume":255.69643800000003,"liquidity":1498.4316,"spread":0.48,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T17:33:15Z","impliedProbability":0.285,"volume24hr":3345.682364,"volume":3345.6823640000002,"liquidity":190.4016,"spread":0.43,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T20:38:31Z","impliedProbability":0.485,"volume24hr":3548.358712,"volume":3548.3587119999997,"liquidity":145.2891,"spread":0.27,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T23:31:58Z","impliedProbability":0.605,"volume24hr":3604.5490829999994,"volume":3604.549083,"liquidity":284.2346,"spread":0.03,"oneDayPriceChange":0.32,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T01:57:47Z","impliedProbability":0.5,"volume24hr":3604.5490830000003,"volume":3604.5490829999994,"liquidity":1.1198,"spread":0.98,"oneDayPriceChange":0.21,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T07:10:39Z","impliedProbability":1.0,"volume24hr":3576.771305,"volume":3604.549083,"liquidity":null,"spread":0.006,"oneDayPriceChange":0.707,"oneWeekPriceChange":null}
+  ]
+}

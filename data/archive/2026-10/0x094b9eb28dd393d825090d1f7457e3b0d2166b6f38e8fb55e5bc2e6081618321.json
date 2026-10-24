@@ -1,0 +1,74 @@
+{
+  "conditionId": "0x094b9eb28dd393d825090d1f7457e3b0d2166b6f38e8fb55e5bc2e6081618321",
+  "slug": "nba-tor-was-2026-10-23-total-246pt5",
+  "question": "Raptors vs. Wizards: O/U 246.5",
+  "eventSlug": "nba-tor-was-2026-10-23",
+  "eventTitle": "Raptors vs. Wizards",
+  "eventId": "1202604",
+  "clobTokenIds": [
+    "65566002399966688074760306117406896948892270011485442380218374094940447694929",
+    "81749830079085268366893522506996436116036315162846790047527103926599849158848"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-10-23T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-24T07:10:39Z",
+  "history": [
+{"timestamp":"2026-10-22T06:36:22Z","impliedProbability":0.365,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T12:25:35Z","impliedProbability":0.28,"volume24hr":0.0,"volume":null,"liquidity":5493.4136,"spread":0.06,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T17:31:54Z","impliedProbability":0.285,"volume24hr":0.0,"volume":null,"liquidity":5755.1078,"spread":0.05,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T20:47:53Z","impliedProbability":0.285,"volume24hr":0.0,"volume":null,"liquidity":26757.1264,"spread":0.05,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T23:41:24Z","impliedProbability":0.28,"volume24hr":0.0,"volume":null,"liquidity":26221.4366,"spread":0.04,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T02:01:44Z","impliedProbability":0.285,"volume24hr":0.0,"volume":null,"liquidity":26228.6449,"spread":0.03,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T07:26:36Z","impliedProbability":0.295,"volume24hr":0.0,"volume":null,"liquidity":30380.7262,"spread":0.03,"oneDayPriceChange":-0.02,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T12:48:44Z","impliedProbability":0.3,"volume24hr":0.0,"volume":null,"liquidity":8923.8489,"spread":0.04,"oneDayPriceChange":0.02,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T17:33:15Z","impliedProbability":0.305,"volume24hr":0.0,"volume":null,"liquidity":11321.3331,"spread":0.03,"oneDayPriceChange":0.02,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T20:38:31Z","impliedProbability":0.305,"volume24hr":0.0,"volume":null,"liquidity":31970.449,"spread":0.03,"oneDayPriceChange":0.02,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T23:31:58Z","impliedProbability":0.16,"volume24hr":37.373332,"volume":37.373332,"liquidity":4703.8985,"spread":0.08,"oneDayPriceChange":-0.125,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T01:57:47Z","impliedProbability":0.0005,"volume24hr":113.333132,"volume":113.333132,"liquidity":12476.48009,"spread":0.001,"oneDayPriceChange":-0.2845,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T07:10:39Z","impliedProbability":0.0,"volume24hr":113.333132,"volume":113.333132,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":-0.2845,"oneWeekPriceChange":null}
+  ]
+}

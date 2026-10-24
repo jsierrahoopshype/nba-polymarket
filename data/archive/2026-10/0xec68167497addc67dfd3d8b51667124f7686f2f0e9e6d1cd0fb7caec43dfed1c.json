@@ -1,0 +1,70 @@
+{
+  "conditionId": "0xec68167497addc67dfd3d8b51667124f7686f2f0e9e6d1cd0fb7caec43dfed1c",
+  "slug": "nba-hou-sas-2026-10-23-rebounds-devin-vassell-3pt5",
+  "question": "Devin Vassell: Rebounds O/U 3.5",
+  "eventSlug": "nba-hou-sas-2026-10-23",
+  "eventTitle": "Rockets vs. Spurs",
+  "eventId": "1203772",
+  "clobTokenIds": [
+    "18104852137630345868277215211018923301535731398949438152658856391606705941629",
+    "54920953926408292799178912560578155729486452788616425089673969621911354620"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-24T01:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-24T07:10:39Z",
+  "history": [
+{"timestamp":"2026-10-22T23:45:15Z","impliedProbability":0.29,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T02:01:44Z","impliedProbability":0.48,"volume24hr":0.0,"volume":null,"liquidity":364.589,"spread":0.1,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T07:26:36Z","impliedProbability":0.47,"volume24hr":0.0,"volume":null,"liquidity":1504.4693,"spread":0.08,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T12:48:44Z","impliedProbability":0.475,"volume24hr":0.0,"volume":null,"liquidity":1446.3691,"spread":0.07,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T17:33:15Z","impliedProbability":0.48,"volume24hr":0.0,"volume":null,"liquidity":1075.9697,"spread":0.06,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T20:38:31Z","impliedProbability":0.49,"volume24hr":0.0,"volume":null,"liquidity":1119.1497,"spread":0.06,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T23:31:58Z","impliedProbability":0.35,"volume24hr":0.0,"volume":null,"liquidity":1811.4996,"spread":0.3,"oneDayPriceChange":-0.135,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T01:57:47Z","impliedProbability":0.495,"volume24hr":101.78999999999999,"volume":101.78999999999999,"liquidity":1.2696,"spread":0.97,"oneDayPriceChange":0.015,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T07:10:39Z","impliedProbability":1.0,"volume24hr":101.78999999999999,"volume":101.78999999999999,"liquidity":0.0,"spread":0.01,"oneDayPriceChange":0.53,"oneWeekPriceChange":null}
+  ]
+}

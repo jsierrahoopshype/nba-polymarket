@@ -1,0 +1,70 @@
+{
+  "conditionId": "0xd187915f2d2b8882ce2440371cd840d5fe37abc850496eeeae8ed4219247af04",
+  "slug": "nba-nyk-bos-2026-10-23-points-mikal-bridges-9pt5",
+  "question": "Mikal Bridges: Points O/U 9.5",
+  "eventSlug": "nba-nyk-bos-2026-10-23",
+  "eventTitle": "Knicks vs. Celtics",
+  "eventId": "1202600",
+  "clobTokenIds": [
+    "101975713946220797884456548297749593498446854207079493670434304479144093993498",
+    "88961246514414729880482636420428417731164395862073916138362556910639911228388"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-23T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-24T07:10:39Z",
+  "history": [
+{"timestamp":"2026-10-22T23:43:38Z","impliedProbability":0.36,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T02:01:44Z","impliedProbability":0.365,"volume24hr":0.0,"volume":null,"liquidity":14.9893,"spread":0.65,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T07:26:36Z","impliedProbability":0.36,"volume24hr":0.0,"volume":null,"liquidity":343.7498,"spread":0.64,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T12:48:44Z","impliedProbability":0.355,"volume24hr":0.0,"volume":null,"liquidity":312.1598,"spread":0.65,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T17:33:15Z","impliedProbability":0.56,"volume24hr":7.462687,"volume":7.462687,"liquidity":383.1117,"spread":0.2,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T20:38:31Z","impliedProbability":0.42,"volume24hr":7.462687,"volume":7.462687,"liquidity":906.1519,"spread":0.48,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T23:31:58Z","impliedProbability":0.5,"volume24hr":7.462687,"volume":7.462687,"liquidity":null,"spread":1.0,"oneDayPriceChange":0.135,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T01:57:47Z","impliedProbability":0.0005,"volume24hr":7.462687,"volume":7.462687,"liquidity":2697.48985,"spread":0.001,"oneDayPriceChange":-0.3645,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T07:10:39Z","impliedProbability":0.0,"volume24hr":7.462687,"volume":7.462687,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":-0.3645,"oneWeekPriceChange":null}
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "conditionId": "0xaf5087fd70bf9172299d892588c93af088ef648da9a32ab1eb7da9056dafa520",
+  "slug": "nba-det-mia-2026-10-23-spread-away-11pt5",
+  "question": "Spread: Pistons (-11.5)",
+  "eventSlug": "nba-det-mia-2026-10-23",
+  "eventTitle": "Pistons vs. Heat",
+  "eventId": "1202605",
+  "clobTokenIds": [
+    "76597513861588217868586175561417336732223752521994572181416992046876754547530",
+    "64080574370805273526355890865094619093324483781016998435616270424665164994172"
+  ],
+  "outcomes": [
+    "Pistons",
+    "Heat"
+  ],
+  "endDate": "2026-10-24T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-24T07:10:39Z",
+  "history": [
+{"timestamp":"2026-10-22T05:00:25Z","impliedProbability":0.485,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T06:36:27Z","impliedProbability":0.205,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T12:25:35Z","impliedProbability":0.16,"volume24hr":0.0,"volume":null,"liquidity":5679.3045,"spread":0.04,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T17:31:54Z","impliedProbability":0.16,"volume24hr":0.0,"volume":null,"liquidity":7768.1763,"spread":0.04,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T20:47:53Z","impliedProbability":0.18,"volume24hr":0.0,"volume":null,"liquidity":19775.8619,"spread":0.04,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T23:41:24Z","impliedProbability":0.21,"volume24hr":0.0,"volume":null,"liquidity":19944.338,"spread":0.02,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T02:01:44Z","impliedProbability":0.21,"volume24hr":0.0,"volume":null,"liquidity":21216.342,"spread":0.04,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T07:26:36Z","impliedProbability":0.2,"volume24hr":0.0,"volume":null,"liquidity":22146.9142,"spread":0.02,"oneDayPriceChange":-0.01,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T12:48:44Z","impliedProbability":0.205,"volume24hr":0.0,"volume":null,"liquidity":16480.8713,"spread":0.03,"oneDayPriceChange":0.04,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T17:33:15Z","impliedProbability":0.215,"volume24hr":31.25,"volume":31.25,"liquidity":13605.6036,"spread":0.03,"oneDayPriceChange":0.055,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T20:38:31Z","impliedProbability":0.22,"volume24hr":31.25,"volume":31.25,"liquidity":40363.4949,"spread":0.02,"oneDayPriceChange":0.04,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T23:31:58Z","impliedProbability":0.225,"volume24hr":31.25,"volume":31.25,"liquidity":42039.453,"spread":0.01,"oneDayPriceChange":0.015,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T01:57:47Z","impliedProbability":0.64,"volume24hr":21077.534368,"volume":20612.756265000004,"liquidity":35298.5437,"spread":0.04,"oneDayPriceChange":0.43,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T07:10:39Z","impliedProbability":1.0,"volume24hr":25250.164876000003,"volume":25250.164876000003,"liquidity":null,"spread":0.001,"oneDayPriceChange":0.7995,"oneWeekPriceChange":null}
+  ]
+}

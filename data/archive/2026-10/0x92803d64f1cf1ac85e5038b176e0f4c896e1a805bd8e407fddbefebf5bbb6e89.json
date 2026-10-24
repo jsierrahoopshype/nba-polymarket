@@ -1,0 +1,74 @@
+{
+  "conditionId": "0x92803d64f1cf1ac85e5038b176e0f4c896e1a805bd8e407fddbefebf5bbb6e89",
+  "slug": "nba-hou-sas-2026-10-23-assists-kevin-durant-3pt5",
+  "question": "Kevin Durant: Assists O/U 3.5",
+  "eventSlug": "nba-hou-sas-2026-10-23",
+  "eventTitle": "Rockets vs. Spurs",
+  "eventId": "1203772",
+  "clobTokenIds": [
+    "68112328573883734098810494632768365570264906115182987862359467407408953894708",
+    "109090275492675008499099237163428644284886018990382120731686113113866922459203"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-24T01:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-24T07:10:39Z",
+  "history": [
+{"timestamp":"2026-10-22T06:35:53Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":3.9698,"spread":0.94,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T12:25:35Z","impliedProbability":0.51,"volume24hr":0.0,"volume":null,"liquidity":121.0995,"spread":0.1,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T17:31:54Z","impliedProbability":0.35,"volume24hr":0.0,"volume":null,"liquidity":140.5988,"spread":0.46,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T20:47:53Z","impliedProbability":0.345,"volume24hr":0.0,"volume":null,"liquidity":47.1087,"spread":0.49,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T23:41:24Z","impliedProbability":0.35,"volume24hr":0.0,"volume":null,"liquidity":10693.283,"spread":0.5,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T02:01:44Z","impliedProbability":0.335,"volume24hr":0.0,"volume":null,"liquidity":11596.3725,"spread":0.47,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T07:26:36Z","impliedProbability":0.525,"volume24hr":0.0,"volume":null,"liquidity":17218.3767,"spread":0.07,"oneDayPriceChange":0.025,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T12:48:44Z","impliedProbability":0.505,"volume24hr":0.0,"volume":null,"liquidity":17498.2281,"spread":0.09,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T17:33:15Z","impliedProbability":0.5,"volume24hr":36.5,"volume":36.5,"liquidity":6582.4799,"spread":0.04,"oneDayPriceChange":0.15,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T20:38:31Z","impliedProbability":0.52,"volume24hr":141.93635600000002,"volume":141.936356,"liquidity":26118.6625,"spread":0.04,"oneDayPriceChange":0.17,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T23:31:58Z","impliedProbability":0.515,"volume24hr":192.106167,"volume":192.106167,"liquidity":21185.6211,"spread":0.03,"oneDayPriceChange":0.165,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T01:57:47Z","impliedProbability":0.57,"volume24hr":335.156167,"volume":335.156167,"liquidity":13.7898,"spread":0.84,"oneDayPriceChange":0.23,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T07:10:39Z","impliedProbability":1.0,"volume24hr":335.156167,"volume":335.156167,"liquidity":0.0,"spread":0.03,"oneDayPriceChange":0.47,"oneWeekPriceChange":null}
+  ]
+}
