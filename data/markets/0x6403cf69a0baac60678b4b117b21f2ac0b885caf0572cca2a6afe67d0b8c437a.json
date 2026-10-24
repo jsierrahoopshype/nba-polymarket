@@ -1,0 +1,62 @@
+{
+  "conditionId": "0x6403cf69a0baac60678b4b117b21f2ac0b885caf0572cca2a6afe67d0b8c437a",
+  "slug": "nba-sas-dal-2026-10-24-assists-naji-marshall-9pt5",
+  "question": "Naji Marshall: Assists O/U 9.5",
+  "eventSlug": "nba-sas-dal-2026-10-24",
+  "eventTitle": "Spurs vs. Mavericks",
+  "eventId": "1208444",
+  "clobTokenIds": [
+    "15981175322171986905968462724674150988018795144719409132367132448827845457866",
+    "26291442311322528931742430784257601711892667712162938866477258638497200603077"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-25T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-24T12:04:42Z","impliedProbability":0.49,"volume24hr":0.0,"volume":null,"liquidity":6.5198,"spread":0.92,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

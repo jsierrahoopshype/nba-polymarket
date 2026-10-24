@@ -1,0 +1,65 @@
+{
+  "conditionId": "0x7851d57cfe75aeb5a27ca4812f51b6189064de09648cdfc7fdd1a46385f56137",
+  "slug": "nba-sas-dal-2026-10-24-points-victor-wembanyama-44pt5",
+  "question": "Victor Wembanyama: Points O/U 44.5",
+  "eventSlug": "nba-sas-dal-2026-10-24",
+  "eventTitle": "Spurs vs. Mavericks",
+  "eventId": "1208444",
+  "clobTokenIds": [
+    "33280328718634648642478731575235916464650431280931325352774247205089914106354",
+    "41288509048817985805371278520662410979179441706288265882523081998030145322630"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-25T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-24T09:00:25Z","impliedProbability":0.425,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T10:00:21Z","impliedProbability":0.37,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T11:00:32Z","impliedProbability":0.295,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T12:04:42Z","impliedProbability":0.25,"volume24hr":0.0,"volume":null,"liquidity":232.2496,"spread":0.44,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

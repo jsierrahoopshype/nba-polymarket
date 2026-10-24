@@ -1,0 +1,65 @@
+{
+  "conditionId": "0x13b5e62f9036e47a7ea8a18f0f39c13639d06c8523fd90c1ab68ecc0d34f8f09",
+  "slug": "nba-nop-den-2026-10-24-steals-demar-derozan-2pt5",
+  "question": "DeMar DeRozan: Steals O/U 2.5",
+  "eventSlug": "nba-nop-den-2026-10-24",
+  "eventTitle": "Pelicans vs. Nuggets",
+  "eventId": "1210114",
+  "clobTokenIds": [
+    "26227493811241407219874835744198870544341605916431110892398394199735705519774",
+    "15081263311826682587681812459278190032582884024243567225735753850272736966699"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-25T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-24T09:00:26Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T10:00:22Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T11:00:33Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T12:04:42Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":4.4197,"spread":0.94,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

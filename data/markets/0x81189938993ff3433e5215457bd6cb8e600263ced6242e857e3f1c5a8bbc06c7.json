@@ -1,0 +1,64 @@
+{
+  "conditionId": "0x81189938993ff3433e5215457bd6cb8e600263ced6242e857e3f1c5a8bbc06c7",
+  "slug": "nba-was-chi-2026-10-24-rebounds-jalen-smith-15pt5",
+  "question": "Jalen Smith: Rebounds O/U 15.5",
+  "eventSlug": "nba-was-chi-2026-10-24",
+  "eventTitle": "Wizards vs. Bulls",
+  "eventId": "1208443",
+  "clobTokenIds": [
+    "96227472433778051560921610365850754866412340543499476017334096112726089018199",
+    "32789550364119766233367849067426625806470031481648351553516845492507461445219"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-25T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-24T10:00:22Z","impliedProbability":0.475,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T11:00:33Z","impliedProbability":0.475,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T12:04:42Z","impliedProbability":0.435,"volume24hr":0.0,"volume":null,"liquidity":135.5197,"spread":0.81,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
