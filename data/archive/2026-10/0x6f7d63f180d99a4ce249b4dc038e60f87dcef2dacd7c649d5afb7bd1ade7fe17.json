@@ -1,0 +1,73 @@
+{
+  "conditionId": "0x6f7d63f180d99a4ce249b4dc038e60f87dcef2dacd7c649d5afb7bd1ade7fe17",
+  "slug": "nba-min-orl-2026-10-23-assists-franz-wagner-5pt5",
+  "question": "Franz Wagner: Assists O/U 5.5",
+  "eventSlug": "nba-min-orl-2026-10-23",
+  "eventTitle": "Timberwolves vs. Magic",
+  "eventId": "1202603",
+  "clobTokenIds": [
+    "76833287239002755129396019468140225481321199791718733677935526178775136311722",
+    "18725357063928635928250266147407982110994001205877839602822352776597939199449"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-23T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-24T01:57:47Z",
+  "history": [
+{"timestamp":"2026-10-22T15:00:49Z","impliedProbability":0.285,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T16:00:20Z","impliedProbability":0.285,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T17:31:54Z","impliedProbability":0.275,"volume24hr":0.0,"volume":null,"liquidity":171.1497,"spread":0.33,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T20:47:53Z","impliedProbability":0.28,"volume24hr":0.0,"volume":null,"liquidity":10788.4193,"spread":0.34,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T23:41:24Z","impliedProbability":0.29,"volume24hr":0.0,"volume":null,"liquidity":11378.4689,"spread":0.28,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T02:01:44Z","impliedProbability":0.28,"volume24hr":0.0,"volume":null,"liquidity":11563.6194,"spread":0.3,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T07:26:36Z","impliedProbability":0.285,"volume24hr":0.0,"volume":null,"liquidity":17911.9061,"spread":0.23,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T12:48:44Z","impliedProbability":0.24,"volume24hr":0.0,"volume":null,"liquidity":8084.3239,"spread":0.32,"oneDayPriceChange":-0.26,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T17:33:15Z","impliedProbability":0.29,"volume24hr":588.3413419999999,"volume":588.3413419999999,"liquidity":7944.8648,"spread":0.24,"oneDayPriceChange":0.015,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T20:38:31Z","impliedProbability":0.355,"volume24hr":646.8779279999999,"volume":646.8779279999999,"liquidity":17645.9569,"spread":0.11,"oneDayPriceChange":0.055,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T23:31:58Z","impliedProbability":0.26,"volume24hr":646.8779279999999,"volume":646.8779279999999,"liquidity":61.3193,"spread":0.16,"oneDayPriceChange":-0.02,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T01:57:47Z","impliedProbability":0.0,"volume24hr":646.8779279999999,"volume":646.8779279999999,"liquidity":0.0,"spread":0.01,"oneDayPriceChange":-0.285,"oneWeekPriceChange":null}
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "conditionId": "0x5568368ddb31311871704e5ecde3986f01013f2c3ab95c95e8e6cb53e3c79903",
+  "slug": "nba-atl-cha-2026-10-23-spread-away-4pt5",
+  "question": "Spread: Hawks (-4.5)",
+  "eventSlug": "nba-atl-cha-2026-10-23",
+  "eventTitle": "Hawks vs. Hornets",
+  "eventId": "1202601",
+  "clobTokenIds": [
+    "82450587505635182853798364928094840584143497122197963083324412187274537583291",
+    "14116828213626732048980762291377049968319831507089256040564075895385703784895"
+  ],
+  "outcomes": [
+    "Hawks",
+    "Hornets"
+  ],
+  "endDate": "2026-10-23T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-24T01:57:47Z",
+  "history": [
+{"timestamp":"2026-10-22T06:35:53Z","impliedProbability":0.385,"volume24hr":0.0,"volume":null,"liquidity":1909.0696,"spread":0.11,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T12:25:35Z","impliedProbability":0.46,"volume24hr":250.30731300000002,"volume":250.30731300000002,"liquidity":39278.3168,"spread":0.02,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T17:31:54Z","impliedProbability":0.44,"volume24hr":250.30731300000002,"volume":250.30731300000002,"liquidity":44249.4787,"spread":0.02,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T20:47:53Z","impliedProbability":0.425,"volume24hr":250.30731300000002,"volume":250.30731300000002,"liquidity":69762.93,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-22T23:41:24Z","impliedProbability":0.435,"volume24hr":291.557313,"volume":291.557313,"liquidity":67921.3986,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T02:01:44Z","impliedProbability":0.44,"volume24hr":291.557313,"volume":291.557313,"liquidity":68166.438,"spread":0.02,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T07:26:36Z","impliedProbability":0.45,"volume24hr":95.272223,"volume":345.579536,"liquidity":80872.5136,"spread":0.02,"oneDayPriceChange":-0.005,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T12:48:44Z","impliedProbability":0.445,"volume24hr":95.272223,"volume":345.579536,"liquidity":70286.6415,"spread":0.01,"oneDayPriceChange":-0.005,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T17:33:15Z","impliedProbability":0.435,"volume24hr":2667.4361559999993,"volume":2917.743468999999,"liquidity":136598.1324,"spread":0.01,"oneDayPriceChange":-0.005,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T20:38:31Z","impliedProbability":0.435,"volume24hr":2783.5461559999994,"volume":3033.8534689999997,"liquidity":472865.2144,"spread":0.01,"oneDayPriceChange":0.01,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-23T23:31:58Z","impliedProbability":0.575,"volume24hr":16466.670994,"volume":13833.693688999998,"liquidity":41316.0569,"spread":0.03,"oneDayPriceChange":0.14,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T01:57:47Z","impliedProbability":1.0,"volume24hr":19449.051218999997,"volume":19740.608532000002,"liquidity":null,"spread":0.001,"oneDayPriceChange":0.5595,"oneWeekPriceChange":null}
+  ]
+}

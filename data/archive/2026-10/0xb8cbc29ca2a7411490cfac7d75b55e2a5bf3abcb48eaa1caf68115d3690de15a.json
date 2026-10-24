@@ -1,0 +1,63 @@
+{
+  "conditionId": "0xb8cbc29ca2a7411490cfac7d75b55e2a5bf3abcb48eaa1caf68115d3690de15a",
+  "slug": "nba-det-mia-2026-10-23-1h-spread-away-16pt5",
+  "question": "1H Spread: Pistons (-16.5)",
+  "eventSlug": "nba-det-mia-2026-10-23",
+  "eventTitle": "Pistons vs. Heat",
+  "eventId": "1202605",
+  "clobTokenIds": [
+    "54411466008273010673276507158494781639595965217225200711001001150264966942177",
+    "75786634690826716596055437641747236949603902457891228859773206392688763967099"
+  ],
+  "outcomes": [
+    "Pistons",
+    "Heat"
+  ],
+  "endDate": "2026-10-24T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-24T01:57:47Z",
+  "history": [
+{"timestamp":"2026-10-23T23:34:05Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T01:57:47Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.008,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

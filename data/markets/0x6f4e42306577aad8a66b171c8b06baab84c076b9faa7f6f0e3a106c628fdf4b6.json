@@ -1,0 +1,62 @@
+{
+  "conditionId": "0x6f4e42306577aad8a66b171c8b06baab84c076b9faa7f6f0e3a106c628fdf4b6",
+  "slug": "nba-mem-gsw-2026-10-23-1h-spread-home-8pt5",
+  "question": "1H Spread: Warriors (-8.5)",
+  "eventSlug": "nba-mem-gsw-2026-10-23",
+  "eventTitle": "Grizzlies vs. Warriors",
+  "eventId": "1203774",
+  "clobTokenIds": [
+    "17282805770219251208431423658105174748227984201400583944993028544003470024193",
+    "23097269844273968173472318862083070795361604547801743290374386691501665856632"
+  ],
+  "outcomes": [
+    "Warriors",
+    "Grizzlies"
+  ],
+  "endDate": "2026-10-24T02:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-24T01:57:47Z","impliedProbability":0.47,"volume24hr":0.0,"volume":null,"liquidity":228.5029,"spread":0.9,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
