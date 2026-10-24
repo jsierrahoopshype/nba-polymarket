@@ -1,0 +1,64 @@
+{
+  "conditionId": "0xf5434e9f9abdf1623e883b7d4c53952559773a443ae17ab427a95bf2618371b8",
+  "slug": "nba-nop-den-2026-10-24-2q-spread-home-4pt5",
+  "question": "2Q Spread: Nuggets (-4.5)",
+  "eventSlug": "nba-nop-den-2026-10-24",
+  "eventTitle": "Pelicans vs. Nuggets",
+  "eventId": "1210114",
+  "clobTokenIds": [
+    "99610388046300864680026791805309275330904847495507838985897245628494914059800",
+    "58151376005886631754616305143519047603493520250459710055323914089945782727711"
+  ],
+  "outcomes": [
+    "Nuggets",
+    "Pelicans"
+  ],
+  "endDate": "2026-10-25T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-24T14:00:26Z","impliedProbability":0.375,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T15:00:36Z","impliedProbability":0.28,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T15:55:28Z","impliedProbability":0.325,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

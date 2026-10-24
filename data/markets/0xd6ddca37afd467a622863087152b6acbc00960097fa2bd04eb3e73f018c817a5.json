@@ -1,0 +1,63 @@
+{
+  "conditionId": "0xd6ddca37afd467a622863087152b6acbc00960097fa2bd04eb3e73f018c817a5",
+  "slug": "nba-bkn-cle-2026-10-24-team-total-cle-119pt5",
+  "question": "Cavaliers Team Total: O/U 119.5",
+  "eventSlug": "nba-bkn-cle-2026-10-24",
+  "eventTitle": "Nets vs. Cavaliers",
+  "eventId": "1208440",
+  "clobTokenIds": [
+    "105691710416369220129769153384118538270200269131170362005848378453950159197218",
+    "42720632472738069714494690144527115999814773686945292871549864864776884108104"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-10-24T23:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-24T15:00:38Z","impliedProbability":0.505,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T15:53:19Z","impliedProbability":0.505,"volume24hr":0.0,"volume":null,"liquidity":85.935,"spread":0.03,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
