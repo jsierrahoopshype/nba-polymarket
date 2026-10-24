@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x31973de498c26f665bbb54a136a339d5dba3f1610ececb9a4adc4f91292071a9",
+  "slug": "nba-orl-nyk-2026-10-25-spread-home-8pt5",
+  "question": "Spread: Knicks (-8.5)",
+  "eventSlug": "nba-orl-nyk-2026-10-25",
+  "eventTitle": "Magic vs. Knicks",
+  "eventId": "1215091",
+  "clobTokenIds": [
+    "78562064752284000309858037496324893110577336389418365404785968109165265421956",
+    "87700676459346596990739433951017173603250550170573724025473188523537444831345"
+  ],
+  "outcomes": [
+    "Knicks",
+    "Magic"
+  ],
+  "endDate": "2026-10-25T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-24T21:00:52Z","impliedProbability":0.43,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T21:14:39Z","impliedProbability":0.43,"volume24hr":0.0,"volume":null,"liquidity":19.3693,"spread":0.76,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
