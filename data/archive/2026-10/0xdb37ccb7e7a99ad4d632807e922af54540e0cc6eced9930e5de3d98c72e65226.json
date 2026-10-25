@@ -1,0 +1,67 @@
+{
+  "conditionId": "0xdb37ccb7e7a99ad4d632807e922af54540e0cc6eced9930e5de3d98c72e65226",
+  "slug": "nba-mia-cha-2026-10-24-points-naz-reid-17pt5",
+  "question": "Naz Reid: Points O/U 17.5",
+  "eventSlug": "nba-mia-cha-2026-10-24",
+  "eventTitle": "Heat vs. Hornets",
+  "eventId": "1208439",
+  "clobTokenIds": [
+    "57078160417025398371167593318527805673450274318822572212755396847955534994430",
+    "101486416019707959529412164932623747741962493914196514355963195836080067184164"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-24T22:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-25T01:29:19Z",
+  "history": [
+{"timestamp":"2026-10-24T12:04:42Z","impliedProbability":0.27,"volume24hr":0.0,"volume":null,"liquidity":663.1778,"spread":0.48,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T15:53:19Z","impliedProbability":0.27,"volume24hr":0.0,"volume":null,"liquidity":1314.777,"spread":0.48,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T18:41:45Z","impliedProbability":0.28,"volume24hr":0.0,"volume":null,"liquidity":1119.3792,"spread":0.46,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T21:14:39Z","impliedProbability":0.475,"volume24hr":0.0,"volume":null,"liquidity":1451.0144,"spread":0.05,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T23:23:31Z","impliedProbability":0.5,"volume24hr":15.0,"volume":15.0,"liquidity":null,"spread":1.0,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-25T01:29:19Z","impliedProbability":1.0,"volume24hr":15.0,"volume":15.0,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

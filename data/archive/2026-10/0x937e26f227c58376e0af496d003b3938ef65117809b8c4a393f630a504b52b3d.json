@@ -1,0 +1,69 @@
+{
+  "conditionId": "0x937e26f227c58376e0af496d003b3938ef65117809b8c4a393f630a504b52b3d",
+  "slug": "nba-mia-cha-2026-10-24-rebounds-giannis-antetokounmpo-13pt5",
+  "question": "Giannis Antetokounmpo: Rebounds O/U 13.5",
+  "eventSlug": "nba-mia-cha-2026-10-24",
+  "eventTitle": "Heat vs. Hornets",
+  "eventId": "1208439",
+  "clobTokenIds": [
+    "91587810060568464433731504789150936912208380933652742207028597320691887295316",
+    "93952705176910419918777630604747393901730334838597046545235491370043769074312"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-24T22:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-25T01:29:19Z",
+  "history": [
+{"timestamp":"2026-10-24T07:00:25Z","impliedProbability":0.155,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T07:10:39Z","impliedProbability":0.155,"volume24hr":0.0,"volume":null,"liquidity":53.2494,"spread":0.25,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T12:04:42Z","impliedProbability":0.15,"volume24hr":0.0,"volume":null,"liquidity":92.1395,"spread":0.24,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T15:53:19Z","impliedProbability":0.14,"volume24hr":0.0,"volume":null,"liquidity":789.5394,"spread":0.22,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T18:41:45Z","impliedProbability":0.12,"volume24hr":0.0,"volume":null,"liquidity":73.8997,"spread":0.22,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T21:14:39Z","impliedProbability":0.12,"volume24hr":0.0,"volume":null,"liquidity":67.0098,"spread":0.22,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T23:23:31Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":null,"spread":1.0,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-25T01:29:19Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

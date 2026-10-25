@@ -1,0 +1,67 @@
+{
+  "conditionId": "0x615db9a940cb13fc837605af388480cf7560a5fc7c87a391861c42e75a77ad4d",
+  "slug": "nba-mia-cha-2026-10-24-threes-dennis-schroder-1pt5",
+  "question": "Dennis Schröder: 3-Pointers Made O/U 1.5",
+  "eventSlug": "nba-mia-cha-2026-10-24",
+  "eventTitle": "Heat vs. Hornets",
+  "eventId": "1208439",
+  "clobTokenIds": [
+    "75584177975584907776610024942250475516749421708969297659032562073719042494994",
+    "108274990273144232926798685769033693444849645636349137623275623577998102798401"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-24T22:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-25T01:29:19Z",
+  "history": [
+{"timestamp":"2026-10-24T12:04:42Z","impliedProbability":0.24,"volume24hr":0.0,"volume":null,"liquidity":15.0698,"spread":0.42,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T15:53:19Z","impliedProbability":0.24,"volume24hr":0.0,"volume":null,"liquidity":66.9398,"spread":0.42,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T18:41:45Z","impliedProbability":0.22,"volume24hr":0.0,"volume":null,"liquidity":8.7716,"spread":0.42,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T21:14:39Z","impliedProbability":0.22,"volume24hr":7.595239,"volume":7.595239,"liquidity":15.99,"spread":0.42,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-24T23:23:31Z","impliedProbability":0.505,"volume24hr":7.595239,"volume":7.595239,"liquidity":6.0,"spread":0.99,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-25T01:29:19Z","impliedProbability":1.0,"volume24hr":15.185239,"volume":7.595239,"liquidity":null,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
