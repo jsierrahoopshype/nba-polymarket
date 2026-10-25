@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x6868f00dcc1579fdea19d6faeddf87eabb60f7e1137c460e99c13216a8dccc1b",
+  "slug": "nba-orl-nyk-2026-10-25-3q-spread-home-4pt5",
+  "question": "3Q Spread: Knicks (-4.5)",
+  "eventSlug": "nba-orl-nyk-2026-10-25",
+  "eventTitle": "Magic vs. Knicks",
+  "eventId": "1215091",
+  "clobTokenIds": [
+    "82541117775319197567807165284357935567506874291093126253704655615830993214074",
+    "108867257737168115457752180588586242970027452452297609655679666291410762830929"
+  ],
+  "outcomes": [
+    "Knicks",
+    "Magic"
+  ],
+  "endDate": "2026-10-25T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-25T15:00:33Z","impliedProbability":0.345,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-25T16:15:38Z","impliedProbability":0.34,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
