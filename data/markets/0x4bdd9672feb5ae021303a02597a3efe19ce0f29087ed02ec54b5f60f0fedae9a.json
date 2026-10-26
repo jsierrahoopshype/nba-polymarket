@@ -1,0 +1,53 @@
+{
+  "conditionId": "0x4bdd9672feb5ae021303a02597a3efe19ce0f29087ed02ec54b5f60f0fedae9a",
+  "slug": "nba-bos-orl-2026-11-01-exact-margin-home-11-15",
+  "question": "Exact Margin: Magic by 11-15",
+  "eventSlug": "nba-bos-orl-2026-11-01-exact-margin",
+  "eventTitle": "Celtics vs. Magic - Exact Margin",
+  "eventId": "1256355",
+  "clobTokenIds": [
+    "78536865166227395570863673031728212002997913946373806841001363992628817624761",
+    "51820095744925096749011383243687676379044485044006740334881724189190496914906"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-01T20:30:00Z",
+  "negRisk": true,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-26T01:44:25Z","impliedProbability":0.495,"volume24hr":0.0,"volume":null,"liquidity":4.5,"spread":0.97,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
