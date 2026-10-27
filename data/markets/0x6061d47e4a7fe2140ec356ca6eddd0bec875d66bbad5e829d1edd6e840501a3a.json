@@ -1,0 +1,62 @@
+{
+  "conditionId": "0x6061d47e4a7fe2140ec356ca6eddd0bec875d66bbad5e829d1edd6e840501a3a",
+  "slug": "nba-det-nyk-2026-10-27-rebounds-kevin-huerter-1pt5",
+  "question": "Kevin Huerter: Rebounds O/U 1.5",
+  "eventSlug": "nba-det-nyk-2026-10-27",
+  "eventTitle": "Pistons vs. Knicks",
+  "eventId": "1226978",
+  "clobTokenIds": [
+    "78789985128220264074003436106674767208189929802623019440528026249592442051457",
+    "39363061349068882447774931334397011503192145149821790251915792539098221205240"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-28T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-27T23:16:00Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":1.9699,"spread":0.98,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
