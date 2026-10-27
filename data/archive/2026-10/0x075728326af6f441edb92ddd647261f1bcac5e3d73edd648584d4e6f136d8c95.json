@@ -1,0 +1,65 @@
+{
+  "conditionId": "0x075728326af6f441edb92ddd647261f1bcac5e3d73edd648584d4e6f136d8c95",
+  "slug": "nba-atl-hou-2026-10-26-1h-team-total-hou-58pt5",
+  "question": "Rockets 1H Team Total: O/U 58.5",
+  "eventSlug": "nba-atl-hou-2026-10-26",
+  "eventTitle": "Hawks vs. Rockets",
+  "eventId": "1220875",
+  "clobTokenIds": [
+    "11518732269679040497082174935713471820778207303196634141950251901523653612622",
+    "9832122952217722397209654574798053531691823508824961112175257787354661635503"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-10-27T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-27T02:28:55Z",
+  "history": [
+{"timestamp":"2026-10-26T14:17:23Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-26T20:00:12Z","impliedProbability":0.605,"volume24hr":75.44,"volume":75.44,"liquidity":5325.3089,"spread":0.21,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-26T23:47:19Z","impliedProbability":0.505,"volume24hr":75.44,"volume":75.44,"liquidity":5579.6522,"spread":0.81,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-27T02:28:55Z","impliedProbability":1.0,"volume24hr":75.44,"volume":75.44,"liquidity":0.0,"spread":0.949,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
