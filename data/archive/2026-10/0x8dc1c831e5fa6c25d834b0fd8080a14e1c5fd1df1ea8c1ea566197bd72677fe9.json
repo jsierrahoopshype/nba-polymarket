@@ -1,0 +1,67 @@
+{
+  "conditionId": "0x8dc1c831e5fa6c25d834b0fd8080a14e1c5fd1df1ea8c1ea566197bd72677fe9",
+  "slug": "nba-dal-mia-2026-10-26-rebounds-andrew-wiggins-3pt5",
+  "question": "Andrew Wiggins: Rebounds O/U 3.5",
+  "eventSlug": "nba-dal-mia-2026-10-26",
+  "eventTitle": "Mavericks vs. Heat",
+  "eventId": "1220872",
+  "clobTokenIds": [
+    "17202160289819627753610910165700027752723526157544860661817546505176045195423",
+    "41998227699512476618288295270893321617481332444405090436286148688375140790234"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-26T23:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-27T08:19:41Z",
+  "history": [
+{"timestamp":"2026-10-26T07:05:35Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":1.9198,"spread":0.98,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-26T14:13:23Z","impliedProbability":0.55,"volume24hr":0.0,"volume":null,"liquidity":474.724,"spread":0.1,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-26T20:00:12Z","impliedProbability":0.295,"volume24hr":0.0,"volume":null,"liquidity":369.9399,"spread":0.57,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-26T23:47:19Z","impliedProbability":0.5,"volume24hr":16.611017,"volume":16.611017,"liquidity":1.1198,"spread":0.98,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-27T02:28:55Z","impliedProbability":0.0245,"volume24hr":16.611017,"volume":16.611017,"liquidity":204.7588,"spread":0.049,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-27T08:19:41Z","impliedProbability":0.0,"volume24hr":16.611017,"volume":16.611017,"liquidity":0.0,"spread":0.049,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
