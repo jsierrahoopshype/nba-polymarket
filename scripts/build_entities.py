@@ -43,13 +43,13 @@ ROSTER_PATH = Path(__file__).resolve().parent / "vendor" / "roster_players.json"
 # Change this if a custom domain is configured.
 SITE_BASE = "https://jsierrahoopshype.github.io/nba-polymarket"
 
-# Image sources. Headshots are keyed by the roster's headshot filename
-# (<nba_id>-<slug>.png, stored per player) on the nba-headshots Pages site;
-# confirmed 200 for face + thumb. HEADSHOT_RAW is the verified-reachable
-# raw.githubusercontent mirror used as the <img> onerror fallback.
-HEADSHOT_FACE = "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face/{file}"
-HEADSHOT_THUMB = "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/thumb/{file}"
-HEADSHOT_RAW = "https://raw.githubusercontent.com/jsierrahoopshype/nba-headshots/main/players/headshots/face/{file}"
+# Image sources. Headshots are the one HoopsMatic headshot look: nba-headshots'
+# face-fill/ folder (face fills a circle, transparent WebP, 160px), keyed by the
+# roster's headshot stem (<nba_id>-<slug>). Every size used here is <= 80px, so
+# the 160px set is enough. FACE_FILL_STEMS_PATH (vendored from nba-headshots) lists
+# the players that have a file; anyone else shows their initials instead.
+HEADSHOT_FACE = "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-fill/{stem}.webp"
+FACE_FILL_STEMS_PATH = Path(__file__).resolve().parent / "vendor" / "face_fill_stems.txt"
 TEAM_LOGO = "https://cdn.nba.com/logos/nba/{id}/global/L/logo.svg"
 # Optional Cloudflare Worker proxy fallback for team logos — fill in to enable.
 TEAM_LOGO_PROXY = ""
@@ -117,9 +117,48 @@ def load_roster():
     return players
 
 
-def headshot_file(p):
-    """Headshot image filename for a player (<nba_id>-<slug>.png)."""
-    return p.get("headshot_filename") or f'{p["nba_id"]}-{p["slug"]}.png'
+def headshot_stem(p):
+    """Headshot stem for a player (<nba_id>-<slug>)."""
+    f = p.get("headshot_filename") or f'{p["nba_id"]}-{p["slug"]}.png'
+    return f.rsplit(".", 1)[0]
+
+
+def load_face_stems():
+    try:
+        return set(FACE_FILL_STEMS_PATH.read_text(encoding="utf-8").split())
+    except OSError:
+        return set()
+
+
+FACE_STEMS = load_face_stems()
+
+
+def headshot_url(p):
+    """face-fill URL for a player, or None when there is no file (show initials)."""
+    stem = headshot_stem(p)
+    return HEADSHOT_FACE.format(stem=stem) if stem in FACE_STEMS else None
+
+
+_NAME_SUFFIXES = {"jr", "sr", "ii", "iii", "iv", "v"}
+
+
+def initials(name):
+    """'Stephen Curry' -> 'SC'; 'Gary Trent Jr.' -> 'GT'."""
+    w = [x for x in (name or "").replace(".", " ").split()
+         if x.lower().strip(",") not in _NAME_SUFFIXES]
+    return (w[0][0] + (w[-1][0] if len(w) > 1 else "")).upper() if w else "?"
+
+
+def face_html(name, url, size, cls="", alt=""):
+    """Circular headshot (face-fill) or, with no file / a failed load, initials."""
+    c = f"ph {cls}".strip()
+    ini = esc(initials(name))
+    if not url:
+        return f'<span class="{c}" style="--s:{size}px">{ini}</span>'
+    return (f'<span class="{c}" style="--s:{size}px"><img src="{url}" alt="{esc(alt)}" '
+            f'loading="lazy" width="{size}" height="{size}" data-i="{ini}" '
+            "onerror=\"this.onerror=null;this.parentNode.textContent=this.dataset.i\">"
+            "</span>")
 
 
 def match_question(q_tokens, players):
@@ -165,7 +204,7 @@ def write_if_changed(path, content, stats):
 _SLUG_TO_ABBREV = {v[3]: k for k, v in TEAMS.items()}
 
 
-def entity_page(kind, slug, name, sub, img, fallback_img, markets):
+def entity_page(kind, slug, name, sub, img, markets):
     """One entity page: static SEO shell + client-filled live table."""
     desc = (f"Live Polymarket betting odds and implied probabilities for {name} — "
             f"championship, awards, props and more, updated continuously on the "
@@ -183,8 +222,11 @@ def entity_page(kind, slug, name, sub, img, fallback_img, markets):
         "type": kind, "slug": slug, "name": name,
         "ids": [m["conditionId"] for m in markets],
     }
-    onerr = (f"this.onerror=null;this.src='{fallback_img}'"
-             if fallback_img else "this.onerror=null;this.style.display='none'")
+    if kind == "player":
+        head_img = face_html(name, img, 72, "eimg", alt=name) + "\n"
+    else:
+        head_img = (f'<img class="eimg" src="{img}" alt="{esc(name)}" loading="lazy" '
+                    "width=\"72\" height=\"72\" onerror=\"this.onerror=null;this.style.display='none'\">\n")
     return (
         '<!doctype html>\n<html lang="en">\n<head>\n'
         '<meta charset="utf-8">\n'
@@ -200,8 +242,7 @@ def entity_page(kind, slug, name, sub, img, fallback_img, markets):
         '<a class="back" href="../../index.html">← All markets</a>\n'
         + search_box("../../") +
         '<div class="ehead">\n'
-        f'<img class="eimg" src="{img}" alt="{esc(name)}" loading="lazy" '
-        f'width="72" height="72" onerror="{onerr}">\n'
+        + head_img +
         f'<div><h1>{esc(name)}</h1><div class="esub">{esc(sub)}</div></div>\n'
         '</div>\n'
         f'<div id="markets">{body}</div>\n'
@@ -244,8 +285,10 @@ def directory_page(kind, title, entries):
         f'<tr data-href="../{kind}/{esc(e["slug"])}/" data-name="{esc(e["name"].lower())}" '
         f'data-vol="{int(e["vol"])}" data-count="{e["count"]}">'
         f'<td class="rank">{i + 1}</td>'
-        f'<td class="name lb-ent"><img src="{e["thumb"]}" alt="" loading="lazy" '
-        f'width="28" height="28" onerror="this.style.visibility=\'hidden\'">'
+        f'<td class="name lb-ent">'
+        + (face_html(e["name"], e["thumb"], 28) if kind == "player" else
+           f'<img src="{e["thumb"]}" alt="" loading="lazy" '
+           f'width="28" height="28" onerror="this.style.visibility=\'hidden\'">') +
         f'<span>{esc(e["name"])}</span></td>'
         f'<td class="vol">{fmt_vol(e["vol"])}</td>'
         f'<td class="pct">{e["count"]}</td></tr>'
@@ -347,7 +390,7 @@ def main():
     def player_entity(slug):
         p = players_by_slug[slug]
         return {"t": "player", "slug": p["slug"], "name": p["full_name"],
-                "img": HEADSHOT_THUMB.format(file=headshot_file(p))}
+                "img": headshot_url(p)}
 
     def team_entity(slug):
         tid, name, _nick, tslug, _a = TEAMS[_SLUG_TO_ABBREV[slug]]
@@ -391,12 +434,11 @@ def main():
     for p in players:
         ms = vol_sorted(by_player.get(p["slug"], []))
         sub = p.get("team_abbrev") or "NBA"
-        img = HEADSHOT_FACE.format(file=headshot_file(p))
-        raw = HEADSHOT_RAW.format(file=headshot_file(p))
+        img = headshot_url(p)
         write_if_changed(DOCS_DIR / "player" / p["slug"] / "index.html",
-                         entity_page("player", p["slug"], p["full_name"], sub, img, raw, ms), stats)
+                         entity_page("player", p["slug"], p["full_name"], sub, img, ms), stats)
         player_dir_entries.append({"slug": p["slug"], "name": p["full_name"],
-                                   "thumb": HEADSHOT_THUMB.format(file=headshot_file(p)),
+                                   "thumb": img,
                                    "count": len(ms), "vol": total_vol(ms)})
 
     # team pages (all 30)
@@ -405,7 +447,7 @@ def main():
         ms = vol_sorted(by_team.get(slug, []))
         img = TEAM_LOGO.format(id=tid)
         write_if_changed(DOCS_DIR / "team" / slug / "index.html",
-                         entity_page("team", slug, name, "NBA team", img, "", ms), stats)
+                         entity_page("team", slug, name, "NBA team", img, ms), stats)
         team_dir_entries.append({"slug": slug, "name": name,
                                  "thumb": img, "count": len(ms), "vol": total_vol(ms)})
 

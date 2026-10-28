@@ -64,7 +64,9 @@
   function renderResults(box, results) {
     if (!results.length) { box.classList.remove('open'); box.innerHTML = ''; return; }
     box.innerHTML = results.map(function (r) {
-      var thumb = r.img
+      var thumb = r.kind === 'player'
+        ? faceHtml(r.label, r.img, 20)
+        : r.img
         ? '<img src="' + esc(r.img) + '" alt="" loading="lazy" width="20" height="20" onerror="' + IMG_FALLBACK + '">'
         : '<span class="gs-dot ' + esc(r.kind) + '"></span>';
       return '<a class="gs-item" href="' + esc(r.url) + '">' + thumb +

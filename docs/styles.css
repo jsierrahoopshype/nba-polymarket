@@ -301,3 +301,11 @@ td.name::after,.card .q::after{content:"";display:table;clear:both}
 .lb-ent{display:flex;align-items:center;gap:.6rem;font-family:'DM Sans',sans-serif}
 .lb-ent img{width:28px;height:28px;border-radius:50%;object-fit:contain;background:var(--surface-hover);flex-shrink:0}
 .lb-ent span{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Player headshots — the one HoopsMatic look: nba-headshots face-fill (the face
+   fills the circle) on a light grey disc; a player with no photo shows initials. */
+.ph{display:inline-flex;align-items:center;justify-content:center;width:var(--s);height:var(--s);
+  border-radius:50%;overflow:hidden;background:#e8e8ed;flex-shrink:0;vertical-align:middle;
+  font-family:'DM Sans',sans-serif;font-weight:700;color:#55555c;font-size:calc(var(--s) * .34);line-height:1}
+span.ph>img{width:100%;height:100%;object-fit:cover;display:block;border-radius:0;background:none}
+span.ph.eimg{border-radius:50%;background:#e8e8ed}
