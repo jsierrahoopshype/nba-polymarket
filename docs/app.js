@@ -149,8 +149,9 @@ function docsBase() {
   return (typeof _dataBase === 'string' ? _dataBase : '../data/').replace(/data\/$/, 'docs/');
 }
 
-/* onerror for hotlinked images: try the raw.githubusercontent mirror once
-   (the Pages host can lag/serve differently), then hide if that also fails. */
+/* onerror for team logos: retry once (the raw.githubusercontent swap only ever
+   matched nba-headshots URLs; player faces now use faceHtml's initials fallback
+   instead), then hide if that also fails. */
 const IMG_FALLBACK =
   "if(this.dataset.f){this.style.display='none'}else{this.dataset.f=1;" +
   "this.src=this.src.replace('https://jsierrahoopshype.github.io/nba-headshots/'," +
@@ -171,11 +172,29 @@ async function loadEntities() {
   return ENTITY_MAP;
 }
 
+/* Player headshots: the one HoopsMatic look (nba-headshots face-fill, the face
+   fills a circle). A player with no file (img null in entities.json) or whose
+   image fails to load shows their initials in the same circle. */
+function initials(name) {
+  const w = String(name || '').replace(/\./g, ' ').split(/\s+/)
+    .filter(x => x && !/^(jr|sr|ii|iii|iv|v),?$/i.test(x));
+  return w.length ? (w[0][0] + (w.length > 1 ? w[w.length - 1][0] : '')).toUpperCase() : '?';
+}
+function faceHtml(name, img, size) {
+  const ini = esc(initials(name));
+  return '<span class="ph" style="--s:' + size + 'px">' + (img
+    ? '<img src="' + esc(img) + '" alt="" loading="lazy" width="' + size + '" height="' + size +
+      '" data-i="' + ini + '" onerror="this.onerror=null;this.parentNode.textContent=this.dataset.i">'
+    : ini) + '</span>';
+}
+
 function entityLink(x, cls, imgSize, withName) {
+  const pic = x.t === 'player' ? faceHtml(x.name, x.img, imgSize)
+    : '<img src="' + esc(x.img) + '" alt="" loading="lazy" width="' + imgSize + '" height="' + imgSize +
+      '" onerror="' + IMG_FALLBACK + '">';
   return '<a class="' + cls + '" href="' + docsBase() + esc(x.t) + '/' + esc(x.slug) + '/" ' +
     'title="' + esc(x.name) + '" onclick="event.stopPropagation()">' +
-    '<img src="' + esc(x.img) + '" alt="" loading="lazy" width="' + imgSize + '" height="' + imgSize +
-    '" onerror="' + IMG_FALLBACK + '">' + (withName ? esc(x.name) : '') + '</a>';
+    pic + (withName ? esc(x.name) : '') + '</a>';
 }
 
 /* Small linked thumbnail for a market's primary entity (row name cells). */
