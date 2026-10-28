@@ -1,0 +1,63 @@
+{
+  "conditionId": "0xa930450b3bb1952e07af4c0d5bd1b6c6955c0e67bb66fc40795c11cf100e26d3",
+  "slug": "nba-lal-lac-2026-10-28-3q-spread-home-4pt5",
+  "question": "3Q Spread: Clippers (-4.5)",
+  "eventSlug": "nba-lal-lac-2026-10-28",
+  "eventTitle": "Lakers vs. Clippers",
+  "eventId": "1233863",
+  "clobTokenIds": [
+    "65337441397878137522906587334564061782076941925516618207747017784326142941993",
+    "84034813965153193420013018717042530069072428378382656297541563465012609666530"
+  ],
+  "outcomes": [
+    "Clippers",
+    "Lakers"
+  ],
+  "endDate": "2026-10-29T02:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-28T15:52:00Z","impliedProbability":0.205,"volume24hr":0.0,"volume":null,"liquidity":175.5248,"spread":0.37,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-28T16:00:22Z","impliedProbability":0.235,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
