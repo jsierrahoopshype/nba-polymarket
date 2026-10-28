@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x335af94bd58c5aaa1d8d7f8e186a56ccd1d4c2c503c595d33a6b72c9e41b4819",
+  "slug": "nba-sas-uta-2026-10-28-spread-away-27pt5",
+  "question": "Spread: Spurs (-27.5)",
+  "eventSlug": "nba-sas-uta-2026-10-28",
+  "eventTitle": "Spurs vs. Jazz",
+  "eventId": "1233861",
+  "clobTokenIds": [
+    "100954330837538234616814250530895768604086797516399371310897444122310038976011",
+    "73042475307629281862181835069576745254909618660285009129993903544576604474503"
+  ],
+  "outcomes": [
+    "Spurs",
+    "Jazz"
+  ],
+  "endDate": "2026-10-29T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-28T01:00:24Z","impliedProbability":0.14,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-28T02:24:58Z","impliedProbability":0.145,"volume24hr":0.0,"volume":null,"liquidity":8908.1849,"spread":0.19,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
