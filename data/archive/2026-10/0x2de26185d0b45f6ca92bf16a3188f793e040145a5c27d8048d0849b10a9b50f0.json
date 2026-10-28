@@ -1,0 +1,69 @@
+{
+  "conditionId": "0x2de26185d0b45f6ca92bf16a3188f793e040145a5c27d8048d0849b10a9b50f0",
+  "slug": "nba-por-lal-2026-10-27-points-walker-kessler-14pt5",
+  "question": "Walker Kessler: Points O/U 14.5",
+  "eventSlug": "nba-por-lal-2026-10-27",
+  "eventTitle": "Trail Blazers vs. Lakers",
+  "eventId": "1228188",
+  "clobTokenIds": [
+    "3081025638215301150473894367610116547987017906349601485313289453110054732512",
+    "102490533112222225073678230187839663062039619335910640784788822664499199093711"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-28T03:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-28T08:54:56Z",
+  "history": [
+{"timestamp":"2026-10-27T06:00:31Z","impliedProbability":0.22,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-27T07:00:23Z","impliedProbability":0.24,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-27T08:21:21Z","impliedProbability":0.36,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-27T14:45:03Z","impliedProbability":0.23,"volume24hr":0.0,"volume":null,"liquidity":1051.8723,"spread":0.36,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-27T19:41:49Z","impliedProbability":0.235,"volume24hr":52.941175,"volume":52.941175,"liquidity":1163.6919,"spread":0.27,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-27T23:16:00Z","impliedProbability":0.405,"volume24hr":109.941175,"volume":109.941175,"liquidity":1031.0565,"spread":0.09,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-28T02:24:58Z","impliedProbability":0.295,"volume24hr":178.804812,"volume":178.804812,"liquidity":1124.614,"spread":0.19,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-28T08:54:56Z","impliedProbability":0.0,"volume24hr":334.017312,"volume":334.01731199999995,"liquidity":null,"spread":0.001,"oneDayPriceChange":-0.3195,"oneWeekPriceChange":null}
+  ]
+}

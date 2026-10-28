@@ -1,0 +1,69 @@
+{
+  "conditionId": "0xcee0632461828506fa6b73832e4ccfa85bddffc9c11f73791253c4bd8a57ff7b",
+  "slug": "nba-det-nyk-2026-10-27-points-cade-cunningham-24pt5",
+  "question": "Cade Cunningham: Points O/U 24.5",
+  "eventSlug": "nba-det-nyk-2026-10-27",
+  "eventTitle": "Pistons vs. Knicks",
+  "eventId": "1226978",
+  "clobTokenIds": [
+    "30239605545591755690026919029156962424556164630788044333697199694986446676722",
+    "63259135471564002085127415656237506120946881427339395650686035003950600244080"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-28T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-28T08:54:56Z",
+  "history": [
+{"timestamp":"2026-10-27T06:00:23Z","impliedProbability":0.26,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-27T07:00:19Z","impliedProbability":0.425,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-27T08:20:20Z","impliedProbability":0.44,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-27T14:45:03Z","impliedProbability":0.435,"volume24hr":13.697280000000001,"volume":13.697280000000001,"liquidity":1088.599,"spread":0.07,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-27T19:41:49Z","impliedProbability":0.425,"volume24hr":225.23529200000002,"volume":225.23529200000002,"liquidity":1915.9414,"spread":0.03,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-27T23:16:00Z","impliedProbability":0.445,"volume24hr":477.199578,"volume":440.19957800000003,"liquidity":3272.1017,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-28T02:24:58Z","impliedProbability":0.22,"volume24hr":543.247174,"volume":543.247174,"liquidity":20.4413,"spread":0.4,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-28T08:54:56Z","impliedProbability":0.0,"volume24hr":603.154561,"volume":612.6851740000001,"liquidity":null,"spread":0.005,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
