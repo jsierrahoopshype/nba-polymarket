@@ -1,0 +1,66 @@
+{
+  "conditionId": "0x02c5c792923e6d5b30c874685b022a6d0033c92aead570fd3313951ba2068926",
+  "slug": "nba-lal-lac-2026-10-28-2q-spread-home-2pt5",
+  "question": "2Q Spread: Clippers (-2.5)",
+  "eventSlug": "nba-lal-lac-2026-10-28",
+  "eventTitle": "Lakers vs. Clippers",
+  "eventId": "1233863",
+  "clobTokenIds": [
+    "63014010537472398304390712389981820317965832548713117527205189141648001352369",
+    "5582940551178648676657900811113685857818065338310024811970519158844052050222"
+  ],
+  "outcomes": [
+    "Clippers",
+    "Lakers"
+  ],
+  "endDate": "2026-10-29T02:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-29T06:32:37Z",
+  "history": [
+{"timestamp":"2026-10-28T15:52:00Z","impliedProbability":0.305,"volume24hr":0.0,"volume":null,"liquidity":174.6298,"spread":0.31,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-28T16:00:27Z","impliedProbability":0.33,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-28T20:54:00Z","impliedProbability":0.36,"volume24hr":0.0,"volume":null,"liquidity":7025.863,"spread":0.68,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-29T00:42:34Z","impliedProbability":0.375,"volume24hr":0.0,"volume":null,"liquidity":6985.8816,"spread":0.13,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-29T06:32:37Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.009,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

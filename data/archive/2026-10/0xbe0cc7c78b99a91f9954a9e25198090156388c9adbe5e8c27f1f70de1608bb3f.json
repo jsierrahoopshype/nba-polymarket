@@ -1,0 +1,64 @@
+{
+  "conditionId": "0xbe0cc7c78b99a91f9954a9e25198090156388c9adbe5e8c27f1f70de1608bb3f",
+  "slug": "nba-lal-lac-2026-10-28-points-jake-laravia-14pt5",
+  "question": "Jake LaRavia: Points O/U 14.5",
+  "eventSlug": "nba-lal-lac-2026-10-28",
+  "eventTitle": "Lakers vs. Clippers",
+  "eventId": "1233863",
+  "clobTokenIds": [
+    "31022659756553667564776403036169392532448781356938438745918139100566999387615",
+    "34205191423844396627391896196965159360363289995863359330015541178041954484810"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-29T02:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-29T06:32:37Z",
+  "history": [
+{"timestamp":"2026-10-28T20:54:00Z","impliedProbability":null,"volume24hr":0.0,"volume":0.0,"liquidity":0.0,"spread":1.0,"oneDayPriceChange":0.0,"oneWeekPriceChange":0.0},
+{"timestamp":"2026-10-29T00:42:34Z","impliedProbability":0.085,"volume24hr":0.0,"volume":null,"liquidity":101.4477,"spread":0.15,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-29T06:32:37Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.15,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
