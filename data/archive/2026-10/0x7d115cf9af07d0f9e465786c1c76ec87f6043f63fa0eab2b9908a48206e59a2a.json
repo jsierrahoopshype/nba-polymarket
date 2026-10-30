@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x7d115cf9af07d0f9e465786c1c76ec87f6043f63fa0eab2b9908a48206e59a2a",
+  "slug": "nba-sac-nop-2026-10-29-threes-bennedict-mathurin-0pt5",
+  "question": "Bennedict Mathurin: 3-Pointers Made O/U 0.5",
+  "eventSlug": "nba-sac-nop-2026-10-29",
+  "eventTitle": "Kings vs. Pelicans",
+  "eventId": "1238116",
+  "clobTokenIds": [
+    "72869881110754591273551248761244701033110692317141733439283879885097630287239",
+    "110648964735135231497502838780723967295047794470917211560695813757904808923148"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-30T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-30T02:50:35Z",
+  "history": [
+{"timestamp":"2026-10-29T23:24:38Z","impliedProbability":0.32,"volume24hr":0.0,"volume":null,"liquidity":9.605,"spread":0.62,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T02:50:35Z","impliedProbability":1.0,"volume24hr":10.0,"volume":10.0,"liquidity":0.0,"spread":0.185,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
