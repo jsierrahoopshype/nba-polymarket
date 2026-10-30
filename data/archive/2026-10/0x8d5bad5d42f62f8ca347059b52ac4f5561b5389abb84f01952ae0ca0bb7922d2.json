@@ -1,0 +1,67 @@
+{
+  "conditionId": "0x8d5bad5d42f62f8ca347059b52ac4f5561b5389abb84f01952ae0ca0bb7922d2",
+  "slug": "nba-cle-atl-2026-10-29-rebounds-donovan-mitchell-4pt5",
+  "question": "Donovan Mitchell: Rebounds O/U 4.5",
+  "eventSlug": "nba-cle-atl-2026-10-29",
+  "eventTitle": "Cavaliers vs. Hawks",
+  "eventId": "1238115",
+  "clobTokenIds": [
+    "98687987020902535844640593202920569883502046705477438723833515910834541938403",
+    "47767796761256746648799072799940286762454665250658789410740361860449780118176"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-30T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-30T09:49:00Z",
+  "history": [
+{"timestamp":"2026-10-29T06:32:37Z","impliedProbability":0.285,"volume24hr":0.0,"volume":null,"liquidity":1150.7839,"spread":0.55,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-29T13:43:05Z","impliedProbability":0.28,"volume24hr":0.0,"volume":null,"liquidity":1700.5172,"spread":0.54,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-29T19:17:57Z","impliedProbability":0.285,"volume24hr":473.357611,"volume":452.357611,"liquidity":1236.6074,"spread":0.43,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-29T23:24:38Z","impliedProbability":0.475,"volume24hr":500.0067400000001,"volume":500.00674000000004,"liquidity":3183.2938,"spread":0.07,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T02:50:35Z","impliedProbability":0.465,"volume24hr":557.929817,"volume":557.9298170000001,"liquidity":66.5716,"spread":0.93,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T09:49:00Z","impliedProbability":0.0,"volume24hr":557.929817,"volume":557.9298170000001,"liquidity":null,"spread":0.93,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "conditionId": "0x1f114bfb939d1369098aa746122d7aacfefc5b23e17bdfa3e0a85d080cdebd7e",
+  "slug": "nba-cle-atl-2026-10-29-rebounds-evan-mobley-15pt5",
+  "question": "Evan Mobley: Rebounds O/U 15.5",
+  "eventSlug": "nba-cle-atl-2026-10-29",
+  "eventTitle": "Cavaliers vs. Hawks",
+  "eventId": "1238115",
+  "clobTokenIds": [
+    "77075343585817965590238281619089397235110468797662742669835883533461178404477",
+    "76911673281624909682690336691535086898016876990127117005176554188243715157663"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-30T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-30T09:49:00Z",
+  "history": [
+{"timestamp":"2026-10-29T06:32:37Z","impliedProbability":0.49,"volume24hr":0.0,"volume":null,"liquidity":2.6599,"spread":0.96,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-29T13:43:05Z","impliedProbability":0.055,"volume24hr":0.0,"volume":null,"liquidity":93.7229,"spread":0.09,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-29T19:17:57Z","impliedProbability":0.09,"volume24hr":0.0,"volume":null,"liquidity":116.1614,"spread":0.16,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-29T23:24:38Z","impliedProbability":0.14,"volume24hr":0.0,"volume":null,"liquidity":37.2598,"spread":0.26,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T02:50:35Z","impliedProbability":0.455,"volume24hr":0.0,"volume":null,"liquidity":119.05,"spread":0.91,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T09:49:00Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.91,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
