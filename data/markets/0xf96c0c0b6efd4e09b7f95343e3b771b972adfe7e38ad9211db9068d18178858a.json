@@ -1,0 +1,63 @@
+{
+  "conditionId": "0xf96c0c0b6efd4e09b7f95343e3b771b972adfe7e38ad9211db9068d18178858a",
+  "slug": "nba-okc-hou-2026-10-31-points-marcus-smart-14pt5",
+  "question": "Marcus Smart: Points O/U 14.5",
+  "eventSlug": "nba-okc-hou-2026-10-31",
+  "eventTitle": "Thunder vs. Rockets",
+  "eventId": "1249503",
+  "clobTokenIds": [
+    "31306758345914216584235300881243007279086587926448450141765759584788708411855",
+    "81152479788739609477008405161098402005826834588824231597617281003284838941359"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-01T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-31T20:00:41Z","impliedProbability":0.105,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T20:41:14Z","impliedProbability":0.4,"volume24hr":0.0,"volume":null,"liquidity":193.8598,"spread":0.78,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

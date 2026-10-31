@@ -1,0 +1,63 @@
+{
+  "conditionId": "0xfbae1d362dd230d3dc8be93b388f36676dd0fba79f46df8ff662a218475ad917",
+  "slug": "nba-okc-hou-2026-10-31-team-total-okc-102pt5",
+  "question": "Thunder Team Total: O/U 102.5",
+  "eventSlug": "nba-okc-hou-2026-10-31",
+  "eventTitle": "Thunder vs. Rockets",
+  "eventId": "1249503",
+  "clobTokenIds": [
+    "102647687287206539700345508609940325825731516551416449434226165168847285707073",
+    "88652345420154221654076114633531900338877840449847657442807265051961526747166"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-11-01T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-31T20:00:32Z","impliedProbability":0.52,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T20:41:14Z","impliedProbability":0.53,"volume24hr":0.0,"volume":null,"liquidity":11.1997,"spread":0.92,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

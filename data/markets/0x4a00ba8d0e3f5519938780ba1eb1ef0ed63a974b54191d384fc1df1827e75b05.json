@@ -1,0 +1,62 @@
+{
+  "conditionId": "0x4a00ba8d0e3f5519938780ba1eb1ef0ed63a974b54191d384fc1df1827e75b05",
+  "slug": "nba-min-sas-2026-10-31-points-deaaron-fox-15pt5",
+  "question": "De'Aaron Fox: Points O/U 15.5",
+  "eventSlug": "nba-min-sas-2026-10-31",
+  "eventTitle": "Timberwolves vs. Spurs",
+  "eventId": "1249502",
+  "clobTokenIds": [
+    "89433907873500637177501096390551590695812842548819035173195839450621248599089",
+    "107263933076712535086854654922716692386291717654155689932631434876347627560391"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-01T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-31T20:41:14Z","impliedProbability":0.27,"volume24hr":0.0,"volume":null,"liquidity":519.5198,"spread":0.52,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x5a8be73e276b7e6b5afc1a7e1ce4070f3c42fd3efc0f969d247b38f74290564d",
+  "slug": "nba-bos-orl-2026-11-01-total-196pt5",
+  "question": "Celtics vs. Magic: O/U 196.5",
+  "eventSlug": "nba-bos-orl-2026-11-01",
+  "eventTitle": "Celtics vs. Magic",
+  "eventId": "1256226",
+  "clobTokenIds": [
+    "78406051827859116251230929735711481029144203062329585572518398005837782959646",
+    "63698388048799259424972720314897610057184507334764253177262613954969751946634"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-11-01T20:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-31T20:00:32Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T20:41:14Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":2.02,"spread":0.98,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

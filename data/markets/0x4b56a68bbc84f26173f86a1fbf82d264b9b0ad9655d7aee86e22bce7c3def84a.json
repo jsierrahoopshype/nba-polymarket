@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x4b56a68bbc84f26173f86a1fbf82d264b9b0ad9655d7aee86e22bce7c3def84a",
+  "slug": "nba-okc-hou-2026-10-31-points-alperen-sengun-24pt5",
+  "question": "Alperen Sengün: Points O/U 24.5",
+  "eventSlug": "nba-okc-hou-2026-10-31",
+  "eventTitle": "Thunder vs. Rockets",
+  "eventId": "1249503",
+  "clobTokenIds": [
+    "71765341853139853869335244581645460578284559118720165127670636117172720498494",
+    "58237983491630794820615596651686715431732187216184749549705488328596041979219"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-01T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-31T20:00:43Z","impliedProbability":0.165,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T20:41:14Z","impliedProbability":0.14,"volume24hr":0.0,"volume":null,"liquidity":181.9197,"spread":0.22,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
