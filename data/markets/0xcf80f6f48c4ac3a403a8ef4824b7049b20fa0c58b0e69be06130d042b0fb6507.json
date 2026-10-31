@@ -1,0 +1,64 @@
+{
+  "conditionId": "0xcf80f6f48c4ac3a403a8ef4824b7049b20fa0c58b0e69be06130d042b0fb6507",
+  "slug": "nba-sac-mem-2026-10-31-1q-total-50pt5",
+  "question": "Kings vs. Grizzlies: 1Q O/U 50.5",
+  "eventSlug": "nba-sac-mem-2026-10-31",
+  "eventTitle": "Kings vs. Grizzlies",
+  "eventId": "1249500",
+  "clobTokenIds": [
+    "69739375232076394854532824868704326833616564069591931811680800743723062233103",
+    "105843194974721430631802784724923971580646972530652877227914795249658844718152"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-11-01T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-31T15:00:31Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T17:00:58Z","impliedProbability":0.88,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T17:38:22Z","impliedProbability":0.885,"volume24hr":0.0,"volume":null,"liquidity":207.1389,"spread":0.09,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

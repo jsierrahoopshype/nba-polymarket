@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x57d5a900bfbc01c7b0ea088bfb5475a7ee9429b97a4543f419c75ae7fe43b956",
+  "slug": "nba-atl-nop-2026-10-31-1h-spread-home-3pt5",
+  "question": "1H Spread: Pelicans (-3.5)",
+  "eventSlug": "nba-atl-nop-2026-10-31",
+  "eventTitle": "Hawks vs. Pelicans",
+  "eventId": "1249499",
+  "clobTokenIds": [
+    "63735696197915115986822526050464477007068099135715525450809437540724760235164",
+    "84398211773426501009019189112245034943809425946658523132161551496465641748270"
+  ],
+  "outcomes": [
+    "Pelicans",
+    "Hawks"
+  ],
+  "endDate": "2026-10-31T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-31T15:00:36Z","impliedProbability":0.285,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T17:38:22Z","impliedProbability":0.295,"volume24hr":0.0,"volume":null,"liquidity":1284.2161,"spread":0.09,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "conditionId": "0xbef0156f7927a1dd7f9cdd9e0589b6b8cd13aa1a70ffdb5992d66e80c9c0a96d",
+  "slug": "nba-min-sas-2026-10-31-1q-total-43pt5",
+  "question": "Timberwolves vs. Spurs: 1Q O/U 43.5",
+  "eventSlug": "nba-min-sas-2026-10-31",
+  "eventTitle": "Timberwolves vs. Spurs",
+  "eventId": "1249502",
+  "clobTokenIds": [
+    "57227080834078483493157375949790202878301946617951316546362211570925910914448",
+    "40402684113774451949220662076835432340521818065302966412146106466423851052581"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-11-01T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-31T15:00:49Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T17:38:22Z","impliedProbability":0.72,"volume24hr":0.0,"volume":null,"liquidity":44.3199,"spread":0.54,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
