@@ -1,0 +1,65 @@
+{
+  "conditionId": "0x6e76464c4ff89d300e1cc09a602a80cca068d3bff9e7c8be2cd6c3c6daa2d9f8",
+  "slug": "nba-por-uta-2026-10-31-assists-jrue-holiday-1pt5",
+  "question": "Jrue Holiday: Assists O/U 1.5",
+  "eventSlug": "nba-por-uta-2026-10-31",
+  "eventTitle": "Trail Blazers vs. Jazz",
+  "eventId": "1249497",
+  "clobTokenIds": [
+    "37236502187130518291218194005302769837832314910233977137223331640214120529665",
+    "15608574272698773057594891657361471104298009157214174863833321590451955728988"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-31T19:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-31T04:00:19Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T05:00:25Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T06:00:42Z","impliedProbability":0.565,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T06:21:46Z","impliedProbability":0.805,"volume24hr":0.0,"volume":null,"liquidity":102.0189,"spread":0.33,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "conditionId": "0x8fc23416a7287bafa7456903a120328d879aaf8c6d5141504235e65ac4ddca2e",
+  "slug": "nba-orl-tor-2026-10-30-points-franz-wagner-14pt5",
+  "question": "Franz Wagner: Points O/U 14.5",
+  "eventSlug": "nba-orl-tor-2026-10-30",
+  "eventTitle": "Magic vs. Raptors",
+  "eventId": "1243430",
+  "clobTokenIds": [
+    "51290040246858274859961770172840912908289778237324217699146534154925485410750",
+    "11943324423923519215001649187942637926530447663546200240591399887535211096985"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-30T23:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-31T06:21:46Z",
+  "history": [
+{"timestamp":"2026-10-30T07:00:23Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T08:00:23Z","impliedProbability":0.455,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T09:00:41Z","impliedProbability":0.45,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T09:49:00Z","impliedProbability":0.45,"volume24hr":0.0,"volume":null,"liquidity":37.8502,"spread":0.88,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T09:51:23Z","impliedProbability":0.45,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T16:20:42Z","impliedProbability":0.46,"volume24hr":0.0,"volume":null,"liquidity":69.3485,"spread":0.78,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T20:59:01Z","impliedProbability":0.81,"volume24hr":0.0,"volume":null,"liquidity":147.0002,"spread":0.08,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T00:41:10Z","impliedProbability":0.875,"volume24hr":0.0,"volume":null,"liquidity":23.6699,"spread":0.23,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T06:21:46Z","impliedProbability":1.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

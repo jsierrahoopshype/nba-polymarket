@@ -1,0 +1,68 @@
+{
+  "conditionId": "0x48a47c566f52344472b2333acd4c74b6f34858b62b1f9a3e9230dbd6e47618bb",
+  "slug": "nba-det-bkn-2026-10-30-rebounds-duncan-robinson-3pt5",
+  "question": "Duncan Robinson: Rebounds O/U 3.5",
+  "eventSlug": "nba-det-bkn-2026-10-30",
+  "eventTitle": "Pistons vs. Nets",
+  "eventId": "1243428",
+  "clobTokenIds": [
+    "15276084718840536319968894312221348402894433623663650182531878487201256504340",
+    "78858947927526503326677176842252142119266244221276299986848017075396529589112"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-30T23:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-31T06:21:46Z",
+  "history": [
+{"timestamp":"2026-10-30T09:00:20Z","impliedProbability":0.235,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T09:49:00Z","impliedProbability":0.17,"volume24hr":0.0,"volume":null,"liquidity":216.4186,"spread":0.32,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T09:50:18Z","impliedProbability":0.17,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T16:20:42Z","impliedProbability":0.23,"volume24hr":0.0,"volume":null,"liquidity":1366.3698,"spread":0.08,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T20:59:01Z","impliedProbability":0.175,"volume24hr":0.0,"volume":null,"liquidity":2150.4697,"spread":0.21,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T00:41:10Z","impliedProbability":0.425,"volume24hr":0.0,"volume":null,"liquidity":53.8999,"spread":0.43,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T06:21:46Z","impliedProbability":1.0,"volume24hr":16.0,"volume":16.0,"liquidity":0.0,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

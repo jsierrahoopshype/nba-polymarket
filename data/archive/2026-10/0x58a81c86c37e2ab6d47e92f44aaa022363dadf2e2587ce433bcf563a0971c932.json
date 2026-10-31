@@ -1,0 +1,69 @@
+{
+  "conditionId": "0x58a81c86c37e2ab6d47e92f44aaa022363dadf2e2587ce433bcf563a0971c932",
+  "slug": "nba-lac-min-2026-10-30-total-214pt5",
+  "question": "Clippers vs. Timberwolves: O/U 214.5",
+  "eventSlug": "nba-lac-min-2026-10-30",
+  "eventTitle": "Clippers vs. Timberwolves",
+  "eventId": "1243433",
+  "clobTokenIds": [
+    "103036612506148786391095625021123476881361317062364775805098525550473727323187",
+    "57645745231203333231555605774559849768744957940476879351239425587849131142216"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-10-31T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-10-31T06:21:46Z",
+  "history": [
+{"timestamp":"2026-10-29T19:17:57Z","impliedProbability":0.485,"volume24hr":0.0,"volume":null,"liquidity":30.1597,"spread":0.95,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-29T23:24:38Z","impliedProbability":0.665,"volume24hr":0.0,"volume":null,"liquidity":3413.8142,"spread":0.27,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T02:50:35Z","impliedProbability":0.68,"volume24hr":0.0,"volume":null,"liquidity":10839.6127,"spread":0.04,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T09:49:00Z","impliedProbability":0.68,"volume24hr":0.0,"volume":null,"liquidity":10064.1507,"spread":0.04,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T16:20:42Z","impliedProbability":0.695,"volume24hr":87.0,"volume":87.0,"liquidity":37156.2907,"spread":0.03,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-30T20:59:01Z","impliedProbability":0.69,"volume24hr":87.0,"volume":87.0,"liquidity":38732.7588,"spread":0.02,"oneDayPriceChange":0.005,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T00:41:10Z","impliedProbability":0.78,"volume24hr":482.985913,"volume":284.985913,"liquidity":9267.8764,"spread":0.04,"oneDayPriceChange":0.075,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T06:21:46Z","impliedProbability":1.0,"volume24hr":612.913079,"volume":612.9130789999999,"liquidity":null,"spread":0.001,"oneDayPriceChange":0.3195,"oneWeekPriceChange":null}
+  ]
+}

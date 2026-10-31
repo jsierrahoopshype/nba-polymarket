@@ -1,0 +1,63 @@
+{
+  "conditionId": "0xfdb9d2ee7649a4e9c8dc4176a55cb8d90f418022dcd6837b6ca37b1107d53032",
+  "slug": "nba-atl-nop-2026-10-31-points-zion-williamson-22pt5",
+  "question": "Zion Williamson: Points O/U 22.5",
+  "eventSlug": "nba-atl-nop-2026-10-31",
+  "eventTitle": "Hawks vs. Pelicans",
+  "eventId": "1249499",
+  "clobTokenIds": [
+    "56796529046166628974225038945564323242988571287667321305728518788189881128873",
+    "77564192347122147897343252668397382150687194394339349665592070258079483113267"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-31T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-31T06:00:36Z","impliedProbability":0.255,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T06:21:46Z","impliedProbability":0.315,"volume24hr":0.0,"volume":null,"liquidity":862.9929,"spread":0.41,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

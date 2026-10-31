@@ -1,0 +1,64 @@
+{
+  "conditionId": "0x7171ca5c04ad6fd3a0c0c08d8d96767e4952db6b816e44366c6c64f4079d130d",
+  "slug": "nba-atl-nop-2026-10-31-points-dejounte-murray-16pt5",
+  "question": "Dejounte Murray: Points O/U 16.5",
+  "eventSlug": "nba-atl-nop-2026-10-31",
+  "eventTitle": "Hawks vs. Pelicans",
+  "eventId": "1249499",
+  "clobTokenIds": [
+    "111365966511658303852129214280399209549876531591690215579058957709781390586121",
+    "101054025852036089462565118751487617147504339931138006285312120821433128501953"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-31T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-31T06:00:39Z","impliedProbability":0.28,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T06:19:14Z","impliedProbability":0.325,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T06:21:46Z","impliedProbability":0.325,"volume24hr":0.0,"volume":null,"liquidity":1051.0801,"spread":0.43,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

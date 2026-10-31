@@ -1,0 +1,67 @@
+{
+  "conditionId": "0x71e9bb614f5a0f04f31f16d4c0d8f0c0314e34d9992e485d16ce35e18f799bbf",
+  "slug": "nba-por-uta-2026-10-31-spread-home-11pt5",
+  "question": "Spread: Jazz (-11.5)",
+  "eventSlug": "nba-por-uta-2026-10-31",
+  "eventTitle": "Trail Blazers vs. Jazz",
+  "eventId": "1249497",
+  "clobTokenIds": [
+    "108070525852708333881864567856595433050464937136729363411909937914429745271822",
+    "115737219306766906495668934247409177232552199906268119887035964780454733463216"
+  ],
+  "outcomes": [
+    "Jazz",
+    "Trail Blazers"
+  ],
+  "endDate": "2026-10-31T19:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-10-31T02:00:53Z","impliedProbability":0.095,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T03:00:29Z","impliedProbability":0.09,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T04:00:14Z","impliedProbability":0.085,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T05:00:20Z","impliedProbability":0.085,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T06:00:24Z","impliedProbability":0.085,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-10-31T06:21:46Z","impliedProbability":0.09,"volume24hr":0.0,"volume":null,"liquidity":5780.7076,"spread":0.04,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
