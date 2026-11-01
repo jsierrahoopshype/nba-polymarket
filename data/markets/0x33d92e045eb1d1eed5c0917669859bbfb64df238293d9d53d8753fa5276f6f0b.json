@@ -1,0 +1,62 @@
+{
+  "conditionId": "0x33d92e045eb1d1eed5c0917669859bbfb64df238293d9d53d8753fa5276f6f0b",
+  "slug": "nba-bkn-nyk-2026-11-02-spread-home-12pt5",
+  "question": "Spread: Knicks (-12.5)",
+  "eventSlug": "nba-bkn-nyk-2026-11-02",
+  "eventTitle": "Nets vs. Knicks",
+  "eventId": "1262959",
+  "clobTokenIds": [
+    "90731820746135729580794743600918643368614953950049237640528902311027143651471",
+    "49218466467204065993084987450758839163409218888314057826796782020204766687181"
+  ],
+  "outcomes": [
+    "Knicks",
+    "Nets"
+  ],
+  "endDate": "2026-11-03T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-01T20:47:08Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":2.3194,"spread":0.94,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

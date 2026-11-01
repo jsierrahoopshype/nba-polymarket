@@ -1,0 +1,62 @@
+{
+  "conditionId": "0x49fe99b8a0b037186f541d1f384fe717ec4877beb18e57d1f731b4b4425859c4",
+  "slug": "nba-was-orl-2026-11-02-spread-home-6pt5",
+  "question": "Spread: Magic (-6.5)",
+  "eventSlug": "nba-was-orl-2026-11-02",
+  "eventTitle": "Wizards vs. Magic",
+  "eventId": "1262960",
+  "clobTokenIds": [
+    "104227858985146894760327434624460105854778812888685542009478834449539993908521",
+    "4279694149800534196128476551656233280949764437953967472837780643124071010697"
+  ],
+  "outcomes": [
+    "Magic",
+    "Wizards"
+  ],
+  "endDate": "2026-11-03T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-01T20:47:18Z","impliedProbability":0.35,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
