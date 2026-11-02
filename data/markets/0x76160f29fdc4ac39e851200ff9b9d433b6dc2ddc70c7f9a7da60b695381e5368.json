@@ -1,0 +1,65 @@
+{
+  "conditionId": "0x76160f29fdc4ac39e851200ff9b9d433b6dc2ddc70c7f9a7da60b695381e5368",
+  "slug": "nba-mil-min-2026-11-02-rebounds-jaime-jaquez-jr-9pt5",
+  "question": "Jaime Jaquez Jr.: Rebounds O/U 9.5",
+  "eventSlug": "nba-mil-min-2026-11-02",
+  "eventTitle": "Bucks vs. Timberwolves",
+  "eventId": "1264475",
+  "clobTokenIds": [
+    "29123748764290738124981729163429579462461473499696766374203203575479109732343",
+    "72991832639187881021478456521280178280150642735690099228633302444317265898698"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-03T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-02T04:00:21Z","impliedProbability":0.055,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T05:00:20Z","impliedProbability":0.055,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T05:49:30Z","impliedProbability":0.055,"volume24hr":0.0,"volume":null,"liquidity":51.5198,"spread":0.09,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T05:52:13Z","impliedProbability":0.055,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

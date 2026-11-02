@@ -1,0 +1,67 @@
+{
+  "conditionId": "0x5f5a09241d7e1669ea2eb28864a621b6032a4e03ae03207e0b8f90fd3948c88a",
+  "slug": "nba-chi-phi-2026-11-02-points-vj-edgecombe-24pt5",
+  "question": "VJ Edgecombe: Points O/U 24.5",
+  "eventSlug": "nba-chi-phi-2026-11-02",
+  "eventTitle": "Bulls vs. 76ers",
+  "eventId": "1262961",
+  "clobTokenIds": [
+    "77410708792090611248450335835325380785351035818720378064278238642276879518298",
+    "66704974504809381284876061027239664664604647706327806625491966505394653983491"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-03T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-02T02:00:16Z","impliedProbability":0.07,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T03:00:20Z","impliedProbability":0.07,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T04:00:17Z","impliedProbability":0.07,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T05:00:16Z","impliedProbability":0.07,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T05:49:30Z","impliedProbability":0.06,"volume24hr":0.0,"volume":null,"liquidity":66.5167,"spread":0.1,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T05:50:15Z","impliedProbability":0.06,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "conditionId": "0x43c739382711c45dcce3218fcbaab9c1cb1e4b132f9dda931d7f5a175513b24b",
+  "slug": "nba-bkn-nyk-2026-11-02-rebounds-karl-anthony-towns-3pt5",
+  "question": "Karl-Anthony Towns: Rebounds O/U 3.5",
+  "eventSlug": "nba-bkn-nyk-2026-11-02",
+  "eventTitle": "Nets vs. Knicks",
+  "eventId": "1262959",
+  "clobTokenIds": [
+    "35363775515222693530173316553680346715432568435056136739255875514445214694186",
+    "63370217542305615032488945226444572351547223197933316329116483796703176465413"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-03T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-02T03:00:25Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T04:00:18Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T05:00:17Z","impliedProbability":0.485,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T05:49:30Z","impliedProbability":0.485,"volume24hr":0.0,"volume":null,"liquidity":8.0197,"spread":0.95,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T05:50:16Z","impliedProbability":0.485,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "conditionId": "0x1e24e2b7612049cb7d5283db1109ef0c9708c96bda7c4cdc62cb325991f23f85",
+  "slug": "nba-bos-hou-2026-11-02-points-jayson-tatum-39pt5",
+  "question": "Jayson Tatum: Points O/U 39.5",
+  "eventSlug": "nba-bos-hou-2026-11-02",
+  "eventTitle": "Celtics vs. Rockets",
+  "eventId": "1264476",
+  "clobTokenIds": [
+    "66557646438611169682252499047990821458361785529123198255039084939817186805963",
+    "24382821615519571946836150255474417379526044827853210635887761952849198847046"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-03T01:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-02T05:00:17Z","impliedProbability":0.45,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T05:49:30Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":2.0198,"spread":0.98,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T05:52:11Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "conditionId": "0x98fbac29c406811d04ef5d18ce6e7218d7c81cd9b2174af65e165eaaaa6d3ec5",
+  "slug": "nba-bkn-ind-2026-11-01-rebounds-michael-porter-jr-1pt5",
+  "question": "Michael Porter Jr.: Rebounds O/U 1.5",
+  "eventSlug": "nba-bkn-ind-2026-11-01",
+  "eventTitle": "Nets vs. Pacers",
+  "eventId": "1256227",
+  "clobTokenIds": [
+    "95560671376092850649679123611268006180948724630819089571102533140710380595109",
+    "68525149172211258480025390175305285974220273129220950017703654336658965427310"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-01T22:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-02T05:49:30Z",
+  "history": [
+{"timestamp":"2026-11-01T07:00:19Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-01T08:00:19Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-01T09:00:28Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-01T09:48:25Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-01T16:28:55Z","impliedProbability":0.49,"volume24hr":0.0,"volume":null,"liquidity":6.8196,"spread":0.96,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-01T20:47:08Z","impliedProbability":0.59,"volume24hr":23.03,"volume":23.03,"liquidity":35.771,"spread":0.76,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-01T23:58:15Z","impliedProbability":0.9995,"volume24hr":23.03,"volume":23.03,"liquidity":50.05857,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T05:49:30Z","impliedProbability":1.0,"volume24hr":23.03,"volume":23.03,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

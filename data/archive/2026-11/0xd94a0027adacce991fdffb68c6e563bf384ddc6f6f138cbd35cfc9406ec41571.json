@@ -1,0 +1,70 @@
+{
+  "conditionId": "0xd94a0027adacce991fdffb68c6e563bf384ddc6f6f138cbd35cfc9406ec41571",
+  "slug": "nba-lac-gsw-2026-11-01-rebounds-darius-garland-1pt5",
+  "question": "Darius Garland: Rebounds O/U 1.5",
+  "eventSlug": "nba-lac-gsw-2026-11-01",
+  "eventTitle": "Clippers vs. Warriors",
+  "eventId": "1257708",
+  "clobTokenIds": [
+    "43762205102404878331208169467977494706877632454590322260517417134605064957892",
+    "88248219466369456033606402659256040859588226565631390222654271189696496678442"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-02T01:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-02T05:49:30Z",
+  "history": [
+{"timestamp":"2026-11-01T06:00:33Z","impliedProbability":0.445,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-01T07:00:20Z","impliedProbability":0.45,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-01T08:00:19Z","impliedProbability":0.45,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-01T09:00:32Z","impliedProbability":0.445,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-01T09:49:18Z","impliedProbability":0.43,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-01T16:28:55Z","impliedProbability":0.415,"volume24hr":0.0,"volume":null,"liquidity":226.0887,"spread":0.69,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-01T20:47:08Z","impliedProbability":0.39,"volume24hr":0.0,"volume":null,"liquidity":188.128,"spread":0.74,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-01T23:58:15Z","impliedProbability":0.62,"volume24hr":0.0,"volume":null,"liquidity":304.963,"spread":0.22,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T05:49:30Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

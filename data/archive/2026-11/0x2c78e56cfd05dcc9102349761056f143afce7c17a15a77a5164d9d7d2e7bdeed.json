@@ -1,0 +1,67 @@
+{
+  "conditionId": "0x2c78e56cfd05dcc9102349761056f143afce7c17a15a77a5164d9d7d2e7bdeed",
+  "slug": "nba-bos-orl-2026-11-01-assists-jayson-tatum-7pt5",
+  "question": "Jayson Tatum: Assists O/U 7.5",
+  "eventSlug": "nba-bos-orl-2026-11-01",
+  "eventTitle": "Celtics vs. Magic",
+  "eventId": "1256226",
+  "clobTokenIds": [
+    "43756186867378130745295617571019193772723247788851119717446757001345507352988",
+    "10443423107314131562005969604324461827441665782011864822529465152400756975193"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-01T20:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-02T05:49:30Z",
+  "history": [
+{"timestamp":"2026-11-01T09:00:16Z","impliedProbability":0.22,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-01T09:48:23Z","impliedProbability":0.32,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-01T16:28:55Z","impliedProbability":0.34,"volume24hr":0.0,"volume":null,"liquidity":1229.7989,"spread":0.08,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-01T20:47:08Z","impliedProbability":0.485,"volume24hr":0.0,"volume":null,"liquidity":7.4697,"spread":0.95,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-01T23:58:15Z","impliedProbability":0.01,"volume24hr":0.0,"volume":null,"liquidity":63.2,"spread":0.02,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T05:49:30Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.02,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
