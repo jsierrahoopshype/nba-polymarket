@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x37b167239fc9ce0c4baaa85470309e107080d752b5052e5d8e5b4b47c7d84988",
+  "slug": "nba-tor-lac-2026-11-02-spread-away-30pt5",
+  "question": "Spread: Raptors (-30.5)",
+  "eventSlug": "nba-tor-lac-2026-11-02",
+  "eventTitle": "Raptors vs. Clippers",
+  "eventId": "1264480",
+  "clobTokenIds": [
+    "66642802424241766481792061378839972638812880018941225288365998566200670923195",
+    "3127220525828904179788772618586980744884620716276717065789905794753955058823"
+  ],
+  "outcomes": [
+    "Raptors",
+    "Clippers"
+  ],
+  "endDate": "2026-11-03T03:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-01T23:00:20Z","impliedProbability":0.245,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-01T23:58:15Z","impliedProbability":0.235,"volume24hr":0.0,"volume":null,"liquidity":166.6799,"spread":0.45,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
