@@ -1,0 +1,68 @@
+{
+  "conditionId": "0x07b576c7024613e7acba56ff2776682c439486161b702a2eed9a1611b861a05c",
+  "slug": "nba-mil-min-2026-11-02-points-jonathan-kuminga-15pt5",
+  "question": "Jonathan Kuminga: Points O/U 15.5",
+  "eventSlug": "nba-mil-min-2026-11-02",
+  "eventTitle": "Bucks vs. Timberwolves",
+  "eventId": "1264475",
+  "clobTokenIds": [
+    "74259043020238394863059822702682920317605037531596047045584568168108353152798",
+    "16774458438734074103374317107886266238612713861093046877784165440046040415463"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-03T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-03T11:25:09Z",
+  "history": [
+{"timestamp":"2026-11-02T03:00:23Z","impliedProbability":0.255,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T04:00:18Z","impliedProbability":0.245,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T05:51:16Z","impliedProbability":0.245,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T14:09:02Z","impliedProbability":0.27,"volume24hr":0.0,"volume":null,"liquidity":1807.1367,"spread":0.42,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T22:47:11Z","impliedProbability":0.325,"volume24hr":4.979167,"volume":4.979167,"liquidity":1804.4125,"spread":0.45,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T03:44:56Z","impliedProbability":0.5,"volume24hr":4.979167,"volume":4.979167,"liquidity":null,"spread":1.0,"oneDayPriceChange":0.255,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T11:25:09Z","impliedProbability":0.0,"volume24hr":4.979167,"volume":4.979167,"liquidity":0.0,"spread":1.0,"oneDayPriceChange":0.255,"oneWeekPriceChange":null}
+  ]
+}
