@@ -1,0 +1,66 @@
+{
+  "conditionId": "0x6f47ab272aa42ffc0552fa364746d23f8539724039561e7c44c8c5ba156b0406",
+  "slug": "nba-det-cha-2026-11-02-points-dennis-schroder-11pt5",
+  "question": "Dennis Schröder: Points O/U 11.5",
+  "eventSlug": "nba-det-cha-2026-11-02",
+  "eventTitle": "Pistons vs. Hornets",
+  "eventId": "1262957",
+  "clobTokenIds": [
+    "74288700973592681072304898744223194618859543155441841629833165745233249765949",
+    "101047242105858119022279765591241175464340992016076412334070058912335527564599"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-03T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-03T03:44:56Z",
+  "history": [
+{"timestamp":"2026-11-01T23:58:15Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":null,"spread":1.0,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T05:49:30Z","impliedProbability":0.265,"volume24hr":0.0,"volume":null,"liquidity":451.0466,"spread":0.51,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T14:09:02Z","impliedProbability":0.285,"volume24hr":0.0,"volume":null,"liquidity":621.5204,"spread":0.53,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-02T22:47:11Z","impliedProbability":0.285,"volume24hr":0.0,"volume":null,"liquidity":1560.9902,"spread":0.37,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T03:44:56Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":1.0,"oneDayPriceChange":0.235,"oneWeekPriceChange":null}
+  ]
+}
