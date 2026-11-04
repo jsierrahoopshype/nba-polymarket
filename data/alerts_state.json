@@ -13,7 +13,6 @@
   "digest_sent_for": "2026-06-29",
   "digest3": {
     "sent": [
-      "2026-11-01-morning",
       "2026-11-01-afternoon",
       "2026-11-01-night",
       "2026-11-02-morning",
@@ -21,10 +20,16 @@
       "2026-11-03-morning",
       "2026-11-03-afternoon",
       "2026-11-03-night",
-      "2026-11-04-morning"
+      "2026-11-04-morning",
+      "2026-11-04-afternoon"
     ],
-    "last_slot": "2026-11-04T12:49:52.109374+00:00",
+    "last_slot": "2026-11-04T20:21:06.998093+00:00",
     "last_warn": null
   },
-  "last_alert": {}
+  "last_alert": {
+    "0x9fdd044a58c60de1adfc85582c31852b3f34ba680270f0967fde73daf97c92eb": {
+      "ts": "2026-11-04T20:21:06Z",
+      "p": 0.14
+    }
+  }
 }
