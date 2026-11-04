@@ -13,6 +13,16 @@ Two channels, both off the existing poll data (no new market fetching):
              across the three daily digests (and with instant), so a move can recur
              in consecutive digests — that is expected.
 
+--instant also posts (each grouped one Slack message per event per run):
+  * New market: an NBA market not in data/seen_markets.json once it reaches
+    NEW_MARKET_VOLUME_FLOOR ($5K traded). The first run records everything silently.
+  * Flips: a new favorite in a multi-outcome (negRisk) event, or a market crossing
+    25% / 50% / 75% (state in data/alerts_tracker.json, recorded silently on first sight).
+  * Volume spike: 24h volume >= SPIKE_MULT x the market's recent daily average.
+Repetition control for every channel: one alert per market per COOLDOWN_HOURS
+unless it moves 2x the channel's threshold again (state: alerts_state.last_alert),
+and the digest keeps only the biggest mover per event.
+
 The digest is gated on negRisk + unresolved + ALERT_VOLUME_FLOOR and a 2.0-point
 floor (a quiet day showing one or two lines is correct). Resolved markets are
 excluded; the instant channel additionally skips near-settled prices.
@@ -60,6 +70,9 @@ DATA_DIR = REPO_ROOT / "data"
 INDEX_PATH = DATA_DIR / "index.json"
 MARKETS_DIR = DATA_DIR / "markets"
 STATE_PATH = DATA_DIR / "alerts_state.json"
+# Committed by the poll workflow (it already `git add data`):
+SEEN_PATH = DATA_DIR / "seen_markets.json"        # every market ID seen, for "New market"
+TRACKER_PATH = DATA_DIR / "alerts_tracker.json"   # last 25/50/75 band + event favorite
 
 INSTANT_SWING = 0.06          # 6 points over 6h
 INSTANT_HOURS = 6
@@ -83,6 +96,36 @@ ALERT_LIQUIDITY_FLOOR = 1000
 # event: "Heat vs. Magic: Team to Score First", "...: Odd/Even Score").
 # Futures and awards have no type and always alert.
 SLACK_MUTED_MARKET_TYPES = ["moneyline", "spreads", "totals", "player_props", "game_props"]
+
+# --- repetition control (all channels) ---------------------------------------
+# A market alerts at most once per COOLDOWN_HOURS (instant, flip, crossing, volume
+# spike, digest all share one record), unless its price has moved at least
+# COOLDOWN_OVERRIDE_MULT x that channel's normal threshold since the last alert
+# (instant 6pt -> 12pt; digest 2pt -> 4pt).
+COOLDOWN_HOURS = 24
+COOLDOWN_OVERRIDE_MULT = 2
+INSTANT_MAX_MESSAGES = 12     # flood cap per poll run (one message per event)
+EVENT_MAX_LINES = 3           # max market lines inside one event's message
+
+# --- new markets --------------------------------------------------------------
+# A market not seen before is announced once its cumulative volume reaches this
+# floor, if that happens within NEW_MARKET_WINDOW_DAYS of first sighting.
+NEW_MARKET_VOLUME_FLOOR = 5000
+NEW_MARKET_WINDOW_DAYS = 7
+SEEN_PRUNE_DAYS = 60          # forget IDs gone from the index this long
+
+# --- flips --------------------------------------------------------------------
+CROSS_LEVELS = (0.25, 0.50, 0.75)
+CROSS_HYSTERESIS = 0.015      # must clear a line by 1.5pt to count as crossed
+FLIP_MARGIN = 0.015           # new favorite must lead the old one by 1.5pt
+FLIP_MIN_PROB = 0.10          # ignore favorite changes among 5% longshots
+FLIP_CANDIDATE_VOLUME = 1000  # outcome needs this much traded to count as favorite
+
+# --- volume spikes ------------------------------------------------------------
+SPIKE_MULT = 4                # 24h volume >= 4x the recent daily average
+SPIKE_MIN_24H = 10000         # and at least $10K traded in the last 24h
+SPIKE_LOOKBACK_DAYS = 7
+SPIKE_MIN_DAYS = 3            # need >= 3 prior daily readings
 
 # --- digest (three daily, rolling 24-hour window) ----------------------------
 DIGEST_FLOOR = 0.02           # 2.0 percentage points over the rolling 24h window
@@ -270,36 +313,389 @@ def slack_muted(m):
     return slack_market_type(m) in SLACK_MUTED_MARKET_TYPES
 
 
+# --- shared cooldown (cuts repetition across every channel) --------------------
+
+def _utc_now():
+    return datetime.now(timezone.utc)
+
+
+def _iso_utc(dt):
+    return dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def event_key(m):
+    """Grouping key for "one alert per event": Polymarket event id, else slug,
+    else the market itself (a standalone market is its own event)."""
+    return str(m.get("eventId") or m.get("eventSlug") or m.get("conditionId") or "")
+
+
+def last_alerts(state):
+    """Per-market record of the latest Slack alert (any channel):
+    {conditionId: {"ts": ISO-UTC, "p": prob at alert}}. Pruned past 48h."""
+    la = state.get("last_alert")
+    if not isinstance(la, dict):
+        la = {}
+    cutoff = _utc_now() - timedelta(hours=48)
+    for cid in [c for c, v in la.items()
+                if not isinstance(v, dict) or _parse_or_epoch(v.get("ts")) < cutoff]:
+        la.pop(cid, None)
+    state["last_alert"] = la
+    return la
+
+
+def _parse_or_epoch(ts):
+    try:
+        return parse_ts(ts)
+    except (TypeError, ValueError, AttributeError):
+        return datetime(1970, 1, 1, tzinfo=timezone.utc)
+
+
+def cooldown_ok(la, cid, prob, threshold, now=None):
+    """One alert per market per COOLDOWN_HOURS, unless the price has moved at least
+    COOLDOWN_OVERRIDE_MULT x the channel's normal threshold since that alert."""
+    rec = la.get(cid)
+    if not rec:
+        return True
+    now = now or _utc_now()
+    if now - _parse_or_epoch(rec.get("ts")) >= timedelta(hours=COOLDOWN_HOURS):
+        return True
+    last_p = rec.get("p")
+    if not isinstance(last_p, (int, float)) or not isinstance(prob, (int, float)):
+        return False
+    return abs(prob - last_p) >= COOLDOWN_OVERRIDE_MULT * threshold
+
+
+def mark_alerted(la, cid, prob, now=None):
+    la[cid] = {"ts": _iso_utc(now or _utc_now()),
+               "p": round(prob, 4) if isinstance(prob, (int, float)) else None}
+
+
+# --- tracker files (seen markets, crossing bands, event favorites) -------------
+
+def _load_json(path):
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+
+
+def _save_maps(path, head, maps):
+    """Write {head..., name: {k: v}, ...} with one map entry per line (sorted), so
+    a poll that touches a few markets rewrites a few lines and git stays small.
+    Round-trips through json.loads."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    parts = [f"  {json.dumps(k)}: {json.dumps(v)}" for k, v in head.items()]
+    for name, mapping in maps.items():
+        rows = ",\n".join(f"    {json.dumps(k)}: {json.dumps(mapping[k], separators=(',', ':'))}"
+                          for k in sorted(mapping))
+        parts.append(f"  {json.dumps(name)}: {{\n{rows}\n  }}" if rows else f"  {json.dumps(name)}: {{}}")
+    path.write_text("{\n" + ",\n".join(parts) + "\n}\n", encoding="utf-8")
+
+
+def _save_map_file(path, head, map_key, mapping):
+    _save_maps(path, head, {map_key: mapping})
+
+
+def alertable_universe(index):
+    """Live, unresolved, non-muted NBA markets (the existing single-game mute rule
+    is what excludes game winner / spreads / totals / props)."""
+    return [m for m in index.get("markets", [])
+            if m.get("conditionId") and not m.get("resolved") and not slack_muted(m)]
+
+
+def crossing_band(old_band, p):
+    """Which 25/50/75 band a price sits in, with CROSS_HYSTERESIS so a price
+    wobbling on a line doesn't flip back and forth. Band k = k thresholds passed."""
+    raw = sum(p >= t for t in CROSS_LEVELS)
+    if old_band is None:
+        return raw
+    if raw > old_band:
+        for k in range(raw, old_band, -1):            # highest band cleanly passed
+            if p >= CROSS_LEVELS[k - 1] + CROSS_HYSTERESIS:
+                return k
+    elif raw < old_band:
+        for k in range(raw, old_band):                 # lowest band cleanly dropped to
+            if p <= CROSS_LEVELS[k] - CROSS_HYSTERESIS:
+                return k
+    return old_band
+
+
+def load_history_points(condition_id):
+    """[(datetime, prob, volume24hr-or-None)] sorted, from a live market file."""
+    path = MARKETS_DIR / f"{condition_id}.json"
+    try:
+        hist = json.loads(path.read_text(encoding="utf-8")).get("history") or []
+    except (OSError, ValueError):
+        return []
+    pts = []
+    for s in hist:
+        ts = s.get("timestamp")
+        if not ts:
+            continue
+        try:
+            pts.append((parse_ts(ts), s.get("impliedProbability"), s.get("volume24hr")))
+        except (ValueError, TypeError):
+            continue
+    pts.sort(key=lambda x: x[0])
+    return pts
+
+
+def volume_spike(m):
+    """(vol24h, recent_avg) when the market's 24h volume is >= SPIKE_MULT x the
+    average of its daily 24h-volume readings over the prior SPIKE_LOOKBACK_DAYS,
+    else None. Needs SPIKE_MIN_DAYS of readings so a young market can't fire."""
+    vol = m.get("volume24hr") or 0
+    if vol < SPIKE_MIN_24H:
+        return None
+    pts = [(t, v) for t, _, v in load_history_points(m["conditionId"])
+           if isinstance(v, (int, float))]
+    if not pts:
+        return None
+    now_t = pts[-1][0]
+    readings = []
+    for d in range(1, SPIKE_LOOKBACK_DAYS + 1):
+        target = now_t - timedelta(days=d)
+        t, v = min(pts, key=lambda tv: abs((tv[0] - target).total_seconds()))
+        if abs((t - target).total_seconds()) <= 3 * 3600:   # a reading near that day mark
+            readings.append(v)
+    if len(readings) < SPIKE_MIN_DAYS:
+        return None
+    avg = sum(readings) / len(readings)
+    if avg <= 0 or vol < SPIKE_MULT * avg:
+        return None
+    return vol, avg
+
+
+def _money(x):
+    if x >= 1_000_000:
+        return f"${x / 1_000_000:.1f}M"
+    if x >= 1_000:
+        return f"${x / 1_000:.0f}K"
+    return f"${x:.0f}"
+
+
+def _odds_phrase(m):
+    subject, outcome = subject_outcome(m.get("question"))
+    return f"{possessive(subject)} odds of {outcome}" if outcome else f"{possessive(subject)} odds"
+
+
+def crossing_sentence(m, p, old_band, new_band):
+    level = CROSS_LEVELS[max(old_band, new_band) - 1] if new_band > old_band \
+        else CROSS_LEVELS[new_band]
+    way = "above" if new_band > old_band else "below"
+    return (f"{_odds_phrase(m)} have crossed {way} {level * 100:.0f}% on Polymarket, "
+            f"now at {p * 100:.1f}%.\n{hoopsmatic_url(m)}")
+
+
+def flip_sentence(new_m, old_m, event_title):
+    new_s, _ = subject_outcome(new_m.get("question"))
+    old_s, _ = subject_outcome(old_m.get("question")) if old_m else (None, None)
+    np_ = new_m["impliedProbability"] * 100
+    title = event_title or "this market"
+    if old_m and isinstance(old_m.get("impliedProbability"), (int, float)):
+        op = old_m["impliedProbability"] * 100
+        return (f"New favorite in {title}: {new_s} ({np_:.1f}%) has overtaken "
+                f"{old_s} ({op:.1f}%) on Polymarket.\n{hoopsmatic_url(new_m)}")
+    return f"New favorite in {title}: {new_s} at {np_:.1f}% on Polymarket.\n{hoopsmatic_url(new_m)}"
+
+
+def spike_sentence(m, vol, avg):
+    return (f"Trading surge on {_odds_phrase(m)}: {_money(vol)} traded in the past 24 hours, "
+            f"{vol / avg:.1f}x the recent daily average ({_money(avg)}). "
+            f"Odds now {m['impliedProbability'] * 100:.1f}%.\n{hoopsmatic_url(m)}")
+
+
+def new_market_sentence(markets):
+    """One message for an event's newly listed markets (top outcomes by odds)."""
+    markets = sorted(markets, key=lambda x: x.get("impliedProbability") or 0, reverse=True)
+    top = markets[0]
+    vol = sum(x.get("volume") or 0 for x in markets)
+    if len(markets) == 1:
+        p = top.get("impliedProbability")
+        odds = f" at {p * 100:.1f}%" if isinstance(p, (int, float)) else ""
+        return (f"New market on Polymarket: {top.get('question')}{odds}, "
+                f"{_money(vol)} traded so far.\n{hoopsmatic_url(top)}")
+    lead = ", ".join(
+        f"{subject_outcome(x.get('question'))[0]} {x['impliedProbability'] * 100:.1f}%"
+        for x in markets[:3] if isinstance(x.get("impliedProbability"), (int, float)))
+    return (f"New market on Polymarket: {top.get('eventTitle')} ({len(markets)} outcomes, "
+            f"{_money(vol)} traded so far). Leading: {lead}.\n{hoopsmatic_url(top)}")
+
+
 # --- modes -------------------------------------------------------------------
+
+def check_new_markets(universe, now):
+    """New-market detection against data/seen_markets.json.
+
+    File shape: {"bootstrapped": ISO, "markets": {cid: {"first": ISO, "ann": 0|1}}}.
+    First run (file missing) records every current market as already announced and
+    posts nothing. Afterwards a market not seen before is recorded with ann=0 and
+    is announced once its cumulative volume reaches NEW_MARKET_VOLUME_FLOOR, as long
+    as that happens within NEW_MARKET_WINDOW_DAYS of first sighting (older ones are
+    retired silently). Returns {event_key: [markets to announce]}."""
+    data = _load_json(SEEN_PATH)
+    stamp = _iso_utc(now)
+    if not isinstance(data, dict) or not isinstance(data.get("markets"), dict):
+        seen = {m["conditionId"]: {"first": stamp, "ann": 1} for m in universe}
+        _save_map_file(SEEN_PATH, {"bootstrapped": stamp}, "markets", seen)
+        print(f"New markets: bootstrapped {len(seen)} market(s) silently.")
+        return {}
+    seen = data["markets"]
+
+    for m in universe:
+        seen.setdefault(m["conditionId"], {"first": stamp, "ann": 0})
+
+    by_event = {}
+    for m in universe:
+        by_event.setdefault(event_key(m), []).append(m)
+
+    announce = {}
+    window = timedelta(days=NEW_MARKET_WINDOW_DAYS)
+    for ek, ms in by_event.items():
+        pending = [m for m in ms if not seen[m["conditionId"]].get("ann")]
+        if not pending:
+            continue
+        fresh = [m for m in pending
+                 if now - _parse_or_epoch(seen[m["conditionId"]].get("first")) <= window]
+        if not fresh:
+            for m in pending:                      # too old to be "new": retire silently
+                seen[m["conditionId"]]["ann"] = 1
+            continue
+        if any((m.get("volume") or 0) >= NEW_MARKET_VOLUME_FLOOR for m in fresh):
+            announce[ek] = fresh
+            # Mark all pending outcomes of this event announced, so the rest of a
+            # newly listed event doesn't trickle in one alert at a time later.
+            for m in pending:
+                seen[m["conditionId"]]["ann"] = 1
+
+    # Prune markets gone from the index for a long time (resolved and archived).
+    live_ids = {m["conditionId"] for m in universe}
+    old = now - timedelta(days=SEEN_PRUNE_DAYS)
+    for cid in [c for c, v in seen.items()
+                if c not in live_ids and _parse_or_epoch(v.get("first")) < old]:
+        seen.pop(cid, None)
+
+    _save_map_file(SEEN_PATH, {"bootstrapped": data.get("bootstrapped") or stamp},
+                   "markets", seen)
+    return announce
+
 
 def run_instant():
     index = json.loads(INDEX_PATH.read_text(encoding="utf-8"))
+    now = _utc_now()
     today = madrid_today()
     state = ensure_today(load_state(), today)
     sent = state["instant_sent"]
+    la = last_alerts(state)
+    universe = alertable_universe(index)
 
-    fired = 0
-    for m in index.get("markets", []):
-        cid = m.get("conditionId")
-        if not cid or cid in sent or not is_live_swingable(m) or not loud_enough(m):
+    tracker = _load_json(TRACKER_PATH)
+    if not isinstance(tracker, dict):
+        tracker = {}
+    bands = tracker.get("bands") if isinstance(tracker.get("bands"), dict) else {}
+    leaders = tracker.get("leaders") if isinstance(tracker.get("leaders"), dict) else {}
+
+    # lines[event_key] = list of (priority, cid, prob, text); lower priority wins
+    # when one market qualifies for several alert kinds in the same run.
+    lines = {}
+
+    def add(m, prio, text):
+        lines.setdefault(event_key(m), []).append(
+            (prio, m["conditionId"], m.get("impliedProbability"), text))
+
+    # 1) new markets (one grouped line per event)
+    for ek, ms in check_new_markets(universe, now).items():
+        lines.setdefault(ek, []).append((0, None, None, new_market_sentence(ms)))
+        for m in ms:
+            mark_alerted(la, m["conditionId"], m.get("impliedProbability"), now)
+
+    by_id = {m["conditionId"]: m for m in universe}
+
+    # 2) favorite flips in multi-outcome (negRisk) events
+    events = {}
+    for m in universe:
+        # Only outcomes with real trading can be "the favorite": Polymarket lists
+        # unnamed placeholders ("Player K") at the 50% default with $0 volume.
+        if (m.get("negRisk") and isinstance(m.get("impliedProbability"), (int, float))
+                and (m.get("volume") or 0) >= FLIP_CANDIDATE_VOLUME):
+            events.setdefault(event_key(m), []).append(m)
+    new_leaders = {}
+    for ek, ms in events.items():
+        if len(ms) < 2:
             continue
-        if slack_muted(m):
-            continue                               # muted type: never posted, never recorded in sent
+        top = max(ms, key=lambda x: x["impliedProbability"])
+        prev_id = leaders.get(ek)
+        prev = by_id.get(prev_id) if prev_id else None
+        if prev is None or prev_id == top["conditionId"]:
+            new_leaders[ek] = top["conditionId"]   # first sighting / unchanged: silent
+            continue
+        # Hysteresis: the challenger must lead by FLIP_MARGIN, else keep the old leader.
+        if top["impliedProbability"] - (prev.get("impliedProbability") or 0) < FLIP_MARGIN:
+            new_leaders[ek] = prev_id
+            continue
+        new_leaders[ek] = top["conditionId"]
+        if (top["impliedProbability"] >= FLIP_MIN_PROB and loud_enough(top)
+                and top["impliedProbability"] <= SETTLE_HI
+                and cooldown_ok(la, top["conditionId"], top["impliedProbability"], INSTANT_SWING, now)):
+            add(top, 1, flip_sentence(top, prev, top.get("eventTitle")))
+
+    # 3) 25/50/75 crossings, 4) 6h swings, 5) volume spikes
+    new_bands = {}
+    for m in universe:
+        cid = m["conditionId"]
+        p = m.get("impliedProbability")
+        if not isinstance(p, (int, float)):
+            continue
+        old_band = bands.get(cid)
+        band = crossing_band(old_band, p)
+        new_bands[cid] = band
+        if not is_live_swingable(m) or not loud_enough(m):
+            continue
+        if old_band is not None and band != old_band:
+            if cooldown_ok(la, cid, p, INSTANT_SWING, now):
+                add(m, 2, crossing_sentence(m, p, old_band, band))
         sw = swing_6h(cid)
-        if not sw:
-            continue
-        start, end = sw
-        if abs(end - start) < INSTANT_SWING or artificial_swing(start, m):
-            continue
-        msg = prose_sentence(m, start, end, cid + today,
-                             "in the past 6 hours on Polymarket")
-        if post_slack(msg):
-            sent[cid] = {"ts": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-                         "swing": round(end - start, 4)}
-            fired += 1
+        if sw:
+            start, end = sw
+            if abs(end - start) >= INSTANT_SWING and not artificial_swing(start, m) \
+                    and cooldown_ok(la, cid, end, INSTANT_SWING, now):
+                add(m, 3, prose_sentence(m, start, end, cid + today,
+                                         "in the past 6 hours on Polymarket"))
+        spike = volume_spike(m)
+        if spike and cooldown_ok(la, cid, p, INSTANT_SWING, now):
+            add(m, 4, spike_sentence(m, *spike))
 
+    # (No tracker yet = first run: every band/leader has no previous value, so
+    # crossings and flips are recorded silently above and nothing posts for them.)
+
+    # One Slack message per event per run: best line per market, best markets first.
+    fired = 0
+    messages = 0
+    for ek, items in sorted(lines.items(), key=lambda kv: min(x[0] for x in kv[1])):
+        if not items:
+            continue
+        if messages >= INSTANT_MAX_MESSAGES:
+            print(f"Instant: message cap {INSTANT_MAX_MESSAGES} hit, deferring the rest.")
+            break
+        best = {}
+        for prio, cid, prob, text in sorted(items, key=lambda x: x[0]):
+            best.setdefault(cid or f"new:{ek}", (prio, cid, prob, text))
+        chosen = sorted(best.values(), key=lambda x: x[0])[:EVENT_MAX_LINES]
+        if post_slack("\n\n".join(x[3] for x in chosen)):
+            messages += 1
+            for prio, cid, prob, _ in chosen:
+                if cid:
+                    mark_alerted(la, cid, prob, now)
+                    sent[cid] = {"ts": _iso_utc(now), "kind": _KIND[prio]}
+                    fired += 1
+
+    _save_maps(TRACKER_PATH, {}, {"leaders": new_leaders, "bands": new_bands})
     save_state(state)
-    print(f"Instant alerts: {fired} fired ({len(sent)} sent so far today {today}).")
+    print(f"Instant alerts: {messages} message(s), {fired} market line(s) "
+          f"({len(sent)} sent so far today {today}).")
+
+
+_KIND = {0: "new", 1: "flip", 2: "cross", 3: "swing", 4: "volume"}
 
 
 # --- digest prose + links ----------------------------------------------------
@@ -542,6 +938,7 @@ def run_digest(force=False):
 
     cutoff_utc = now_madrid.astimezone(timezone.utc) - timedelta(hours=24)
     index = json.loads(INDEX_PATH.read_text(encoding="utf-8"))
+    la = last_alerts(state)
     movers = []
     max_swing = 0.0                                # biggest 24h move among real candidates
     for m in index.get("markets", []):
@@ -560,10 +957,23 @@ def run_digest(force=False):
         max_swing = max(max_swing, delta)          # track before the floor, for the quiet-day line
         if delta < DIGEST_FLOOR:
             continue
+        # Shared 24h cooldown: skip a market already alerted (instant or a previous
+        # digest) unless it has moved 2x the digest floor since that alert.
+        if not cooldown_ok(la, cid, end_p, DIGEST_FLOOR, now_utc):
+            continue
         movers.append((m, start_p, end_p, delta))
 
     movers.sort(key=lambda x: x[3], reverse=True)
-    movers = movers[:DIGEST_TOP_N]
+    # At most one line per event: keep each event's biggest mover.
+    seen_events = set()
+    per_event = []
+    for mv in movers:
+        ek = event_key(mv[0])
+        if ek in seen_events:
+            continue
+        seen_events.add(ek)
+        per_event.append(mv)
+    movers = per_event[:DIGEST_TOP_N]
 
     if movers:
         header = f"*NBA Polymarket — biggest moves · last 24h ({slot_date}, {slot_label} Madrid)*"
@@ -572,7 +982,9 @@ def run_digest(force=False):
                            "over the past 24 hours on Polymarket")
             for m, start_p, end_p, _ in movers
         ]
-        post_slack("\n\n".join(blocks))
+        if post_slack("\n\n".join(blocks)) and not force:
+            for m, _, end_p, _ in movers:      # forced test runs don't consume cooldowns
+                mark_alerted(la, m["conditionId"], end_p, now_utc)
     elif not force and now_madrid.date() <= QUIET_LINE_UNTIL:
         # Pre-season quiet-day signal (self-expires at QUIET_LINE_UNTIL): report the
         # flat market and by how much, so silence isn't mistaken for a broken pipeline.

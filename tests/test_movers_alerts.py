@@ -98,7 +98,9 @@ class RunInstantMuteTest(unittest.TestCase):
             posted = []
             with mock.patch.multiple(ma, INDEX_PATH=tmp / "index.json",
                                      MARKETS_DIR=tmp / "markets",
-                                     STATE_PATH=tmp / "alerts_state.json"), \
+                                     STATE_PATH=tmp / "alerts_state.json",
+                                     SEEN_PATH=tmp / "seen_markets.json",
+                                     TRACKER_PATH=tmp / "alerts_tracker.json"), \
                  mock.patch.object(ma, "post_slack", side_effect=lambda t: posted.append(t) or True), \
                  mock.patch("builtins.print"):
                 ma.run_instant()
