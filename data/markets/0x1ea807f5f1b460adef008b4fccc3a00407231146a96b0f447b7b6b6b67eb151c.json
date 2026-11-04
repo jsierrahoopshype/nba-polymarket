@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x1ea807f5f1b460adef008b4fccc3a00407231146a96b0f447b7b6b6b67eb151c",
+  "slug": "nba-ind-mem-2026-11-04-1h-spread-home-17pt5",
+  "question": "1H Spread: Grizzlies (-17.5)",
+  "eventSlug": "nba-ind-mem-2026-11-04",
+  "eventTitle": "Pacers vs. Grizzlies",
+  "eventId": "1276200",
+  "clobTokenIds": [
+    "75389846062109808247615713392521446709962591603250388027561778122590413435843",
+    "7273394424933611463791930458207110240114095694771388892232550654361353446743"
+  ],
+  "outcomes": [
+    "Grizzlies",
+    "Pacers"
+  ],
+  "endDate": "2026-11-05T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-04T18:49:03Z","impliedProbability":0.45,"volume24hr":0.0,"volume":null,"liquidity":188.0397,"spread":0.88,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T18:50:23Z","impliedProbability":0.46,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
