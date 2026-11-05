@@ -4,7 +4,9 @@ NBA Polymarket — Slack movers alerts.
 Two channels, both off the existing poll data (no new market fetching):
 
   --instant  (run after each poll/build_index): every LIVE market whose implied
-             probability swung >= 6 points over the last 6h fires a one-off Slack
+             probability swung >= its category's instant threshold (awards 8,
+             futures 5, other 4 points; see CATEGORY_THRESHOLDS) over the last 6h
+             fires a one-off Slack
              message, at most once per market per calendar day (Europe/Madrid).
              Same prose + HoopsMatic link as the digest, worded for a 6h window.
   --digest   (run three times a day, 07:00/15:00/23:00 Madrid): the top 10 movers
@@ -20,11 +22,13 @@ Two channels, both off the existing poll data (no new market fetching):
     25% / 50% / 75% (state in data/alerts_tracker.json, recorded silently on first sight).
   * Volume spike: 24h volume >= SPIKE_MULT x the market's recent daily average.
 Repetition control for every channel: one alert per market per COOLDOWN_HOURS
-unless it moves 2x the channel's threshold again (state: alerts_state.last_alert),
+unless it moves 2x the market's category threshold for that channel again
+(state: alerts_state.last_alert),
 and the digest keeps only the biggest mover per event.
 
-The digest is gated on negRisk + unresolved + ALERT_VOLUME_FLOOR and a 2.0-point
-floor (a quiet day showing one or two lines is correct). Resolved markets are
+The digest is gated on negRisk + unresolved + ALERT_VOLUME_FLOOR and a per-category
+24h floor (awards 4, futures/other 2 points; a quiet day showing one or two lines is
+correct, and a slot with no market clearing its floor posts nothing). Resolved markets are
 excluded; the instant channel additionally skips near-settled prices.
 
 Dedup/calendar state lives in data/alerts_state.json:
@@ -74,7 +78,35 @@ STATE_PATH = DATA_DIR / "alerts_state.json"
 SEEN_PATH = DATA_DIR / "seen_markets.json"        # every market ID seen, for "New market"
 TRACKER_PATH = DATA_DIR / "alerts_tracker.json"   # last 25/50/75 band + event favorite
 
-INSTANT_SWING = 0.06          # 6 points over 6h
+# =============================================================================
+# PER-CATEGORY ALERT THRESHOLDS (edit here)
+# -----------------------------------------------------------------------------
+# Minimum move, in probability points (0.04 = 4 points), a market needs to make
+#   "digest"  — the three-daily 24h digest
+#   "instant" — the 6h instant swing alert
+# The "re-alert early" cooldown override (COOLDOWN_OVERRIDE_MULT, 2x) also uses
+# the market's own category value for the channel it's alerting on.
+# A market's category comes from its event title (else its question), see
+# market_category(). Anything matching no category uses "other".
+CATEGORY_THRESHOLDS = {
+    # MVP, ROY, DPOY, Sixth Man, MIP, COY, Clutch Player
+    "awards":  {"digest": 0.04, "instant": 0.08},
+    # Champion, conference champion, playoffs, play-in, seeding, win totals
+    "futures": {"digest": 0.02, "instant": 0.05},
+    # Trade, next-team and everything else
+    "other":   {"digest": 0.02, "instant": 0.04},
+}
+# Title patterns, checked in this order (first match wins), case-insensitive.
+CATEGORY_PATTERNS = [
+    ("awards", r"\bMVP\b|Most Valuable Player|Rookie of the Year|\bROY\b|"
+               r"Defensive Player of the Year|\bDPOY\b|Sixth Man|6th Man|"
+               r"Most Improved|\bMIP\b|Coach of the Year|\bCOY\b|Clutch Player"),
+    ("futures", r"\bchampions?\b|NBA Finals|\bFinals\b|playoffs?|play-in|\bseed(s|ing)?\b|"
+                r"win totals?|to win \d+\+? games"),
+]
+# =============================================================================
+
+# (6h instant swing threshold is per category: CATEGORY_THRESHOLDS above.)
 INSTANT_HOURS = 6
 SETTLE_LO, SETTLE_HI = 0.02, 0.98   # outside this band a move is settlement, skip
 MIN_HISTORY_HOURS = 5         # need ~6h of history to judge a 6h swing
@@ -100,8 +132,8 @@ SLACK_MUTED_MARKET_TYPES = ["moneyline", "spreads", "totals", "player_props", "g
 # --- repetition control (all channels) ---------------------------------------
 # A market alerts at most once per COOLDOWN_HOURS (instant, flip, crossing, volume
 # spike, digest all share one record), unless its price has moved at least
-# COOLDOWN_OVERRIDE_MULT x that channel's normal threshold since the last alert
-# (instant 6pt -> 12pt; digest 2pt -> 4pt).
+# COOLDOWN_OVERRIDE_MULT x the market's own category threshold for that channel
+# since the last alert (e.g. awards instant 8pt -> 16pt, awards digest 4pt -> 8pt).
 COOLDOWN_HOURS = 24
 COOLDOWN_OVERRIDE_MULT = 2
 INSTANT_MAX_MESSAGES = 12     # flood cap per poll run (one message per event)
@@ -128,7 +160,7 @@ SPIKE_LOOKBACK_DAYS = 7
 SPIKE_MIN_DAYS = 3            # need >= 3 prior daily readings
 
 # --- digest (three daily, rolling 24-hour window) ----------------------------
-DIGEST_FLOOR = 0.02           # 2.0 percentage points over the rolling 24h window
+# (24h digest floor is per category: CATEGORY_THRESHOLDS above.)
 DIGEST_TOP_N = 10             # at most this many movers per digest
 DIGEST_BIG_MOVE = 8           # >= this many points gets a stronger verb (surged vs risen)
 DIGEST_STALE_HOURS = 36       # tripwire: warn if no slot has been processed in this long
@@ -313,6 +345,38 @@ def slack_muted(m):
     return slack_market_type(m) in SLACK_MUTED_MARKET_TYPES
 
 
+# --- per-category thresholds ---------------------------------------------------
+
+_CATEGORY_RES = [(name, re.compile(pat, re.I)) for name, pat in CATEGORY_PATTERNS]
+
+
+def _match_category(text):
+    for name, rx in _CATEGORY_RES:
+        if text and rx.search(text):
+            return name
+    return None
+
+
+def market_category(m):
+    """"awards" | "futures" | "other", from the event title, falling back to the
+    market question when the event title matches nothing."""
+    return (_match_category((m.get("eventTitle") or "").strip())
+            or _match_category((m.get("question") or "").strip())
+            or "other")
+
+
+def category_threshold(m, channel):
+    """The market's own threshold for channel "digest" or "instant"."""
+    t = CATEGORY_THRESHOLDS.get(market_category(m)) or CATEGORY_THRESHOLDS["other"]
+    return t[channel]
+
+
+def clears(delta, threshold):
+    """|delta| >= threshold, compared at 0.01-point precision so a float like
+    0.0799999 for an 8.0-point move still counts as 8 points."""
+    return round(abs(delta), 4) >= round(threshold, 4)
+
+
 # --- shared cooldown (cuts repetition across every channel) --------------------
 
 def _utc_now():
@@ -362,7 +426,7 @@ def cooldown_ok(la, cid, prob, threshold, now=None):
     last_p = rec.get("p")
     if not isinstance(last_p, (int, float)) or not isinstance(prob, (int, float)):
         return False
-    return abs(prob - last_p) >= COOLDOWN_OVERRIDE_MULT * threshold
+    return clears(prob - last_p, COOLDOWN_OVERRIDE_MULT * threshold)
 
 
 def mark_alerted(la, cid, prob, now=None):
@@ -636,7 +700,8 @@ def run_instant():
         new_leaders[ek] = top["conditionId"]
         if (top["impliedProbability"] >= FLIP_MIN_PROB and loud_enough(top)
                 and top["impliedProbability"] <= SETTLE_HI
-                and cooldown_ok(la, top["conditionId"], top["impliedProbability"], INSTANT_SWING, now)):
+                and cooldown_ok(la, top["conditionId"], top["impliedProbability"],
+                                category_threshold(top, "instant"), now)):
             add(top, 1, flip_sentence(top, prev, top.get("eventTitle")))
 
     # 3) 25/50/75 crossings, 4) 6h swings, 5) volume spikes
@@ -651,18 +716,19 @@ def run_instant():
         new_bands[cid] = band
         if not is_live_swingable(m) or not loud_enough(m):
             continue
+        inst = category_threshold(m, "instant")
         if old_band is not None and band != old_band:
-            if cooldown_ok(la, cid, p, INSTANT_SWING, now):
+            if cooldown_ok(la, cid, p, inst, now):
                 add(m, 2, crossing_sentence(m, p, old_band, band))
         sw = swing_6h(cid)
         if sw:
             start, end = sw
-            if abs(end - start) >= INSTANT_SWING and not artificial_swing(start, m) \
-                    and cooldown_ok(la, cid, end, INSTANT_SWING, now):
+            if clears(end - start, inst) and not artificial_swing(start, m) \
+                    and cooldown_ok(la, cid, end, inst, now):
                 add(m, 3, prose_sentence(m, start, end, cid + today,
                                          "in the past 6 hours on Polymarket"))
         spike = volume_spike(m)
-        if spike and cooldown_ok(la, cid, p, INSTANT_SWING, now):
+        if spike and cooldown_ok(la, cid, p, inst, now):
             add(m, 4, spike_sentence(m, *spike))
 
     # (No tracker yet = first run: every band/leader has no previous value, so
@@ -955,11 +1021,12 @@ def run_digest(force=False):
             continue                               # skip 0.50-default initialization noise
         delta = abs(end_p - start_p)
         max_swing = max(max_swing, delta)          # track before the floor, for the quiet-day line
-        if delta < DIGEST_FLOOR:
+        floor = category_threshold(m, "digest")
+        if not clears(delta, floor):
             continue
         # Shared 24h cooldown: skip a market already alerted (instant or a previous
-        # digest) unless it has moved 2x the digest floor since that alert.
-        if not cooldown_ok(la, cid, end_p, DIGEST_FLOOR, now_utc):
+        # digest) unless it has moved 2x its category's digest floor since then.
+        if not cooldown_ok(la, cid, end_p, floor, now_utc):
             continue
         movers.append((m, start_p, end_p, delta))
 
