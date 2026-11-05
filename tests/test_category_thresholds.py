@@ -17,7 +17,18 @@ from test_alert_kinds import Harness, mk, ts  # noqa: E402
 AWARDS = ["NBA: 2026-27 MVP", "NBA: 2026-27 Rookie of the Year",
           "NBA: 2026-27 Defensive Player of the Year", "NBA: 2026-27 Sixth Man of the Year",
           "NBA: 2026-27 Most Improved Player", "NBA: 2026-27 Coach of the Year",
-          "NBA: 2026-27 Clutch Player of the Year", "NBA: 2026 NBA Cup MVP"]
+          "NBA: 2026-27 Clutch Player of the Year", "NBA: 2026 NBA Cup MVP",
+          # stat leaders
+          "NBA: 2026-27 Points Per Game Leader", "NBA: 2026-27 Rebounds Per Game Leader",
+          "NBA: 2026-27 Assists Per Game Leader", "NBA: 2026-27 Steals Per Game Leader",
+          "NBA: 2026-27 Blocks Per Game Leader",
+          "NBA: 2026-27 Three-Pointers Made Per Game Leader",
+          "NBA: 2026-27 Efficiency (EFF) Leader",
+          "NBA: 2026-27 Player Efficiency Rating (PER) Leader",
+          # team / star selections
+          "NBA: 2026-27 All-NBA First Team", "NBA: 2026-27 All-NBA Teams (Any)",
+          "NBA: 2026-27 All-Defensive First Team", "NBA: 2026-27 All-Rookie First Team",
+          "NBA All-Stars 2027"]
 FUTURES = ["NBA: 2027 Champion", "NBA: 2027 Eastern Conference Champion",
            "NBA: 2027 Western Conference Champion", "NBA: Team to Make Playoffs",
            "NBA: Team to Make Play-In", "NBA: 2026-27 Western Conference #1 Seed",
@@ -26,10 +37,14 @@ FUTURES = ["NBA: 2027 Champion", "NBA: 2027 Eastern Conference Champion",
            "NBA Playoffs: 2027 Finals Exact Matchup"]
 OTHER = ["NBA: Players to be Traded Before the 2027 Trade Deadline",
          "NBA: Steph Curry Next Team", "NBA Free Agency: DeMar DeRozan Next Team",
-         "NBA: 2026-27 Points Per Game Leader", "NBA: 2026-27 All-NBA First Team",
-         "NBA: 2026-27 All-Rookie First Team", "NBA: 2026-27 All-Defensive First Team",
          "NBA: Team to reach 2026 NBA Cup Championship Game",
-         "2027 NBA Draft: 1st Overall Pick", ""]
+         "NBA: Team to reach 2026 NBA Cup Knockout Rounds", "NBA: 2026 NBA Cup Winner",
+         "NBA: 2026-27 Worst Regular Season Record",
+         "Las Vegas NBA franchise and arena price?",
+         "NBA to announce expansion team in Las Vegas by...?",
+         "2027 NBA Draft: 1st Overall Pick", "2027 NBA Draft Lottery: 1st Pick",
+         "NBA: Players to Average 25+ PPG in 2026-27",
+         "NBA: LeBron James 2026-27 Regular Season Triple-Doubles", ""]
 
 
 def hist(hours_back, a, b):
@@ -57,6 +72,12 @@ class CategoryDetectionTest(unittest.TestCase):
     def test_event_title_wins_over_question(self):
         m = {"eventTitle": "NBA: 2026-27 MVP", "question": "Will X make the Playoffs?"}
         self.assertEqual(ma.market_category(m), "awards")
+
+    def test_new_award_groups_use_award_thresholds(self):
+        for t in ("NBA: 2026-27 Points Per Game Leader", "NBA: 2026-27 All-NBA First Team",
+                  "NBA All-Stars 2027"):
+            self.assertEqual(ma.category_threshold({"eventTitle": t}, "digest"), 0.04, t)
+            self.assertEqual(ma.category_threshold({"eventTitle": t}, "instant"), 0.08, t)
 
     def test_thresholds(self):
         self.assertEqual(ma.category_threshold({"eventTitle": "NBA: 2026-27 MVP"}, "digest"), 0.04)
