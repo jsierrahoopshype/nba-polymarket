@@ -105,7 +105,9 @@ CATEGORY_PATTERNS = [
                # stat leaders (points/rebounds/assists/steals/blocks/3PM/EFF/PER ... Leader)
                r"\bLeaders?\b|"
                # All-NBA / All-Defensive / All-Rookie team and All-Star selections
-               r"All-NBA|All-Defensive|All-Rookie|All-Stars?\b"),
+               r"All-NBA|All-Defensive|All-Rookie|All-Stars?\b|"
+               # stat thresholds ("Players to Average 25+ PPG / 10+ RPG ...")
+               r"\bto average\b"),
     ("futures", r"\bchampions?\b|NBA Finals|\bFinals\b|playoffs?|play-in|\bseed(s|ing)?\b|"
                 r"win totals?|to win \d+\+? games"),
 ]

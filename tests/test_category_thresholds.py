@@ -28,7 +28,11 @@ AWARDS = ["NBA: 2026-27 MVP", "NBA: 2026-27 Rookie of the Year",
           # team / star selections
           "NBA: 2026-27 All-NBA First Team", "NBA: 2026-27 All-NBA Teams (Any)",
           "NBA: 2026-27 All-Defensive First Team", "NBA: 2026-27 All-Rookie First Team",
-          "NBA All-Stars 2027"]
+          "NBA All-Stars 2027",
+          # stat thresholds
+          "NBA: Players to Average 25+ PPG in 2026-27", "NBA: Players to Average 30+ PPG in 2026-27",
+          "NBA: Players to Average 10+ RPG in 2026-27", "NBA: Players to Average 10+ APG in 2026-27",
+          "NBA: Players to Average 2+ SPG in 2026-27"]
 FUTURES = ["NBA: 2027 Champion", "NBA: 2027 Eastern Conference Champion",
            "NBA: 2027 Western Conference Champion", "NBA: Team to Make Playoffs",
            "NBA: Team to Make Play-In", "NBA: 2026-27 Western Conference #1 Seed",
@@ -43,7 +47,6 @@ OTHER = ["NBA: Players to be Traded Before the 2027 Trade Deadline",
          "Las Vegas NBA franchise and arena price?",
          "NBA to announce expansion team in Las Vegas by...?",
          "2027 NBA Draft: 1st Overall Pick", "2027 NBA Draft Lottery: 1st Pick",
-         "NBA: Players to Average 25+ PPG in 2026-27",
          "NBA: LeBron James 2026-27 Regular Season Triple-Doubles", ""]
 
 
@@ -75,7 +78,7 @@ class CategoryDetectionTest(unittest.TestCase):
 
     def test_new_award_groups_use_award_thresholds(self):
         for t in ("NBA: 2026-27 Points Per Game Leader", "NBA: 2026-27 All-NBA First Team",
-                  "NBA All-Stars 2027"):
+                  "NBA All-Stars 2027", "NBA: Players to Average 10+ RPG in 2026-27"):
             self.assertEqual(ma.category_threshold({"eventTitle": t}, "digest"), 0.04, t)
             self.assertEqual(ma.category_threshold({"eventTitle": t}, "instant"), 0.08, t)
 
