@@ -1,0 +1,66 @@
+{
+  "conditionId": "0x361540ea159e73a5f99c2936e13705b91336fbb02ada7a3bdc3adb78b5c0ce56",
+  "slug": "nba-cha-bkn-2026-11-04-assists-moussa-diabate-3pt5",
+  "question": "Moussa Diabaté: Assists O/U 3.5",
+  "eventSlug": "nba-cha-bkn-2026-11-04",
+  "eventTitle": "Hornets vs. Nets",
+  "eventId": "1274878",
+  "clobTokenIds": [
+    "53281218575063476103445292847147673689531426506666642596650034748078234893267",
+    "92998351801758462598556380185455501378540778840940084234925695947840861723056"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-05T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-05T06:39:00Z",
+  "history": [
+{"timestamp":"2026-11-04T03:25:23Z","impliedProbability":0.105,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T11:27:51Z","impliedProbability":0.1,"volume24hr":0.0,"volume":null,"liquidity":72.8297,"spread":0.18,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T18:49:03Z","impliedProbability":0.09,"volume24hr":0.0,"volume":null,"liquidity":272.0447,"spread":0.16,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-05T00:01:54Z","impliedProbability":0.095,"volume24hr":0.0,"volume":null,"liquidity":184.5979,"spread":0.17,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-05T06:39:00Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":-0.0995,"oneWeekPriceChange":null}
+  ]
+}

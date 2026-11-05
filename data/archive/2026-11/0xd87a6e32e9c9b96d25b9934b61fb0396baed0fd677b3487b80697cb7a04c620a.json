@@ -1,0 +1,74 @@
+{
+  "conditionId": "0xd87a6e32e9c9b96d25b9934b61fb0396baed0fd677b3487b80697cb7a04c620a",
+  "slug": "nba-dal-sas-2026-11-04-total-229pt5",
+  "question": "Mavericks vs. Spurs: O/U 229.5",
+  "eventSlug": "nba-dal-sas-2026-11-04",
+  "eventTitle": "Mavericks vs. Spurs",
+  "eventId": "1276206",
+  "clobTokenIds": [
+    "10387595332266048533011708814497843831742589171951949995616012603636997481156",
+    "74553658982561552565004599992342392543038639465332982246551773659485166148779"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-11-05T02:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-05T06:39:00Z",
+  "history": [
+{"timestamp":"2026-11-03T06:00:40Z","impliedProbability":0.51,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T07:00:19Z","impliedProbability":0.51,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T08:00:19Z","impliedProbability":0.48,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T09:00:23Z","impliedProbability":0.48,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T10:00:26Z","impliedProbability":0.45,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T11:25:09Z","impliedProbability":0.46,"volume24hr":0.0,"volume":null,"liquidity":3298.5585,"spread":0.06,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T18:38:30Z","impliedProbability":0.51,"volume24hr":0.0,"volume":null,"liquidity":15609.9776,"spread":0.14,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T23:42:28Z","impliedProbability":0.4,"volume24hr":3.773585,"volume":3.773585,"liquidity":11692.0667,"spread":0.2,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T03:23:42Z","impliedProbability":0.445,"volume24hr":7.543585,"volume":7.543585,"liquidity":30719.8494,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T11:27:51Z","impliedProbability":0.465,"volume24hr":7.543585,"volume":7.543585,"liquidity":29070.8047,"spread":0.01,"oneDayPriceChange":0.01,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T18:49:03Z","impliedProbability":0.425,"volume24hr":7.543585,"volume":7.543585,"liquidity":45658.3567,"spread":0.01,"oneDayPriceChange":-0.09,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-05T00:01:54Z","impliedProbability":0.425,"volume24hr":3.77,"volume":7.543585,"liquidity":54858.2483,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-05T06:39:00Z","impliedProbability":0.0,"volume24hr":28197.030538,"volume":28204.574123000002,"liquidity":null,"spread":0.001,"oneDayPriceChange":-0.4645,"oneWeekPriceChange":null}
+  ]
+}

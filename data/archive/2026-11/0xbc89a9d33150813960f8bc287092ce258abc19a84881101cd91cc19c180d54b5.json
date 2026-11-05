@@ -1,0 +1,74 @@
+{
+  "conditionId": "0xbc89a9d33150813960f8bc287092ce258abc19a84881101cd91cc19c180d54b5",
+  "slug": "nba-cha-bkn-2026-11-04-spread-home-13pt5",
+  "question": "Spread: Nets (-13.5)",
+  "eventSlug": "nba-cha-bkn-2026-11-04",
+  "eventTitle": "Hornets vs. Nets",
+  "eventId": "1274878",
+  "clobTokenIds": [
+    "80902025093050223584686851855704752282226372541630985350369780619306124960898",
+    "14948081113634668853315124720730045153021814604948249254691072004315449689063"
+  ],
+  "outcomes": [
+    "Nets",
+    "Hornets"
+  ],
+  "endDate": "2026-11-05T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-05T06:39:00Z",
+  "history": [
+{"timestamp":"2026-11-03T06:00:40Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T07:00:19Z","impliedProbability":0.25,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T08:00:19Z","impliedProbability":0.235,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T09:00:24Z","impliedProbability":0.235,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T10:00:26Z","impliedProbability":0.145,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T11:25:20Z","impliedProbability":0.145,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T18:38:30Z","impliedProbability":0.15,"volume24hr":0.0,"volume":null,"liquidity":10078.6819,"spread":0.2,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T23:42:28Z","impliedProbability":0.12,"volume24hr":0.0,"volume":null,"liquidity":8928.939,"spread":0.12,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T03:23:42Z","impliedProbability":0.085,"volume24hr":0.0,"volume":null,"liquidity":12447.677,"spread":0.03,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T11:27:51Z","impliedProbability":0.1,"volume24hr":0.0,"volume":null,"liquidity":10338.44,"spread":0.04,"oneDayPriceChange":-0.045,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T18:49:03Z","impliedProbability":0.105,"volume24hr":0.0,"volume":null,"liquidity":16229.8787,"spread":0.03,"oneDayPriceChange":-0.03,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-05T00:01:54Z","impliedProbability":0.1,"volume24hr":0.0,"volume":null,"liquidity":29212.4546,"spread":0.02,"oneDayPriceChange":-0.025,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-05T06:39:00Z","impliedProbability":0.0,"volume24hr":638.1616379999999,"volume":638.161638,"liquidity":null,"spread":0.001,"oneDayPriceChange":-0.0895,"oneWeekPriceChange":null}
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "conditionId": "0x9a82b8c915bb0ea051a043d5a7552c087b951023c67d57707b0dc6924c0db892",
+  "slug": "nba-phi-det-2026-11-04-assists-cade-cunningham-5pt5",
+  "question": "Cade Cunningham: Assists O/U 5.5",
+  "eventSlug": "nba-phi-det-2026-11-04",
+  "eventTitle": "76ers vs. Pistons",
+  "eventId": "1274875",
+  "clobTokenIds": [
+    "70958144133091051216687206410476389710597867758448406587083252470680010265058",
+    "62536486119751166770210476131613530357027841123798165320887951449389782507796"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-05T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-05T06:39:00Z",
+  "history": [
+{"timestamp":"2026-11-03T18:38:30Z","impliedProbability":0.46,"volume24hr":0.0,"volume":null,"liquidity":3.9897,"spread":0.9,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T23:42:28Z","impliedProbability":0.47,"volume24hr":0.0,"volume":null,"liquidity":3.5297,"spread":0.92,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T03:23:42Z","impliedProbability":0.42,"volume24hr":0.0,"volume":null,"liquidity":36.8646,"spread":0.82,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T11:27:51Z","impliedProbability":0.705,"volume24hr":0.0,"volume":null,"liquidity":114.1996,"spread":0.37,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T18:49:03Z","impliedProbability":0.72,"volume24hr":0.0,"volume":null,"liquidity":159.6308,"spread":0.24,"oneDayPriceChange":0.26,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-05T00:01:54Z","impliedProbability":0.795,"volume24hr":0.0,"volume":null,"liquidity":219.4855,"spread":0.09,"oneDayPriceChange":0.325,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-05T06:39:00Z","impliedProbability":1.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":0.5795,"oneWeekPriceChange":null}
+  ]
+}

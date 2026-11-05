@@ -1,0 +1,66 @@
+{
+  "conditionId": "0x59b081e4794ec8f4797f88c400204cc87632987281ddcb6e04c2cb4704dcd8b5",
+  "slug": "nba-lal-sac-2026-11-04-points-luka-doncic-33pt5",
+  "question": "Luka Dončić: Points O/U 33.5",
+  "eventSlug": "nba-lal-sac-2026-11-04",
+  "eventTitle": "Lakers vs. Kings",
+  "eventId": "1276207",
+  "clobTokenIds": [
+    "33188111897508275218893263545003576296022420097753977131625898285763339677257",
+    "939057168121715053460848621530313508803712385019470741130397811991740308323"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-05T03:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-05T06:39:00Z",
+  "history": [
+{"timestamp":"2026-11-04T03:27:14Z","impliedProbability":0.265,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T11:27:51Z","impliedProbability":0.275,"volume24hr":400.0,"volume":400.0,"liquidity":1132.5192,"spread":0.53,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T18:49:03Z","impliedProbability":0.385,"volume24hr":400.0,"volume":400.0,"liquidity":719.7766,"spread":0.63,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-05T00:01:54Z","impliedProbability":0.445,"volume24hr":457.551876,"volume":440.50102799999996,"liquidity":961.5372,"spread":0.29,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-05T06:39:00Z","impliedProbability":1.0,"volume24hr":480.43573599999996,"volume":480.43573599999996,"liquidity":null,"spread":0.004,"oneDayPriceChange":0.728,"oneWeekPriceChange":null}
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "conditionId": "0x02dded3db602f80e6160488b21d557054802da731abbbfb9487371c77c5a771d",
+  "slug": "nba-phi-det-2026-11-04-rebounds-vj-edgecombe-5pt5",
+  "question": "VJ Edgecombe: Rebounds O/U 5.5",
+  "eventSlug": "nba-phi-det-2026-11-04",
+  "eventTitle": "76ers vs. Pistons",
+  "eventId": "1274875",
+  "clobTokenIds": [
+    "62558795299981914805927149307130537154592861759914311474235587052400916173460",
+    "4555900651727511051095938010942521684198354212412965197453560774952854939684"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-05T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-05T06:39:00Z",
+  "history": [
+{"timestamp":"2026-11-03T18:38:30Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":1.92,"spread":0.98,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T23:42:28Z","impliedProbability":0.295,"volume24hr":0.0,"volume":null,"liquidity":419.2999,"spread":0.57,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T03:23:42Z","impliedProbability":0.44,"volume24hr":0.0,"volume":null,"liquidity":1035.1343,"spread":0.1,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T11:27:51Z","impliedProbability":0.475,"volume24hr":10.156863,"volume":10.156863,"liquidity":933.2914,"spread":0.09,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T18:49:03Z","impliedProbability":0.505,"volume24hr":433.016863,"volume":433.016863,"liquidity":1570.5654,"spread":0.01,"oneDayPriceChange":0.005,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-05T00:01:54Z","impliedProbability":0.49,"volume24hr":507.63037899999995,"volume":507.630379,"liquidity":1300.841,"spread":0.04,"oneDayPriceChange":0.195,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-05T06:39:00Z","impliedProbability":1.0,"volume24hr":523.789306,"volume":533.946169,"liquidity":null,"spread":0.01,"oneDayPriceChange":0.555,"oneWeekPriceChange":null}
+  ]
+}

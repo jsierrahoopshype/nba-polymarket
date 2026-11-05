@@ -1,0 +1,74 @@
+{
+  "conditionId": "0x400eebfa24d62f27d4b4921fff36aad11eb752c836fc266e26bfa4b5396882f3",
+  "slug": "nba-dal-sas-2026-11-04-spread-home-8pt5",
+  "question": "Spread: Spurs (-8.5)",
+  "eventSlug": "nba-dal-sas-2026-11-04",
+  "eventTitle": "Mavericks vs. Spurs",
+  "eventId": "1276206",
+  "clobTokenIds": [
+    "76956444069586346388742311360605520396741385260227495303549422232234325194124",
+    "103268987755124550638702754888917106544370330378552609913192572952665259002377"
+  ],
+  "outcomes": [
+    "Spurs",
+    "Mavericks"
+  ],
+  "endDate": "2026-11-05T02:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-05T06:39:00Z",
+  "history": [
+{"timestamp":"2026-11-03T06:00:54Z","impliedProbability":0.69,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T07:00:22Z","impliedProbability":0.72,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T08:00:23Z","impliedProbability":0.65,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T09:00:39Z","impliedProbability":0.655,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T10:00:30Z","impliedProbability":0.645,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T11:25:24Z","impliedProbability":0.645,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T18:38:30Z","impliedProbability":0.615,"volume24hr":0.0,"volume":null,"liquidity":15001.6449,"spread":0.27,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T23:42:28Z","impliedProbability":0.54,"volume24hr":0.0,"volume":null,"liquidity":12592.8289,"spread":0.2,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T03:23:42Z","impliedProbability":0.595,"volume24hr":0.0,"volume":null,"liquidity":28087.1707,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T11:27:51Z","impliedProbability":0.605,"volume24hr":0.0,"volume":null,"liquidity":27483.8608,"spread":0.01,"oneDayPriceChange":-0.04,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T18:49:03Z","impliedProbability":0.625,"volume24hr":0.0,"volume":null,"liquidity":17223.4469,"spread":0.03,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-05T00:01:54Z","impliedProbability":0.625,"volume24hr":0.0,"volume":null,"liquidity":23965.4236,"spread":0.03,"oneDayPriceChange":0.085,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-05T06:39:00Z","impliedProbability":0.0,"volume24hr":9155.896460000002,"volume":9155.89646,"liquidity":null,"spread":0.001,"oneDayPriceChange":-0.5995,"oneWeekPriceChange":null}
+  ]
+}

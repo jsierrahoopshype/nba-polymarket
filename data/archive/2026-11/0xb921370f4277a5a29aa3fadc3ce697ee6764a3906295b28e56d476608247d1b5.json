@@ -1,0 +1,68 @@
+{
+  "conditionId": "0xb921370f4277a5a29aa3fadc3ce697ee6764a3906295b28e56d476608247d1b5",
+  "slug": "nba-phi-det-2026-11-04-points-tyrese-maxey-24pt5",
+  "question": "Tyrese Maxey: Points O/U 24.5",
+  "eventSlug": "nba-phi-det-2026-11-04",
+  "eventTitle": "76ers vs. Pistons",
+  "eventId": "1274875",
+  "clobTokenIds": [
+    "70822146102975050093815633702808135366502098022624082621696384752005018137285",
+    "49120790928764729868634749776385297135725960591222272820247403352636548319217"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-05T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-05T06:39:00Z",
+  "history": [
+{"timestamp":"2026-11-03T18:38:30Z","impliedProbability":0.45,"volume24hr":18.8764,"volume":18.8764,"liquidity":46.7541,"spread":0.88,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-03T23:42:28Z","impliedProbability":0.245,"volume24hr":18.8764,"volume":18.8764,"liquidity":179.77,"spread":0.47,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T03:23:42Z","impliedProbability":0.305,"volume24hr":23.224227,"volume":23.224227,"liquidity":1936.8389,"spread":0.25,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T11:27:51Z","impliedProbability":0.34,"volume24hr":46.178773,"volume":46.178773,"liquidity":1354.6325,"spread":0.2,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T18:49:03Z","impliedProbability":0.46,"volume24hr":77.497597,"volume":96.373997,"liquidity":1387.7746,"spread":0.06,"oneDayPriceChange":0.03,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-05T00:01:54Z","impliedProbability":0.505,"volume24hr":1099.250576,"volume":1112.126976,"liquidity":1140.6419,"spread":0.01,"oneDayPriceChange":0.06,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-05T06:39:00Z","impliedProbability":0.0,"volume24hr":1881.0938339999998,"volume":1927.272607,"liquidity":null,"spread":0.001,"oneDayPriceChange":-0.3045,"oneWeekPriceChange":null}
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "conditionId": "0x3237c97853e43937c6df7591b5dc42dfbd428a97d4f085a1283ecf6342c68d9f",
+  "slug": "nba-uta-nop-2026-11-04-points-jeremiah-fears-14pt5",
+  "question": "Jeremiah Fears: Points O/U 14.5",
+  "eventSlug": "nba-uta-nop-2026-11-04",
+  "eventTitle": "Jazz vs. Pelicans",
+  "eventId": "1276201",
+  "clobTokenIds": [
+    "19094692621051496569361536744197516133062304259639552255042886056642038172264",
+    "17880566723255562169294158132636942169173505179494794716762864204980614540280"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-05T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-05T06:39:00Z",
+  "history": [
+{"timestamp":"2026-11-04T03:26:21Z","impliedProbability":0.26,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T11:27:51Z","impliedProbability":0.395,"volume24hr":0.0,"volume":null,"liquidity":1104.7497,"spread":0.11,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-04T18:49:03Z","impliedProbability":0.35,"volume24hr":29.0,"volume":13.0,"liquidity":945.3355,"spread":0.44,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-05T00:01:54Z","impliedProbability":0.48,"volume24hr":210.22717699999998,"volume":210.22717699999998,"liquidity":977.7283,"spread":0.06,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-05T06:39:00Z","impliedProbability":1.0,"volume24hr":262.031099,"volume":262.031099,"liquidity":null,"spread":0.001,"oneDayPriceChange":0.7445,"oneWeekPriceChange":null}
+  ]
+}
