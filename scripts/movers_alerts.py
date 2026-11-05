@@ -89,7 +89,8 @@ TRACKER_PATH = DATA_DIR / "alerts_tracker.json"   # last 25/50/75 band + event f
 # A market's category comes from its event title (else its question), see
 # market_category(). Anything matching no category uses "other".
 CATEGORY_THRESHOLDS = {
-    # MVP, ROY, DPOY, Sixth Man, MIP, COY, Clutch Player
+    # MVP, ROY, DPOY, Sixth Man, MIP, COY, Clutch Player, stat leaders,
+    # All-NBA / All-Defensive / All-Rookie / All-Star selections
     "awards":  {"digest": 0.04, "instant": 0.08},
     # Champion, conference champion, playoffs, play-in, seeding, win totals
     "futures": {"digest": 0.02, "instant": 0.05},
@@ -100,7 +101,11 @@ CATEGORY_THRESHOLDS = {
 CATEGORY_PATTERNS = [
     ("awards", r"\bMVP\b|Most Valuable Player|Rookie of the Year|\bROY\b|"
                r"Defensive Player of the Year|\bDPOY\b|Sixth Man|6th Man|"
-               r"Most Improved|\bMIP\b|Coach of the Year|\bCOY\b|Clutch Player"),
+               r"Most Improved|\bMIP\b|Coach of the Year|\bCOY\b|Clutch Player|"
+               # stat leaders (points/rebounds/assists/steals/blocks/3PM/EFF/PER ... Leader)
+               r"\bLeaders?\b|"
+               # All-NBA / All-Defensive / All-Rookie team and All-Star selections
+               r"All-NBA|All-Defensive|All-Rookie|All-Stars?\b"),
     ("futures", r"\bchampions?\b|NBA Finals|\bFinals\b|playoffs?|play-in|\bseed(s|ing)?\b|"
                 r"win totals?|to win \d+\+? games"),
 ]
