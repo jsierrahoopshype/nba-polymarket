@@ -149,7 +149,8 @@ class AlertKindsTest(unittest.TestCase):
     def test_one_message_per_event(self):
         qa, qb = "Will Zeta win the 2026-27 NBA MVP?", "Will Eta win the 2026-27 NBA MVP?"
         sa = [{"timestamp": ts(h), "impliedProbability": p} for h, p in ((7, 0.20), (6, 0.20), (0, 0.28))]
-        sb = [{"timestamp": ts(h), "impliedProbability": p} for h, p in ((7, 0.15), (6, 0.15), (0, 0.08))]
+        # 9pt drop: clears the 8pt awards instant threshold
+        sb = [{"timestamp": ts(h), "impliedProbability": p} for h, p in ((7, 0.17), (6, 0.17), (0, 0.08))]
         posted = self.h.run([mk("0x1", qa, 0.28), mk("0x2", qb, 0.08)], {"0x1": sa, "0x2": sb})
         self.assertEqual(len(posted), 1)
         self.assertIn("Zeta", posted[0])
