@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x66f74e513af05e943c5d5d6f90d57209ef7ccf1e01ee243ac9cc59406390f7dc",
+  "slug": "nba-phi-cle-2026-11-06-rebounds-evan-mobley-15pt5",
+  "question": "Evan Mobley: Rebounds O/U 15.5",
+  "eventSlug": "nba-phi-cle-2026-11-06",
+  "eventTitle": "76ers vs. Cavaliers",
+  "eventId": "1284231",
+  "clobTokenIds": [
+    "115517666207166872832753524506672252229115020888989246981086644638243350180231",
+    "26158938439356879230300960897746429843126282780522276426329604008453363345510"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-07T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-06T01:00:31Z","impliedProbability":0.065,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T01:45:40Z","impliedProbability":0.065,"volume24hr":0.0,"volume":null,"liquidity":51.2996,"spread":0.11,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

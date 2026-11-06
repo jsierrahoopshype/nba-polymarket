@@ -1,0 +1,65 @@
+{
+  "conditionId": "0xbe7896ae5691fc80c5a01875671a4a0149abc55d8e83902904c0e0ff72363e5c",
+  "slug": "nba-phi-cle-2026-11-06-rebounds-joel-embiid-5pt5",
+  "question": "Joel Embiid: Rebounds O/U 5.5",
+  "eventSlug": "nba-phi-cle-2026-11-06",
+  "eventTitle": "76ers vs. Cavaliers",
+  "eventId": "1284231",
+  "clobTokenIds": [
+    "84708095738361000358533618795280522366941287577964110457885373587016699731677",
+    "16896728717108792881888552117131199246337848950838150159856359591460121599271"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-07T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-05T23:00:24Z","impliedProbability":0.44,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T00:00:48Z","impliedProbability":0.435,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T01:00:35Z","impliedProbability":0.44,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T01:45:40Z","impliedProbability":0.44,"volume24hr":0.0,"volume":null,"liquidity":4.6198,"spread":0.86,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
