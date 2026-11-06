@@ -1,0 +1,57 @@
+{
+  "conditionId": "0x3b235fd87d396cd2c187e5610f9560bb88fc531a9cb3ff7f730149ef8aedbede",
+  "slug": "nba-sas-sac-2026-11-06-exact-margin-away-1-5",
+  "question": "Exact Margin: Spurs by 1-5",
+  "eventSlug": "nba-sas-sac-2026-11-06-exact-margin",
+  "eventTitle": "Spurs vs. Kings - Exact Margin",
+  "eventId": "1325115",
+  "clobTokenIds": [
+    "48835544259313204938445391614545883600167961002621928143692609746094445754556",
+    "2738669274352105410575620289275355919768119695245721608276840931627935442955"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-07T03:00:00Z",
+  "negRisk": true,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-06T14:00:19Z","impliedProbability":0.2,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T15:00:20Z","impliedProbability":0.19,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T16:00:35Z","impliedProbability":0.19,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T16:17:06Z","impliedProbability":0.19,"volume24hr":0.0,"volume":null,"liquidity":402.6344,"spread":0.36,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T16:22:35Z","impliedProbability":0.19,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "conditionId": "0x6f2f9d29b050a96fccb675d1888be697b8221f270eb9d1207701e438b59835e8",
+  "slug": "nba-bos-cha-2026-11-06-4q-spread-away-3pt5",
+  "question": "4Q Spread: Celtics (-3.5)",
+  "eventSlug": "nba-bos-cha-2026-11-06",
+  "eventTitle": "Celtics vs. Hornets",
+  "eventId": "1284229",
+  "clobTokenIds": [
+    "10538910505541989299430141346407405360218589165510235861949504815217299807143",
+    "56961258601570031630010238060446990829283757283566621759224961881588959736048"
+  ],
+  "outcomes": [
+    "Celtics",
+    "Hornets"
+  ],
+  "endDate": "2026-11-07T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-06T15:00:22Z","impliedProbability":0.24,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T16:00:35Z","impliedProbability":0.23,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T16:18:13Z","impliedProbability":0.23,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

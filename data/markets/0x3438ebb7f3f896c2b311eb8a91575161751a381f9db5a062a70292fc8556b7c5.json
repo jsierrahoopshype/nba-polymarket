@@ -1,0 +1,57 @@
+{
+  "conditionId": "0x3438ebb7f3f896c2b311eb8a91575161751a381f9db5a062a70292fc8556b7c5",
+  "slug": "nba-okc-mem-2026-11-06-exact-margin-home-1-5",
+  "question": "Exact Margin: Grizzlies by 1-5",
+  "eventSlug": "nba-okc-mem-2026-11-06-exact-margin",
+  "eventTitle": "Thunder vs. Grizzlies - Exact Margin",
+  "eventId": "1325111",
+  "clobTokenIds": [
+    "83152496177846627241424481751098188440416355433678874877655015095646771314587",
+    "55104761847415691069557403739090705194245771890476430952166004235317715440694"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-07T01:00:00Z",
+  "negRisk": true,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-06T14:00:21Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T15:00:30Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T16:00:37Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T16:17:06Z","impliedProbability":0.495,"volume24hr":0.0,"volume":null,"liquidity":2.1945,"spread":0.97,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T16:22:36Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

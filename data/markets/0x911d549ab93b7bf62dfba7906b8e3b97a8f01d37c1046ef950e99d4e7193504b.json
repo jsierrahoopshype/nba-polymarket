@@ -1,0 +1,66 @@
+{
+  "conditionId": "0x911d549ab93b7bf62dfba7906b8e3b97a8f01d37c1046ef950e99d4e7193504b",
+  "slug": "nba-okc-mem-2026-11-06-steals-cedric-coward-0pt5",
+  "question": "Cedric Coward: Steals O/U 0.5",
+  "eventSlug": "nba-okc-mem-2026-11-06",
+  "eventTitle": "Thunder vs. Grizzlies",
+  "eventId": "1284234",
+  "clobTokenIds": [
+    "7062119372721791166822733818330869770046607203257299005441089911532948571223",
+    "79267298400112597955762471497686728149664231892953972324163718402975084955849"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-07T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-06T13:00:23Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T14:00:23Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T15:00:39Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T16:00:40Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T16:19:21Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

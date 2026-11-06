@@ -1,0 +1,65 @@
+{
+  "conditionId": "0x3d8345e41155342fb333203d7e5b9907313d51db0002d85c01db6320084749ed",
+  "slug": "nba-was-atl-2026-11-06-rebounds-bilal-coulibaly-3pt5",
+  "question": "Bilal Coulibaly: Rebounds O/U 3.5",
+  "eventSlug": "nba-was-atl-2026-11-06",
+  "eventTitle": "Wizards vs. Hawks",
+  "eventId": "1284227",
+  "clobTokenIds": [
+    "26240511358305579845255284941507306536594261966564162373245257281764378594852",
+    "97237982499144821161156798211173140683145922616603070446164262315006000060472"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-07T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-06T14:00:23Z","impliedProbability":0.245,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T15:00:41Z","impliedProbability":0.235,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T16:00:40Z","impliedProbability":0.255,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T16:17:17Z","impliedProbability":0.25,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

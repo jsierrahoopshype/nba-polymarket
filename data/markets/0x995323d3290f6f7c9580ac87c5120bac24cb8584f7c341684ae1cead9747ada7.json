@@ -1,0 +1,67 @@
+{
+  "conditionId": "0x995323d3290f6f7c9580ac87c5120bac24cb8584f7c341684ae1cead9747ada7",
+  "slug": "nba-bos-cha-2026-11-06-blocks-derrick-white-1pt5",
+  "question": "Derrick White: Blocks O/U 1.5",
+  "eventSlug": "nba-bos-cha-2026-11-06",
+  "eventTitle": "Celtics vs. Hornets",
+  "eventId": "1284229",
+  "clobTokenIds": [
+    "38986715320608877644887990504036851768714059974481291443705793926351885039810",
+    "19102442829421244002365832166004993370234220120454055323540559601970671300695"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-07T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-06T12:00:38Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T13:00:23Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T14:00:22Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T15:00:36Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T16:00:39Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T16:17:16Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
