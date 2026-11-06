@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x18e150597c8306aa03c0142dffe805e34acab4fd431f219d2b68a01d295bcefa",
+  "slug": "nba-orl-bkn-2026-11-20",
+  "question": "Magic vs. Nets",
+  "eventSlug": "nba-orl-bkn-2026-11-20",
+  "eventTitle": "Magic vs. Nets",
+  "eventId": "1323810",
+  "clobTokenIds": [
+    "47056391758167580710861301611180495368608553328084299695828360137782094415037",
+    "87306238614048256570377696512721236935594566007967913043573191109683767225212"
+  ],
+  "outcomes": [
+    "Magic",
+    "Nets"
+  ],
+  "endDate": "2026-11-21T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-06T08:00:31Z","impliedProbability":0.575,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T08:35:19Z","impliedProbability":0.575,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

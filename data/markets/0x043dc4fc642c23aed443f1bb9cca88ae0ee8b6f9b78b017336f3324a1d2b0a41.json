@@ -1,0 +1,64 @@
+{
+  "conditionId": "0x043dc4fc642c23aed443f1bb9cca88ae0ee8b6f9b78b017336f3324a1d2b0a41",
+  "slug": "nba-was-atl-2026-11-06-spread-home-1pt5",
+  "question": "Spread: Hawks (-1.5)",
+  "eventSlug": "nba-was-atl-2026-11-06",
+  "eventTitle": "Wizards vs. Hawks",
+  "eventId": "1284227",
+  "clobTokenIds": [
+    "44319693786426048640677445459435395818879643598507469205726103284272615811912",
+    "29735542302563124780697112555192033605119377877071652689703465328076851523656"
+  ],
+  "outcomes": [
+    "Hawks",
+    "Wizards"
+  ],
+  "endDate": "2026-11-07T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-06T07:00:24Z","impliedProbability":0.67,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T08:00:36Z","impliedProbability":0.665,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T08:35:08Z","impliedProbability":0.665,"volume24hr":0.0,"volume":null,"liquidity":4960.2345,"spread":0.05,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
