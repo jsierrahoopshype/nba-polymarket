@@ -1,0 +1,67 @@
+{
+  "conditionId": "0xb71d182823de1dbac9efbb5edf562a2dc5e5162aa75c08e9a69333fe57c862ca",
+  "slug": "nba-phi-cle-2026-11-06-rebounds-james-harden-3pt5",
+  "question": "James Harden: Rebounds O/U 3.5",
+  "eventSlug": "nba-phi-cle-2026-11-06",
+  "eventTitle": "76ers vs. Cavaliers",
+  "eventId": "1284231",
+  "clobTokenIds": [
+    "64290011153128376004639210003787077455435905302491328292524171524604959435067",
+    "23672808571272376990897763031958009439908606250442676192162204375632296924423"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-07T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-07T07:19:34Z",
+  "history": [
+{"timestamp":"2026-11-06T01:45:40Z","impliedProbability":0.395,"volume24hr":0.0,"volume":null,"liquidity":6.8598,"spread":0.77,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T08:35:08Z","impliedProbability":0.395,"volume24hr":0.0,"volume":null,"liquidity":222.2698,"spread":0.77,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T16:17:06Z","impliedProbability":0.625,"volume24hr":0.0,"volume":null,"liquidity":349.4856,"spread":0.25,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-06T21:38:32Z","impliedProbability":0.655,"volume24hr":0.0,"volume":null,"liquidity":302.4996,"spread":0.17,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-07T01:14:55Z","impliedProbability":0.79,"volume24hr":0.0,"volume":null,"liquidity":141.6283,"spread":0.42,"oneDayPriceChange":0.395,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-07T07:19:34Z","impliedProbability":1.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":0.6045,"oneWeekPriceChange":null}
+  ]
+}
