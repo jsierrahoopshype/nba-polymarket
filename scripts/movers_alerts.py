@@ -6,21 +6,24 @@ Two channels, both off the existing poll data (no new market fetching):
   --instant  (run after each poll/build_index): every LIVE market whose implied
              probability swung >= its category's instant threshold (awards 8,
              futures 5, other 4 points; see CATEGORY_THRESHOLDS) over the last 6h
-             fires a one-off Slack
-             message, at most once per market per calendar day (Europe/Madrid).
-             Same prose + HoopsMatic link as the digest, worded for a 6h window.
+             fires a one-off plain-text Slack message (subject to the
+             cooldown below), with the HoopsMatic URL alone on the line under it.
   --digest   (run three times a day, 07:00/15:00/23:00 Madrid): the top 10 movers
              over a rolling 24-hour window, ranked by absolute swing, as
              natural-prose sentences for HoopsHype Rumors. The 24h windows overlap
              across the three daily digests (and with instant), so a move can recur
              in consecutive digests — that is expected.
 
---instant also posts (each grouped one Slack message per event per run):
-  * New market: an NBA market not in data/seen_markets.json once it reaches
-    NEW_MARKET_VOLUME_FLOOR ($5K traded). The first run records everything silently.
-  * Flips: a new favorite in a multi-outcome (negRisk) event, or a market crossing
-    25% / 50% / 75% (state in data/alerts_tracker.json, recorded silently on first sight).
-  * Volume spike: 24h volume >= SPIKE_MULT x the market's recent daily average.
+--instant posts ONLY on odds moves: a market's 6h swing must clear its category's
+instant threshold. Nothing else can trigger a message on its own:
+  * Volume never triggers an alert. When the odds have already moved past the
+    threshold, the market's 24h volume can appear as a short supporting clause.
+  * New favorite (negRisk event) and 25% / 50% / 75% crossings are tracked in
+    data/alerts_tracker.json and only show up as a supporting clause on a
+    threshold move ("... crossing the 50% mark").
+  * New listings are still recorded in data/seen_markets.json but never posted.
+Messages are plain text, grouped one Slack message per event per run, and each
+market's HoopsMatic URL sits alone on the line under its sentence.
 Repetition control for every channel: one alert per market per COOLDOWN_HOURS
 unless it moves 2x the market's category threshold for that channel again
 (state: alerts_state.last_alert),
@@ -137,8 +140,7 @@ ALERT_LIQUIDITY_FLOOR = 1000
 SLACK_MUTED_MARKET_TYPES = ["moneyline", "spreads", "totals", "player_props", "game_props"]
 
 # --- repetition control (all channels) ---------------------------------------
-# A market alerts at most once per COOLDOWN_HOURS (instant, flip, crossing, volume
-# spike, digest all share one record), unless its price has moved at least
+# A market alerts at most once per COOLDOWN_HOURS (instant and digest all share one record), unless its price has moved at least
 # COOLDOWN_OVERRIDE_MULT x the market's own category threshold for that channel
 # since the last alert (e.g. awards instant 8pt -> 16pt, awards digest 4pt -> 8pt).
 COOLDOWN_HOURS = 24
@@ -160,11 +162,10 @@ FLIP_MARGIN = 0.015           # new favorite must lead the old one by 1.5pt
 FLIP_MIN_PROB = 0.10          # ignore favorite changes among 5% longshots
 FLIP_CANDIDATE_VOLUME = 1000  # outcome needs this much traded to count as favorite
 
-# --- volume spikes ------------------------------------------------------------
-SPIKE_MULT = 4                # 24h volume >= 4x the recent daily average
-SPIKE_MIN_24H = 10000         # and at least $10K traded in the last 24h
-SPIKE_LOOKBACK_DAYS = 7
-SPIKE_MIN_DAYS = 3            # need >= 3 prior daily readings
+# --- supporting volume clause (never a trigger) -----------------------------
+# On an alert that already cleared its odds threshold, mention 24h volume when at
+# least this much traded. Volume on its own never sends a message.
+VOLUME_CLAUSE_MIN_24H = 10000
 
 # --- digest (three daily, rolling 24-hour window) ----------------------------
 # (24h digest floor is per category: CATEGORY_THRESHOLDS above.)
@@ -491,52 +492,6 @@ def crossing_band(old_band, p):
     return old_band
 
 
-def load_history_points(condition_id):
-    """[(datetime, prob, volume24hr-or-None)] sorted, from a live market file."""
-    path = MARKETS_DIR / f"{condition_id}.json"
-    try:
-        hist = json.loads(path.read_text(encoding="utf-8")).get("history") or []
-    except (OSError, ValueError):
-        return []
-    pts = []
-    for s in hist:
-        ts = s.get("timestamp")
-        if not ts:
-            continue
-        try:
-            pts.append((parse_ts(ts), s.get("impliedProbability"), s.get("volume24hr")))
-        except (ValueError, TypeError):
-            continue
-    pts.sort(key=lambda x: x[0])
-    return pts
-
-
-def volume_spike(m):
-    """(vol24h, recent_avg) when the market's 24h volume is >= SPIKE_MULT x the
-    average of its daily 24h-volume readings over the prior SPIKE_LOOKBACK_DAYS,
-    else None. Needs SPIKE_MIN_DAYS of readings so a young market can't fire."""
-    vol = m.get("volume24hr") or 0
-    if vol < SPIKE_MIN_24H:
-        return None
-    pts = [(t, v) for t, _, v in load_history_points(m["conditionId"])
-           if isinstance(v, (int, float))]
-    if not pts:
-        return None
-    now_t = pts[-1][0]
-    readings = []
-    for d in range(1, SPIKE_LOOKBACK_DAYS + 1):
-        target = now_t - timedelta(days=d)
-        t, v = min(pts, key=lambda tv: abs((tv[0] - target).total_seconds()))
-        if abs((t - target).total_seconds()) <= 3 * 3600:   # a reading near that day mark
-            readings.append(v)
-    if len(readings) < SPIKE_MIN_DAYS:
-        return None
-    avg = sum(readings) / len(readings)
-    if avg <= 0 or vol < SPIKE_MULT * avg:
-        return None
-    return vol, avg
-
-
 def _money(x):
     if x >= 1_000_000:
         return f"${x / 1_000_000:.1f}M"
@@ -545,52 +500,74 @@ def _money(x):
     return f"${x:.0f}"
 
 
-def _odds_phrase(m):
+# Team nicknames, so "Denver Nuggets" reads as "the Nuggets" in instant alerts.
+_TEAM_NICKNAMES = ("Hawks", "Celtics", "Nets", "Hornets", "Bulls", "Cavaliers", "Mavericks",
+                   "Nuggets", "Pistons", "Warriors", "Rockets", "Pacers", "Clippers", "Lakers",
+                   "Grizzlies", "Heat", "Bucks", "Timberwolves", "Pelicans", "Knicks", "Thunder",
+                   "Magic", "76ers", "Suns", "Trail Blazers", "Kings", "Spurs", "Raptors",
+                   "Jazz", "Wizards")
+
+
+def _short_subject(subject):
+    """'Denver Nuggets' -> 'the Nuggets'; players and anything else unchanged."""
+    for nick in _TEAM_NICKNAMES:
+        if subject == nick or subject.endswith(" " + nick):
+            return "the " + nick
+    return subject
+
+
+# Simple-past verbs for instant alerts, by direction and size.
+_I_UP_BIG = ["jumped", "surged", "shot up"]
+_I_UP_SMALL = ["rose", "climbed", "moved up"]
+_I_DOWN_BIG = ["dropped", "tumbled", "sank"]
+_I_DOWN_SMALL = ["slipped", "dipped", "fell"]
+_I_WINDOWS = ["in the past {h} hours", "over the last {h} hours"]
+
+
+def _pick(pool, key, salt):
+    return pool[int(hashlib.md5((key + salt).encode("utf-8")).hexdigest(), 16) % len(pool)]
+
+
+def instant_sentence(m, start_p, end_p, key, hours=INSTANT_HOURS, clauses=()):
+    """Plain-text instant alert: leads with the move, gives before -> now and the
+    window, then the HoopsMatic URL alone on the next line. Wording (verb, window
+    phrase, sentence shape) varies deterministically per market+day via `key`.
+    `clauses` are short supporting phrases (crossing, new favorite, volume)."""
     subject, outcome = subject_outcome(m.get("question"))
-    return f"{possessive(subject)} odds of {outcome}" if outcome else f"{possessive(subject)} odds"
+    who = possessive(_short_subject(subject))
+    odds = f"{who} odds of {outcome}" if outcome else f"{who} odds"
+    a, b = round(start_p * 100, 1), round(end_p * 100, 1)
+    delta = b - a
+    if delta >= 0:
+        verb = _pick(_I_UP_BIG if delta >= DIGEST_BIG_MOVE else _I_UP_SMALL, key, "v")
+    else:
+        verb = _pick(_I_DOWN_BIG if -delta >= DIGEST_BIG_MOVE else _I_DOWN_SMALL, key, "v")
+    window = _pick(_I_WINDOWS, key, "w").format(h=hours)
+    mag = f"{abs(delta):.1f}".removesuffix(".0")
+    pts = "point" if mag == "1" else "points"
+    shapes = [
+        f"{odds} {verb} from {a:.1f}% to {b:.1f}% {window}",
+        f"{odds} {verb} {mag} {pts} {window}, from {a:.1f}% to {b:.1f}%",
+    ]
+    text = _pick(shapes, key, "s")
+    text = text[0].upper() + text[1:]
+    text += "".join(", " + c for c in clauses if c) + "."
+    return text + "\n" + hoopsmatic_url(m)
 
 
-def crossing_sentence(m, p, old_band, new_band):
-    level = CROSS_LEVELS[max(old_band, new_band) - 1] if new_band > old_band \
-        else CROSS_LEVELS[new_band]
-    way = "above" if new_band > old_band else "below"
-    return (f"{_odds_phrase(m)} have crossed {way} {level * 100:.0f}% on Polymarket, "
-            f"now at {p * 100:.1f}%.\n{hoopsmatic_url(m)}")
+def volume_clause(m):
+    vol = m.get("volume24hr")
+    if isinstance(vol, (int, float)) and vol >= VOLUME_CLAUSE_MIN_24H:
+        return f"with {_money(vol)} traded in the past day"
+    return None
 
 
-def flip_sentence(new_m, old_m, event_title):
-    new_s, _ = subject_outcome(new_m.get("question"))
-    old_s, _ = subject_outcome(old_m.get("question")) if old_m else (None, None)
-    np_ = new_m["impliedProbability"] * 100
-    title = event_title or "this market"
-    if old_m and isinstance(old_m.get("impliedProbability"), (int, float)):
-        op = old_m["impliedProbability"] * 100
-        return (f"New favorite in {title}: {new_s} ({np_:.1f}%) has overtaken "
-                f"{old_s} ({op:.1f}%) on Polymarket.\n{hoopsmatic_url(new_m)}")
-    return f"New favorite in {title}: {new_s} at {np_:.1f}% on Polymarket.\n{hoopsmatic_url(new_m)}"
-
-
-def spike_sentence(m, vol, avg):
-    return (f"Trading surge on {_odds_phrase(m)}: {_money(vol)} traded in the past 24 hours, "
-            f"{vol / avg:.1f}x the recent daily average ({_money(avg)}). "
-            f"Odds now {m['impliedProbability'] * 100:.1f}%.\n{hoopsmatic_url(m)}")
-
-
-def new_market_sentence(markets):
-    """One message for an event's newly listed markets (top outcomes by odds)."""
-    markets = sorted(markets, key=lambda x: x.get("impliedProbability") or 0, reverse=True)
-    top = markets[0]
-    vol = sum(x.get("volume") or 0 for x in markets)
-    if len(markets) == 1:
-        p = top.get("impliedProbability")
-        odds = f" at {p * 100:.1f}%" if isinstance(p, (int, float)) else ""
-        return (f"New market on Polymarket: {top.get('question')}{odds}, "
-                f"{_money(vol)} traded so far.\n{hoopsmatic_url(top)}")
-    lead = ", ".join(
-        f"{subject_outcome(x.get('question'))[0]} {x['impliedProbability'] * 100:.1f}%"
-        for x in markets[:3] if isinstance(x.get("impliedProbability"), (int, float)))
-    return (f"New market on Polymarket: {top.get('eventTitle')} ({len(markets)} outcomes, "
-            f"{_money(vol)} traded so far). Leading: {lead}.\n{hoopsmatic_url(top)}")
+def crossing_clause(old_band, new_band):
+    if old_band is None or new_band == old_band:
+        return None
+    if new_band > old_band:
+        return f"crossing above {CROSS_LEVELS[new_band - 1] * 100:.0f}%"
+    return f"dropping below {CROSS_LEVELS[new_band] * 100:.0f}%"
 
 
 # --- modes -------------------------------------------------------------------
@@ -666,23 +643,18 @@ def run_instant():
     bands = tracker.get("bands") if isinstance(tracker.get("bands"), dict) else {}
     leaders = tracker.get("leaders") if isinstance(tracker.get("leaders"), dict) else {}
 
-    # lines[event_key] = list of (priority, cid, prob, text); lower priority wins
-    # when one market qualifies for several alert kinds in the same run.
+    # lines[event_key] = list of (swing, cid, prob, text). Only 6h odds moves that
+    # clear the market's category threshold ever land here.
     lines = {}
 
-    def add(m, prio, text):
-        lines.setdefault(event_key(m), []).append(
-            (prio, m["conditionId"], m.get("impliedProbability"), text))
-
-    # 1) new markets (one grouped line per event)
-    for ek, ms in check_new_markets(universe, now).items():
-        lines.setdefault(ek, []).append((0, None, None, new_market_sentence(ms)))
-        for m in ms:
-            mark_alerted(la, m["conditionId"], m.get("impliedProbability"), now)
+    # New listings: recorded in seen_markets.json, never posted (a listing reaching
+    # a volume floor is not an odds move).
+    check_new_markets(universe, now)
 
     by_id = {m["conditionId"]: m for m in universe}
 
-    # 2) favorite flips in multi-outcome (negRisk) events
+    # Favorite changes in multi-outcome (negRisk) events: tracked for the
+    # supporting clause only, never a trigger on their own.
     events = {}
     for m in universe:
         # Only outcomes with real trading can be "the favorite": Polymarket lists
@@ -691,6 +663,7 @@ def run_instant():
                 and (m.get("volume") or 0) >= FLIP_CANDIDATE_VOLUME):
             events.setdefault(event_key(m), []).append(m)
     new_leaders = {}
+    new_favorites = set()
     for ek, ms in events.items():
         if len(ms) < 2:
             continue
@@ -698,20 +671,17 @@ def run_instant():
         prev_id = leaders.get(ek)
         prev = by_id.get(prev_id) if prev_id else None
         if prev is None or prev_id == top["conditionId"]:
-            new_leaders[ek] = top["conditionId"]   # first sighting / unchanged: silent
+            new_leaders[ek] = top["conditionId"]   # first sighting / unchanged
             continue
         # Hysteresis: the challenger must lead by FLIP_MARGIN, else keep the old leader.
         if top["impliedProbability"] - (prev.get("impliedProbability") or 0) < FLIP_MARGIN:
             new_leaders[ek] = prev_id
             continue
         new_leaders[ek] = top["conditionId"]
-        if (top["impliedProbability"] >= FLIP_MIN_PROB and loud_enough(top)
-                and top["impliedProbability"] <= SETTLE_HI
-                and cooldown_ok(la, top["conditionId"], top["impliedProbability"],
-                                category_threshold(top, "instant"), now)):
-            add(top, 1, flip_sentence(top, prev, top.get("eventTitle")))
+        if top["impliedProbability"] >= FLIP_MIN_PROB:
+            new_favorites.add(top["conditionId"])
 
-    # 3) 25/50/75 crossings, 4) 6h swings, 5) volume spikes
+    # 6h odds moves (the only trigger). Crossing bands are still tracked every run.
     new_bands = {}
     for m in universe:
         cid = m["conditionId"]
@@ -724,51 +694,42 @@ def run_instant():
         if not is_live_swingable(m) or not loud_enough(m):
             continue
         inst = category_threshold(m, "instant")
-        if old_band is not None and band != old_band:
-            if cooldown_ok(la, cid, p, inst, now):
-                add(m, 2, crossing_sentence(m, p, old_band, band))
         sw = swing_6h(cid)
-        if sw:
-            start, end = sw
-            if clears(end - start, inst) and not artificial_swing(start, m) \
-                    and cooldown_ok(la, cid, end, inst, now):
-                add(m, 3, prose_sentence(m, start, end, cid + today,
-                                         "in the past 6 hours on Polymarket"))
-        spike = volume_spike(m)
-        if spike and cooldown_ok(la, cid, p, inst, now):
-            add(m, 4, spike_sentence(m, *spike))
+        if not sw:
+            continue
+        start, end = sw
+        if not clears(end - start, inst) or artificial_swing(start, m) \
+                or not cooldown_ok(la, cid, end, inst, now):
+            continue
+        clauses = [crossing_clause(old_band, band)]
+        if cid in new_favorites:
+            clauses.append(f"making {_short_subject(subject_outcome(m.get('question'))[0])} "
+                           f"the new favorite")
+        clauses.append(volume_clause(m))
+        lines.setdefault(event_key(m), []).append(
+            (abs(end - start), cid, end, instant_sentence(m, start, end, cid + today,
+                                                          clauses=clauses)))
 
-    # (No tracker yet = first run: every band/leader has no previous value, so
-    # crossings and flips are recorded silently above and nothing posts for them.)
-
-    # One Slack message per event per run: best line per market, best markets first.
+    # One Slack message per event per run, biggest moves first.
     fired = 0
     messages = 0
-    for ek, items in sorted(lines.items(), key=lambda kv: min(x[0] for x in kv[1])):
-        if not items:
-            continue
+    for ek, items in sorted(lines.items(), key=lambda kv: -max(x[0] for x in kv[1])):
         if messages >= INSTANT_MAX_MESSAGES:
             print(f"Instant: message cap {INSTANT_MAX_MESSAGES} hit, deferring the rest.")
             break
-        best = {}
-        for prio, cid, prob, text in sorted(items, key=lambda x: x[0]):
-            best.setdefault(cid or f"new:{ek}", (prio, cid, prob, text))
-        chosen = sorted(best.values(), key=lambda x: x[0])[:EVENT_MAX_LINES]
+        chosen = sorted(items, key=lambda x: -x[0])[:EVENT_MAX_LINES]
         if post_slack("\n\n".join(x[3] for x in chosen)):
             messages += 1
-            for prio, cid, prob, _ in chosen:
-                if cid:
-                    mark_alerted(la, cid, prob, now)
-                    sent[cid] = {"ts": _iso_utc(now), "kind": _KIND[prio]}
-                    fired += 1
+            for _, cid, prob, _ in chosen:
+                mark_alerted(la, cid, prob, now)
+                sent[cid] = {"ts": _iso_utc(now), "kind": "swing"}
+                fired += 1
 
     _save_maps(TRACKER_PATH, {}, {"leaders": new_leaders, "bands": new_bands})
     save_state(state)
     print(f"Instant alerts: {messages} message(s), {fired} market line(s) "
           f"({len(sent)} sent so far today {today}).")
 
-
-_KIND = {0: "new", 1: "flip", 2: "cross", 3: "swing", 4: "volume"}
 
 
 # --- digest prose + links ----------------------------------------------------
