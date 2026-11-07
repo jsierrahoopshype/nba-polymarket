@@ -1,0 +1,62 @@
+{
+  "conditionId": "0x2e314307abf0120d2edc2d9ae03f9dc7666a4df3fb2ec7d5ac2d2db1fde30ee2",
+  "slug": "nba-orl-gsw-2026-11-07-1h-spread-home-1pt5",
+  "question": "1H Spread: Warriors (-1.5)",
+  "eventSlug": "nba-orl-gsw-2026-11-07",
+  "eventTitle": "Magic vs. Warriors",
+  "eventId": "1284243",
+  "clobTokenIds": [
+    "42430497255440629249213777829956335560762025986907668630741816511533339002009",
+    "22247327737204905351439291072525556136238871152247863075436284897143011865692"
+  ],
+  "outcomes": [
+    "Warriors",
+    "Magic"
+  ],
+  "endDate": "2026-11-08T01:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-07T14:17:21Z","impliedProbability":0.58,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
