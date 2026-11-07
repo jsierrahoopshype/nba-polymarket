@@ -14,8 +14,9 @@ Two channels, both off the existing poll data (no new market fetching):
              across the three daily digests (and with instant), so a move can recur
              in consecutive digests — that is expected.
 
---instant posts ONLY on odds moves: a market's 6h swing must clear its category's
-instant threshold. Nothing else can trigger a message on its own:
+--instant posts ONLY on odds moves: a market's 6h OR 24h swing must clear its
+category's instant threshold (the larger qualifying window is used and named in
+the wording; one shared cooldown means a move posts once, not once per window). Nothing else can trigger a message on its own:
   * Volume never triggers an alert. When the odds have already moved past the
     threshold, the market's 24h volume can appear as a short supporting clause.
   * New favorite (negRisk event) and 25% / 50% / 75% crossings are tracked in
@@ -118,6 +119,10 @@ CATEGORY_PATTERNS = [
 
 # (6h instant swing threshold is per category: CATEGORY_THRESHOLDS above.)
 INSTANT_HOURS = 6
+# Second instant window: a slow drift over a day, same per-category thresholds.
+# The shared cooldown covers both windows, so a move posts once, never twice.
+INSTANT_DAY_HOURS = 24
+DAY_BASELINE_TOLERANCE_HOURS = 3   # 24h baseline must sit within 3h of the 24h mark
 SETTLE_LO, SETTLE_HI = 0.02, 0.98   # outside this band a move is settlement, skip
 MIN_HISTORY_HOURS = 5         # need ~6h of history to judge a 6h swing
 # Alert-only floors: a swing must have real money behind it to fire a Slack alert.
@@ -283,6 +288,36 @@ def swing_6h(condition_id):
     if base is None:
         base = pts[0][1]
     return base, last_p
+
+
+def swing_24h(condition_id):
+    """(start_prob, end_prob) over the last 24h, or None when the market lacks a
+    snapshot near the 24h mark (a younger market can't pass off a shorter window
+    as "the past day"). Baseline = latest snapshot at or before now-24h."""
+    path = MARKETS_DIR / f"{condition_id}.json"
+    try:
+        hist = json.loads(path.read_text(encoding="utf-8")).get("history") or []
+    except (OSError, ValueError):
+        return None
+    pts = []
+    for s in hist:
+        p = s.get("impliedProbability")
+        ts = s.get("timestamp")
+        if p is None or not ts:
+            continue
+        try:
+            pts.append((parse_ts(ts), float(p)))
+        except (ValueError, TypeError):
+            continue
+    if len(pts) < 2:
+        return None
+    pts.sort(key=lambda x: x[0])
+    last_t, last_p = pts[-1]
+    cutoff = last_t - timedelta(hours=INSTANT_DAY_HOURS)
+    before = [(t, p) for t, p in pts if t <= cutoff]
+    if not before or cutoff - before[-1][0] > timedelta(hours=DAY_BASELINE_TOLERANCE_HOURS):
+        return None
+    return before[-1][1], last_p
 
 
 def is_live_swingable(m):
@@ -522,6 +557,7 @@ _I_UP_SMALL = ["rose", "climbed", "moved up"]
 _I_DOWN_BIG = ["dropped", "tumbled", "sank"]
 _I_DOWN_SMALL = ["slipped", "dipped", "fell"]
 _I_WINDOWS = ["in the past {h} hours", "over the last {h} hours"]
+_I_WINDOWS_DAY = ["in the past day", "over the past 24 hours"]
 
 
 def _pick(pool, key, salt):
@@ -542,7 +578,8 @@ def instant_sentence(m, start_p, end_p, key, hours=INSTANT_HOURS, clauses=()):
         verb = _pick(_I_UP_BIG if delta >= DIGEST_BIG_MOVE else _I_UP_SMALL, key, "v")
     else:
         verb = _pick(_I_DOWN_BIG if -delta >= DIGEST_BIG_MOVE else _I_DOWN_SMALL, key, "v")
-    window = _pick(_I_WINDOWS, key, "w").format(h=hours)
+    pool = _I_WINDOWS_DAY if hours == INSTANT_DAY_HOURS else _I_WINDOWS
+    window = _pick(pool, key, "w").format(h=hours)
     mag = f"{abs(delta):.1f}".removesuffix(".0")
     pts = "point" if mag == "1" else "points"
     shapes = [
@@ -555,9 +592,11 @@ def instant_sentence(m, start_p, end_p, key, hours=INSTANT_HOURS, clauses=()):
     return text + "\n" + hoopsmatic_url(m)
 
 
-def volume_clause(m):
+def volume_clause(m, hours=INSTANT_HOURS):
     vol = m.get("volume24hr")
     if isinstance(vol, (int, float)) and vol >= VOLUME_CLAUSE_MIN_24H:
+        if hours == INSTANT_DAY_HOURS:             # window already says "past day"
+            return f"with {_money(vol)} traded"
         return f"with {_money(vol)} traded in the past day"
     return None
 
@@ -694,21 +733,25 @@ def run_instant():
         if not is_live_swingable(m) or not loud_enough(m):
             continue
         inst = category_threshold(m, "instant")
-        sw = swing_6h(cid)
-        if not sw:
+        # Both windows, same threshold; keep the larger qualifying move. One
+        # cooldown record (last_alert) covers both, so a market posts once per move.
+        candidates = []
+        for hours, sw in ((INSTANT_HOURS, swing_6h(cid)), (INSTANT_DAY_HOURS, swing_24h(cid))):
+            if sw and clears(sw[1] - sw[0], inst) and not artificial_swing(sw[0], m):
+                candidates.append((abs(sw[1] - sw[0]), hours, sw[0], sw[1]))
+        if not candidates:
             continue
-        start, end = sw
-        if not clears(end - start, inst) or artificial_swing(start, m) \
-                or not cooldown_ok(la, cid, end, inst, now):
+        _, hours, start, end = max(candidates, key=lambda c: (c[0], -c[1]))
+        if not cooldown_ok(la, cid, end, inst, now):
             continue
         clauses = [crossing_clause(old_band, band)]
         if cid in new_favorites:
             clauses.append(f"making {_short_subject(subject_outcome(m.get('question'))[0])} "
                            f"the new favorite")
-        clauses.append(volume_clause(m))
+        clauses.append(volume_clause(m, hours))
         lines.setdefault(event_key(m), []).append(
             (abs(end - start), cid, end, instant_sentence(m, start, end, cid + today,
-                                                          clauses=clauses)))
+                                                          hours=hours, clauses=clauses)))
 
     # One Slack message per event per run, biggest moves first.
     fired = 0
