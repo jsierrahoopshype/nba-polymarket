@@ -1,5 +1,6 @@
 """
-Tests for the new-market, flip, crossing, volume-spike and repetition rules in
+Tests for the odds-move-only instant alerts (new markets, flips, crossings and
+volume never trigger on their own) and repetition rules in
 scripts/movers_alerts.py.
 
 Run:  python -m unittest discover -s tests
@@ -80,49 +81,36 @@ class AlertKindsTest(unittest.TestCase):
     def tearDown(self):
         self.h.close()
 
-    def test_new_market_bootstrap_silent_then_announced(self):
+    def test_new_market_is_recorded_but_never_posted(self):
         base = [mk("0xa", "Will A win the 2027 NBA Finals?", 0.30)]
         self.assertEqual(self.h.run(base, {}), [])                       # bootstrap: silent
         seen = json.loads((self.h.dir / "seen_markets.json").read_text())
         self.assertIn("0xa", seen["markets"])
-        # a tiny new market: recorded, not announced
-        small = base + [mk("0xb", "Will B be traded?", 0.2, event="E2", neg=False, volume=100)]
-        self.assertEqual(self.h.run(small, {}), [])
-        # it reaches the floor -> announced once
-        big = base + [mk("0xb", "Will B be traded?", 0.2, event="E2", neg=False, volume=6000)]
-        posted = self.h.run(big, {})
-        self.assertEqual(len(posted), 1)
-        self.assertIn("New market", posted[0])
-        self.assertEqual(self.h.run(big, {}), [])                        # never again
+        # a new market past the old $5K floor: still silent (volume is not a trigger)
+        big = base + [mk("0xb", "Will B be traded?", 0.2, event="E2", neg=False, volume=60000)]
+        self.assertEqual(self.h.run(big, {}), [])
+        seen = json.loads((self.h.dir / "seen_markets.json").read_text())
+        self.assertIn("0xb", seen["markets"])
 
-    def test_new_event_is_one_message(self):
-        self.h.run([mk("0xa", "Will A win the 2027 NBA Finals?", 0.30)], {})
-        new = [mk(f"0xc{i}", f"Will Player {i} win the 2026-27 NBA MVP?", 0.3 - i * 0.05,
-                  event="MVP", title="NBA: 2026-27 MVP") for i in range(4)]
-        posted = self.h.run([mk("0xa", "Will A win the 2027 NBA Finals?", 0.30)] + new, {})
-        self.assertEqual(len(posted), 1)
-        self.assertIn("NBA: 2026-27 MVP (4 outcomes", posted[0])
-
-    def test_flip(self):
+    def test_flip_alone_sends_nothing(self):
         a, b = "Will Alpha win the 2026-27 NBA MVP?", "Will Beta win the 2026-27 NBA MVP?"
         self.assertEqual(self.h.run([mk("0x1", a, 0.40), mk("0x2", b, 0.35)], {}), [])
-        posted = self.h.run([mk("0x1", a, 0.36), mk("0x2", b, 0.42)], {})
-        self.assertEqual(len(posted), 1)
-        self.assertIn("New favorite", posted[0])
-        self.assertIn("Beta (42.0%) has overtaken Alpha (36.0%)", posted[0])
+        # Beta overtakes Alpha, but neither 6h move clears the 8pt awards threshold
+        self.assertEqual(self.h.run([mk("0x1", a, 0.36), mk("0x2", b, 0.42)], {}), [])
 
-    def test_flip_needs_margin(self):
+    def test_flip_rides_along_on_a_threshold_move(self):
         a, b = "Will Alpha win the 2026-27 NBA MVP?", "Will Beta win the 2026-27 NBA MVP?"
-        self.h.run([mk("0x1", a, 0.40), mk("0x2", b, 0.35)], {})
-        self.assertEqual(self.h.run([mk("0x1", a, 0.385), mk("0x2", b, 0.39)], {}), [])
+        self.h.run([mk("0x1", a, 0.40), mk("0x2", b, 0.30)], {})
+        hb = [{"timestamp": ts(h), "impliedProbability": p} for h, p in ((7, 0.30), (6, 0.30), (0, 0.45))]
+        posted = self.h.run([mk("0x1", a, 0.38), mk("0x2", b, 0.45)], {"0x2": hb})
+        self.assertEqual(len(posted), 1)
+        self.assertIn("from 30.0% to 45.0%", posted[0])
+        self.assertIn("making Beta the new favorite", posted[0])
 
-    def test_crossing_with_hysteresis(self):
+    def test_crossing_alone_sends_nothing(self):
         q = "Will Gamma win the 2027 NBA Finals?"
         self.h.run([mk("0x1", q, 0.45, neg=False)], {})
-        self.assertEqual(self.h.run([mk("0x1", q, 0.51, neg=False)], {}), [])   # inside 1.5pt band
-        posted = self.h.run([mk("0x1", q, 0.53, neg=False)], {})
-        self.assertEqual(len(posted), 1)
-        self.assertIn("crossed above 50%", posted[0])
+        self.assertEqual(self.h.run([mk("0x1", q, 0.53, neg=False)], {}), [])   # 50% crossed, flat 6h
 
     def test_cooldown_and_double_threshold(self):
         q = "Will Delta win the 2027 NBA Finals?"
@@ -138,13 +126,39 @@ class AlertKindsTest(unittest.TestCase):
         swing3 = [{"timestamp": ts(h), "impliedProbability": p} for h, p in ((7, 0.37), (6, 0.37), (0, 0.495))]
         self.assertEqual(len(self.h.run([mk("0x1", q, 0.495, neg=False)], {"0x1": swing3})), 1)
 
-    def test_volume_spike(self):
+    def test_volume_spike_with_flat_odds_sends_nothing(self):
         q = "Will Epsilon be traded before the 2027 trade deadline?"
         hist = [{"timestamp": ts(24 * d), "impliedProbability": 0.4, "volume24hr": 5000} for d in range(7, 0, -1)]
-        hist.append({"timestamp": ts(0), "impliedProbability": 0.4, "volume24hr": 30000})
-        self.h.run([mk("0x1", q, 0.4, neg=False, vol24=30000)], {"0x1": hist})   # bootstrap run also checks spikes
-        st = self.h.state()
-        self.assertEqual(st["instant_sent"]["0x1"]["kind"], "volume")
+        hist.append({"timestamp": ts(0), "impliedProbability": 0.4, "volume24hr": 80000})   # 16x volume
+        self.assertEqual(self.h.run([mk("0x1", q, 0.4, neg=False, vol24=80000)], {"0x1": hist}), [])
+        self.assertEqual(self.h.run([mk("0x1", q, 0.4, neg=False, vol24=80000)], {"0x1": hist}), [])
+        self.assertEqual(self.h.state()["instant_sent"], {})
+
+    def test_odds_move_sends_one_message_with_url_last(self):
+        q = "Will Denver Nuggets win the 2027 NBA Finals?"
+        hist = [{"timestamp": ts(h), "impliedProbability": p} for h, p in ((7, 0.10), (6, 0.10), (0, 0.17))]
+        m = mk("0x1", q, 0.17, neg=False, vol24=45000, title="NBA: 2027 Champion")
+        posted = self.h.run([m], {"0x1": hist})
+        self.assertEqual(len(posted), 1)
+        lines = posted[0].split("\n")
+        self.assertEqual(lines[-1], "https://hoopsmatic.com/polymarket/market/"
+                                    "will-denver-nuggets-win-the-2027-nba-finals/")
+        self.assertNotIn(" ", lines[-1])                          # URL alone on its line
+        self.assertEqual(len(lines), 2)
+        self.assertTrue(lines[0].startswith("The Nuggets' odds of winning the 2027 NBA Finals "))
+        self.assertIn("10.0% to 17.0%", lines[0])
+        self.assertRegex(lines[0], r"(in the past|over the last) 6 hours")
+        self.assertIn("with $45K traded in the past day", lines[0])  # supporting clause only
+        self.assertNotIn("surge", lines[0].lower().replace("surged", ""))
+        self.assertNotIn("*", posted[0])                         # plain text
+
+    def test_wording_varies(self):
+        m = {"question": "Will Denver Nuggets win the 2027 NBA Finals?"}
+        texts = {ma.instant_sentence(m, 0.10, 0.17, f"k{i}").split("\n")[0] for i in range(40)}
+        self.assertGreater(len(texts), 3)
+        for t in texts:
+            self.assertIn("10.0%", t)
+            self.assertIn("17.0%", t)
 
     def test_one_message_per_event(self):
         qa, qb = "Will Zeta win the 2026-27 NBA MVP?", "Will Eta win the 2026-27 NBA MVP?"
