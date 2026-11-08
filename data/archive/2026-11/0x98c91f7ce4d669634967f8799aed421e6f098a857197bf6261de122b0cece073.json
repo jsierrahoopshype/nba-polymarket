@@ -1,0 +1,70 @@
+{
+  "conditionId": "0x98c91f7ce4d669634967f8799aed421e6f098a857197bf6261de122b0cece073",
+  "slug": "nba-bkn-atl-2026-11-07-rebounds-dayron-sharpe-7pt5",
+  "question": "Day'Ron Sharpe: Rebounds O/U 7.5",
+  "eventSlug": "nba-bkn-atl-2026-11-07",
+  "eventTitle": "Nets vs. Hawks",
+  "eventId": "1284240",
+  "clobTokenIds": [
+    "88761630048368812536060075452054356701247029891058316796024250531599993899138",
+    "44114464323353917624450546452444193721301055166942452901180268043870614176181"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-08T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-08T08:49:10Z",
+  "history": [
+{"timestamp":"2026-11-07T11:00:19Z","impliedProbability":0.415,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-07T12:00:32Z","impliedProbability":0.37,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-07T13:00:20Z","impliedProbability":0.3,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-07T14:00:21Z","impliedProbability":0.285,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-07T14:15:19Z","impliedProbability":0.425,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-07T18:52:43Z","impliedProbability":0.35,"volume24hr":0.0,"volume":null,"liquidity":780.1894,"spread":0.44,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-07T22:37:33Z","impliedProbability":0.455,"volume24hr":0.0,"volume":null,"liquidity":664.2212,"spread":0.21,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-08T01:51:07Z","impliedProbability":0.235,"volume24hr":0.0,"volume":null,"liquidity":81.1499,"spread":0.45,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-08T08:49:10Z","impliedProbability":1.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

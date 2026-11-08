@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x99bfa2f5c1bfe11dc97eaa43f4349b90ddfdc684ed1a65646faea2c0bbb190f8",
+  "slug": "nba-bkn-dal-2026-11-08-assists-cooper-flagg-3pt5",
+  "question": "Cooper Flagg: Assists O/U 3.5",
+  "eventSlug": "nba-bkn-dal-2026-11-08",
+  "eventTitle": "Nets vs. Mavericks",
+  "eventId": "1284249",
+  "clobTokenIds": [
+    "12999968035673775975578640665128555258752772627406353888456288313546549773326",
+    "18478013933948208703796068620966151283895963966759413249660559220432889642983"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-09T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-08T08:49:10Z","impliedProbability":0.475,"volume24hr":0.0,"volume":null,"liquidity":7.213,"spread":0.93,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-08T08:50:16Z","impliedProbability":0.47,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

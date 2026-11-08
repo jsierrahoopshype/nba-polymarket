@@ -1,0 +1,69 @@
+{
+  "conditionId": "0x468307a6a9b7ea7480e9112461a375765de283800e5978f810a0203cb5cabc18",
+  "slug": "nba-nyk-cle-2026-11-07-assists-donovan-mitchell-3pt5",
+  "question": "Donovan Mitchell: Assists O/U 3.5",
+  "eventSlug": "nba-nyk-cle-2026-11-07",
+  "eventTitle": "Knicks vs. Cavaliers",
+  "eventId": "1284241",
+  "clobTokenIds": [
+    "51083214034226682469005230351049344003913349399135319198637063501588136074183",
+    "355894216396940445442405717814849174054349038758860763055228607904593312145"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-08T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-08T08:49:10Z",
+  "history": [
+{"timestamp":"2026-11-07T12:00:45Z","impliedProbability":0.435,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-07T13:00:23Z","impliedProbability":0.59,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-07T14:00:23Z","impliedProbability":0.66,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-07T14:16:21Z","impliedProbability":0.655,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-07T18:52:43Z","impliedProbability":0.66,"volume24hr":0.0,"volume":null,"liquidity":235.4476,"spread":0.24,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-07T22:37:33Z","impliedProbability":0.405,"volume24hr":0.0,"volume":null,"liquidity":265.1874,"spread":0.69,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-08T01:51:07Z","impliedProbability":0.5,"volume24hr":6.849314,"volume":6.849314,"liquidity":null,"spread":1.0,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-08T08:49:10Z","impliedProbability":1.0,"volume24hr":6.849314,"volume":6.849314,"liquidity":0.0,"spread":0.2,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
