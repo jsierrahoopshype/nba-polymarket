@@ -1,0 +1,63 @@
+{
+  "conditionId": "0xcae60dc7eab66cba04790cdeaf2188f1c4a93ef6ceb086e8f46d3a9598b2018e",
+  "slug": "nba-bkn-dal-2026-11-08-2q-spread-home-1pt5",
+  "question": "2Q Spread: Mavericks (-1.5)",
+  "eventSlug": "nba-bkn-dal-2026-11-08",
+  "eventTitle": "Nets vs. Mavericks",
+  "eventId": "1284249",
+  "clobTokenIds": [
+    "79518182545634305622536896832524331595249987962368631947536448077025660868398",
+    "47248963242645197730441485223424004763706775602877152019680084755371454379099"
+  ],
+  "outcomes": [
+    "Mavericks",
+    "Nets"
+  ],
+  "endDate": "2026-11-09T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-08T15:39:11Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":1.9198,"spread":0.98,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-08T15:41:19Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
