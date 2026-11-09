@@ -1,0 +1,59 @@
+{
+  "conditionId": "0x3ec2909a70276021d64f5743861132443f417cda488604e70d14f8e1cd377373",
+  "slug": "nba-lal-det-2026-11-08-exact-margin-home-6-10",
+  "question": "Exact Margin: Pistons by 6-10",
+  "eventSlug": "nba-lal-det-2026-11-08-exact-margin",
+  "eventTitle": "Lakers vs. Pistons - Exact Margin",
+  "eventId": "1340880",
+  "clobTokenIds": [
+    "102483353493354076637338751965415277474483265959227559332844663776340449432646",
+    "91832216523198371592666473623975215362499755161211660334625983707233518820260"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-08T23:00:00Z",
+  "negRisk": true,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-09T02:59:22Z",
+  "history": [
+{"timestamp":"2026-11-08T14:00:18Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-08T15:00:25Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-08T15:39:11Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":2.0945,"spread":0.98,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-08T15:44:17Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-08T19:58:42Z","impliedProbability":0.545,"volume24hr":55.5555,"volume":55.5555,"liquidity":3.2194,"spread":0.89,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-08T23:38:12Z","impliedProbability":0.505,"volume24hr":55.5555,"volume":55.5555,"liquidity":0.2855,"spread":0.99,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T02:59:22Z","impliedProbability":0.0,"volume24hr":84.1055,"volume":84.1055,"liquidity":0.0,"spread":0.2,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

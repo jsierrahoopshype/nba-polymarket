@@ -1,0 +1,64 @@
+{
+  "conditionId": "0xadd81bae505b8c522d9d35bc66edab1cc7c59e9213b4f39d68b0b613d72ac2f8",
+  "slug": "nba-lal-det-2026-11-08-points-austin-reaves-25pt5",
+  "question": "Austin Reaves: Points O/U 25.5",
+  "eventSlug": "nba-lal-det-2026-11-08",
+  "eventTitle": "Lakers vs. Pistons",
+  "eventId": "1284247",
+  "clobTokenIds": [
+    "5828020777920310097138439200270369045676545257644960498382439584958436793948",
+    "73586616189753108074883244823876113208563167401422126266314773478261708743452"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-08T23:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-09T02:59:22Z",
+  "history": [
+{"timestamp":"2026-11-08T19:58:42Z","impliedProbability":0.275,"volume24hr":0.0,"volume":null,"liquidity":94.5,"spread":0.55,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-08T23:38:12Z","impliedProbability":0.5,"volume24hr":51.818182,"volume":51.818182,"liquidity":null,"spread":1.0,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T02:59:22Z","impliedProbability":1.0,"volume24hr":51.818182,"volume":51.818182,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
