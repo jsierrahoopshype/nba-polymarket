@@ -1,0 +1,63 @@
+{
+  "conditionId": "0xf27dc906ef93f1b0233b0435ff31f2da7f49ff3da34bfe4b3db7620288f88d33",
+  "slug": "nba-okc-por-2026-11-10-spread-away-21pt5",
+  "question": "Spread: Thunder (-21.5)",
+  "eventSlug": "nba-okc-por-2026-11-10",
+  "eventTitle": "Thunder vs. Trail Blazers",
+  "eventId": "1284269",
+  "clobTokenIds": [
+    "66691230286395802514010642237635264529082679248753950782143649123737001624975",
+    "83798996967554326980047131906851434714352540923349839004072857393646552539181"
+  ],
+  "outcomes": [
+    "Thunder",
+    "Trail Blazers"
+  ],
+  "endDate": "2026-11-11T04:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-09T21:00:34Z","impliedProbability":0.315,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T21:31:14Z","impliedProbability":0.315,"volume24hr":0.0,"volume":null,"liquidity":171.2998,"spread":0.61,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
