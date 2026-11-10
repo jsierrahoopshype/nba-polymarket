@@ -1,0 +1,70 @@
+{
+  "conditionId": "0x125dbaa8416897d3bd96c2c262d5d6292ab8a0b8e2c9d574d070b9e15f1fe4b7",
+  "slug": "nba-was-det-2026-11-09-rebounds-john-collins-5pt5",
+  "question": "John Collins: Rebounds O/U 5.5",
+  "eventSlug": "nba-was-det-2026-11-09",
+  "eventTitle": "Wizards vs. Pistons",
+  "eventId": "1284258",
+  "clobTokenIds": [
+    "111520630069444723828108177933201634150228375390012010664111906544463465973500",
+    "888867995257847377723123792705540062001192002691624273480193412514860989358"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-10T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-10T03:48:29Z",
+  "history": [
+{"timestamp":"2026-11-09T06:00:31Z","impliedProbability":0.52,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T07:00:31Z","impliedProbability":0.52,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T08:00:17Z","impliedProbability":0.52,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T09:00:30Z","impliedProbability":0.52,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T10:00:17Z","impliedProbability":0.345,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T11:00:17Z","impliedProbability":0.54,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T11:19:28Z","impliedProbability":0.54,"volume24hr":0.0,"volume":null,"liquidity":1596.1122,"spread":0.06,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T21:31:14Z","impliedProbability":0.54,"volume24hr":1.963637,"volume":1.963637,"liquidity":1376.6638,"spread":0.04,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-10T03:48:29Z","impliedProbability":1.0,"volume24hr":3.9236370000000003,"volume":3.9236370000000003,"liquidity":null,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

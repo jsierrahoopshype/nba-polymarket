@@ -1,0 +1,66 @@
+{
+  "conditionId": "0x2a84a4449127f20a252c20045c85991752f41f28696f0e0033d4311a22cb0e25",
+  "slug": "nba-mem-tor-2026-11-09-rebounds-jerami-grant-5pt5",
+  "question": "Jerami Grant: Rebounds O/U 5.5",
+  "eventSlug": "nba-mem-tor-2026-11-09",
+  "eventTitle": "Grizzlies vs. Raptors",
+  "eventId": "1284259",
+  "clobTokenIds": [
+    "74151762854729322673137009047759691727385761236475049660374473689796298005196",
+    "20809314677313940841173829306349153259554600402617223699940914339756354537525"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-10T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-10T03:48:29Z",
+  "history": [
+{"timestamp":"2026-11-09T11:00:17Z","impliedProbability":0.47,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T11:19:28Z","impliedProbability":0.485,"volume24hr":0.0,"volume":null,"liquidity":8.2796,"spread":0.95,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T11:22:11Z","impliedProbability":0.485,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T21:31:14Z","impliedProbability":0.036,"volume24hr":0.0,"volume":null,"liquidity":1850.3903,"spread":0.052,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-10T03:48:29Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

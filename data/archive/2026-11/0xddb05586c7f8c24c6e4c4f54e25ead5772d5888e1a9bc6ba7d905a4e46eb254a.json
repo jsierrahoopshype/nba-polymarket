@@ -1,0 +1,67 @@
+{
+  "conditionId": "0xddb05586c7f8c24c6e4c4f54e25ead5772d5888e1a9bc6ba7d905a4e46eb254a",
+  "slug": "nba-mem-tor-2026-11-09-rebounds-jakob-poeltl-9pt5",
+  "question": "Jakob Poeltl: Rebounds O/U 9.5",
+  "eventSlug": "nba-mem-tor-2026-11-09",
+  "eventTitle": "Grizzlies vs. Raptors",
+  "eventId": "1284259",
+  "clobTokenIds": [
+    "45748999630713228657889973405683847757919088664018958462582077965766083901208",
+    "44064554645118984611851003874610217708531928965689889144099173247589052544663"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-10T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-10T03:48:29Z",
+  "history": [
+{"timestamp":"2026-11-09T10:00:16Z","impliedProbability":0.155,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T11:00:16Z","impliedProbability":0.15,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T11:19:28Z","impliedProbability":0.15,"volume24hr":0.0,"volume":null,"liquidity":1258.6498,"spread":0.28,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T11:20:11Z","impliedProbability":0.15,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T21:31:14Z","impliedProbability":0.255,"volume24hr":0.0,"volume":null,"liquidity":1317.5219,"spread":0.07,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-10T03:48:29Z","impliedProbability":0.0,"volume24hr":37.0,"volume":37.0,"liquidity":0.0,"spread":0.19,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

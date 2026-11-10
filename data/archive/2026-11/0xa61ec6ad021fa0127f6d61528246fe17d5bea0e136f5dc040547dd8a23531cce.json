@@ -1,0 +1,69 @@
+{
+  "conditionId": "0xa61ec6ad021fa0127f6d61528246fe17d5bea0e136f5dc040547dd8a23531cce",
+  "slug": "nba-lal-atl-2026-11-09-points-dyson-daniels-9pt5",
+  "question": "Dyson Daniels: Points O/U 9.5",
+  "eventSlug": "nba-lal-atl-2026-11-09",
+  "eventTitle": "Lakers vs. Hawks",
+  "eventId": "1284256",
+  "clobTokenIds": [
+    "94781871818847738061249359084475957534022308368803035523521875840546123801837",
+    "112502698762918335370944674273425269375071948874773250888729879257224342942673"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-10T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-10T03:48:29Z",
+  "history": [
+{"timestamp":"2026-11-09T07:00:30Z","impliedProbability":0.33,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T08:00:15Z","impliedProbability":0.52,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T09:00:24Z","impliedProbability":0.54,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T10:00:16Z","impliedProbability":0.54,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T11:00:15Z","impliedProbability":0.54,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T11:19:28Z","impliedProbability":0.54,"volume24hr":0.0,"volume":null,"liquidity":985.7022,"spread":0.06,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T21:31:14Z","impliedProbability":0.525,"volume24hr":0.0,"volume":null,"liquidity":1115.4616,"spread":0.15,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-10T03:48:29Z","impliedProbability":1.0,"volume24hr":45.057469,"volume":45.057469,"liquidity":0.0,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
