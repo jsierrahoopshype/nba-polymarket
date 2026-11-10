@@ -1,0 +1,68 @@
+{
+  "conditionId": "0x4b7c896c7dc79d617c412bc52c913f76909344928c9a0981ad9adde6d2ca37d7",
+  "slug": "nba-den-hou-2026-11-09-spread-home-3pt5",
+  "question": "Spread: Rockets (-3.5)",
+  "eventSlug": "nba-den-hou-2026-11-09",
+  "eventTitle": "Nuggets vs. Rockets",
+  "eventId": "1284261",
+  "clobTokenIds": [
+    "24608245942757742205443759886976047874583275416209777867615815941562371641236",
+    "36345642473899015777138085907739493011786403002564074425300025254318455485273"
+  ],
+  "outcomes": [
+    "Rockets",
+    "Nuggets"
+  ],
+  "endDate": "2026-11-10T01:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-10T11:53:26Z",
+  "history": [
+{"timestamp":"2026-11-08T19:59:17Z","impliedProbability":0.655,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-08T23:38:12Z","impliedProbability":0.72,"volume24hr":217.22,"volume":217.22,"liquidity":14185.1048,"spread":0.04,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T02:59:22Z","impliedProbability":0.665,"volume24hr":266.216667,"volume":266.21666700000003,"liquidity":22058.7883,"spread":0.03,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T11:19:28Z","impliedProbability":0.67,"volume24hr":714.137595,"volume":714.137595,"liquidity":24477.7445,"spread":0.02,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-09T21:31:14Z","impliedProbability":0.535,"volume24hr":6324.373648,"volume":6324.373648000001,"liquidity":98763.9945,"spread":0.01,"oneDayPriceChange":0.015,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-10T03:48:29Z","impliedProbability":0.86,"volume24hr":27069.649691,"volume":27135.866358000003,"liquidity":10713.5517,"spread":0.02,"oneDayPriceChange":0.185,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-10T11:53:26Z","impliedProbability":1.0,"volume24hr":28915.394779000006,"volume":29629.532374,"liquidity":null,"spread":0.001,"oneDayPriceChange":0.3245,"oneWeekPriceChange":null}
+  ]
+}
