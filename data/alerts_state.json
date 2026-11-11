@@ -1,6 +1,11 @@
 {
   "date": "2026-11-11",
-  "instant_sent": {},
+  "instant_sent": {
+    "0xdfb9ede62f1d118beae01dc709e2706c1a23a2432532046fd49f77851f13d427": {
+      "ts": "2026-11-11T06:51:35Z",
+      "kind": "swing"
+    }
+  },
   "digest_sent_for": "2026-06-29",
   "digest3": {
     "sent": [
@@ -18,10 +23,6 @@
     "last_warn": null
   },
   "last_alert": {
-    "0xdfb9ede62f1d118beae01dc709e2706c1a23a2432532046fd49f77851f13d427": {
-      "ts": "2026-11-09T03:01:18Z",
-      "p": 0.225
-    },
     "0xb3bb2c8065e8192b3d9bc6744fe17ac6e361f89e7e349718e235bade77a5ddc0": {
       "ts": "2026-11-09T13:40:42Z",
       "p": 0.3225
@@ -41,6 +42,10 @@
     "0xa7eb73164bda95698fe4d536c1a89051e330c8eb46af760f42d37be58802b43a": {
       "ts": "2026-11-10T20:22:42Z",
       "p": 0.34
+    },
+    "0xdfb9ede62f1d118beae01dc709e2706c1a23a2432532046fd49f77851f13d427": {
+      "ts": "2026-11-11T06:51:35Z",
+      "p": 0.175
     }
   }
 }

@@ -1,0 +1,66 @@
+{
+  "conditionId": "0x9cefee74eabeb6ba4b83f81871c97dd7a39f3c56271122a83e6c3a4e09b93655",
+  "slug": "nba-mia-uta-2026-11-10-rebounds-davion-mitchell-5pt5",
+  "question": "Davion Mitchell: Rebounds O/U 5.5",
+  "eventSlug": "nba-mia-uta-2026-11-10",
+  "eventTitle": "Heat vs. Jazz",
+  "eventId": "1284267",
+  "clobTokenIds": [
+    "103037398938457806984238073631533743696532065435046773920244066786323379889274",
+    "103723579955905159251193006866180227631092885674836336322807445497956080236669"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-11T02:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-11T06:47:01Z",
+  "history": [
+{"timestamp":"2026-11-10T03:50:18Z","impliedProbability":0.06,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-10T11:53:26Z","impliedProbability":0.05,"volume24hr":0.0,"volume":null,"liquidity":1843.4896,"spread":0.08,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-10T19:33:17Z","impliedProbability":0.06,"volume24hr":0.0,"volume":null,"liquidity":3450.89543,"spread":0.02,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T00:15:12Z","impliedProbability":0.0395,"volume24hr":0.0,"volume":null,"liquidity":2822.84996,"spread":0.059,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T06:47:01Z","impliedProbability":0.0,"volume24hr":52.512563,"volume":52.512563,"liquidity":null,"spread":0.199,"oneDayPriceChange":0.0345,"oneWeekPriceChange":null}
+  ]
+}
