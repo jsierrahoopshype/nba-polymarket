@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x24f1cc244f91b97e8a085f4829e13fd401648a2d23f03e59a67b3c0bee52c6d4",
+  "slug": "nba-bos-tor-2026-11-11-team-total-bos-109pt5",
+  "question": "Celtics Team Total: O/U 109.5",
+  "eventSlug": "nba-bos-tor-2026-11-11",
+  "eventTitle": "Celtics vs. Raptors",
+  "eventId": "1284272",
+  "clobTokenIds": [
+    "56529789012796842861648621567802801303544614998781602918441060725647787154315",
+    "62452281408296749195148465926019391586552312332182534445980996786469174249110"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-11-12T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-11T14:00:17Z","impliedProbability":0.56,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T14:45:41Z","impliedProbability":0.575,"volume24hr":0.0,"volume":null,"liquidity":182.1,"spread":0.09,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

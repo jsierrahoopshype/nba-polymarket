@@ -1,0 +1,63 @@
+{
+  "conditionId": "0xa5bb86b253b3b85c8a74eef0b2801f5d107945e7701637d63b4d2cfb39309f2a",
+  "slug": "nba-sas-chi-2026-11-11-team-total-chi-112pt5",
+  "question": "Bulls Team Total: O/U 112.5",
+  "eventSlug": "nba-sas-chi-2026-11-11",
+  "eventTitle": "Spurs vs. Bulls",
+  "eventId": "1284273",
+  "clobTokenIds": [
+    "96040660481105203872576633143818430501150571962863070210593955948529191888212",
+    "50527003028521480667910924506413946963954277736516294220160313004881675011460"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-11-12T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-11T14:00:19Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T14:45:41Z","impliedProbability":0.49,"volume24hr":0.0,"volume":null,"liquidity":1839.2664,"spread":0.02,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

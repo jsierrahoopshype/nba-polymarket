@@ -1,0 +1,71 @@
+{
+  "conditionId": "0xb75d409edff191cbbe6fb7f1b3fb3450cd7697c98823d8333908e661281db04b",
+  "slug": "nba-okc-por-2026-11-10-assists-isaiah-hartenstein-3pt5",
+  "question": "Isaiah Hartenstein: Assists O/U 3.5",
+  "eventSlug": "nba-okc-por-2026-11-10",
+  "eventTitle": "Thunder vs. Trail Blazers",
+  "eventId": "1284269",
+  "clobTokenIds": [
+    "59204977426151163267978353575375755952404831954701007049541668730099333101897",
+    "110449951695411733117513189260083567229777038486781118951765463835776300928767"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-11T04:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-11T14:45:41Z",
+  "history": [
+{"timestamp":"2026-11-10T06:00:30Z","impliedProbability":0.255,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-10T07:00:18Z","impliedProbability":0.525,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-10T08:00:19Z","impliedProbability":0.555,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-10T09:00:57Z","impliedProbability":0.56,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-10T10:00:18Z","impliedProbability":0.56,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-10T11:55:17Z","impliedProbability":0.555,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-10T19:33:17Z","impliedProbability":0.53,"volume24hr":353.21,"volume":353.21000000000004,"liquidity":3804.2146,"spread":0.04,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T00:15:12Z","impliedProbability":0.555,"volume24hr":1257.74,"volume":1257.7400000000002,"liquidity":2032.5377,"spread":0.03,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T06:47:01Z","impliedProbability":0.9995,"volume24hr":1247.229286,"volume":1471.8292860000001,"liquidity":1433.51597,"spread":0.001,"oneDayPriceChange":0.4745,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T14:45:41Z","impliedProbability":1.0,"volume24hr":1118.619286,"volume":1471.8292860000001,"liquidity":null,"spread":0.001,"oneDayPriceChange":0.4745,"oneWeekPriceChange":null}
+  ]
+}

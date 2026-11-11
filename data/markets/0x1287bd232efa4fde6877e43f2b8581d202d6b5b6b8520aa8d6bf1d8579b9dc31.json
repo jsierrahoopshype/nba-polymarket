@@ -1,0 +1,64 @@
+{
+  "conditionId": "0x1287bd232efa4fde6877e43f2b8581d202d6b5b6b8520aa8d6bf1d8579b9dc31",
+  "slug": "nba-was-ind-2026-11-11-steals-aj-dybantsa-3pt5",
+  "question": "AJ Dybantsa: Steals O/U 3.5",
+  "eventSlug": "nba-was-ind-2026-11-11",
+  "eventTitle": "Wizards vs. Pacers",
+  "eventId": "1284270",
+  "clobTokenIds": [
+    "80132562046499195734046935052368823195457745639973672585482242706260984659145",
+    "70980159737603058791264665033051923155719483425427624201624009109293581055476"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-12T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-11T13:00:22Z","impliedProbability":0.065,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T14:00:17Z","impliedProbability":0.485,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T14:45:41Z","impliedProbability":0.06,"volume24hr":0.0,"volume":null,"liquidity":122.6547,"spread":0.1,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
