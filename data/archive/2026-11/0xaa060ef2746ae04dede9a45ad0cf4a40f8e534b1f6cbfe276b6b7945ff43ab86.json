@@ -1,0 +1,67 @@
+{
+  "conditionId": "0xaa060ef2746ae04dede9a45ad0cf4a40f8e534b1f6cbfe276b6b7945ff43ab86",
+  "slug": "nba-den-mem-2026-11-11-spread-away-3pt5",
+  "question": "Spread: Nuggets (-3.5)",
+  "eventSlug": "nba-den-mem-2026-11-11",
+  "eventTitle": "Nuggets vs. Grizzlies",
+  "eventId": "1284274",
+  "clobTokenIds": [
+    "56171836216616851281382072162681095709502646489129943442664307791441768258988",
+    "44517470094586053251851726540349187675962156214353493555279173569526227040358"
+  ],
+  "outcomes": [
+    "Nuggets",
+    "Grizzlies"
+  ],
+  "endDate": "2026-11-12T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-12T10:18:43Z",
+  "history": [
+{"timestamp":"2026-11-11T00:17:26Z","impliedProbability":0.46,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T06:47:01Z","impliedProbability":0.515,"volume24hr":165.545447,"volume":136.699293,"liquidity":26683.311,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T14:45:41Z","impliedProbability":0.515,"volume24hr":6319.752867,"volume":6319.752867,"liquidity":81761.2021,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T21:36:30Z","impliedProbability":0.505,"volume24hr":28468.560557999997,"volume":28468.560558,"liquidity":156837.8629,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-12T02:31:48Z","impliedProbability":0.645,"volume24hr":34490.390929,"volume":34490.390929,"liquidity":29830.1223,"spread":0.05,"oneDayPriceChange":0.14,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-12T10:18:43Z","impliedProbability":1.0,"volume24hr":49604.292841,"volume":49809.418958999995,"liquidity":null,"spread":0.001,"oneDayPriceChange":0.4945,"oneWeekPriceChange":null}
+  ]
+}

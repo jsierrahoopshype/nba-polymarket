@@ -1,0 +1,67 @@
+{
+  "conditionId": "0xfd3a0d315d5305f304a09887b34359e1cb16940966aaa6c627d221b50fd21df0",
+  "slug": "nba-sas-chi-2026-11-11-points-josh-giddey-14pt5",
+  "question": "Josh Giddey: Points O/U 14.5",
+  "eventSlug": "nba-sas-chi-2026-11-11",
+  "eventTitle": "Spurs vs. Bulls",
+  "eventId": "1284273",
+  "clobTokenIds": [
+    "107398332487901304962696122948301294966416312649838779977560919781878035037489",
+    "46136439461110717034740968115027470343194120974232506511956562914418082749080"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-12T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-12T10:18:43Z",
+  "history": [
+{"timestamp":"2026-11-11T00:17:25Z","impliedProbability":0.22,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T06:47:01Z","impliedProbability":0.225,"volume24hr":0.0,"volume":null,"liquidity":608.899,"spread":0.37,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T14:45:41Z","impliedProbability":0.34,"volume24hr":0.0,"volume":null,"liquidity":1389.1192,"spread":0.08,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T21:36:30Z","impliedProbability":0.37,"volume24hr":0.0,"volume":null,"liquidity":958.5059,"spread":0.06,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-12T02:31:48Z","impliedProbability":0.165,"volume24hr":0.0,"volume":null,"liquidity":16.3599,"spread":0.21,"oneDayPriceChange":-0.055,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-12T10:18:43Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":-0.3545,"oneWeekPriceChange":null}
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "conditionId": "0x447fda289331037cd9f78436e74778ac3b0afe7021248fd1e5cbc47efcd2776e",
+  "slug": "nba-okc-por-2026-11-11-spread-away-5pt5",
+  "question": "Spread: Thunder (-5.5)",
+  "eventSlug": "nba-okc-por-2026-11-11",
+  "eventTitle": "Thunder vs. Trail Blazers",
+  "eventId": "1284280",
+  "clobTokenIds": [
+    "18785077574731254366011463358857844973657632793802106432295397150746220688255",
+    "17959959075407230027782259236279490169912006518379061890761977390985767089818"
+  ],
+  "outcomes": [
+    "Thunder",
+    "Trail Blazers"
+  ],
+  "endDate": "2026-11-12T03:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-12T10:18:43Z",
+  "history": [
+{"timestamp":"2026-11-10T22:00:19Z","impliedProbability":0.335,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-10T23:00:34Z","impliedProbability":0.385,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T00:18:12Z","impliedProbability":0.405,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T06:47:01Z","impliedProbability":0.35,"volume24hr":30.0,"volume":30.0,"liquidity":2275.7529,"spread":0.18,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T14:45:41Z","impliedProbability":0.37,"volume24hr":30.0,"volume":30.0,"liquidity":26859.6008,"spread":0.02,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-11T21:36:30Z","impliedProbability":0.295,"volume24hr":113.111112,"volume":41.111112,"liquidity":35926.4816,"spread":0.01,"oneDayPriceChange":-0.04,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-12T02:31:48Z","impliedProbability":0.28,"volume24hr":118.821112,"volume":118.821112,"liquidity":23535.9878,"spread":0.02,"oneDayPriceChange":-0.1,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-12T10:18:43Z","impliedProbability":0.0,"volume24hr":4891.793694,"volume":4921.793694,"liquidity":null,"spread":0.001,"oneDayPriceChange":-0.3745,"oneWeekPriceChange":null}
+  ]
+}
