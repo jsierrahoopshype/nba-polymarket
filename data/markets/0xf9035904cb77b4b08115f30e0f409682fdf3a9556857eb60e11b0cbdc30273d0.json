@@ -1,0 +1,62 @@
+{
+  "conditionId": "0xf9035904cb77b4b08115f30e0f409682fdf3a9556857eb60e11b0cbdc30273d0",
+  "slug": "nba-nyk-ind-2026-11-13-spread-away-11pt5",
+  "question": "Spread: Knicks (-11.5)",
+  "eventSlug": "nba-nyk-ind-2026-11-13",
+  "eventTitle": "Knicks vs. Pacers",
+  "eventId": "1284287",
+  "clobTokenIds": [
+    "69689515214889618945375296280419896303542559078609725026328938831058655752074",
+    "62378003615755941382922259521538031056767529761505902031818004646740696459853"
+  ],
+  "outcomes": [
+    "Knicks",
+    "Pacers"
+  ],
+  "endDate": "2026-11-14T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-12T23:49:38Z","impliedProbability":0.395,"volume24hr":0.0,"volume":null,"liquidity":121.4894,"spread":0.77,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
