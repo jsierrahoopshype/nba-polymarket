@@ -1,0 +1,69 @@
+{
+  "conditionId": "0x94430a502136597286b96da6289cd3cf4a84a7f891f3b19b38fd867d05eb27bf",
+  "slug": "nba-cha-phx-2026-11-12-rebounds-khaman-maluach-5pt5",
+  "question": "Khaman Maluach: Rebounds O/U 5.5",
+  "eventSlug": "nba-cha-phx-2026-11-12",
+  "eventTitle": "Hornets vs. Suns",
+  "eventId": "1284286",
+  "clobTokenIds": [
+    "4940918304657914267022808784720112867055511010898885619292618995543267368495",
+    "47681753488416628936600985815809163986891244025734941071362595940373256163160"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-13T02:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-13T12:08:33Z",
+  "history": [
+{"timestamp":"2026-11-12T07:00:15Z","impliedProbability":0.28,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-12T08:00:15Z","impliedProbability":0.29,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-12T09:00:14Z","impliedProbability":0.26,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-12T10:20:15Z","impliedProbability":0.28,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-12T18:27:40Z","impliedProbability":0.45,"volume24hr":10.1,"volume":10.1,"liquidity":1917.5274,"spread":0.08,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-12T23:49:38Z","impliedProbability":0.47,"volume24hr":88.747059,"volume":88.747059,"liquidity":1843.4104,"spread":0.08,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-13T04:02:14Z","impliedProbability":0.505,"volume24hr":94.407437,"volume":94.40743699999999,"liquidity":0.06,"spread":0.99,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-13T12:08:33Z","impliedProbability":0.0,"volume24hr":94.407437,"volume":94.40743699999999,"liquidity":0.0,"spread":0.07,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
