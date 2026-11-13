@@ -1,0 +1,65 @@
+{
+  "conditionId": "0x427c7563455da217abebac37ac3178c7788eabbc07f4c321ce3a0fb97c5b6929",
+  "slug": "nba-nyk-ind-2026-11-13-assists-og-anunoby-5pt5",
+  "question": "OG Anunoby: Assists O/U 5.5",
+  "eventSlug": "nba-nyk-ind-2026-11-13",
+  "eventTitle": "Knicks vs. Pacers",
+  "eventId": "1284287",
+  "clobTokenIds": [
+    "21604942073645383499729239940206528538095876466246048774982090139798653042383",
+    "82630333859952215118103871330992167238522062211092649902100128813003857299054"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-14T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-13T17:00:36Z","impliedProbability":0.04,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-13T18:00:25Z","impliedProbability":0.0345,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-13T19:00:21Z","impliedProbability":0.031,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-13T19:42:20Z","impliedProbability":0.0295,"volume24hr":0.0,"volume":null,"liquidity":1864.88629,"spread":0.039,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

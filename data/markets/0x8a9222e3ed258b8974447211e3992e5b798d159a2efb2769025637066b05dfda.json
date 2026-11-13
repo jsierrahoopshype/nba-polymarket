@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x8a9222e3ed258b8974447211e3992e5b798d159a2efb2769025637066b05dfda",
+  "slug": "nba-uta-hou-2026-11-13-1h-spread-home-8pt5",
+  "question": "1H Spread: Rockets (-8.5)",
+  "eventSlug": "nba-uta-hou-2026-11-13",
+  "eventTitle": "Jazz vs. Rockets",
+  "eventId": "1284295",
+  "clobTokenIds": [
+    "10327549129694692802431148851402408401266860451357959687063972166713347543493",
+    "94697730744800337181407919395827851143633075875979073893168819675012362168831"
+  ],
+  "outcomes": [
+    "Rockets",
+    "Jazz"
+  ],
+  "endDate": "2026-11-14T01:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-13T19:00:21Z","impliedProbability":0.54,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-13T19:44:20Z","impliedProbability":0.545,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
