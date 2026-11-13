@@ -1,0 +1,63 @@
+{
+  "conditionId": "0xe9c6e88c524654c07d1b180ca373830f2173c403f918b56d84142eb8c188f131",
+  "slug": "nba-dal-min-2026-11-12-2h-team-total-min-61pt5",
+  "question": "Timberwolves 2H Team Total: O/U 61.5",
+  "eventSlug": "nba-dal-min-2026-11-12",
+  "eventTitle": "Mavericks vs. Timberwolves",
+  "eventId": "1284284",
+  "clobTokenIds": [
+    "11366781395395307482069635115153899393680541877595375280600948263442806349250",
+    "50926837935854431428149720216420923132604211841708692604130310748121349805207"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-11-13T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-13T04:02:14Z",
+  "history": [
+{"timestamp":"2026-11-12T23:49:38Z","impliedProbability":0.505,"volume24hr":0.0,"volume":null,"liquidity":1.0099,"spread":0.99,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-13T04:02:14Z","impliedProbability":1.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.17,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
