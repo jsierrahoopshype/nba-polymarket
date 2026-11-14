@@ -1,0 +1,53 @@
+{
+  "conditionId": "0xf38b7902a7c8ce6410578acb52a611e316820a7584dbbc32213b9832b6f79007",
+  "slug": "nba-bkn-mem-2026-11-14-exact-margin-away-16-20",
+  "question": "Exact Margin: Nets by 16-20",
+  "eventSlug": "nba-bkn-mem-2026-11-14-exact-margin",
+  "eventTitle": "Nets vs. Grizzlies - Exact Margin",
+  "eventId": "1386897",
+  "clobTokenIds": [
+    "46059712874893520995873428704655373703719010942839906880528029428225409639255",
+    "22737734953866752280849797426192074992661974643237522186789810762265322859498"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-15T01:00:00Z",
+  "negRisk": true,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-14T14:06:24Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

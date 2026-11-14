@@ -1,0 +1,62 @@
+{
+  "conditionId": "0x025bfed9bc8f4016fa6d6e6e28d37ff71adac938c718f159f6b9e0a7be67cb38",
+  "slug": "nba-bkn-mem-2026-11-14-team-total-bkn-119pt5",
+  "question": "Nets Team Total: O/U 119.5",
+  "eventSlug": "nba-bkn-mem-2026-11-14",
+  "eventTitle": "Nets vs. Grizzlies",
+  "eventId": "1287019",
+  "clobTokenIds": [
+    "78552535871664470491037737860633714204275207452592226384396002511706803369105",
+    "51088963283392330123015288065057151599568749816966788303075336261344989143789"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-11-15T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-14T14:03:40Z","impliedProbability":0.49,"volume24hr":0.0,"volume":null,"liquidity":6.3696,"spread":0.96,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

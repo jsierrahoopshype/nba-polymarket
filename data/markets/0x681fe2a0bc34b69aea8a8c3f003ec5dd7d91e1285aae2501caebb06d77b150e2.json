@@ -1,0 +1,62 @@
+{
+  "conditionId": "0x681fe2a0bc34b69aea8a8c3f003ec5dd7d91e1285aae2501caebb06d77b150e2",
+  "slug": "nba-dal-cle-2026-11-14-1h-spread-away-1pt5",
+  "question": "1H Spread: Mavericks (-1.5)",
+  "eventSlug": "nba-dal-cle-2026-11-14",
+  "eventTitle": "Mavericks vs. Cavaliers",
+  "eventId": "1287017",
+  "clobTokenIds": [
+    "14118655598062070635563732088553640156364890577163647569775435213727055396717",
+    "92178410473471146749728468845255349937306343641862365151749756405408783431272"
+  ],
+  "outcomes": [
+    "Mavericks",
+    "Cavaliers"
+  ],
+  "endDate": "2026-11-15T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-14T14:03:40Z","impliedProbability":0.42,"volume24hr":0.0,"volume":null,"liquidity":5476.3614,"spread":0.04,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
