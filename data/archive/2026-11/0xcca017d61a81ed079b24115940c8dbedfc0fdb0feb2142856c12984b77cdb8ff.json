@@ -1,0 +1,68 @@
+{
+  "conditionId": "0xcca017d61a81ed079b24115940c8dbedfc0fdb0feb2142856c12984b77cdb8ff",
+  "slug": "nba-gsw-sas-2026-11-13-steals-deanthony-melton-0pt5",
+  "question": "De'Anthony Melton: Steals O/U 0.5",
+  "eventSlug": "nba-gsw-sas-2026-11-13",
+  "eventTitle": "Warriors vs. Spurs",
+  "eventId": "1284296",
+  "clobTokenIds": [
+    "84336687650417546359667931339288586925745471892899335591347165498162045958239",
+    "96678001401772767393773446402656265685513318638955652913862513808692626205265"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-14T02:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-14T06:57:59Z",
+  "history": [
+{"timestamp":"2026-11-13T10:00:33Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-13T11:00:35Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-13T12:08:33Z","impliedProbability":0.49,"volume24hr":0.0,"volume":null,"liquidity":3.8598,"spread":0.96,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-13T12:10:17Z","impliedProbability":0.49,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-13T19:42:20Z","impliedProbability":0.39,"volume24hr":0.0,"volume":null,"liquidity":33.9993,"spread":0.76,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-14T00:30:03Z","impliedProbability":0.395,"volume24hr":0.0,"volume":null,"liquidity":27.8093,"spread":0.77,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-14T06:57:59Z","impliedProbability":1.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.2,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

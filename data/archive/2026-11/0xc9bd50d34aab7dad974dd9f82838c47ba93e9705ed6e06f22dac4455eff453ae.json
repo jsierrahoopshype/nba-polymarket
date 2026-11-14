@@ -1,0 +1,65 @@
+{
+  "conditionId": "0xc9bd50d34aab7dad974dd9f82838c47ba93e9705ed6e06f22dac4455eff453ae",
+  "slug": "nba-okc-lac-2026-11-13-threes-max-strus-1pt5",
+  "question": "Max Strus: 3-Pointers Made O/U 1.5",
+  "eventSlug": "nba-okc-lac-2026-11-13",
+  "eventTitle": "Thunder vs. Clippers",
+  "eventId": "1284299",
+  "clobTokenIds": [
+    "3543594739293147145623067202136259632238999319023578141680321501295539554469",
+    "49163583000128886800951474034245094648682047406695572087425176153248544435815"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-14T03:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-14T06:57:59Z",
+  "history": [
+{"timestamp":"2026-11-13T19:00:18Z","impliedProbability":0.355,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-13T19:45:33Z","impliedProbability":0.375,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-14T00:30:03Z","impliedProbability":0.64,"volume24hr":0.0,"volume":null,"liquidity":189.0379,"spread":0.06,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-14T06:57:59Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "conditionId": "0xaca714417461d3da25e330600ab41d352d74b61d895dc8030f0bd18745738cd8",
+  "slug": "nba-atl-chi-2026-11-13-points-nicolas-claxton-4pt5",
+  "question": "Nicolas Claxton: Points O/U 4.5",
+  "eventSlug": "nba-atl-chi-2026-11-13",
+  "eventTitle": "Hawks vs. Bulls",
+  "eventId": "1284292",
+  "clobTokenIds": [
+    "79080402467830030370554861364260379494235265287606215093509694227401513700984",
+    "71010319431674268574479907625059101366446794547778007576160726178557219463558"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-14T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-14T06:57:59Z",
+  "history": [
+{"timestamp":"2026-11-14T00:30:03Z","impliedProbability":0.415,"volume24hr":0.0,"volume":null,"liquidity":11.1276,"spread":0.81,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-14T06:57:59Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

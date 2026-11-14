@@ -1,0 +1,64 @@
+{
+  "conditionId": "0x56a293b361324f082f91bc28cb9c1a60cfc0efbeb80c2228e4590a178a90dd14",
+  "slug": "nba-mil-orl-2026-11-13-threes-jalen-suggs-1pt5",
+  "question": "Jalen Suggs: 3-Pointers Made O/U 1.5",
+  "eventSlug": "nba-mil-orl-2026-11-13",
+  "eventTitle": "Bucks vs. Magic",
+  "eventId": "1284289",
+  "clobTokenIds": [
+    "34807943876424494363427564344077438797530569521441133595707856541968525662249",
+    "53668897642527860004170272716771872998799366129498092758062039516498779504566"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-14T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-14T06:57:59Z",
+  "history": [
+{"timestamp":"2026-11-14T00:00:15Z","impliedProbability":0.215,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-14T00:30:03Z","impliedProbability":0.395,"volume24hr":0.0,"volume":null,"liquidity":7.6734,"spread":0.79,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-14T06:57:59Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

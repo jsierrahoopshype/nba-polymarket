@@ -1,0 +1,67 @@
+{
+  "conditionId": "0x4b4e01ee5cee40ea69c20f5981ff99fd6b8fb1ea72e58c1d155eccb29483f807",
+  "slug": "nba-por-sac-2026-11-13-total-219pt5",
+  "question": "Trail Blazers vs. Kings: O/U 219.5",
+  "eventSlug": "nba-por-sac-2026-11-13",
+  "eventTitle": "Trail Blazers vs. Kings",
+  "eventId": "1284298",
+  "clobTokenIds": [
+    "63707806689543117328790766776121098806463644984376403261948123101294847499707",
+    "19188981518774617476843959219851422604020996296239185266078023535093661068029"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-11-14T03:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-14T06:57:59Z",
+  "history": [
+{"timestamp":"2026-11-12T23:50:16Z","impliedProbability":0.665,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-13T04:02:14Z","impliedProbability":0.715,"volume24hr":0.0,"volume":null,"liquidity":3246.4631,"spread":0.09,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-13T12:08:33Z","impliedProbability":0.73,"volume24hr":0.0,"volume":null,"liquidity":15746.0695,"spread":0.08,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-13T19:42:20Z","impliedProbability":0.715,"volume24hr":285.91,"volume":285.91,"liquidity":25108.7166,"spread":0.03,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-14T00:30:03Z","impliedProbability":0.71,"volume24hr":309.389451,"volume":309.389451,"liquidity":10494.1855,"spread":0.04,"oneDayPriceChange":-0.005,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-14T06:57:59Z","impliedProbability":1.0,"volume24hr":2127.619599,"volume":2127.619599,"liquidity":null,"spread":0.001,"oneDayPriceChange":0.2895,"oneWeekPriceChange":null}
+  ]
+}
