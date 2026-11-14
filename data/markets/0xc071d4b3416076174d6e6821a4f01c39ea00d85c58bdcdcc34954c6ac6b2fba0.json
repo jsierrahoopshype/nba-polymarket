@@ -1,0 +1,64 @@
+{
+  "conditionId": "0xc071d4b3416076174d6e6821a4f01c39ea00d85c58bdcdcc34954c6ac6b2fba0",
+  "slug": "nba-por-sac-2026-11-13-rebounds-dylan-cardwell-5pt5",
+  "question": "Dylan Cardwell: Rebounds O/U 5.5",
+  "eventSlug": "nba-por-sac-2026-11-13",
+  "eventTitle": "Trail Blazers vs. Kings",
+  "eventId": "1284298",
+  "clobTokenIds": [
+    "63905994555343554356167649525734935926132283430227940617298655720131150422699",
+    "103286244004084209658006885895594043706885468094724930087601993716620855491201"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-14T03:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-13T23:00:16Z","impliedProbability":0.565,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-14T00:00:22Z","impliedProbability":0.525,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-14T00:30:03Z","impliedProbability":0.525,"volume24hr":0.0,"volume":null,"liquidity":471.3174,"spread":0.31,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
