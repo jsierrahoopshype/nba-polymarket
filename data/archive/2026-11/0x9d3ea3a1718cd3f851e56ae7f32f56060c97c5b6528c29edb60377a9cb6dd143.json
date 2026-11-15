@@ -1,0 +1,64 @@
+{
+  "conditionId": "0x9d3ea3a1718cd3f851e56ae7f32f56060c97c5b6528c29edb60377a9cb6dd143",
+  "slug": "nba-den-nop-2026-11-14-assists-jordan-poole-3pt5",
+  "question": "Jordan Poole: Assists O/U 3.5",
+  "eventSlug": "nba-den-nop-2026-11-14",
+  "eventTitle": "Nuggets vs. Pelicans",
+  "eventId": "1287016",
+  "clobTokenIds": [
+    "62061448514016945269605504620418881999275761396114592377370266839521952637987",
+    "88731645603558464543571659082908328681509189642610582990569792116637215105023"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-15T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-15T09:54:57Z",
+  "history": [
+{"timestamp":"2026-11-14T22:58:54Z","impliedProbability":0.36,"volume24hr":0.0,"volume":null,"liquidity":2295.4424,"spread":0.04,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-15T02:32:16Z","impliedProbability":0.9995,"volume24hr":0.0,"volume":null,"liquidity":998.64172,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-15T09:54:57Z","impliedProbability":1.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
