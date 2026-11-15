@@ -1,0 +1,65 @@
+{
+  "conditionId": "0x93040de4cd1bad3d332ec971840f93f6211dffc9be681f0ed6a02e76c9ef0b48",
+  "slug": "nba-den-nop-2026-11-14-1h-team-total-nop-53pt5",
+  "question": "Pelicans 1H Team Total: O/U 53.5",
+  "eventSlug": "nba-den-nop-2026-11-14",
+  "eventTitle": "Nuggets vs. Pelicans",
+  "eventId": "1287016",
+  "clobTokenIds": [
+    "44322903580245846300458136688310113209780125731452341154578555182399353550533",
+    "70833764270679135483264274828514880856261778023196045714765757224370367574567"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-11-15T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-15T02:32:16Z",
+  "history": [
+{"timestamp":"2026-11-14T14:03:50Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-14T19:07:56Z","impliedProbability":0.51,"volume24hr":0.0,"volume":null,"liquidity":11110.8549,"spread":0.5,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-14T22:58:54Z","impliedProbability":0.53,"volume24hr":3.928572,"volume":3.928572,"liquidity":15251.3105,"spread":0.1,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-15T02:32:16Z","impliedProbability":0.0,"volume24hr":15.997537999999999,"volume":15.997537999999999,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
