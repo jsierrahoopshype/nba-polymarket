@@ -1,0 +1,62 @@
+{
+  "conditionId": "0x0b54b83625bd4cc3efa6501083e49ea86913aba3cbda1ad6b2e886c0a383396d",
+  "slug": "nba-phi-bkn-2026-11-16-spread-away-2pt5",
+  "question": "Spread: 76ers (-2.5)",
+  "eventSlug": "nba-phi-bkn-2026-11-16",
+  "eventTitle": "76ers vs. Nets",
+  "eventId": "1299580",
+  "clobTokenIds": [
+    "95733660905026988755858837798653185800593777877137901955840620783529310008976",
+    "44630912434534212712489658174662270949892280173652933095016078284093088070472"
+  ],
+  "outcomes": [
+    "76ers",
+    "Nets"
+  ],
+  "endDate": "2026-11-17T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-16T01:23:28Z","impliedProbability":0.465,"volume24hr":0.0,"volume":null,"liquidity":66.2397,"spread":0.91,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

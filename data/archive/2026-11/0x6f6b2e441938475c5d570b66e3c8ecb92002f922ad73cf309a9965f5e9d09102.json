@@ -1,0 +1,67 @@
+{
+  "conditionId": "0x6f6b2e441938475c5d570b66e3c8ecb92002f922ad73cf309a9965f5e9d09102",
+  "slug": "nba-cha-lac-2026-11-15-total-205pt5",
+  "question": "Hornets vs. Clippers: O/U 205.5",
+  "eventSlug": "nba-cha-lac-2026-11-15",
+  "eventTitle": "Hornets vs. Clippers",
+  "eventId": "1293078",
+  "clobTokenIds": [
+    "16306114135487642136391100069193995013655046134822426782449359691162576944428",
+    "100164539560781196828782690907780180316574913175270426694612844730555359442886"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-11-15T21:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-16T01:23:28Z",
+  "history": [
+{"timestamp":"2026-11-14T22:59:23Z","impliedProbability":0.725,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-15T02:32:16Z","impliedProbability":0.685,"volume24hr":0.0,"volume":null,"liquidity":5516.2633,"spread":0.61,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-15T09:54:57Z","impliedProbability":0.73,"volume24hr":0.0,"volume":null,"liquidity":25837.8288,"spread":0.04,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-15T16:54:27Z","impliedProbability":0.715,"volume24hr":48.275863,"volume":48.275863,"liquidity":24718.037,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-15T21:36:35Z","impliedProbability":0.69,"volume24hr":98.50276,"volume":98.50276,"liquidity":379.6197,"spread":0.12,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-16T01:23:28Z","impliedProbability":1.0,"volume24hr":11747.464491999997,"volume":11747.464492000001,"liquidity":null,"spread":0.001,"oneDayPriceChange":0.3245,"oneWeekPriceChange":null}
+  ]
+}
