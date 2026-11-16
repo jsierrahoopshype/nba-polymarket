@@ -1,0 +1,70 @@
+{
+  "conditionId": "0xede32a01d6f6537f40ca9abf30c72c0cd1e330b24d8f38e652961d301c1e13e8",
+  "slug": "nba-atl-mil-2026-11-15-rebounds-myles-turner-9pt5",
+  "question": "Myles Turner: Rebounds O/U 9.5",
+  "eventSlug": "nba-atl-mil-2026-11-15",
+  "eventTitle": "Hawks vs. Bucks",
+  "eventId": "1293083",
+  "clobTokenIds": [
+    "83452781507167202902205944176384239140858750861912573845452219605238106669282",
+    "95459174875673422766902223391853114816757226094228598430837956012502540381769"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-16T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-16T08:29:49Z",
+  "history": [
+{"timestamp":"2026-11-15T06:00:29Z","impliedProbability":0.1,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-15T07:00:17Z","impliedProbability":0.095,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-15T08:00:17Z","impliedProbability":0.095,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-15T09:00:22Z","impliedProbability":0.09,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-15T09:58:15Z","impliedProbability":0.085,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-15T16:54:27Z","impliedProbability":0.09,"volume24hr":0.0,"volume":null,"liquidity":3034.0594,"spread":0.16,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-15T21:36:35Z","impliedProbability":0.075,"volume24hr":0.0,"volume":null,"liquidity":4335.7198,"spread":0.11,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-16T01:23:28Z","impliedProbability":0.175,"volume24hr":0.0,"volume":null,"liquidity":160.94,"spread":0.31,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-16T08:29:49Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.199,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
