@@ -1,6 +1,11 @@
 {
-  "date": "2026-11-16",
-  "instant_sent": {},
+  "date": "2026-11-17",
+  "instant_sent": {
+    "0xcadc5659b9c7aadb8a9d688e2ddae935713446d19dbb01a76872617f618ad9fe": {
+      "ts": "2026-11-17T02:27:30Z",
+      "kind": "swing"
+    }
+  },
   "digest_sent_for": "2026-06-29",
   "digest3": {
     "sent": [
@@ -33,6 +38,10 @@
     "0xb3bb2c8065e8192b3d9bc6744fe17ac6e361f89e7e349718e235bade77a5ddc0": {
       "ts": "2026-11-16T22:48:18Z",
       "p": 0.3055
+    },
+    "0xcadc5659b9c7aadb8a9d688e2ddae935713446d19dbb01a76872617f618ad9fe": {
+      "ts": "2026-11-17T02:27:30Z",
+      "p": 0.235
     }
   }
 }
