@@ -48,12 +48,12 @@ SITE_BASE = "https://jsierrahoopshype.github.io/nba-polymarket"
 # roster's headshot stem (<nba_id>-<slug>). Every size used here is <= 80px, so
 # the 160px set is enough. FACE_FILL_STEMS_PATH (vendored from nba-headshots) lists
 # the players that have a file; anyone else shows their initials instead.
-HEADSHOT_FACE = "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-fill/{stem}.webp"
+# Served from hoopsmatic.com's mirror of nba-headshots (same file paths), never
+# github.io: no third-party requests from the static docs/ pages or entities.json.
+HEADSHOT_FACE = "https://hoopsmatic.com/img/nba-headshots/players/headshots/face-fill/{stem}.webp"
 FACE_FILL_STEMS_PATH = Path(__file__).resolve().parent / "vendor" / "face_fill_stems.txt"
-# entities.json is read by the live app (hoopsmatic.com/polymarket), so its
-# headshot URLs point at the hoopsmatic-worker's same-origin mirror of the same
-# files instead of github.io (privacy: no third-party requests from the page).
-# The static docs/ pages keep HEADSHOT_FACE. Team logos (cdn.nba.com) unchanged.
+# entities_img() is kept as a safety net: it rewrites any stray github.io
+# headshot URL to the hoopsmatic.com mirror. Team logos (cdn.nba.com) unchanged.
 HEADSHOT_PREFIX_GH = "https://jsierrahoopshype.github.io/nba-headshots/"
 HEADSHOT_PREFIX_HM = "https://hoopsmatic.com/img/nba-headshots/"
 TEAM_LOGO = "https://cdn.nba.com/logos/nba/{id}/global/L/logo.svg"

@@ -149,13 +149,10 @@ function docsBase() {
   return (typeof _dataBase === 'string' ? _dataBase : '../data/').replace(/data\/$/, 'docs/');
 }
 
-/* onerror for team logos: retry once (the raw.githubusercontent swap only ever
-   matched nba-headshots URLs; player faces now use faceHtml's initials fallback
-   instead), then hide if that also fails. */
-const IMG_FALLBACK =
-  "if(this.dataset.f){this.style.display='none'}else{this.dataset.f=1;" +
-  "this.src=this.src.replace('https://jsierrahoopshype.github.io/nba-headshots/'," +
-  "'https://raw.githubusercontent.com/jsierrahoopshype/nba-headshots/main/')}";
+/* onerror for team logos: hide the broken image. (The old headshot-host ->
+   raw-file swap never matched cdn.nba.com logos, so its "retry"
+   reloaded the same URL; player faces use faceHtml's initials fallback.) */
+const IMG_FALLBACK = "this.onerror=null;this.style.display='none'";
 
 /* --- entities (players/teams matched to a market) ------------------------- */
 /* data/entities.json maps a conditionId to { primary, all }: `primary` is the
