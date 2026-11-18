@@ -31,6 +31,7 @@ from pathlib import Path
 # Single source of truth for the question-derived "clean" slug, so the alias
 # pages we emit match exactly what HoopsMatic (and the audit) request.
 from movers_alerts import slugify
+import sitemap_lastmod as slm
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
@@ -204,8 +205,15 @@ def esc(s):
         "<", "&lt;").replace(">", "&gt;").replace('"', "&quot;").replace("'", "&#39;")
 
 
+# path -> content hash of every page this build produced (written or unchanged);
+# the sitemap's per-URL lastmod is driven by these.
+CONTENT_HASH = {}
+SITEMAP_STATE_PATH = DATA_DIR / "sitemap_lastmod.json"
+
+
 def write_if_changed(path, content, stats):
     """Write only when the bytes differ, so unchanged pages don't churn."""
+    CONTENT_HASH[path] = slm.content_hash(content)
     path.parent.mkdir(parents=True, exist_ok=True)
     if path.exists() and path.read_text(encoding="utf-8") == content:
         stats["skipped"] += 1
@@ -392,6 +400,33 @@ def market_page(m):
     )
 
 
+# --- sitemap -----------------------------------------------------------------
+
+def sitemap_keys(players, market_slugs):
+    """Sitemap URL keys (paths under SITEMAP_BASE), in sitemap order."""
+    keys = ["", "movers.html", "resolved.html", "players/", "teams/"]
+    keys += [f"player/{p['slug']}/" for p in players]
+    keys += [f"team/{t[3]}/" for t in TEAMS.values()]
+    keys += [f"market/{s}/" for s in sorted(market_slugs)]
+    return keys
+
+
+def key_to_file(key):
+    """Sitemap key -> the docs/ file the Worker serves for it."""
+    rel = key or "index.html"
+    if rel.endswith("/"):
+        rel += "index.html"
+    return DOCS_DIR / rel
+
+
+def page_hash(key):
+    """Hash of a sitemap page: from this build if it wrote it, else from disk
+    (hand-written pages like index.html / movers.html)."""
+    f = key_to_file(key)
+    h = CONTENT_HASH.get(f)
+    return h if h is not None else slm.content_hash(f.read_bytes())
+
+
 # --- main --------------------------------------------------------------------
 
 def main():
@@ -520,18 +555,14 @@ def main():
         alias_seen.add(clean)
         write_if_changed(DOCS_DIR / "market" / clean / "index.html", market_page(m), stats)
 
-    # sitemap.xml (urls only — no lastmod, so it stays churn-free)
-    urls = [f"{SITE_BASE}/docs/index.html", f"{SITE_BASE}/docs/movers.html",
-            f"{SITE_BASE}/docs/resolved.html", f"{SITE_BASE}/docs/players/",
-            f"{SITE_BASE}/docs/teams/"]
-    urls += [f"{SITE_BASE}/docs/player/{p['slug']}/" for p in players]
-    urls += [f"{SITE_BASE}/docs/team/{t[3]}/" for t in TEAMS.values()]
-    urls += [f"{SITE_BASE}/docs/market/{s}/" for s in sorted(market_slugs)]
-    sitemap = ('<?xml version="1.0" encoding="UTF-8"?>\n'
-               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-               + "".join(f"<url><loc>{u}</loc></url>\n" for u in urls)
-               + "</urlset>\n")
-    write_if_changed(DOCS_DIR / "sitemap.xml", sitemap, stats)
+    # sitemap.xml: hoopsmatic.com URLs, each with an accurate per-URL lastmod
+    # (moves only when that page's content hash changes; state in
+    # data/sitemap_lastmod.json). Keys are paths under SITEMAP_BASE.
+    keys = sitemap_keys(players, market_slugs)
+    entries = [(k, page_hash(k)) for k in keys]
+    lastmods, state = slm.update_state(entries, slm.load_state(SITEMAP_STATE_PATH), slm.now_iso())
+    write_if_changed(SITEMAP_STATE_PATH, slm.dump_state(state), stats)
+    write_if_changed(DOCS_DIR / "sitemap.xml", slm.render_sitemap(keys, lastmods), stats)
 
     matched_players = sum(1 for p in players if by_player.get(p["slug"]))
     matched_teams = sum(1 for s in (t[3] for t in TEAMS.values()) if by_team.get(s))
