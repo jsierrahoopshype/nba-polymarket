@@ -50,6 +50,12 @@ SITE_BASE = "https://jsierrahoopshype.github.io/nba-polymarket"
 # the players that have a file; anyone else shows their initials instead.
 HEADSHOT_FACE = "https://jsierrahoopshype.github.io/nba-headshots/players/headshots/face-fill/{stem}.webp"
 FACE_FILL_STEMS_PATH = Path(__file__).resolve().parent / "vendor" / "face_fill_stems.txt"
+# entities.json is read by the live app (hoopsmatic.com/polymarket), so its
+# headshot URLs point at the hoopsmatic-worker's same-origin mirror of the same
+# files instead of github.io (privacy: no third-party requests from the page).
+# The static docs/ pages keep HEADSHOT_FACE. Team logos (cdn.nba.com) unchanged.
+HEADSHOT_PREFIX_GH = "https://jsierrahoopshype.github.io/nba-headshots/"
+HEADSHOT_PREFIX_HM = "https://hoopsmatic.com/img/nba-headshots/"
 TEAM_LOGO = "https://cdn.nba.com/logos/nba/{id}/global/L/logo.svg"
 # Optional Cloudflare Worker proxy fallback for team logos — fill in to enable.
 TEAM_LOGO_PROXY = ""
@@ -137,6 +143,14 @@ def headshot_url(p):
     """face-fill URL for a player, or None when there is no file (show initials)."""
     stem = headshot_stem(p)
     return HEADSHOT_FACE.format(stem=stem) if stem in FACE_STEMS else None
+
+
+def entities_img(url):
+    """Rewrite a github.io headshot URL to the hoopsmatic.com mirror (same path).
+    None and any other URL (cdn.nba.com logos) pass through untouched."""
+    if url and url.startswith(HEADSHOT_PREFIX_GH):
+        return HEADSHOT_PREFIX_HM + url[len(HEADSHOT_PREFIX_GH):]
+    return url
 
 
 _NAME_SUFFIXES = {"jr", "sr", "ii", "iii", "iv", "v"}
@@ -390,7 +404,7 @@ def main():
     def player_entity(slug):
         p = players_by_slug[slug]
         return {"t": "player", "slug": p["slug"], "name": p["full_name"],
-                "img": headshot_url(p)}
+                "img": entities_img(headshot_url(p))}
 
     def team_entity(slug):
         tid, name, _nick, tslug, _a = TEAMS[_SLUG_TO_ABBREV[slug]]
@@ -466,7 +480,7 @@ def main():
     # Sorted by NAME (stable) so this file doesn't churn when volumes shift the
     # leaderboard order each poll — search doesn't care about order.
     directory = (
-        [{"t": "player", "slug": e["slug"], "name": e["name"], "img": e["thumb"]}
+        [{"t": "player", "slug": e["slug"], "name": e["name"], "img": entities_img(e["thumb"])}
          for e in player_dir_entries] +
         [{"t": "team", "slug": e["slug"], "name": e["name"], "img": e["thumb"]}
          for e in team_dir_entries]
