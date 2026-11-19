@@ -1,0 +1,65 @@
+{
+  "conditionId": "0x6851e4db6198ff3c00364159894ed79f396e0359a5dd8354588b5d50fa8a3f31",
+  "slug": "nba-por-mil-2026-11-19-spread-home-8pt5",
+  "question": "Spread: Bucks (-8.5)",
+  "eventSlug": "nba-por-mil-2026-11-19",
+  "eventTitle": "Trail Blazers vs. Bucks",
+  "eventId": "1318454",
+  "clobTokenIds": [
+    "74194931307139569476687878210749319911670295243965291594214508707540807729640",
+    "83704382531224969212650967810736575375803376163062095735845139281703040970385"
+  ],
+  "outcomes": [
+    "Bucks",
+    "Trail Blazers"
+  ],
+  "endDate": "2026-11-20T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-19T05:00:17Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-19T06:00:20Z","impliedProbability":0.08,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-19T07:00:15Z","impliedProbability":0.17,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-19T08:01:44Z","impliedProbability":0.085,"volume24hr":0.0,"volume":null,"liquidity":4028.8774,"spread":0.05,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

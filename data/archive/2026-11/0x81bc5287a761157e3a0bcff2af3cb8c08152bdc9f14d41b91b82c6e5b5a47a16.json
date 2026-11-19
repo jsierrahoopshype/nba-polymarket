@@ -1,0 +1,65 @@
+{
+  "conditionId": "0x81bc5287a761157e3a0bcff2af3cb8c08152bdc9f14d41b91b82c6e5b5a47a16",
+  "slug": "nba-det-nop-2026-11-18-rebounds-ausar-thompson-3pt5",
+  "question": "Ausar Thompson: Rebounds O/U 3.5",
+  "eventSlug": "nba-det-nop-2026-11-18",
+  "eventTitle": "Pistons vs. Pelicans",
+  "eventId": "1312324",
+  "clobTokenIds": [
+    "30879438126606325948399112939030156010450260370633556897247869922053926130265",
+    "87569162960953981457505882149992288864499962982679993047783173089785415977580"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-19T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-19T08:01:44Z",
+  "history": [
+{"timestamp":"2026-11-18T10:02:12Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-18T18:48:36Z","impliedProbability":0.47,"volume24hr":0.0,"volume":null,"liquidity":96.72,"spread":0.92,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-19T00:47:05Z","impliedProbability":0.48,"volume24hr":0.0,"volume":null,"liquidity":11.29,"spread":0.94,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-19T08:01:44Z","impliedProbability":1.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

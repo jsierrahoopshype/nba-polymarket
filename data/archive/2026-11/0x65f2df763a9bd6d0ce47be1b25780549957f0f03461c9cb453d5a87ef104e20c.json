@@ -1,0 +1,67 @@
+{
+  "conditionId": "0x65f2df763a9bd6d0ce47be1b25780549957f0f03461c9cb453d5a87ef104e20c",
+  "slug": "nba-atl-okc-2026-11-18-points-aday-mara-4pt5",
+  "question": "Aday Mara: Points O/U 4.5",
+  "eventSlug": "nba-atl-okc-2026-11-18",
+  "eventTitle": "Hawks vs. Thunder",
+  "eventId": "1312325",
+  "clobTokenIds": [
+    "7957095072723608176983099240231761810432042109832791530701321332252992163061",
+    "55540218552910536658745101869291030371853375198957061807444248337266949061827"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-19T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-19T08:01:44Z",
+  "history": [
+{"timestamp":"2026-11-18T01:56:38Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":17.5,"spread":0.98,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-18T02:00:58Z","impliedProbability":0.48,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-18T10:00:32Z","impliedProbability":0.455,"volume24hr":0.0,"volume":null,"liquidity":46.15,"spread":0.89,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-18T18:48:36Z","impliedProbability":0.845,"volume24hr":0.0,"volume":null,"liquidity":288.45,"spread":0.03,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-19T00:47:05Z","impliedProbability":0.44,"volume24hr":0.0,"volume":null,"liquidity":37.0969,"spread":0.86,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-19T08:01:44Z","impliedProbability":1.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":0.4995,"oneWeekPriceChange":null}
+  ]
+}
