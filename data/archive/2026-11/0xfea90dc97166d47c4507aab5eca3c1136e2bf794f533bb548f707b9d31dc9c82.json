@@ -1,0 +1,65 @@
+{
+  "conditionId": "0xfea90dc97166d47c4507aab5eca3c1136e2bf794f533bb548f707b9d31dc9c82",
+  "slug": "nba-por-mil-2026-11-19-blocks-donovan-clingan-0pt5",
+  "question": "Donovan Clingan: Blocks O/U 0.5",
+  "eventSlug": "nba-por-mil-2026-11-19",
+  "eventTitle": "Trail Blazers vs. Bucks",
+  "eventId": "1318454",
+  "clobTokenIds": [
+    "37966012656598759086916558057310687369481974477609434125241246730157628972114",
+    "842931036337537954155998496643820604969580347283458770194830458114013310067"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-20T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-20T04:24:26Z",
+  "history": [
+{"timestamp":"2026-11-19T08:02:12Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-19T17:21:08Z","impliedProbability":0.44,"volume24hr":0.0,"volume":null,"liquidity":57.4724,"spread":0.86,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-19T23:44:18Z","impliedProbability":0.45,"volume24hr":0.0,"volume":null,"liquidity":15.5308,"spread":0.88,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-20T04:24:26Z","impliedProbability":1.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

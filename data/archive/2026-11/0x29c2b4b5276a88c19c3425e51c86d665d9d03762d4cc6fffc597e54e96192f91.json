@@ -1,0 +1,65 @@
+{
+  "conditionId": "0x29c2b4b5276a88c19c3425e51c86d665d9d03762d4cc6fffc597e54e96192f91",
+  "slug": "nba-nyk-min-2026-11-19-rebounds-rudy-gobert-13pt5",
+  "question": "Rudy Gobert: Rebounds O/U 13.5",
+  "eventSlug": "nba-nyk-min-2026-11-19",
+  "eventTitle": "Knicks vs. Timberwolves",
+  "eventId": "1318455",
+  "clobTokenIds": [
+    "85590011841259857210211848088557709618326315594647504050697113215570066608620",
+    "62316385716354997164775433460163611090985075881547962602636922560168443182367"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-20T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-20T04:24:26Z",
+  "history": [
+{"timestamp":"2026-11-19T08:01:44Z","impliedProbability":0.11,"volume24hr":0.0,"volume":null,"liquidity":199.76,"spread":0.22,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-19T17:21:08Z","impliedProbability":0.105,"volume24hr":0.0,"volume":null,"liquidity":3358.082,"spread":0.19,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-19T23:44:18Z","impliedProbability":0.105,"volume24hr":0.0,"volume":null,"liquidity":3903.3234,"spread":0.19,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-20T04:24:26Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
