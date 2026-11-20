@@ -1,0 +1,62 @@
+{
+  "conditionId": "0x97d55a5c68a0a0575b89d60c92dcc0ba9e1d481480df02d90b92c28752fbd84d",
+  "slug": "nba-cha-atl-2026-11-20-1h-spread-home-0pt5",
+  "question": "1H Spread: Hawks (-0.5)",
+  "eventSlug": "nba-cha-atl-2026-11-20",
+  "eventTitle": "Hornets vs. Hawks",
+  "eventId": "1323809",
+  "clobTokenIds": [
+    "63945248431953743607950248597165962789615834071665948848275293659871922030892",
+    "2224379528327920267321880150582438205381326123221404825204025451084072050026"
+  ],
+  "outcomes": [
+    "Hawks",
+    "Hornets"
+  ],
+  "endDate": "2026-11-21T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-20T13:29:34Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":0.1,"spread":0.98,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
