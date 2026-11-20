@@ -1,0 +1,64 @@
+{
+  "conditionId": "0xd17aaee73eb4362c0e4a6c9d355c3c81048aa4b038483ab7a4207809324b008c",
+  "slug": "nba-was-chi-2026-11-20-rebounds-matas-buzelis-11pt5",
+  "question": "Matas Buzelis: Rebounds O/U 11.5",
+  "eventSlug": "nba-was-chi-2026-11-20",
+  "eventTitle": "Wizards vs. Bulls",
+  "eventId": "1323813",
+  "clobTokenIds": [
+    "16625627907581049212803027061134809390649266007524881170173225157028255932638",
+    "93276799686648188421027643940059881744700162639972790704282779701473375211727"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-21T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-20T17:00:31Z","impliedProbability":0.125,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-20T20:00:34Z","impliedProbability":0.04,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-20T21:30:07Z","impliedProbability":0.0345,"volume24hr":0.0,"volume":null,"liquidity":51.905,"spread":0.049,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
