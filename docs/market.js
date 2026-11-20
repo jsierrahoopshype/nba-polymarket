@@ -308,7 +308,6 @@ function wireRaceChart(outcomes) {
 function render(record, entry, index) {
   const app = document.getElementById('app');
   const m = record || entry || {};
-  const cat = categoryOf(m);
   const resolved = !!(record && record.resolved) || !!(entry && entry.resolved);
 
   const rawCur = HISTORY.length ? HISTORY[HISTORY.length - 1][1]
@@ -424,7 +423,6 @@ function render(record, entry, index) {
   const titleM = { question: question, tags: m.tags, endDate: (record && record.endDate) || (entry && entry.endDate) };
   app.innerHTML =
     '<div class="phead">' +
-      '<span class="cat">' + esc(cat.label) + '</span>' +
       '<h1>' + settledBadge(m) + esc(displayTitle(titleM)) + '</h1>' +
       (entry ? entityChips(entry.conditionId) : '') +
       (meta.length ? '<div class="meta">' + metaHtml + '</div>' : '') +
