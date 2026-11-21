@@ -1,0 +1,64 @@
+{
+  "conditionId": "0xa87352324c5227de2e8a28d3ada1e89d98af2e598d1ce5a803f1cf1f7d45e35a",
+  "slug": "nba-mil-phi-2026-11-21-rebounds-jaime-jaquez-jr-3pt5",
+  "question": "Jaime Jaquez Jr.: Rebounds O/U 3.5",
+  "eventSlug": "nba-mil-phi-2026-11-21",
+  "eventTitle": "Bucks vs. 76ers",
+  "eventId": "1330302",
+  "clobTokenIds": [
+    "69345867455579266388052902723681744119222900015150570450209043918436477809043",
+    "25558978671044994432300439154568948442689016418204728464389547870143772395595"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-21T18:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-21T01:00:27Z","impliedProbability":0.32,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T02:00:52Z","impliedProbability":0.325,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T02:47:03Z","impliedProbability":0.32,"volume24hr":0.0,"volume":null,"liquidity":1002.2298,"spread":0.62,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

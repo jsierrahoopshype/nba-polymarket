@@ -1,0 +1,65 @@
+{
+  "conditionId": "0x74f162586ef8ac0bffb0ec0203d26d1110dc41612b68ae9e95430a90f84ce823",
+  "slug": "nba-was-chi-2026-11-20-1h-team-total-chi-58pt5",
+  "question": "Bulls 1H Team Total: O/U 58.5",
+  "eventSlug": "nba-was-chi-2026-11-20",
+  "eventTitle": "Wizards vs. Bulls",
+  "eventId": "1323813",
+  "clobTokenIds": [
+    "72067294851895015080196540015026832546251608467632214011791676529247900019741",
+    "102486920587566051456048529708143739691729374731280885178444997794113065460478"
+  ],
+  "outcomes": [
+    "Over",
+    "Under"
+  ],
+  "endDate": "2026-11-21T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-21T02:47:03Z",
+  "history": [
+{"timestamp":"2026-11-20T13:29:34Z","impliedProbability":null,"volume24hr":0.0,"volume":0.0,"liquidity":0.0,"spread":1.0,"oneDayPriceChange":0.0,"oneWeekPriceChange":0.0},
+{"timestamp":"2026-11-20T13:31:16Z","impliedProbability":0.69,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-20T21:30:07Z","impliedProbability":0.645,"volume24hr":0.0,"volume":null,"liquidity":10651.2776,"spread":0.13,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T02:47:03Z","impliedProbability":1.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
