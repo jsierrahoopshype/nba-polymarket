@@ -1,0 +1,67 @@
+{
+  "conditionId": "0x4541a0c03d5f03f84c7ff0acde6afb8d82606adac9ea70470d3a433bb8c98e80",
+  "slug": "nba-nop-okc-2026-11-20-threes-jared-mccain-2pt5",
+  "question": "Jared McCain: 3-Pointers Made O/U 2.5",
+  "eventSlug": "nba-nop-okc-2026-11-20",
+  "eventTitle": "Pelicans vs. Thunder",
+  "eventId": "1323814",
+  "clobTokenIds": [
+    "7418866375975928623628339150492552657772584465442955120908299894572106489421",
+    "94941235676348008083596957851678623934681544638805886914383818766897304623033"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-21T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-21T10:18:10Z",
+  "history": [
+{"timestamp":"2026-11-20T03:00:31Z","impliedProbability":0.26,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-20T04:27:12Z","impliedProbability":0.245,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-20T13:29:34Z","impliedProbability":0.245,"volume24hr":2.958334,"volume":2.958334,"liquidity":1700.3665,"spread":0.47,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-20T21:30:07Z","impliedProbability":0.255,"volume24hr":14.545589,"volume":14.545589,"liquidity":3771.6642,"spread":0.49,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T02:47:03Z","impliedProbability":0.625,"volume24hr":62.388727,"volume":62.388726999999996,"liquidity":39.25,"spread":0.75,"oneDayPriceChange":0.365,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T10:18:10Z","impliedProbability":1.0,"volume24hr":59.430392999999995,"volume":62.388726999999996,"liquidity":null,"spread":0.001,"oneDayPriceChange":0.7345,"oneWeekPriceChange":null}
+  ]
+}

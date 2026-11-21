@@ -1,0 +1,67 @@
+{
+  "conditionId": "0x7f6e1378c08325c9ec9425d432e6690a25e968a87284eef7aaae1f8c99961f36",
+  "slug": "nba-nop-okc-2026-11-20-points-shai-gilgeous-alexander-24pt5",
+  "question": "Shai Gilgeous-Alexander: Points O/U 24.5",
+  "eventSlug": "nba-nop-okc-2026-11-20",
+  "eventTitle": "Pelicans vs. Thunder",
+  "eventId": "1323814",
+  "clobTokenIds": [
+    "20676890326369180391192196933774170016165304116267329074803470467136803295067",
+    "107856537139928720223221334830991544368441269347587405075191289495390581880607"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-21T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-21T10:18:10Z",
+  "history": [
+{"timestamp":"2026-11-20T03:00:24Z","impliedProbability":0.46,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-20T04:27:10Z","impliedProbability":0.46,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-20T13:29:34Z","impliedProbability":0.43,"volume24hr":0.0,"volume":null,"liquidity":288.3538,"spread":0.84,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-20T21:30:07Z","impliedProbability":0.42,"volume24hr":0.0,"volume":null,"liquidity":217.7775,"spread":0.82,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T02:47:03Z","impliedProbability":0.9995,"volume24hr":408.85956,"volume":408.85956,"liquidity":1409.99206,"spread":0.001,"oneDayPriceChange":0.5395,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T10:18:10Z","impliedProbability":1.0,"volume24hr":408.85956,"volume":408.85956,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":0.5395,"oneWeekPriceChange":null}
+  ]
+}

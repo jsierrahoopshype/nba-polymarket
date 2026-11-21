@@ -1,0 +1,68 @@
+{
+  "conditionId": "0x7d040fdc24512fde2f660a74f643f34efb85f8d402f2d198b50546c4d88bccca",
+  "slug": "nba-sac-lal-2026-11-20-spread-away-1pt5",
+  "question": "Spread: Kings (-1.5)",
+  "eventSlug": "nba-sac-lal-2026-11-20",
+  "eventTitle": "Kings vs. Lakers",
+  "eventId": "1323817",
+  "clobTokenIds": [
+    "7197708451900151983794987183965531546869719002698807402472806723260875899941",
+    "87516160902640510988569951052133670081461213457192059949354817132141842744457"
+  ],
+  "outcomes": [
+    "Kings",
+    "Lakers"
+  ],
+  "endDate": "2026-11-21T03:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-21T10:18:10Z",
+  "history": [
+{"timestamp":"2026-11-19T22:00:16Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-19T23:47:20Z","impliedProbability":0.26,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-20T04:24:26Z","impliedProbability":0.11,"volume24hr":0.0,"volume":null,"liquidity":10361.826,"spread":0.1,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-20T13:29:34Z","impliedProbability":0.11,"volume24hr":0.0,"volume":null,"liquidity":11002.5647,"spread":0.02,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-20T21:30:07Z","impliedProbability":0.12,"volume24hr":0.0,"volume":null,"liquidity":17665.257,"spread":0.02,"oneDayPriceChange":-0.38,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T02:47:03Z","impliedProbability":0.115,"volume24hr":83.333334,"volume":83.333334,"liquidity":16282.5135,"spread":0.03,"oneDayPriceChange":0.03,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T10:18:10Z","impliedProbability":0.0,"volume24hr":3998.168451,"volume":3998.1684510000005,"liquidity":null,"spread":0.001,"oneDayPriceChange":-0.1195,"oneWeekPriceChange":null}
+  ]
+}

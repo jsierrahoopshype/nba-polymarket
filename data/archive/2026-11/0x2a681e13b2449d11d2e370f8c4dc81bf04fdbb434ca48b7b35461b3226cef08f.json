@@ -1,0 +1,68 @@
+{
+  "conditionId": "0x2a681e13b2449d11d2e370f8c4dc81bf04fdbb434ca48b7b35461b3226cef08f",
+  "slug": "nba-ind-cle-2026-11-20-spread-home-14pt5",
+  "question": "Spread: Cavaliers (-14.5)",
+  "eventSlug": "nba-ind-cle-2026-11-20",
+  "eventTitle": "Pacers vs. Cavaliers",
+  "eventId": "1323811",
+  "clobTokenIds": [
+    "67006305974278612211163163362324580227006037814313106297280794357293231597549",
+    "32459087469324982889086789260262005566816614628451775078765091498727072225533"
+  ],
+  "outcomes": [
+    "Cavaliers",
+    "Pacers"
+  ],
+  "endDate": "2026-11-21T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-21T10:18:10Z",
+  "history": [
+{"timestamp":"2026-11-19T22:00:14Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-19T23:45:14Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-20T04:24:26Z","impliedProbability":0.265,"volume24hr":5.0,"volume":5.0,"liquidity":16897.1916,"spread":0.03,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-20T13:29:34Z","impliedProbability":0.28,"volume24hr":10.0,"volume":10.0,"liquidity":15127.3646,"spread":0.04,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-20T21:30:07Z","impliedProbability":0.255,"volume24hr":10.0,"volume":10.0,"liquidity":20384.6078,"spread":0.03,"oneDayPriceChange":-0.245,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T02:47:03Z","impliedProbability":0.12,"volume24hr":3670.003672,"volume":1690.2373969999999,"liquidity":3823.252,"spread":0.02,"oneDayPriceChange":-0.145,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T10:18:10Z","impliedProbability":0.0,"volume24hr":3988.110055,"volume":3998.1100549999996,"liquidity":null,"spread":0.001,"oneDayPriceChange":-0.2645,"oneWeekPriceChange":null}
+  ]
+}
