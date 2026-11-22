@@ -1,0 +1,67 @@
+{
+  "conditionId": "0xcafbe76cea9d971b3c8c37666f1f49fd4b0e935baa498bed485cf06064f0a7d4",
+  "slug": "nba-mem-min-2026-11-21-assists-ayo-dosunmu-3pt5",
+  "question": "Ayo Dosunmu: Assists O/U 3.5",
+  "eventSlug": "nba-mem-min-2026-11-21",
+  "eventTitle": "Grizzlies vs. Timberwolves",
+  "eventId": "1330305",
+  "clobTokenIds": [
+    "52452427039801824947159443299296469868465410875656443025663425500394158115816",
+    "82079332660254133131938249040425547503946102762692592555696503079808712286709"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-22T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-22T10:17:50Z",
+  "history": [
+{"timestamp":"2026-11-21T02:49:31Z","impliedProbability":0.305,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T10:18:10Z","impliedProbability":0.55,"volume24hr":0.0,"volume":null,"liquidity":1244.8983,"spread":0.08,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T17:40:18Z","impliedProbability":0.365,"volume24hr":0.0,"volume":null,"liquidity":1191.98,"spread":0.39,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T22:26:27Z","impliedProbability":0.27,"volume24hr":0.0,"volume":null,"liquidity":2378.3838,"spread":0.52,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-22T02:35:19Z","impliedProbability":0.55,"volume24hr":0.0,"volume":null,"liquidity":170.24,"spread":0.66,"oneDayPriceChange":0.245,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-22T10:17:50Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.009,"oneDayPriceChange":-0.3205,"oneWeekPriceChange":null}
+  ]
+}

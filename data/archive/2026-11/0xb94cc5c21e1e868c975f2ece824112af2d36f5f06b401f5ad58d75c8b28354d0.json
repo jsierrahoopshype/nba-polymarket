@@ -1,0 +1,68 @@
+{
+  "conditionId": "0xb94cc5c21e1e868c975f2ece824112af2d36f5f06b401f5ad58d75c8b28354d0",
+  "slug": "nba-por-nyk-2026-11-21-rebounds-deni-avdija-5pt5",
+  "question": "Deni Avdija: Rebounds O/U 5.5",
+  "eventSlug": "nba-por-nyk-2026-11-21",
+  "eventTitle": "Trail Blazers vs. Knicks",
+  "eventId": "1330303",
+  "clobTokenIds": [
+    "97885432059824528963518564607250628937175265951005192636792848273524598101476",
+    "77714105407008771085277971054897335434747136564233052871474698647080331280442"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-22T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-22T10:17:50Z",
+  "history": [
+{"timestamp":"2026-11-21T01:00:29Z","impliedProbability":0.37,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T02:48:37Z","impliedProbability":0.335,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T10:18:10Z","impliedProbability":0.33,"volume24hr":39.31858,"volume":39.31858,"liquidity":4472.09,"spread":0.06,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T17:40:18Z","impliedProbability":0.245,"volume24hr":1008.0019359999999,"volume":1008.001936,"liquidity":753.4539,"spread":0.47,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T22:26:27Z","impliedProbability":0.295,"volume24hr":1241.7352710000002,"volume":1136.735271,"liquidity":2099.0299,"spread":0.57,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-22T02:35:19Z","impliedProbability":0.9995,"volume24hr":1335.7352710000002,"volume":1335.735271,"liquidity":2710.54489,"spread":0.001,"oneDayPriceChange":0.6645,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-22T10:17:50Z","impliedProbability":1.0,"volume24hr":1296.416691,"volume":1335.735271,"liquidity":null,"spread":0.001,"oneDayPriceChange":0.6645,"oneWeekPriceChange":null}
+  ]
+}

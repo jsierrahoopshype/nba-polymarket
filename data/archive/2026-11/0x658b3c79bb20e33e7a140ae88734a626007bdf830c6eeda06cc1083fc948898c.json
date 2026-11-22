@@ -1,0 +1,68 @@
+{
+  "conditionId": "0x658b3c79bb20e33e7a140ae88734a626007bdf830c6eeda06cc1083fc948898c",
+  "slug": "nba-por-nyk-2026-11-21-points-damian-lillard-19pt5",
+  "question": "Damian Lillard: Points O/U 19.5",
+  "eventSlug": "nba-por-nyk-2026-11-21",
+  "eventTitle": "Trail Blazers vs. Knicks",
+  "eventId": "1330303",
+  "clobTokenIds": [
+    "55230855033216549950310637030535507509696902881001959197220867824433532438767",
+    "55828747609715617425526855034670115949297376231121531764756902183622515636836"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-22T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-22T10:17:50Z",
+  "history": [
+{"timestamp":"2026-11-21T01:00:27Z","impliedProbability":0.29,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T02:48:36Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T10:18:10Z","impliedProbability":0.55,"volume24hr":0.0,"volume":null,"liquidity":1358.1228,"spread":0.08,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T17:40:18Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":2000.5019,"spread":0.1,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T22:26:27Z","impliedProbability":0.485,"volume24hr":23.065326,"volume":23.065326,"liquidity":1732.3176,"spread":0.05,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-22T02:35:19Z","impliedProbability":0.03,"volume24hr":390.482671,"volume":390.48267100000004,"liquidity":1431.8677,"spread":0.06,"oneDayPriceChange":-0.47,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-22T10:17:50Z","impliedProbability":0.0,"volume24hr":390.482671,"volume":390.4826710000001,"liquidity":null,"spread":0.001,"oneDayPriceChange":-0.4995,"oneWeekPriceChange":null}
+  ]
+}

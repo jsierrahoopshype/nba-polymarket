@@ -1,0 +1,68 @@
+{
+  "conditionId": "0x355340cce3f1031253cb2a33c9f8218e1db084fba8d2895c635692b2306c98e8",
+  "slug": "nba-nop-sas-2026-11-21-spread-home-18pt5",
+  "question": "Spread: Spurs (-18.5)",
+  "eventSlug": "nba-nop-sas-2026-11-21",
+  "eventTitle": "Pelicans vs. Spurs",
+  "eventId": "1330306",
+  "clobTokenIds": [
+    "31378915440975730665955306654646281506176502124728978566375474687703064854198",
+    "91245405151980266879455484353869039794519636189864340304653725075959384980594"
+  ],
+  "outcomes": [
+    "Spurs",
+    "Pelicans"
+  ],
+  "endDate": "2026-11-22T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-22T10:17:50Z",
+  "history": [
+{"timestamp":"2026-11-20T21:30:07Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":0.2,"spread":0.98,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T02:47:03Z","impliedProbability":0.435,"volume24hr":0.0,"volume":null,"liquidity":7079.4442,"spread":0.09,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T10:18:10Z","impliedProbability":0.455,"volume24hr":5.0,"volume":5.0,"liquidity":40232.1677,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T17:40:18Z","impliedProbability":0.495,"volume24hr":693.30853,"volume":455.30853,"liquidity":57940.1077,"spread":0.01,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T22:26:27Z","impliedProbability":0.505,"volume24hr":6800.831277,"volume":6800.831277,"liquidity":148049.0563,"spread":0.01,"oneDayPriceChange":0.005,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-22T02:35:19Z","impliedProbability":0.71,"volume24hr":804264.2611479998,"volume":804264.2611480001,"liquidity":23431.6401,"spread":0.1,"oneDayPriceChange":0.275,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-22T10:17:50Z","impliedProbability":1.0,"volume24hr":810075.1043779999,"volume":810080.1043780001,"liquidity":null,"spread":0.001,"oneDayPriceChange":0.5595,"oneWeekPriceChange":null}
+  ]
+}

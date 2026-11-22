@@ -1,0 +1,67 @@
+{
+  "conditionId": "0xdeee0a7cf9a3e82fa9ed7d7867ed7a81baed65bfe1502e6a83345a08d3e18386",
+  "slug": "nba-lac-dal-2026-11-21-threes-pj-washington-2pt5",
+  "question": "P.J. Washington: 3-Pointers Made O/U 2.5",
+  "eventSlug": "nba-lac-dal-2026-11-21",
+  "eventTitle": "Clippers vs. Mavericks",
+  "eventId": "1330304",
+  "clobTokenIds": [
+    "32330893126657128378386907536900548371191508163249478365003972619894873157868",
+    "3727637852067984571701414475666962286127521513936105133768898520033697806122"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-22T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-22T10:17:50Z",
+  "history": [
+{"timestamp":"2026-11-21T02:47:03Z","impliedProbability":0.15,"volume24hr":0.0,"volume":null,"liquidity":473.06,"spread":0.28,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T10:18:10Z","impliedProbability":0.185,"volume24hr":0.0,"volume":null,"liquidity":2438.4263,"spread":0.35,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T17:40:18Z","impliedProbability":0.145,"volume24hr":0.0,"volume":null,"liquidity":3193.717,"spread":0.27,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-21T22:26:27Z","impliedProbability":0.105,"volume24hr":0.0,"volume":null,"liquidity":2108.95,"spread":0.19,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-22T02:35:19Z","impliedProbability":0.5,"volume24hr":38.0,"volume":38.0,"liquidity":null,"spread":1.0,"oneDayPriceChange":0.35,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-22T10:17:50Z","impliedProbability":0.0,"volume24hr":38.0,"volume":38.0,"liquidity":0.0,"spread":0.198,"oneDayPriceChange":-0.051,"oneWeekPriceChange":null}
+  ]
+}
