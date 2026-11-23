@@ -1,0 +1,67 @@
+{
+  "conditionId": "0x364d481a236d942008d398cb05b1f4d1626ce7feda0d31e68487ec0739d2e311",
+  "slug": "nba-orl-was-2026-11-22-rebounds-wendell-carter-jr-9pt5",
+  "question": "Wendell Carter Jr.: Rebounds O/U 9.5",
+  "eventSlug": "nba-orl-was-2026-11-22",
+  "eventTitle": "Magic vs. Wizards",
+  "eventId": "1338697",
+  "clobTokenIds": [
+    "20557171963285271439079438108061407562852205081943004847817909512923261120966",
+    "104128477997373033464886491328688370302859738183393763539567531114194139021706"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-23T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-23T03:57:28Z",
+  "history": [
+{"timestamp":"2026-11-22T01:00:20Z","impliedProbability":0.495,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-22T02:37:07Z","impliedProbability":0.36,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-22T10:17:50Z","impliedProbability":0.2,"volume24hr":0.0,"volume":null,"liquidity":2127.1374,"spread":0.38,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-22T17:55:45Z","impliedProbability":0.225,"volume24hr":9.341465,"volume":9.341465,"liquidity":2411.238,"spread":0.35,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-22T23:29:19Z","impliedProbability":0.195,"volume24hr":9.341465,"volume":9.341465,"liquidity":3577.7629,"spread":0.37,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-23T03:57:28Z","impliedProbability":0.0,"volume24hr":9.341465,"volume":9.341465,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":-0.3195,"oneWeekPriceChange":null}
+  ]
+}
