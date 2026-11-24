@@ -1,0 +1,65 @@
+{
+  "conditionId": "0x31b029acc5a28205df1677ae8680867969c146a5194ffcb96970aa66de6d39df",
+  "slug": "nba-lac-hou-2026-11-23-1h-moneyline",
+  "question": "Clippers vs. Rockets: 1H Moneyline",
+  "eventSlug": "nba-lac-hou-2026-11-23",
+  "eventTitle": "Clippers vs. Rockets",
+  "eventId": "1346983",
+  "clobTokenIds": [
+    "20979843808433434653240082540573967749649757043787231612135733793094086831577",
+    "38477625356957485314869057746858167287251376822325107364877842255066282524823"
+  ],
+  "outcomes": [
+    "Clippers",
+    "Rockets"
+  ],
+  "endDate": "2026-11-24T01:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-24T11:49:16Z",
+  "history": [
+{"timestamp":"2026-11-23T14:00:14Z","impliedProbability":0.255,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-23T14:29:09Z","impliedProbability":0.25,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-24T01:50:05Z","impliedProbability":0.17,"volume24hr":0.0,"volume":null,"liquidity":1139.66,"spread":0.1,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-24T11:49:16Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
