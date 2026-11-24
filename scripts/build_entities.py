@@ -48,7 +48,7 @@ SITE_BASE = "https://jsierrahoopshype.github.io/nba-polymarket"
 # face-fill/ folder (face fills a circle, transparent WebP, 160px), keyed by the
 # roster's headshot stem (<nba_id>-<slug>). Every size used here is <= 80px, so
 # the 160px set is enough. FACE_FILL_STEMS_PATH (vendored from nba-headshots) lists
-# the players that have a file; anyone else shows their initials instead.
+# the players that have a file; anyone else gets no picture.
 # Served from hoopsmatic.com's mirror of nba-headshots (same file paths), never
 # github.io: no third-party requests from the static docs/ pages or entities.json.
 HEADSHOT_FACE = "https://hoopsmatic.com/img/nba-headshots/players/headshots/face-fill/{stem}.webp"
@@ -141,7 +141,7 @@ FACE_STEMS = load_face_stems()
 
 
 def headshot_url(p):
-    """face-fill URL for a player, or None when there is no file (show initials)."""
+    """face-fill URL for a player, or None when there is no file (no picture)."""
     stem = headshot_stem(p)
     return HEADSHOT_FACE.format(stem=stem) if stem in FACE_STEMS else None
 
@@ -165,14 +165,14 @@ def initials(name):
 
 
 def face_html(name, url, size, cls="", alt=""):
-    """Circular headshot (face-fill) or, with no file / a failed load, initials."""
+    """Circular headshot (face-fill), or nothing: no file / a failed load means
+    no picture at all, never an initials circle (HoopsMatic-wide rule, Nov 2026)."""
     c = f"ph {cls}".strip()
-    ini = esc(initials(name))
     if not url:
-        return f'<span class="{c}" style="--s:{size}px">{ini}</span>'
+        return ""
     return (f'<span class="{c}" style="--s:{size}px"><img src="{url}" alt="{esc(alt)}" '
-            f'loading="lazy" width="{size}" height="{size}" data-i="{ini}" '
-            "onerror=\"this.onerror=null;this.parentNode.textContent=this.dataset.i\">"
+            f'loading="lazy" width="{size}" height="{size}" '
+            "onerror=\"this.onerror=null;this.parentNode.remove()\">"
             "</span>")
 
 
