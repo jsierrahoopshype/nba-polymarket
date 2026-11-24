@@ -302,7 +302,7 @@ td.name::after,.card .q::after{content:"";display:table;clear:both}
 .lb-ent span{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
 /* Player headshots — the one HoopsMatic look: nba-headshots face-fill (the face
-   fills the circle) on a light grey disc; a player with no photo shows initials. */
+   fills the circle) on a light grey disc; a player with no photo gets no disc. */
 .ph{display:inline-flex;align-items:center;justify-content:center;width:var(--s);height:var(--s);
   border-radius:50%;overflow:hidden;background:#e8e8ed;flex-shrink:0;vertical-align:middle;
   font-family:'DM Sans',sans-serif;font-weight:700;color:#55555c;font-size:calc(var(--s) * .34);line-height:1}

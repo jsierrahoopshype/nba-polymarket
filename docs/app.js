@@ -151,7 +151,7 @@ function docsBase() {
 
 /* onerror for team logos: hide the broken image. (The old headshot-host ->
    raw-file swap never matched cdn.nba.com logos, so its "retry"
-   reloaded the same URL; player faces use faceHtml's initials fallback.) */
+   reloaded the same URL; player faces drop out on a failed load, see faceHtml.) */
 const IMG_FALLBACK = "this.onerror=null;this.style.display='none'";
 
 /* --- entities (players/teams matched to a market) ------------------------- */
@@ -171,18 +171,17 @@ async function loadEntities() {
 
 /* Player headshots: the one HoopsMatic look (nba-headshots face-fill, the face
    fills a circle). A player with no file (img null in entities.json) or whose
-   image fails to load shows their initials in the same circle. */
+   image fails to load gets no picture at all: never an initials circle
+   (HoopsMatic-wide rule, Nov 2026). */
 function initials(name) {
   const w = String(name || '').replace(/\./g, ' ').split(/\s+/)
     .filter(x => x && !/^(jr|sr|ii|iii|iv|v),?$/i.test(x));
   return w.length ? (w[0][0] + (w.length > 1 ? w[w.length - 1][0] : '')).toUpperCase() : '?';
 }
 function faceHtml(name, img, size) {
-  const ini = esc(initials(name));
-  return '<span class="ph" style="--s:' + size + 'px">' + (img
-    ? '<img src="' + esc(img) + '" alt="" loading="lazy" width="' + size + '" height="' + size +
-      '" data-i="' + ini + '" onerror="this.onerror=null;this.parentNode.textContent=this.dataset.i">'
-    : ini) + '</span>';
+  if (!img) return '';
+  return '<span class="ph" style="--s:' + size + 'px"><img src="' + esc(img) + '" alt="" loading="lazy" width="' + size +
+    '" height="' + size + '" onerror="this.onerror=null;this.parentNode.remove()"></span>';
 }
 
 function entityLink(x, cls, imgSize, withName) {
@@ -198,7 +197,8 @@ function entityLink(x, cls, imgSize, withName) {
 function entityThumb(conditionId) {
   const e = ENTITY_MAP[conditionId];
   const p = e && e.primary;
-  return p ? entityLink(p, 'ethumb', 22, false) : '';
+  // a player without a photo gets no thumbnail (an empty link otherwise)
+  return p && (p.t !== 'player' || p.img) ? entityLink(p, 'ethumb', 22, false) : '';
 }
 
 /* Clickable chips for every entity matched to a market (one per player/team). */
