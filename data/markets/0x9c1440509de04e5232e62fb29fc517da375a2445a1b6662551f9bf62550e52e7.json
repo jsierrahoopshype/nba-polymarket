@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x9c1440509de04e5232e62fb29fc517da375a2445a1b6662551f9bf62550e52e7",
+  "slug": "nba-chi-cha-2026-11-25-assists-josh-giddey-5pt5",
+  "question": "Josh Giddey: Assists O/U 5.5",
+  "eventSlug": "nba-chi-cha-2026-11-25",
+  "eventTitle": "Bulls vs. Hornets",
+  "eventId": "1362200",
+  "clobTokenIds": [
+    "90016035594934730945999561303175488313417746073249077987366496859516017977451",
+    "22888257171316217033510686458949700221195238009877475499771737357068119463058"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-26T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-25T04:00:13Z","impliedProbability":0.45,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-25T04:36:14Z","impliedProbability":0.455,"volume24hr":0.0,"volume":null,"liquidity":66.02,"spread":0.89,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
