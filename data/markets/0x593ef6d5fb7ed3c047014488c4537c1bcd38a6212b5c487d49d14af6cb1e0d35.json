@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x593ef6d5fb7ed3c047014488c4537c1bcd38a6212b5c487d49d14af6cb1e0d35",
+  "slug": "nba-lac-mem-2026-11-25-1q-spread-away-2pt5",
+  "question": "1Q Spread: Clippers (-2.5)",
+  "eventSlug": "nba-lac-mem-2026-11-25",
+  "eventTitle": "Clippers vs. Grizzlies",
+  "eventId": "1362203",
+  "clobTokenIds": [
+    "103172238764151401578745652443405414307333408881712383206228207312990809164443",
+    "88290580668267417027043210046299860457440624540906352902719572539469748244874"
+  ],
+  "outcomes": [
+    "Clippers",
+    "Grizzlies"
+  ],
+  "endDate": "2026-11-26T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-25T14:00:13Z","impliedProbability":0.3,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-25T14:57:57Z","impliedProbability":0.29,"volume24hr":0.0,"volume":null,"liquidity":62.478,"spread":0.12,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

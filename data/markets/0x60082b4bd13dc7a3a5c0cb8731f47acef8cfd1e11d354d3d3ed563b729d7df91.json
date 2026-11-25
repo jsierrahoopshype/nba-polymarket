@@ -1,0 +1,55 @@
+{
+  "conditionId": "0x60082b4bd13dc7a3a5c0cb8731f47acef8cfd1e11d354d3d3ed563b729d7df91",
+  "slug": "nba-cle-nyk-2026-11-25-exact-margin-away-1-5",
+  "question": "Exact Margin: Cavaliers by 1-5",
+  "eventSlug": "nba-cle-nyk-2026-11-25-exact-margin",
+  "eventTitle": "Cavaliers vs. Knicks - Exact Margin",
+  "eventId": "1458460",
+  "clobTokenIds": [
+    "46960641529473364707217776719817746186137758685912138074371846136716293874303",
+    "108683100795823073405912132682532049967524382195631812312162258373518287246354"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-26T00:30:00Z",
+  "negRisk": true,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-25T14:00:13Z","impliedProbability":0.545,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-25T14:57:57Z","impliedProbability":0.545,"volume24hr":0.0,"volume":null,"liquidity":0.9,"spread":0.91,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-25T15:04:13Z","impliedProbability":0.535,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
