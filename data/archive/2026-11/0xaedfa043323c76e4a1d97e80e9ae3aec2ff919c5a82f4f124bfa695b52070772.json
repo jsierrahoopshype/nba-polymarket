@@ -1,0 +1,67 @@
+{
+  "conditionId": "0xaedfa043323c76e4a1d97e80e9ae3aec2ff919c5a82f4f124bfa695b52070772",
+  "slug": "nba-cle-nyk-2026-11-25-threes-jalen-brunson-0pt5",
+  "question": "Jalen Brunson: 3-Pointers Made O/U 0.5",
+  "eventSlug": "nba-cle-nyk-2026-11-25",
+  "eventTitle": "Cavaliers vs. Knicks",
+  "eventId": "1362201",
+  "clobTokenIds": [
+    "6483098511466181051969900482713527888843695533679670441122677501574439514431",
+    "93047760149964308869054453352245694051941536979197565949399768430387331117125"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-26T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-26T05:28:17Z",
+  "history": [
+{"timestamp":"2026-11-24T11:52:10Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-24T21:39:02Z","impliedProbability":0.49,"volume24hr":0.0,"volume":null,"liquidity":403.09,"spread":0.96,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-25T04:36:14Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":3.2,"spread":0.98,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-25T14:57:57Z","impliedProbability":0.495,"volume24hr":0.0,"volume":null,"liquidity":617.4108,"spread":0.97,"oneDayPriceChange":-0.005,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-25T23:33:46Z","impliedProbability":0.495,"volume24hr":256.27,"volume":256.27,"liquidity":6.2,"spread":0.97,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-26T05:28:17Z","impliedProbability":1.0,"volume24hr":267.38111,"volume":267.38111,"liquidity":null,"spread":0.001,"oneDayPriceChange":0.5045,"oneWeekPriceChange":null}
+  ]
+}
