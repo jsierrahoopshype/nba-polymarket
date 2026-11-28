@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x9582291b282d434b80f5b824c5f0c2cdf2515ea619279bf8edfb2be8db13c45c",
+  "slug": "nba-ind-chi-2026-11-28-rebounds-nicolas-claxton-5pt5",
+  "question": "Nicolas Claxton: Rebounds O/U 5.5",
+  "eventSlug": "nba-ind-chi-2026-11-28",
+  "eventTitle": "Pacers vs. Bulls",
+  "eventId": "1384631",
+  "clobTokenIds": [
+    "92156624661785570736551019821292972045998719495669101570550994998242586815656",
+    "20840824367972058499368262663116650546259107527316917941151733448758173708195"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-29T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-28T01:00:44Z","impliedProbability":0.265,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-28T01:36:12Z","impliedProbability":0.265,"volume24hr":0.0,"volume":null,"liquidity":707.6856,"spread":0.51,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}

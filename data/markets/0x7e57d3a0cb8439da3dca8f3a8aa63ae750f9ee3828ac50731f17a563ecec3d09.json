@@ -1,0 +1,63 @@
+{
+  "conditionId": "0x7e57d3a0cb8439da3dca8f3a8aa63ae750f9ee3828ac50731f17a563ecec3d09",
+  "slug": "nba-ind-chi-2026-11-28-rebounds-isaac-okoro-1pt5",
+  "question": "Isaac Okoro: Rebounds O/U 1.5",
+  "eventSlug": "nba-ind-chi-2026-11-28",
+  "eventTitle": "Pacers vs. Bulls",
+  "eventId": "1384631",
+  "clobTokenIds": [
+    "16256730976247628209202321662065559092959072921324197941319624203664232283616",
+    "53181589013336200166999728444653871073493515288450810433206805735027079415918"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-29T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": false,
+  "resolvedAt": null,
+  "history": [
+{"timestamp":"2026-11-28T01:00:42Z","impliedProbability":0.42,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-28T01:36:12Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":0.2,"spread":0.98,"oneDayPriceChange":null,"oneWeekPriceChange":null}
+  ]
+}
