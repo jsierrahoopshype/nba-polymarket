@@ -1,0 +1,66 @@
+{
+  "conditionId": "0x182c127d8324ddd347cf968e70bc0e38df9ec88e547814e94d34fe038e706573",
+  "slug": "nba-nop-lac-2026-11-27-assists-trey-murphy-iii-2pt5",
+  "question": "Trey Murphy III: Assists O/U 2.5",
+  "eventSlug": "nba-nop-lac-2026-11-27",
+  "eventTitle": "Pelicans vs. Clippers",
+  "eventId": "1377584",
+  "clobTokenIds": [
+    "58316255654626575785215496480947795432137396833020612671226942302618409983463",
+    "19717596573334634248912326719389818430780510650050941533737551420999456388506"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-28T02:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-28T09:27:35Z",
+  "history": [
+{"timestamp":"2026-11-27T00:12:13Z","impliedProbability":0.445,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-27T08:23:11Z","impliedProbability":0.29,"volume24hr":0.0,"volume":null,"liquidity":1733.2962,"spread":0.56,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-27T18:24:11Z","impliedProbability":0.33,"volume24hr":0.0,"volume":null,"liquidity":2132.8362,"spread":0.46,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-28T01:36:12Z","impliedProbability":0.34,"volume24hr":0.0,"volume":null,"liquidity":1701.16,"spread":0.48,"oneDayPriceChange":0.01,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-28T09:27:35Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":-0.2945,"oneWeekPriceChange":null}
+  ]
+}

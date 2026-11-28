@@ -1,0 +1,67 @@
+{
+  "conditionId": "0xaacc1c28fec9397d2e061845ffc277c7bc28f513331290284520161eb2e9aa1a",
+  "slug": "nba-mil-det-2026-11-27-threes-tyler-herro-4pt5",
+  "question": "Tyler Herro: 3-Pointers Made O/U 4.5",
+  "eventSlug": "nba-mil-det-2026-11-27",
+  "eventTitle": "Bucks vs. Pistons",
+  "eventId": "1377576",
+  "clobTokenIds": [
+    "79544429260164580646118930649266606167388715828686829711013543492626636254955",
+    "103402142956930020243024977272887737160251915496703621498325732672883628285054"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-28T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-28T09:27:35Z",
+  "history": [
+{"timestamp":"2026-11-26T23:00:20Z","impliedProbability":0.105,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-27T00:07:08Z","impliedProbability":0.48,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-27T08:23:11Z","impliedProbability":0.09,"volume24hr":0.0,"volume":null,"liquidity":1206.4382,"spread":0.16,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-27T18:24:11Z","impliedProbability":0.095,"volume24hr":0.0,"volume":null,"liquidity":4326.3635,"spread":0.17,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-28T01:36:12Z","impliedProbability":0.13,"volume24hr":0.0,"volume":null,"liquidity":932.4,"spread":0.26,"oneDayPriceChange":0.005,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-28T09:27:35Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":-0.1145,"oneWeekPriceChange":null}
+  ]
+}

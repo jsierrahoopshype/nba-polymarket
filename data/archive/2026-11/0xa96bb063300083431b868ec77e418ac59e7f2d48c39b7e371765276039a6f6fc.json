@@ -1,0 +1,69 @@
+{
+  "conditionId": "0xa96bb063300083431b868ec77e418ac59e7f2d48c39b7e371765276039a6f6fc",
+  "slug": "nba-atl-bos-2026-11-27-steals-dyson-daniels-1pt5",
+  "question": "Dyson Daniels: Steals O/U 1.5",
+  "eventSlug": "nba-atl-bos-2026-11-27",
+  "eventTitle": "Hawks vs. Celtics",
+  "eventId": "1377579",
+  "clobTokenIds": [
+    "84699100041974428124235626872916286279302498524805885836475800941645494276492",
+    "19875326909033034802437098923307149900971593528617942883236397119709797440752"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-28T01:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-28T09:27:35Z",
+  "history": [
+{"timestamp":"2026-11-26T13:00:12Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-26T14:00:12Z","impliedProbability":0.35,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-26T15:42:13Z","impliedProbability":0.35,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-27T00:06:28Z","impliedProbability":0.48,"volume24hr":0.0,"volume":null,"liquidity":99.94,"spread":0.94,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-27T08:23:11Z","impliedProbability":0.33,"volume24hr":0.0,"volume":null,"liquidity":485.2172,"spread":0.64,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-27T18:24:11Z","impliedProbability":0.34,"volume24hr":0.0,"volume":null,"liquidity":479.9067,"spread":0.66,"oneDayPriceChange":-0.01,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-28T01:36:12Z","impliedProbability":0.78,"volume24hr":0.0,"volume":null,"liquidity":19.59,"spread":0.38,"oneDayPriceChange":0.445,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-28T09:27:35Z","impliedProbability":1.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":0.6695,"oneWeekPriceChange":null}
+  ]
+}

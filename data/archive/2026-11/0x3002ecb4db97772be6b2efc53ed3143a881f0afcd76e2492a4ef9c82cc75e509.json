@@ -1,0 +1,68 @@
+{
+  "conditionId": "0x3002ecb4db97772be6b2efc53ed3143a881f0afcd76e2492a4ef9c82cc75e509",
+  "slug": "nba-mia-nyk-2026-11-27-threes-karl-anthony-towns-1pt5",
+  "question": "Karl-Anthony Towns: 3-Pointers Made O/U 1.5",
+  "eventSlug": "nba-mia-nyk-2026-11-27",
+  "eventTitle": "Heat vs. Knicks",
+  "eventId": "1377575",
+  "clobTokenIds": [
+    "46130731010443698952314759259998521420105064700391116859432822402403008741423",
+    "67931175680220143055789912264676084348759567921768938752798485315342336069709"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-28T00:00:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-28T09:27:35Z",
+  "history": [
+{"timestamp":"2026-11-26T05:29:14Z","impliedProbability":0.5,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-26T15:41:51Z","impliedProbability":0.315,"volume24hr":0.0,"volume":null,"liquidity":1517.3192,"spread":0.61,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-27T00:06:28Z","impliedProbability":0.345,"volume24hr":0.0,"volume":null,"liquidity":1353.9592,"spread":0.55,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-27T08:23:11Z","impliedProbability":0.31,"volume24hr":0.0,"volume":null,"liquidity":1844.9421,"spread":0.6,"oneDayPriceChange":-0.19,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-27T18:24:11Z","impliedProbability":0.125,"volume24hr":10.0,"volume":10.0,"liquidity":5697.8296,"spread":0.23,"oneDayPriceChange":-0.18,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-28T01:36:12Z","impliedProbability":0.68,"volume24hr":96.970901,"volume":96.970901,"liquidity":28.44,"spread":0.64,"oneDayPriceChange":0.12,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-28T09:27:35Z","impliedProbability":0.0,"volume24hr":96.970901,"volume":96.970901,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":-0.3395,"oneWeekPriceChange":null}
+  ]
+}

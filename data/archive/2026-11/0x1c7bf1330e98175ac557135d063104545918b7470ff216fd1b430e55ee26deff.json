@@ -1,0 +1,66 @@
+{
+  "conditionId": "0x1c7bf1330e98175ac557135d063104545918b7470ff216fd1b430e55ee26deff",
+  "slug": "nba-bkn-tor-2026-11-27-points-immanuel-quickley-14pt5",
+  "question": "Immanuel Quickley: Points O/U 14.5",
+  "eventSlug": "nba-bkn-tor-2026-11-27",
+  "eventTitle": "Nets vs. Raptors",
+  "eventId": "1377578",
+  "clobTokenIds": [
+    "88073285051601866411947737470306144610907623242615630452022405022259463632578",
+    "35864847687858038516326478948239799805141757972539090595520444685400223974126"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-28T00:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-28T09:27:35Z",
+  "history": [
+{"timestamp":"2026-11-27T00:08:12Z","impliedProbability":0.39,"volume24hr":null,"volume":null,"liquidity":null,"spread":null,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-27T08:23:11Z","impliedProbability":0.395,"volume24hr":0.0,"volume":null,"liquidity":1093.9285,"spread":0.77,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-27T18:24:11Z","impliedProbability":0.38,"volume24hr":0.0,"volume":null,"liquidity":1214.6278,"spread":0.74,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-28T01:36:12Z","impliedProbability":0.575,"volume24hr":1.315787,"volume":1.315787,"liquidity":409.4,"spread":0.41,"oneDayPriceChange":0.18,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-28T09:27:35Z","impliedProbability":1.0,"volume24hr":18.614033,"volume":18.614033,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":0.5995,"oneWeekPriceChange":null}
+  ]
+}

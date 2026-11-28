@@ -1,0 +1,68 @@
+{
+  "conditionId": "0x8ca8cce38f3c19dc8bbc31c63085996bfec77205966220b8e714a27a779e7f7a",
+  "slug": "nba-lal-sas-2026-11-27-rebounds-julian-champagnie-9pt5",
+  "question": "Julian Champagnie: Rebounds O/U 9.5",
+  "eventSlug": "nba-lal-sas-2026-11-27",
+  "eventTitle": "Lakers vs. Spurs",
+  "eventId": "1377582",
+  "clobTokenIds": [
+    "15698754035768438080006226094984105639185429384101383717911107885523308300462",
+    "40756993396482810889110574588466104327238907892457448069069182449966134992056"
+  ],
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-28T02:30:00Z",
+  "negRisk": false,
+  "tags": [
+    {
+      "id": "1",
+      "label": "Sports",
+      "slug": "sports",
+      "forceShow": false,
+      "publishedAt": "2023-10-24 22:37:50.296+00",
+      "updatedBy": 15,
+      "createdAt": "2023-10-24T22:37:50.31Z",
+      "updatedAt": "2026-04-17T20:47:16.461062Z",
+      "forceHide": true
+    },
+    {
+      "id": "745",
+      "label": "NBA",
+      "slug": "nba",
+      "forceShow": false,
+      "publishedAt": "2023-12-18 18:24:38.08+00",
+      "createdAt": "2023-12-18T18:24:38.098Z",
+      "updatedAt": "2026-04-17T17:28:34.430568Z"
+    },
+    {
+      "id": "100639",
+      "label": "Games",
+      "slug": "games",
+      "forceShow": false,
+      "createdAt": "2024-09-23T22:41:37.670714Z",
+      "updatedAt": "2026-03-09T22:28:03.358133Z"
+    },
+    {
+      "id": "28",
+      "label": "Basketball",
+      "slug": "basketball",
+      "forceShow": false,
+      "publishedAt": "2023-11-02 21:04:25.152+00",
+      "createdAt": "2023-11-02T21:04:25.158Z",
+      "updatedAt": "2026-04-17T20:16:02.304942Z"
+    }
+  ],
+  "resolved": true,
+  "resolvedAt": "2026-11-28T09:27:35Z",
+  "history": [
+{"timestamp":"2026-11-26T05:28:17Z","impliedProbability":0.5,"volume24hr":0.0,"volume":null,"liquidity":null,"spread":1.0,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-26T15:41:51Z","impliedProbability":0.06,"volume24hr":0.0,"volume":null,"liquidity":627.1872,"spread":0.1,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-27T00:06:28Z","impliedProbability":0.07,"volume24hr":0.0,"volume":null,"liquidity":209.22,"spread":0.12,"oneDayPriceChange":null,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-27T08:23:11Z","impliedProbability":0.06,"volume24hr":0.0,"volume":null,"liquidity":3339.1272,"spread":0.1,"oneDayPriceChange":-0.44,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-27T18:24:11Z","impliedProbability":0.085,"volume24hr":0.0,"volume":null,"liquidity":1224.1868,"spread":0.15,"oneDayPriceChange":0.025,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-28T01:36:12Z","impliedProbability":0.49,"volume24hr":0.0,"volume":null,"liquidity":216.56,"spread":0.96,"oneDayPriceChange":0.015,"oneWeekPriceChange":null},
+{"timestamp":"2026-11-28T09:27:35Z","impliedProbability":0.0,"volume24hr":0.0,"volume":null,"liquidity":0.0,"spread":0.001,"oneDayPriceChange":-0.0545,"oneWeekPriceChange":null}
+  ]
+}
